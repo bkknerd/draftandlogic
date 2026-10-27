@@ -1,0 +1,21 @@
+{
+  "line": "Official partners of the platforms we build on.",
+  "logos": [
+    {
+      "alt": "Netlify",
+      "image": "/uploads/partner-netlify.png"
+    },
+    {
+      "alt": "Webflow Partner",
+      "image": "/uploads/partner-webflow-partner.svg"
+    },
+    {
+      "alt": "Shopify Partner",
+      "image": "/uploads/partner-shopify-partner.png"
+    },
+    {
+      "alt": "Sanity",
+      "image": "/uploads/partner-sanity.png"
+    }
+  ]
+}

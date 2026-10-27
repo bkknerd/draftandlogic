@@ -1,0 +1,39 @@
+[build]
+  command = "node build.mjs"
+  publish = "dist"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https://avatars.githubusercontent.com https://raw.githubusercontent.com; media-src 'self' data: blob:; connect-src 'self' https://api.github.com https://api.netlify.com; form-action 'self'; frame-ancestors 'none'; base-uri 'self'"
+
+[[headers]]
+  for = "/og.png"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/content/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/uploads/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=3600"

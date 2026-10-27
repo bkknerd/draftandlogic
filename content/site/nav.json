@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "label": "Approach",
+      "href": "#approach"
+    },
+    {
+      "label": "Services",
+      "href": "#stack"
+    },
+    {
+      "label": "Work",
+      "href": "#work"
+    },
+    {
+      "label": "Process",
+      "href": "#process"
+    },
+    {
+      "label": "Start a project",
+      "href": "#contact"
+    }
+  ]
+}

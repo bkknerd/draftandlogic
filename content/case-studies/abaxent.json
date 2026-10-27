@@ -1,0 +1,99 @@
+{
+  "title": "Engineering Abaxent v3",
+  "tag": "Technology solutions network",
+  "shotSel": ".case.abx .shot img",
+  "summaryLead": "Abaxent v3 is a high-performance web platform built for a network of professionals delivering technology solutions, managed services, implementation, and products.",
+  "summaryMore": "To reflect the company's elite technological capabilities, the site was engineered from the ground up without heavy front-end frameworks or third-party UI bloat. A custom CSS architecture, fluid layout scaling and hardware-accelerated animations deliver an immersive, lightning-fast digital experience.",
+  "chips": [
+    "Static and edge hosting",
+    "HTML5 and ARIA",
+    "Pure CSS3",
+    "Vanilla JS",
+    "Inline SVG sprites"
+  ],
+  "stack": [
+    {
+      "name": "Hosting and delivery",
+      "detail": "Static files served from an edge CDN, so pages and assets are cached close to each visitor."
+    },
+    {
+      "name": "Front-end runtime",
+      "detail": "Vanilla JavaScript only. No framework, no third-party UI library, no component build layer."
+    },
+    {
+      "name": "Markup",
+      "detail": "Semantic HTML5 with landmark regions and ARIA controls. viewport-fit=cover with safe-area insets for notched phones."
+    },
+    {
+      "name": "Styling",
+      "detail": "Hand-written CSS3. Design tokens as custom properties on :root, a fluid 12-column layout with CSS Grid and Flexbox, and clamp() for sizing."
+    },
+    {
+      "name": "Theming",
+      "detail": "A single token set drives the whole site, with dark-mode overrides in a prefers-color-scheme media query."
+    },
+    {
+      "name": "Brand graphics",
+      "detail": "An inline SVG sprite: <symbol> shapes reused with <use> and coloured through CSS variables. The pyramid motif uses no raster image."
+    },
+    {
+      "name": "Motion",
+      "detail": "CSS keyframes (introOut, rise, fadeIn) on fixed-position overlay layers, with state classes toggled by vanilla JavaScript. Parallax and scale states run on CSS variables."
+    },
+    {
+      "name": "Typography",
+      "detail": "A system font stack (Helvetica Neue, Helvetica, Arial), so there is no web-font request and text paints immediately."
+    }
+  ],
+  "chapters": [
+    {
+      "title": "Zero-asset scalable branding and motifs",
+      "demo": "sprite",
+      "challenge": "Maintaining sharp, infinitely scalable brand shapes and background patterns, such as the Abaxent pyramid motif, across high-DPI displays without heavy raster imagery or blocking network requests.",
+      "solution": "We embedded inline SVG sprite symbols, styled entirely through cascading CSS custom properties and colour variables.",
+      "outcome": "Instant vector rendering, perfect scaling across Retina and 4K displays, and zero external image payload."
+    },
+    {
+      "title": "High-performance intro sequence and full-screen navigation",
+      "demo": "intro",
+      "challenge": "Creating a cinematic, high-impact intro sequence and full-screen overlay menu without causing layout shift or delaying the initial paint.",
+      "solution": "Fixed-position overlay layers driven by hardware-accelerated CSS keyframe animations (introOut, rise, fadeIn), with state classes managed by vanilla JavaScript.",
+      "outcome": "A smooth, cinematic brand reveal that dismisses itself while keeping the main content fully accessible."
+    },
+    {
+      "title": "Fluid layout and responsive grid matrices",
+      "demo": "steps",
+      "challenge": "Adapting complex multi-column layouts, such as step pyramids, impact statistics and asymmetrical idea cards, across mobile screens, tablets and ultra-wide desktop monitors.",
+      "solution": "CSS Grid with fluid column clamping and dynamic CSS variable overrides (--w) for staggered component geometry.",
+      "outcome": "Complex layouts that stay readable at every width, without a pile of breakpoint overrides."
+    }
+  ],
+  "stats": [
+    {
+      "value": "0",
+      "label": "JavaScript frameworks"
+    },
+    {
+      "value": "0",
+      "label": "raster images for brand shapes"
+    },
+    {
+      "value": "12",
+      "label": "column fluid grid"
+    }
+  ],
+  "results": [
+    {
+      "title": "Performance",
+      "text": "Blazing-fast load times with near-zero runtime overhead and immediate DOM paint execution."
+    },
+    {
+      "title": "Maintainability",
+      "text": "A completely decoupled design system managed through a unified :root token set and dark-mode media query rules."
+    },
+    {
+      "title": "Resilience",
+      "text": "Built entirely on vanilla web technologies, guaranteeing long-term stability and minimal maintenance complexity."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{launch.pageTitle}}</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="{{launch.message}}">
+<meta name="theme-color" content="#F1EEE8">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" id="fav"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600&family=Geist:wght@400;500&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F1EEE8;--fg:#0C0C0C;--mut:#58554D;--rule:#D8D3C8;--lime:#D4FF3A;--display:'Bricolage Grotesque','Helvetica Neue',Arial,sans-serif;--body:'Geist','Helvetica Neue',Arial,sans-serif;--mono:'Geist Mono',ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme:dark){:root{--bg:#0C0C0C;--fg:#F1EEE8;--mut:#A7A399;--rule:#2A2A27}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:auto}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:var(--bg);color:var(--fg);font:400 1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+header{padding-block:clamp(20px,4vw,40px)}
+.wm{height:30px;width:auto;display:block;overflow:visible;color:var(--fg)}
+.wm .cl{fill:none;stroke:var(--fg);stroke-width:.8;opacity:.35}.wm .cl .mid{stroke-dasharray:2 3;opacity:.7}
+.wm .dw,.wm .lw,.wm .amp{stroke:currentColor;stroke-width:2.6;stroke-linecap:square;stroke-linejoin:miter;fill:none}
+.wm .amp{stroke:var(--fg)}.wm .nd{fill:var(--fg)}
+main{flex:1;display:grid;align-content:center;padding-block:clamp(32px,8vw,96px)}
+h1{margin:0;font:600 clamp(3.2rem,12.5vw,10.5rem)/.95 var(--display);letter-spacing:-.045em}
+h1 span{display:block}
+.draft{opacity:.28}
+.built{animation:cut 3.2s steps(1) infinite}
+@keyframes cut{0%{opacity:.28}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.built{animation:none;opacity:1}}
+p.msg{max-width:38rem;margin:clamp(24px,4vw,44px) 0 0;font-size:1.15rem;color:var(--mut)}
+form{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;max-width:38rem}
+label{flex:1 1 240px;display:grid;gap:6px;font:400 .72rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+input{font:inherit;font-size:1.05rem;letter-spacing:0;text-transform:none;color:var(--fg);background:transparent;border:0;border-bottom:2px solid var(--fg);padding:10px 0;border-radius:0}
+input:focus-visible{outline:2px solid var(--fg);outline-offset:4px}
+button{align-self:end;font:500 1rem var(--body);background:var(--lime);color:#0C0C0C;border:2px solid #0C0C0C;border-radius:999px;padding:12px 26px;cursor:pointer}
+button:hover{background:#0C0C0C;color:var(--lime)}button:focus-visible{outline:2px solid var(--fg);outline-offset:3px}button[disabled]{opacity:.6;cursor:wait}
+.note{min-height:1.6em;margin:12px 0 0;color:var(--fg)}
+.alt{margin:8px 0 0;color:var(--mut)}.alt a{color:var(--fg)}
+footer{padding-block:24px;border-top:1px solid var(--rule);font:400 .72rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="/" aria-label="{{footer.name}}" style="display:inline-block;color:inherit"><svg class="wm" viewBox="0 0 292 46" role="img" aria-label="{{footer.name}}"><g class="cl"><path d="M0 8H292M0 36H292M0 3V13M292 3V13M0 31V41M292 31V41"/><path class="mid" d="M0 22H292"/></g><g class="dw" fill="none"><g style="--i:0"><path d="M6 8V36M6 8H13A14 14 0 0 1 13 36H6"/></g><g style="--i:1"><path d="M34 36V8H42A7 7 0 0 1 42 22H34M42 22L50 36"/></g><g style="--i:2"><path d="M57 36L66 8L75 36M59.6 28H72.4"/></g><g style="--i:3"><path d="M82 36V8H96M82 22H93"/></g><g style="--i:4"><path d="M103 8H119M111 8V36"/></g></g><g transform="translate(134 8)"><path class="amp" pathLength="1" d="M20 28L4 9A5.5 5.5 0 0 1 15 9C15 14 7 17 3 21C0 26 5 28.5 9 28.5C14 28.5 18 24 19 19"/></g><g class="lw" fill="none"><g style="--i:5"><path pathLength="1" d="M171 8V36H185"/></g><g style="--i:6"><ellipse cx="204" cy="22" rx="12" ry="14" pathLength="1"/></g><g style="--i:7"><path pathLength="1" d="M244.2 13A12 14 0 1 0 247 22H236"/></g><g style="--i:8"><path pathLength="1" d="M254 8V36"/></g><g style="--i:9"><path pathLength="1" d="M282.2 13A12 14 0 1 0 282.2 31"/></g></g><circle class="nd" cx="204" cy="22" r="2.4"/></svg></a></div></header>
+<main id="main"><div class="wrap">
+  <h1><span class="draft">{{launch.line1}}</span><span class="built">{{launch.line2}}</span></h1>
+  <p class="msg">{{launch.message}}</p>
+  <form name="notify" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="nf" novalidate>
+    <input type="hidden" name="form-name" value="notify"><p hidden><label>Leave empty<input name="bot-field"></label></p>
+    <label>{{launch.emailLabel}}<input name="e" type="email" autocomplete="email" required></label>
+    <button type="submit">{{launch.button}}</button>
+  </form>
+  <p class="note" id="nn" role="status"></p>
+  {{#if launch.contactEmail}}<p class="alt">{{launch.contactText}} <a href="mailto:{{launch.contactEmail}}">{{launch.contactEmail}}</a></p>{{/if}}
+</div></main>
+<footer><div class="wrap"><span>{{footer.name}}</span><span>{{footer.copyright}}</span></div></footer>
+<script>
+(function(){var f=document.getElementById('nf'),n=document.getElementById('nn');
+f.addEventListener('submit',function(ev){ev.preventDefault();
+if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.e.value.trim())){n.textContent='{{j:interface.formInvalid}}';f.e.focus();return}
+var b=f.querySelector('button');b.disabled=true;n.textContent='{{j:interface.formSending}}';
+fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
+.then(function(r){if(!r.ok)throw 0;f.reset();n.textContent='{{j:launch.thanks}}'})
+.catch(function(){n.textContent='{{j:launch.error}}'}).then(function(){b.disabled=false})});})();
+</script>
+</body></html>

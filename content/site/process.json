@@ -1,0 +1,22 @@
+{
+  "heading": "Four stages.",
+  "why": "Layout, content and behavior are agreed on paper first, so the build is not redone.",
+  "steps": [
+    {
+      "title": "Listen",
+      "text": "We map requirements, goals and timelines up front."
+    },
+    {
+      "title": "Draft",
+      "text": "You review drawings of every key page before we build."
+    },
+    {
+      "title": "Build",
+      "text": "We code the site and test it on real devices."
+    },
+    {
+      "title": "Launch",
+      "text": "We go live, train your team and stay on for the first weeks."
+    }
+  ]
+}

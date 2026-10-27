@@ -1,0 +1,15 @@
+{
+  "heading": "Design and engineering, one team.",
+  "columns": [
+    {
+      "title": "Draft",
+      "how": "How it looks and reads",
+      "text": "Real content, tuned type and spacing, every screen sketched before any code. Changes are cheap while it is still a drawing."
+    },
+    {
+      "title": "Logic",
+      "how": "How it behaves",
+      "text": "Search, filters, scheduling, ticketing and the rules behind them. Built to run fast on a phone and hold up under traffic."
+    }
+  ]
+}

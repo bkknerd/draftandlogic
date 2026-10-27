@@ -1,0 +1,63 @@
+{
+  "skip": "Skip to content",
+  "pause": "Pause",
+  "play": "Play",
+  "tickerAria": "Web design and development news",
+  "navAria": "Main",
+  "viewCase": "View the case study →",
+  "mockUrl": "draftandlogic.com/your-site",
+  "mockLines": [
+    {
+      "text": "goals"
+    },
+    {
+      "text": "timeline"
+    },
+    {
+      "text": "budget"
+    },
+    {
+      "text": "who approves"
+    },
+    {
+      "text": "what must not break"
+    }
+  ],
+  "sliderAria": "Drag to compare the drawing with the built page",
+  "sliderLeft": "Draft",
+  "sliderRight": "Logic",
+  "shotsAria": "Project screenshots",
+  "close": "Close",
+  "cursor": "View",
+  "backToTop": "Back to top",
+  "briefTitle": "Brief",
+  "briefDraft": "Draft",
+  "briefReady": "Ready",
+  "briefTo": "To",
+  "briefRe": "Re",
+  "briefFrom": "From",
+  "briefBody": "Brief",
+  "formInvalid": "That email address looks incomplete.",
+  "formSending": "Sending…",
+  "formSent": "Thank you. We will reply within two working days.",
+  "formError": "That did not send. Please try again in a moment.",
+  "notFoundHeading": "404.",
+  "notFoundAccent": "Off the drawing.",
+  "notFoundText": "That page is not on the plan.",
+  "notFoundButton": "Back to the studio",
+  "mockStates": [
+    {
+      "text": "requirements mapped"
+    },
+    {
+      "text": "drawn, awaiting your sign-off"
+    },
+    {
+      "text": "build passing, tested on devices"
+    },
+    {
+      "text": "live"
+    }
+  ],
+  "sliderValue": "% drawn"
+}

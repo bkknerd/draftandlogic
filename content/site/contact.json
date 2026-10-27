@@ -1,0 +1,27 @@
+{
+  "heading": "Have a project?",
+  "intro": "Tell us what you are building. We reply within two working days.",
+  "legend": "What can we help with?",
+  "topics": [
+    {
+      "label": "Start a project",
+      "ml": "What are you building, and by when?"
+    },
+    {
+      "label": "Support",
+      "ml": "Which site is it, and what does it need?"
+    },
+    {
+      "label": "Ask a question",
+      "ml": "What would you like to know?"
+    },
+    {
+      "label": "General message",
+      "ml": "Your message"
+    }
+  ],
+  "nameLabel": "Your name",
+  "emailLabel": "Your email",
+  "messageLabel": "What are you building, and by when?",
+  "button": "Send message"
+}

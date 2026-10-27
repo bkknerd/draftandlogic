@@ -1,0 +1,19 @@
+{
+  "heading": "Selected work",
+  "intro": "Five recent builds and one concept.",
+  "alsoHeading": "Also launched",
+  "also": [
+    {
+      "label": "Southwest Looms",
+      "url": "https://southwestlooms.com/"
+    },
+    {
+      "label": "Brights Beauty",
+      "url": "https://www.brightsbeauty.com/"
+    },
+    {
+      "label": "Persian Carpet",
+      "url": "https://www.persiancarpet.com/"
+    }
+  ]
+}

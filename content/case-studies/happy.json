@@ -1,0 +1,106 @@
+{
+  "title": "happy's: a concept site for a downtown Cary cocktail bar",
+  "tag": "Concept site · cocktail bar and event space, Cary, NC",
+  "shotSel": ".case.happy .shot img",
+  "summaryLead": "happy's is a cocktail bar and event space in downtown Cary, NC. This is a concept site we designed and built to show what the bar's website could be: a loud, friendly page that sells the feeling of the room and still answers the practical questions, like what is on the menu and whether the doors are open. It is a concept, not a launched site.",
+  "summaryMore": "The concept is a single hand-written HTML file with no framework and no build step. The look comes from the bar's own smiley wall: a cream and tomato palette, heavy lowercase headlines in Bricolage Grotesque and small mono labels in Space Mono. The menu is data, the open-or-closed status is worked out from the hours in Eastern time, and a full-screen staircase teaser leads to \"the walk up\".",
+  "chips": [
+    "Vanilla JS",
+    "Pure CSS3",
+    "Native dialog",
+    "Concept"
+  ],
+  "stack": [
+    {
+      "name": "Delivery",
+      "detail": "One self-contained HTML file with no framework, no build step and no database."
+    },
+    {
+      "name": "Markup and accessibility",
+      "detail": "HTML5 landmarks, a native <dialog> for the walk-up (focus returns to its button on close), aria-pressed on toggles and live regions for results."
+    },
+    {
+      "name": "Styling",
+      "detail": "Hand-written CSS with design tokens, in a cream and tomato palette taken from the bar's smiley wall."
+    },
+    {
+      "name": "Typography",
+      "detail": "Bricolage Grotesque for headlines, Hanken Grotesk for body text and Space Mono for labels."
+    },
+    {
+      "name": "Menu",
+      "detail": "60 items in ten sections held as structured data and rendered into colour-coded cards, with category chips and live search. One delegated click handler on the menu grid covers every item."
+    },
+    {
+      "name": "Running tab",
+      "detail": "Priced items toggle onto a floating 'tab (for fun)' total kept in page state. Nothing leaves the browser."
+    },
+    {
+      "name": "Open-now status",
+      "detail": "Hours stored as data keyed by weekday and recalculated every minute in Eastern time. The nav shows the result and today's row in the hours table is highlighted."
+    },
+    {
+      "name": "The walk up",
+      "detail": "Twelve CSS-only steps positioned with translateY and translateZ from a --i custom property, inside the native dialog. Skipped under reduced motion."
+    },
+    {
+      "name": "Motion and input",
+      "detail": "Confetti, the rating count-up and scroll reveals are skipped for reduced motion. The smiley cursor is for mouse users only."
+    },
+    {
+      "name": "Forms",
+      "detail": "The email sign-up is front-end only in this concept. A live version would post to a mailing-list service."
+    }
+  ],
+  "chapters": [
+    {
+      "title": "A menu that is fun to use",
+      "demo": "tab",
+      "challenge": "A bar menu is long. This one has ten sections and 60 items, which is a wall of text on a phone, and guests want to find a drink quickly without feeling like they are reading a spreadsheet.",
+      "solution": "The menu is structured data rendered into colour-coded cards, with category chips and live search. Every priced item is a toggle that adds to a running \"tab (for fun)\" in a floating bar, so the menu behaves more like a game than a list. The tab is a toy only and never leaves the page.",
+      "outcome": "A menu that is quick to scan, easy to keep current with one line of data per drink, and has the same personality as the room."
+    },
+    {
+      "title": "The walk up",
+      "demo": "climb",
+      "challenge": "The bar is also an event space, and \"the walk up\" is part of how it describes itself. A plain link or a PDF would not carry that feeling.",
+      "solution": "A full-screen teaser built on the native dialog element. A CSS-only 3D staircase of 12 steps climbs toward a doorway, then lands on a \"the walk up\" screen with a way back. Under reduced motion the climb is skipped, and focus returns to the button when the dialog closes.",
+      "outcome": "A memorable moment with no video file, no library and no heavy script."
+    },
+    {
+      "title": "Always knows if the doors are open",
+      "demo": "open",
+      "challenge": "Bar hours are irregular. In this concept the bar is closed Monday to Wednesday, opens late Thursday to Saturday and keeps shorter Sunday hours, and visitors just want one clear answer.",
+      "solution": "The hours are stored as data and the page works out the status in Eastern time every minute. The nav shows \"open now · till 12am\", \"opens today 4pm\" or \"closed · opens Thursday 4pm\", and today's row in the hours table is highlighted.",
+      "outcome": "One honest answer in the nav wherever the visitor is on the page, with no manual updates."
+    }
+  ],
+  "stats": [
+    {
+      "value": "60",
+      "label": "menu items"
+    },
+    {
+      "value": "12",
+      "label": "stairs, all CSS"
+    },
+    {
+      "value": "0",
+      "label": "JavaScript frameworks"
+    }
+  ],
+  "results": [
+    {
+      "title": "Personality that sells the place",
+      "text": "The page borrows the bar's own smiley wall and heavy lowercase type, so it reads like happy's before anyone opens the menu."
+    },
+    {
+      "title": "Practical answers up front",
+      "text": "Open-now status sits in the nav, the menu is one tap away, and the address and hours are never more than a scroll down."
+    },
+    {
+      "title": "Motion that respects people",
+      "text": "The staircase climb, the confetti, the scroll reveals and the smiley cursor are all skipped for visitors who ask their device for reduced motion."
+    }
+  ]
+}

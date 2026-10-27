@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "tag": "CSS",
+      "headline": "Interop 2026 launches with 15 new cross-browser features in focus",
+      "source": "Frontend Focus · Feb 2026",
+      "url": "https://frontendfoc.us/issues"
+    },
+    {
+      "tag": "HTML",
+      "headline": "Lazy-loading for video and audio becomes part of the web standard",
+      "source": "Frontend Focus · Apr 2026",
+      "url": "https://frontendfoc.us/issues"
+    },
+    {
+      "tag": "HTML",
+      "headline": "Frontend Focus spotlights a new HTML element for installing web apps",
+      "source": "Frontend Focus · May 2026",
+      "url": "https://frontendfoc.us/issues"
+    },
+    {
+      "tag": "CSS",
+      "headline": "Grid Lanes and the ::search-text pseudo-element lead Frontend News #20",
+      "source": "CSS Weekly · Mar 2026",
+      "url": "https://css-weekly.com/archives"
+    },
+    {
+      "tag": "Graphics",
+      "headline": "WebGPU is now supported in major browsers",
+      "source": "Frontend Dogma · Nov 2025",
+      "url": "https://frontenddogma.com/topics/support"
+    },
+    {
+      "tag": "Performance",
+      "headline": "The median website now carries 2,802 CSS rules",
+      "source": "Frontend Focus · Feb 2026",
+      "url": "https://frontendfoc.us/issues"
+    },
+    {
+      "tag": "Awards",
+      "headline": "Awwwards runs five Sites of the Day in the first week of September",
+      "source": "Awwwards · Sep 2026",
+      "url": "https://www.awwwards.com/inspiration_search/web-interactive/"
+    },
+    {
+      "tag": "Trends",
+      "headline": "2026 Awwwards winners favor one strong concept, scroll-driven storytelling and accessibility",
+      "source": "Trend report · mid-2026",
+      "url": "https://svilenkovic.com/3d/awwwards-2026-3d"
+    }
+  ]
+}
