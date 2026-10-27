@@ -1,7 +1,7 @@
 # Decap CMS 3.8.4 (self-hosted in this folder). Set `repo` below before first use.
 backend:
   name: github
-  repo: YOUR-GITHUB-USER/draftandlogic
+  repo: bkknerd/draftandlogic
   branch: main
 
 media_folder: static/uploads
