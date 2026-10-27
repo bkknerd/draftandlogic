@@ -1138,6 +1138,7 @@ section{position:relative}
 @media(max-width:620px){.dim span{display:none}}
 @media (prefers-reduced-motion:reduce){.dim{transition:none}}
 </style>
+{{{analyticsHead}}}
 </head>
 <body>
 <div id="home">
@@ -1292,7 +1293,7 @@ vb.forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribut
 var cf=document.getElementById('cf');if(cf)cf.addEventListener('submit',function(ev){ev.preventDefault();var f=cf.elements;
 if(!f.n.value.trim()||!f.e.value.trim()||!f.m.value.trim()){document.getElementById('cfn').textContent='{{j:interface.formEmpty}}';return}
 if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.e.value.trim())){document.getElementById('cfn').textContent='{{j:interface.formInvalid}}';f.e.focus();return}
-var bt=cf.querySelector('button[type=submit]'),nt=document.getElementById('cfn');bt.disabled=true;nt.textContent='{{j:interface.formSending}}';fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(cf)).toString()}).then(function(r){if(!r.ok)throw 0;cf.reset();cf.dispatchEvent(new Event('input'));nt.textContent='{{j:interface.formSent}}'}).catch(function(){nt.textContent='{{j:interface.formError}}'}).then(function(){bt.disabled=false})});
+var bt=cf.querySelector('button[type=submit]'),nt=document.getElementById('cfn');bt.disabled=true;nt.textContent='{{j:interface.formSending}}';fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(cf)).toString()}).then(function(r){if(!r.ok)throw 0;cf.reset();cf.dispatchEvent(new Event('input'));window.gtag&&gtag('event','generate_lead');nt.textContent='{{j:interface.formSent}}'}).catch(function(){nt.textContent='{{j:interface.formError}}'}).then(function(){bt.disabled=false})});
 if(cf)cf.querySelectorAll('input[name=t]').forEach(function(r){r.addEventListener('change',function(){document.getElementById('ml').textContent=r.getAttribute('data-ml')})});
 var tp=function(){return cf.querySelector('input[name=t]:checked').value};
 document.querySelectorAll('.ico *').forEach(function(e){e.setAttribute('pathLength','1')});

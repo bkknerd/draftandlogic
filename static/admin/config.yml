@@ -77,6 +77,13 @@ collections:
           - { label: 404 page, second line, name: notFoundAccent, widget: string }
           - { label: 404 page, text, name: notFoundText, widget: string }
           - { label: 404 page, button, name: notFoundButton, widget: string }
+      - name: analytics
+        label: Google Analytics
+        file: content/site/analytics.json
+        format: json
+        fields:
+          - { label: "Turn Google Analytics on", name: enabled, widget: boolean, default: true, hint: "Only runs on the live site, never on the coming soon page. Visitors who send Do Not Track are not measured." }
+          - { label: "Measurement ID", name: measurementId, widget: string, pattern: ['^G-[A-Z0-9]{6,14}$', "Looks like G-XXXXXXXXXX"], hint: "From Google Analytics: Admin, Data streams, your stream." }
       - name: seo
         label: SEO and sharing
         file: content/site/seo.json
