@@ -17,37 +17,40 @@
 html{scroll-behavior:auto}
 body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:var(--bg);color:var(--fg);font:400 1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased}
 .wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
-header{padding-block:clamp(20px,4vw,40px)}
+header{padding-block:clamp(14px,3vh,32px)}
 .wm{height:30px;width:auto;display:block;overflow:visible;color:var(--fg)}
 .wm .cl{fill:none;stroke:var(--fg);stroke-width:.8;opacity:.35}.wm .cl .mid{stroke-dasharray:2 3;opacity:.7}
 .wm .dw,.wm .lw,.wm .amp{stroke:currentColor;stroke-width:2.6;stroke-linecap:square;stroke-linejoin:miter;fill:none}
 .wm .amp{stroke:var(--fg)}.wm .nd{fill:var(--fg)}
-main{flex:1;display:grid;align-content:center;padding-block:clamp(32px,8vw,96px)}
-h1{margin:0;font:600 clamp(2.6rem,8.4vw,7rem)/.95 var(--display);letter-spacing:-.045em}
+main{flex:1;display:grid;align-content:center;padding-block:clamp(8px,2.4vh,40px)}
+.cols{display:grid;grid-template-columns:1fr;grid-template-areas:"h" "c" "r";gap:clamp(10px,2.2vh,28px) clamp(24px,5vw,72px);align-items:start}
+.cols h1{grid-area:h}.cols .cal{grid-area:c}.cols .rest{grid-area:r}
+@media (min-width:900px){.cols{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);grid-template-areas:"h c" "r c";align-items:center}}
+h1{margin:0;font:600 clamp(2.3rem,min(8.4vw,9.5vh),5.6rem)/.95 var(--display);letter-spacing:-.045em}
 h1 span{display:block}
 .draft{color:var(--mut)}
 .built{animation:cut 3.2s steps(1) infinite}
 @keyframes cut{0%{color:var(--mut)}50%{color:var(--fg)}}
 @media (prefers-reduced-motion:reduce){.built{animation:none;color:var(--fg)}}
-p.msg{max-width:38rem;margin:clamp(24px,4vw,44px) 0 0;font-size:1.15rem;color:var(--mut)}
-form{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;max-width:38rem}
+p.msg{max-width:38rem;margin:0;font-size:clamp(1rem,2.2vh,1.15rem);line-height:1.5;color:var(--mut)}
+form{display:flex;flex-wrap:wrap;gap:10px;margin-top:clamp(10px,2vh,20px);max-width:38rem}
 label{flex:1 1 240px;display:grid;gap:6px;font:400 .72rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
 input{font:inherit;font-size:1.05rem;letter-spacing:0;text-transform:none;color:var(--fg);background:transparent;border:0;border-bottom:2px solid var(--fg);padding:10px 0;border-radius:0}
 input:focus-visible{outline:2px solid var(--fg);outline-offset:4px}
 button{align-self:end;font:500 1rem var(--body);background:var(--lime);color:#0C0C0C;border:2px solid #0C0C0C;border-radius:999px;padding:12px 26px;cursor:pointer}
 button:hover{background:#0C0C0C;color:var(--lime)}button:focus-visible{outline:2px solid var(--fg);outline-offset:3px}button[disabled]{opacity:.6;cursor:wait}
-.note{min-height:1.6em;margin:12px 0 0;color:var(--fg)}
+.note{min-height:1.4em;margin:8px 0 0;color:var(--fg)}
 .alt{margin:8px 0 0;color:var(--mut)}.alt a{color:var(--fg)}
 
 /* Dot: the small character from the logo, counting down to launch */
-.cal{margin-top:clamp(24px,4vw,44px);max-width:46rem}
+.cal{max-width:46rem;inline-size:100%}
 .cal-h{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:0 0 4px}
-.cal-n{font:600 clamp(3.2rem,9vw,6rem)/.9 var(--display);letter-spacing:-.04em}
+.cal-n{font:600 clamp(2.6rem,min(9vw,10vh),5rem)/.9 var(--display);letter-spacing:-.04em}
 .cal-t{font:400 .8rem/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
-.cal-w{position:relative;padding-top:108px}
+.cal-w{position:relative;padding-top:clamp(84px,12vh,108px)}
 .dot{position:absolute;top:0;left:0;inline-size:calc(100%/8);display:flex;justify-content:center;transition:left .42s steps(4,end);padding:0;background:none;border:0;border-radius:0;cursor:pointer;color:var(--fg);z-index:2}
 .dot:hover{background:none;color:var(--fg)}
-.dot svg{inline-size:84px;block-size:auto;display:block;overflow:visible}
+.dot svg{inline-size:clamp(60px,10vh,84px);block-size:auto;display:block;overflow:visible}
 .dot .bd{animation:bob 1.2s steps(2) infinite}
 .dot.hop .bd{animation:hop .36s steps(3) 1}
 .dot .ew{fill:var(--bg)}.dot .pu{fill:var(--fg);transform:translate(calc(var(--px,0)*2.4px),calc(var(--py,0)*2.4px))}
@@ -74,14 +77,16 @@ button:hover{background:#0C0C0C;color:var(--lime)}button:focus-visible{outline:2
 .day.go b{color:#0C0C0C}
 .day.go em{display:block;margin-top:5px;font-style:normal;font-size:.55rem;letter-spacing:.1em}
 .day.now{box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--fg)}
+@media (max-width:599px){.cal-w{padding-top:116px}.dot{top:52px}.say{max-inline-size:100%}.day{font-size:.52rem;letter-spacing:.04em}.day.go em{font-size:.46rem;letter-spacing:0;margin-top:4px}p.msg{font-size:.98rem}}
 @media (prefers-reduced-motion:reduce){.dot,.dot .bd,.dot .eye,.say.on{animation:none;transition:none}}
-footer{padding-block:24px;border-top:1px solid var(--rule);font:400 .72rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+footer{padding-block:14px;border-top:1px solid var(--rule);font:400 .72rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 </style>
 </head>
 <body>
 <header><div class="wrap"><a href="/" aria-label="{{footer.name}}" style="display:inline-block;color:inherit"><svg class="wm" viewBox="0 0 292 46" role="img" aria-label="{{footer.name}}"><g class="cl"><path d="M0 8H292M0 36H292M0 3V13M292 3V13M0 31V41M292 31V41"/><path class="mid" d="M0 22H292"/></g><g class="dw" fill="none"><g style="--i:0"><path d="M6 8V36M6 8H13A14 14 0 0 1 13 36H6"/></g><g style="--i:1"><path d="M34 36V8H42A7 7 0 0 1 42 22H34M42 22L50 36"/></g><g style="--i:2"><path d="M57 36L66 8L75 36M59.6 28H72.4"/></g><g style="--i:3"><path d="M82 36V8H96M82 22H93"/></g><g style="--i:4"><path d="M103 8H119M111 8V36"/></g></g><g transform="translate(134 8)"><path class="amp" pathLength="1" d="M20 28L4 9A5.5 5.5 0 0 1 15 9C15 14 7 17 3 21C0 26 5 28.5 9 28.5C14 28.5 18 24 19 19"/></g><g class="lw" fill="none"><g style="--i:5"><path pathLength="1" d="M171 8V36H185"/></g><g style="--i:6"><ellipse cx="204" cy="22" rx="12" ry="14" pathLength="1"/></g><g style="--i:7"><path pathLength="1" d="M244.2 13A12 14 0 1 0 247 22H236"/></g><g style="--i:8"><path pathLength="1" d="M254 8V36"/></g><g style="--i:9"><path pathLength="1" d="M282.2 13A12 14 0 1 0 282.2 31"/></g></g><circle class="nd" cx="204" cy="22" r="2.4"/></svg></a></div></header>
 <main id="main"><div class="wrap">
+  <div class="cols">
   <h1><span class="draft">{{launch.line1}}</span><span class="built">{{launch.line2}}</span></h1>
   {{#if launchDays}}<div class="cal" id="cal" data-launch="{{launch.launchDate}}">
     <p class="cal-h"><span class="cal-n" id="caln">{{launchDaysLeft}}</span><span class="cal-t" id="calt">{{launch.daysToGo}}</span></p>
@@ -92,6 +97,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <ol class="days" id="days">{{#each launchDays}}<li class="day{{#if this.go}} go{{/if}}" data-date="{{this.iso}}"><span>{{this.wd}}</span><b>{{this.d}}</b>{{#if this.go}}<em>{{launch.launchTag}}</em>{{/if}}<i class="x"></i></li>{{/each}}</ol>
     </div>
   </div>{{/if}}
+  <div class="rest">
   <p class="msg">{{launch.message}}</p>
   <form name="notify" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="nf" novalidate>
     <input type="hidden" name="form-name" value="notify"><p hidden><label>Leave empty<input name="bot-field"></label></p>
@@ -100,6 +106,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </form>
   <p class="note" id="nn" role="status"></p>
   {{#if launch.contactEmail}}<p class="alt">{{launch.contactText}} <a href="mailto:{{launch.contactEmail}}">{{launch.contactEmail}}</a></p>{{/if}}
+  </div>
+  </div>
 </div></main>
 <footer><div class="wrap"><span>{{footer.name}}</span><span>{{footer.copyright}}</span></div></footer>
 <script>
@@ -120,7 +128,7 @@ if(left<=0){nEl.textContent='{{j:launch.todayWord}}';tEl.textContent=''}else{nEl
 function place(i){dot.style.left=(i*100/n)+'%'}
 function mark(i){days.forEach(function(d,k){d.classList.toggle('past',k<i);d.classList.toggle('now',k===i)})}
 function hop(){dot.classList.remove('hop');void dot.offsetWidth;dot.classList.add('hop')}
-function talk(s){say.textContent=s;say.classList.add('on');var w=cal.querySelector('.cal-w').clientWidth,c=(parseFloat(dot.style.left)||0)/100*w+w/n/2+30,x=Math.max(0,Math.min(c,w-say.offsetWidth));say.style.left=x+'px';clearTimeout(st);st=setTimeout(function(){say.classList.remove('on')},2600)}
+function talk(s){say.textContent=s;say.classList.add('on');var w=cal.querySelector('.cal-w').clientWidth,c=(parseFloat(dot.style.left)||0)/100*w+w/n/2+30,x=Math.max(0,Math.min(c,w-say.offsetWidth));say.style.left=(w<560?0:x)+'px';clearTimeout(st);st=setTimeout(function(){say.classList.remove('on')},2600)}
 place(0);mark(0);
 if(rm){place(idx);mark(idx)}else{var k=0;(function step(){if(k>=idx){setTimeout(function(){talk(Q[0])},500);return}k++;place(k);hop();mark(k);setTimeout(step,300)})()}
 dot.addEventListener('click',function(){hop();qi=(qi+1)%Q.length;talk(Q[qi])});
