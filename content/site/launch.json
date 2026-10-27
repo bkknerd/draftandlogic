@@ -1,13 +1,13 @@
 {
-  "comingSoon": false,
-  "pageTitle": "Draft and Logic | Coming soon",
-  "line1": "Drawing in progress.",
-  "line2": "Back soon.",
   "message": "Draft and Logic is a web studio in Wake Forest, NC. The new site is being finished. Leave your email and we will tell you when it is live.",
-  "emailLabel": "Your email",
-  "button": "Notify me",
-  "thanks": "Thank you. We will email you when the site is live.",
   "error": "That did not send. Please try again in a moment.",
+  "pageTitle": "Draft and Logic | Coming soon",
+  "thanks": "Thank you. We will email you when the site is live.",
+  "contactText": "Starting a project now? Email us:",
+  "button": "Notify me",
+  "emailLabel": "Your email",
   "contactEmail": "",
-  "contactText": "Starting a project now? Email us:"
+  "comingSoon": true,
+  "line1": "Drawing in progress.",
+  "line2": "Back soon."
 }
