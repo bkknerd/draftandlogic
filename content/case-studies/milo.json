@@ -2,8 +2,8 @@
   "title": "Milo's Cafe: a neighborhood site with a live patio",
   "tag": "Café and restaurant website, Morrisville, NC",
   "shotSel": ".case.milo .shot img",
-  "summaryLead": "Milo's Cafe is a European-style all-day café in Morrisville, NC, serving focaccia sandwiches, Lavazza espresso, matcha and crepes. We built a single-page site to answer the three things a hungry visitor wants to know before they leave the house: what is on the menu, are you open, and can we sit outside.",
-  "summaryMore": "The site is hand-written HTML, CSS and vanilla JavaScript with no framework and no build step. The menu is structured data rather than a PDF, the open-or-closed status is worked out from the café's hours in Eastern time, and an illustrated patio scene reads current conditions for Morrisville from the free Open-Meteo weather service. If that request fails, the page quietly falls back to showing the day's hours.",
+  "summaryLead": "A one-page café site that answers three questions: what is on the menu, are you open, can we sit outside.",
+  "summaryMore": "Hand-written HTML, CSS and JavaScript, with a live patio scene from the free Open-Meteo weather service.",
   "chips": [
     "Vanilla JS",
     "Pure CSS3",
@@ -14,66 +14,50 @@
   "stack": [
     {
       "name": "Delivery",
-      "detail": "One self-contained HTML file with no framework, no build step and no database to maintain."
+      "detail": "One self-contained HTML file. No framework, build step or database."
     },
     {
-      "name": "Markup and accessibility",
-      "detail": "HTML5 landmarks, ARIA tabs for Food and Drinks, live regions, and an accessible name on every control. 'Pair it' results are announced to screen readers."
+      "name": "Accessibility",
+      "detail": "HTML5 landmarks, ARIA tabs, live regions and a name on every control."
     },
     {
-      "name": "Styling and type",
-      "detail": "Hand-written CSS with design tokens. Newsreader for headlines and Hanken Grotesk for body text."
+      "name": "Type",
+      "detail": "Newsreader for headlines, Hanken Grotesk for body."
     },
     {
-      "name": "Menu data",
-      "detail": "69 items held as structured data and rendered into tabs, with live search across names and descriptions, a meat-free filter that matches ingredient names, and a star on guest favourites. The page tells guests to ask about allergens."
-    },
-    {
-      "name": "Pair it",
-      "detail": "Picks a combination from hand-picked food and drink lists based on the guest's mood. If either is left empty it chooses at random."
-    },
-    {
-      "name": "Open or closed",
-      "detail": "Hours stored as data and checked against the current Eastern time, shown in the top bar."
+      "name": "Menu",
+      "detail": "69 items as structured data, with search, a meat-free filter and guest favourites."
     },
     {
       "name": "Patio scene",
-      "detail": "Inline SVG driven by time of day and weather: sun and moon follow the day, the sky blends between dawn, golden hour and dusk, café lights come on after dark, and rain falls when it rains. The verdict comes from feels-like temperature, wind and rain."
-    },
-    {
-      "name": "Weather data",
-      "detail": "Current conditions for Morrisville from the Open-Meteo forecast API (no key needed), refreshed every 30 seconds. If the request fails, the page falls back to showing the day's hours."
+      "detail": "Inline SVG driven by time of day and weather. Falls back to the day's hours if the request fails."
     },
     {
       "name": "Ordering",
-      "detail": "Order buttons link to the café's SpotOn online ordering page, and a sticky Order and Call bar keeps both actions in reach. There is no cart on the site."
-    },
-    {
-      "name": "Motion",
-      "detail": "The intro, custom cursor, marquee and count-up are skipped for visitors who ask their device for reduced motion."
+      "detail": "Buttons link to the café's SpotOn page. No cart on the site."
     }
   ],
   "chapters": [
     {
-      "title": "A patio you can check before you drive over",
+      "title": "A patio you can check first",
       "demo": "patio",
-      "challenge": "Outdoor seating is a big part of the draw, but a photo cannot tell a visitor whether today is a patio day. Weather apps do not know where the shade is or whether the café is open.",
-      "solution": "An illustrated SVG patio scene driven by the time of day and the weather. The sun and moon follow the day, the sky blends between dawn, golden hour and dusk, café lights come on after dark, and rain falls when it rains. A verdict line is worked out from feels-like temperature, wind and rain, and a slider lets visitors scrub through the whole day.",
-      "outcome": "A practical answer to \"should we sit outside?\" that refreshes itself every 30 seconds, with no extra photography and no manual updates."
+      "challenge": "A photo cannot say whether today is a patio day.",
+      "solution": "An SVG scene driven by time and weather, with a verdict and a day slider.",
+      "outcome": "A quick answer to \"should we sit outside?\", refreshed every 30 seconds."
     },
     {
       "title": "A menu that is data, not a PDF",
       "demo": "menu",
-      "challenge": "Café menus usually live in PDFs or photos that cannot be searched, are hard to read on a phone and are invisible to search engines and screen readers.",
-      "solution": "All 69 food and drink items are stored as structured data and rendered into Food and Drinks tabs, with live search across names and descriptions, a meat-free filter and a star on guest favourites. The filter is a guide only, and the page tells guests to ask about ingredients and allergens.",
-      "outcome": "Visitors find what they want in seconds on a phone, and adding a seasonal drink or changing a description is a one-line edit."
+      "challenge": "PDF menus cannot be searched and are hard to read on a phone.",
+      "solution": "69 items rendered into tabs with live search and a meat-free filter.",
+      "outcome": "Found in seconds, and a seasonal change is a one-line edit."
     },
     {
-      "title": "Helping the undecided order",
+      "title": "Help for the undecided",
       "demo": "pair",
-      "challenge": "First-time visitors face dozens of items and no obvious place to start, which slows the decision and can push people towards the safest, most familiar choice.",
-      "solution": "A small \"pair it\" tool. Guests pick a mood for food (savory, sweet or light) and for a drink (coffee, matcha, seasonal or not coffee), and it suggests a combination from hand-picked lists. Leave either one empty and it surprises them. Results are announced to screen readers.",
-      "outcome": "A low-pressure way into the menu with no account, no tracking and no back end."
+      "challenge": "First-timers face dozens of items with no starting point.",
+      "solution": "A \"pair it\" tool picks a food and drink combination by mood.",
+      "outcome": "A low-pressure way in, with no account or tracking."
     }
   ],
   "stats": [
@@ -92,16 +76,16 @@
   ],
   "results": [
     {
-      "title": "Answers before the question",
-      "text": "Today's hours and the patio verdict sit in the top bar before anyone scrolls, and a sticky Order and Call bar keeps the two main actions in reach."
+      "title": "Answers up front",
+      "text": "Hours and the patio verdict sit in the top bar, with a sticky Order and Call bar."
     },
     {
-      "title": "A menu people can use",
-      "text": "Real text that can be searched, filtered, read on a phone and picked up by assistive technology and search engines, instead of a PDF."
+      "title": "A usable menu",
+      "text": "Real text that search engines and screen readers can read."
     },
     {
       "title": "Motion that respects people",
-      "text": "The intro, custom cursor, marquee and count-up are all skipped for visitors who ask their device for reduced motion."
+      "text": "Intro, cursor, marquee and count-up are skipped for reduced motion."
     }
   ]
 }

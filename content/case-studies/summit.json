@@ -2,8 +2,8 @@
   "title": "Engineering Summit",
   "tag": "Shopify Implementation Intelligence",
   "shotSel": ".case.sum .shot img",
-  "summaryLead": "Summit is a high-performance, precision-engineered web application designed to transform complex Shopify project discovery into actionable technical implementation plans, risk assessments, and launch strategies.",
-  "summaryMore": "To reflect the platform's focus on efficiency and technical clarity, the marketing landing site was engineered from the ground up without heavy JavaScript frameworks or bloated UI libraries. The result is an ultra-fast, visually striking digital experience deployed globally on the edge, featuring custom design tokens, procedural SVG assets, and fluid CSS architecture.",
+  "summaryLead": "A marketing site that explains a Shopify planning product in seconds.",
+  "summaryMore": "Framework-free HTML and CSS, with the grain, score ring and fluid type all done in CSS.",
   "chips": [
     "Netlify Edge",
     "HTML5",
@@ -14,62 +14,50 @@
   "stack": [
     {
       "name": "Hosting",
-      "detail": "Netlify Edge: global CDN, static and SSR delivery, and dynamic Open Graph image generation."
+      "detail": "Netlify Edge CDN."
     },
     {
       "name": "Scope",
-      "detail": "The Summit app itself is built with Next.js 14 and Supabase. This case study covers its framework-free marketing landing site."
-    },
-    {
-      "name": "Markup",
-      "detail": "HTML5 with full landmark structure and native responsive elements."
+      "detail": "This covers the framework-free landing site. The Summit app itself runs on Next.js and Supabase."
     },
     {
       "name": "Styling",
-      "detail": "Hand-written CSS3 with design tokens as custom properties (--ink, --pine, --lime), CSS Grid, Flexbox and clamp() sizing."
+      "detail": "Hand-written CSS with design tokens, Grid and clamp()."
     },
     {
-      "name": "Typography",
-      "detail": "Newsreader, Manrope and DM Mono, loaded asynchronously through the Google Fonts API."
+      "name": "Type",
+      "detail": "Newsreader, Manrope and DM Mono from Google Fonts."
     },
     {
-      "name": "Grain texture",
-      "detail": "A procedural SVG fractal-noise filter (feTurbulence) embedded as a data URI on a fixed body::before layer with mix-blend-mode: multiply. It adds no image request."
+      "name": "Grain",
+      "detail": "An SVG feTurbulence filter as a data URI. No image request."
     },
     {
       "name": "Score ring",
-      "detail": "The circular assessment indicator is CSS only: a conic-gradient with a centred pseudo-element. No charting library."
-    },
-    {
-      "name": "Fluid type",
-      "detail": "clamp() with viewport units scales headlines from phone to desktop without breakpoint overrides or layout shift."
-    },
-    {
-      "name": "Motion",
-      "detail": "Hardware-accelerated CSS keyframe transitions."
+      "detail": "A CSS conic-gradient with a centred pseudo-element. No chart library."
     }
   ],
   "chapters": [
     {
-      "title": "Zero-asset texture and grain system",
+      "title": "Paper grain with no image",
       "demo": "grain",
-      "challenge": "Achieving an organic, tactile paper and grain texture across all display resolutions without increasing payload size or adding blocking network requests.",
-      "solution": "We embedded a procedural SVG fractal noise filter (feTurbulence) via a data-URI within a fixed body::before pseudo-element using mix-blend-mode: multiply.",
-      "outcome": "Zero additional network latency, instant rendering, and high-DPI scaling across all device types."
+      "challenge": "Add tactile texture without extra requests.",
+      "solution": "An SVG noise filter as a data URI on a fixed layer.",
+      "outcome": "Zero extra requests and sharp on any screen."
     },
     {
-      "title": "Lightweight component rendering: the assessment card",
+      "title": "A score ring in pure CSS",
       "demo": "score",
-      "challenge": "Designing an impactful, data-rich preview card that displays real-time scoring metrics without pulling in heavy charting libraries like Chart.js or D3.",
-      "solution": "The circular score indicator was built entirely with CSS using conic-gradient combined with a centered pseudo-element to create a donut chart effect.",
-      "outcome": "Clean, crisp UI execution rendered in under a millisecond with zero runtime dependencies."
+      "challenge": "Show a data-rich score card without Chart.js or D3.",
+      "solution": "A conic-gradient donut with a centred pseudo-element.",
+      "outcome": "A crisp ring with no runtime dependency."
     },
     {
-      "title": "Fluid typographic scaling across devices",
+      "title": "Fluid headline type",
       "demo": "type",
-      "challenge": "Creating high-impact headline presentation while eliminating Cumulative Layout Shift (CLS) and avoiding complex breakpoint overrides.",
-      "solution": "We leveraged CSS clamp() using viewport units to dynamically calculate font sizes across screens.",
-      "outcome": "Headlines scale smoothly from phone to wide desktop with no breakpoint overrides."
+      "challenge": "Big headlines with no layout shift or breakpoint overrides.",
+      "solution": "CSS clamp() with viewport units.",
+      "outcome": "Headlines scale smoothly from phone to desktop."
     }
   ],
   "stats": [
@@ -88,16 +76,16 @@
   ],
   "results": [
     {
-      "title": "Performance",
-      "text": "Sub-millisecond TTFB with top-tier Lighthouse scores across Performance, Accessibility, and Best Practices."
+      "title": "Speed",
+      "text": "A static page with no framework runtime."
     },
     {
       "title": "Maintainability",
-      "text": "Fully decoupled design system controlled entirely through central CSS variables (:root)."
+      "text": "One set of CSS variables controls the design."
     },
     {
       "title": "Resilience",
-      "text": "Built on zero third-party framework dependencies, ensuring high long-term stability and minimal maintenance overhead."
+      "text": "Few dependencies, so little to maintain."
     }
   ]
 }

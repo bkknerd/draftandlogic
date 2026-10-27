@@ -2,8 +2,8 @@
   "title": "Engineering the NAMC National Event Portal",
   "tag": "National conference and events portal",
   "shotSel": ".case.namc .shot img",
-  "summaryLead": "The NAMC Event Portal was custom-engineered to support the National Association of Minority Contractors (NAMC) as the digital flagship for major national gatherings, including the 58th Annual National Conference.",
-  "summaryMore": "Designed and built on a high-performance composable architecture hosted on Netlify, the portal delivers very fast page loads, a secure setup and dynamic event management, keeping things running smoothly through peak registration and sponsorship cycles.",
+  "summaryLead": "The digital home for a national conference: tickets, sponsors, schedule and passes.",
+  "summaryMore": "A static-first build on Netlify, with serverless forms and calendar sync.",
   "chips": [
     "Netlify Edge",
     "Composable architecture",
@@ -14,62 +14,50 @@
   "stack": [
     {
       "name": "Hosting",
-      "detail": "Netlify Edge: global CDN distribution, static asset optimisation and fast time to first byte."
+      "detail": "Netlify Edge CDN."
     },
     {
       "name": "Architecture",
-      "detail": "Composable, static-first: pre-built static pages served from the edge, with no server rendering and no database dependency."
+      "detail": "Static-first and composable, with no server rendering or database."
     },
     {
-      "name": "Markup and accessibility",
-      "detail": "HTML5 structured to WCAG 2.1 AA, with keyboard navigation and screen-reader support."
+      "name": "Accessibility",
+      "detail": "Structured to WCAG 2.1 AA, with keyboard and screen-reader support."
     },
     {
       "name": "Styling",
-      "detail": "Modern CSS3 with Grid, a fluid typography scale and design tokens as custom properties."
-    },
-    {
-      "name": "Agenda",
-      "detail": "A native CSS Grid schedule layout built for scanning on a phone."
+      "detail": "Modern CSS with Grid, fluid type and design tokens."
     },
     {
       "name": "Calendar sync",
-      "detail": "Lightweight .ics (iCalendar) file generation, so attendees can add a single session or a whole track to Apple, Google or Outlook calendars."
+      "detail": "Generated .ics files for Apple, Google and Outlook."
     },
     {
-      "name": "Sponsorship workflow",
-      "detail": "Serverless form endpoints and edge routing handle tier selection and details, validate uploads of vector assets, and send notifications to the admin team."
-    },
-    {
-      "name": "Payments",
-      "detail": "Payment gateway routing for sponsorship and registration."
-    },
-    {
-      "name": "Performance",
-      "detail": "A zero-dependency front-end core aimed at top Lighthouse scores for Performance, Accessibility and Best Practices."
+      "name": "Sponsor workflow",
+      "detail": "Serverless form endpoints validate uploads and notify the admin team."
     }
   ],
   "chapters": [
     {
-      "title": "High-performance composable architecture",
+      "title": "Fast under conference traffic",
       "demo": "edge",
-      "challenge": "Delivering real-time event updates, agenda details and sponsor displays to thousands of concurrent visitors without latency or the risk of server overload during peak conference announcements.",
-      "solution": "A static-first build pipeline mapped directly to Netlify's global edge network. Static assets are served from the edge nodes closest to the user, bypassing traditional server-side rendering delays.",
-      "outcome": "Instantaneous load times, near-zero time to first byte, and resistance to traffic spikes."
+      "challenge": "Serve updates, agenda and sponsors quickly during peak announcements.",
+      "solution": "Pre-built static pages served from the edge.",
+      "outcome": "Pages stay quick when traffic spikes."
     },
     {
-      "title": "Multi-tiered sponsorship and asset workflows",
+      "title": "Sponsor onboarding",
       "demo": "sponsor",
-      "challenge": "Letting sponsors select tiers, submit details and upload high-resolution vector assets securely, while streamlining administrative routing.",
-      "solution": "Serverless form endpoints and edge routing logic process incoming sponsorship applications, validate uploads and route notifications instantly to the administrative team.",
-      "outcome": "A frictionless onboarding flow for corporate sponsors, paired with automated back-end handling."
+      "challenge": "Let sponsors pick a tier and upload vector logos without admin back-and-forth.",
+      "solution": "Serverless form endpoints validate files and route notifications.",
+      "outcome": "A short sign-up flow with automatic hand-off."
     },
     {
-      "title": "Interactive schedule and calendar integration",
+      "title": "Schedule and calendar sync",
       "demo": "cal",
-      "challenge": "Giving attendees a mobile-optimised, scannable event schedule that lets them sync to their calendar instantly on any device.",
-      "solution": "A native CSS Grid agenda layout coupled with lightweight .ics file generation and calendar integration, so people can add single sessions or whole tracks to Apple, Google or Outlook calendars.",
-      "outcome": "High mobile usability and real-time schedule access for attendees on site."
+      "challenge": "Give attendees a scannable schedule they can add to any calendar.",
+      "solution": "A CSS Grid agenda plus generated .ics files.",
+      "outcome": "One tap adds a session or a whole track."
     }
   ],
   "stats": [
@@ -88,16 +76,16 @@
   ],
   "results": [
     {
-      "title": "Speed and scalability",
-      "text": "Sub-second load times globally, with zero database dependency overhead."
+      "title": "Speed",
+      "text": "Static pages from the edge, with no database to wait on."
     },
     {
       "title": "Accessibility",
-      "text": "Built to WCAG 2.1 standards, for full screen-reader compatibility and keyboard navigation."
+      "text": "Built to WCAG 2.1 AA targets."
     },
     {
-      "title": "Operational efficiency",
-      "text": "Streamlined sponsor sign-ups and ticket management reduced manual administrative work during event preparation."
+      "title": "Less admin",
+      "text": "Sponsor sign-up and notifications are automated."
     }
   ]
 }

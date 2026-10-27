@@ -2,8 +2,8 @@
   "title": "Engineering Abaxent",
   "tag": "Technology solutions network",
   "shotSel": ".case.abx .shot img",
-  "summaryLead": "Abaxent is a high-performance web platform for a network of professionals delivering technology solutions, managed services, implementation, and products.",
-  "summaryMore": "To reflect the company's technical depth, the site was built from the ground up without front-end frameworks or third-party UI libraries. Hand-written CSS, fluid layout scaling and a scroll-driven video hero deliver an immersive, fast experience, shipped as a single self-contained page.",
+  "summaryLead": "A fast, framework-free site for a network of technology professionals.",
+  "summaryMore": "Hand-written CSS, a scroll-driven video hero and one self-contained page.",
   "chips": [
     "Static and edge hosting",
     "HTML5 and ARIA",
@@ -14,79 +14,63 @@
   ],
   "stack": [
     {
-      "name": "Hosting and delivery",
-      "detail": "Static files served from an edge CDN, so pages and assets are cached close to each visitor."
+      "name": "Hosting",
+      "detail": "Static files on an edge CDN."
     },
     {
-      "name": "Hero media",
-      "detail": "An autoplaying, muted, looping MP4 with a poster frame, embedded in the page so the first screen needs no extra request. It pauses automatically for visitors who prefer reduced motion."
-    },
-    {
-      "name": "Front-end runtime",
-      "detail": "Vanilla JavaScript only. No framework, no third-party UI library, no component build layer."
-    },
-    {
-      "name": "Markup",
-      "detail": "Semantic HTML5 with landmark regions and ARIA controls. viewport-fit=cover with safe-area insets for notched phones."
+      "name": "Runtime",
+      "detail": "Vanilla JavaScript. No framework or UI library."
     },
     {
       "name": "Styling",
-      "detail": "Hand-written CSS3. Design tokens as custom properties on :root, a fluid 12-column layout with CSS Grid and Flexbox, and clamp() for sizing."
+      "detail": "Hand-written CSS with design tokens, Grid and clamp(). Dark mode via prefers-color-scheme."
     },
     {
-      "name": "Theming",
-      "detail": "A single token set drives the whole site. Dark mode comes from a prefers-color-scheme media query, with a data-theme attribute to force light or dark."
+      "name": "Hero media",
+      "detail": "Muted looping MP4 with a poster frame. Paused for reduced motion."
     },
     {
       "name": "Brand graphics",
-      "detail": "An inline SVG sprite: <symbol> shapes reused with <use> and coloured through CSS variables. The pyramid motif uses no raster image."
+      "detail": "One inline SVG sprite, recoloured with CSS variables."
     },
     {
-      "name": "Motion",
-      "detail": "CSS keyframes (introOut, rise, fadeIn, wRise) for the intro and headline, IntersectionObserver for scroll reveals and staggers, and a passive scroll handler that drives the hero media through a CSS variable. All of it is vanilla JavaScript."
-    },
-    {
-      "name": "Typography",
-      "detail": "A system sans stack (Helvetica Neue, Helvetica, Arial) for all body and headline text, plus one italic serif accent, Instrument Serif, loaded from Google Fonts with display=swap so text paints immediately."
-    },
-    {
-      "name": "Content modules",
-      "detail": "Certifications and featured projects are rendered from small data arrays in vanilla JavaScript, so adding a credential or project is a one-line change."
+      "name": "Type",
+      "detail": "System sans stack plus one italic serif accent, Instrument Serif."
     }
   ],
   "chapters": [
     {
-      "title": "Zero-asset scalable branding and motifs",
+      "title": "Brand shapes with no image files",
       "demo": "sprite",
-      "challenge": "Maintaining sharp, infinitely scalable brand shapes and background patterns, such as the Abaxent pyramid motif, across high-DPI displays without heavy raster imagery or blocking network requests.",
-      "solution": "We embedded inline SVG sprite symbols, styled entirely through cascading CSS custom properties and colour variables.",
-      "outcome": "Instant vector rendering, perfect scaling across Retina and 4K displays, and zero external image payload."
+      "challenge": "Keep the pyramid motif sharp at any size without raster images.",
+      "solution": "An inline SVG sprite coloured through CSS variables.",
+      "outcome": "Vector-sharp on every screen, with no image payload."
     },
     {
-      "title": "High-performance intro sequence and full-screen navigation",
+      "title": "Intro and full-screen menu",
       "demo": "intro",
-      "challenge": "Creating a cinematic, high-impact intro sequence and full-screen overlay menu without causing layout shift or delaying the initial paint.",
-      "solution": "Fixed-position overlay layers driven by hardware-accelerated CSS keyframe animations (introOut, rise, fadeIn), with state classes managed by vanilla JavaScript.",
-      "outcome": "A smooth, cinematic brand reveal that dismisses itself while keeping the main content fully accessible."
+      "challenge": "A cinematic intro that does not delay first paint.",
+      "solution": "CSS keyframe overlays toggled by small state classes.",
+      "outcome": "The intro clears itself and the content stays reachable."
     },
     {
       "title": "Scroll-driven video hero",
-      "challenge": "Opening on a full-bleed film without hurting load speed, hijacking scroll, or locking out visitors who prefer less motion or navigate by keyboard.",
-      "solution": "The hero media grows from an inset frame to full-bleed on a CSS variable updated by a passive scroll listener. The header hides on scroll down and returns on scroll up. The full-screen menu uses inert, aria-expanded and Escape to close, and the video is paused for reduced-motion visitors.",
-      "outcome": "A cinematic first screen that scrolls natively, stays keyboard-friendly, and respects motion preferences."
+      "challenge": "Open on a film without hurting speed, scroll or keyboard use.",
+      "solution": "Hero media grows to full-bleed on a CSS variable. The menu uses inert, aria-expanded and Escape.",
+      "outcome": "A cinematic first screen that respects motion preferences."
     },
     {
-      "title": "Fluid layout and responsive grid matrices",
+      "title": "Fluid layout",
       "demo": "steps",
-      "challenge": "Adapting complex multi-column layouts, such as step pyramids, impact statistics and asymmetrical idea cards, across mobile screens, tablets and ultra-wide desktop monitors.",
-      "solution": "CSS Grid with fluid column clamping and dynamic CSS variable overrides (--w) for staggered component geometry.",
-      "outcome": "Complex layouts that stay readable at every width, without a pile of breakpoint overrides."
+      "challenge": "Keep multi-column layouts readable from phone to ultra-wide.",
+      "solution": "CSS Grid with fluid clamping and per-item width variables.",
+      "outcome": "Readable at every width, with few breakpoints."
     },
     {
       "title": "Credential and project carousels",
-      "challenge": "Showing twelve certifications and nine featured-project photos on any screen without a carousel library or layout jumps.",
-      "solution": "Native scroll-snap tracks with drag-to-scroll on desktop, an active-slide observer that drives the caption and pagination, and previous and next buttons that disable at the ends. Images fall back gracefully if a logo fails to load.",
-      "outcome": "Touch, mouse and keyboard users all browse the same content, with no carousel dependency."
+      "challenge": "Show twelve credentials and nine project photos without a carousel library.",
+      "solution": "Native scroll-snap with drag, active-slide state and disabled end buttons.",
+      "outcome": "Touch, mouse and keyboard all browse the same content."
     }
   ],
   "stats": [
@@ -106,15 +90,15 @@
   "results": [
     {
       "title": "Performance",
-      "text": "Fast first paint from a single static page, with no framework runtime and no render-blocking scripts."
+      "text": "Fast first paint from one static page with no framework runtime."
     },
     {
       "title": "Maintainability",
-      "text": "A completely decoupled design system managed through a unified :root token set and dark-mode media query rules."
+      "text": "One token set drives the whole design."
     },
     {
       "title": "Resilience",
-      "text": "Built entirely on vanilla web technologies, guaranteeing long-term stability and minimal maintenance complexity."
+      "text": "Plain web standards, so there is little to break or update."
     }
   ]
 }
