@@ -14,7 +14,8 @@
         }
       ],
       "title": "Making an unfamiliar service easy to grasp",
-      "summary": "We built the site around a single question: what is a technology broker? From there it walks visitors through how brokering works, the impact it has, past work and certifications."
+      "summary": "We built the site around a single question: what is a technology broker? From there it walks visitors through how brokering works, the impact it has, past work and certifications.",
+      "tag": ""
     },
     {
       "style": "namc",
@@ -30,7 +31,8 @@
         }
       ],
       "title": "A conference site that does the work of a front desk",
-      "summary": "For the National Association of Minority Contractors, we built the whole event experience: selling tickets and sponsorships, helping small businesses find the right meetings, and giving every attendee a digital pass."
+      "summary": "For the National Association of Minority Contractors, we built the whole event experience: selling tickets and sponsorships, helping small businesses find the right meetings, and giving every attendee a digital pass.",
+      "tag": ""
     },
     {
       "style": "milo",
@@ -50,7 +52,8 @@
         }
       ],
       "title": "A café site that tells you whether it's a patio day",
-      "summary": "Milo's is a European-style café in Morrisville, NC, known for focaccia sandwiches, Lavazza espresso and crepes. We built a one-page site around the questions a hungry visitor actually has: what is on the menu, are you open, and is it nice enough to sit outside."
+      "summary": "Milo's is a European-style café in Morrisville, NC, known for focaccia sandwiches, Lavazza espresso and crepes. We built a one-page site around the questions a hungry visitor actually has: what is on the menu, are you open, and is it nice enough to sit outside.",
+      "tag": ""
     },
     {
       "style": "sum",
@@ -70,7 +73,8 @@
         }
       ],
       "title": "Turning messy project discovery into a plan",
-      "summary": "Summit is a product for Shopify agencies and consultants. It turns scattered discovery notes into requirements, risk assessments, roadmaps and QA plans. The site had to explain that quickly to teams who live in spreadsheets and inboxes."
+      "summary": "Summit is a product for Shopify agencies and consultants. It turns scattered discovery notes into requirements, risk assessments, roadmaps and QA plans. The site had to explain that quickly to teams who live in spreadsheets and inboxes.",
+      "tag": ""
     },
     {
       "style": "iron",
@@ -90,7 +94,8 @@
         }
       ],
       "title": "A live odds terminal that shows its working",
-      "summary": "Iron Clad is an independent sports analytics site covering MLB, NFL, NBA, NHL and WNBA. It streams current market prices, ranks three daily parlays by probability and value rather than payout, and explains each pick in plain English."
+      "summary": "Iron Clad is an independent sports analytics site covering MLB, NFL, NBA, NHL and WNBA. It streams current market prices, ranks three daily parlays by probability and value rather than payout, and explains each pick in plain English.",
+      "tag": ""
     },
     {
       "style": "happy",
@@ -110,7 +115,29 @@
         }
       ],
       "title": "A cocktail bar site that feels like the room",
-      "summary": "happy's is a cocktail bar and event space in downtown Cary, NC. We designed this concept to show how the bar's smiley-covered wall, its long menu and its irregular opening hours could work together as one loud, friendly page."
+      "summary": "happy's is a cocktail bar and event space in downtown Cary, NC. We designed this concept to show how the bar's smiley-covered wall, its long menu and its irregular opening hours could work together as one loud, friendly page.",
+      "tag": "Concept"
+    },
+    {
+      "style": "walkup",
+      "feature": true,
+      "reverse": false,
+      "study": "walkup",
+      "label": "The WalkUp",
+      "tag": "Concept",
+      "note": "Concept site, not a launched project",
+      "shots": [
+        {
+          "image": "/uploads/walkup-1.jpg",
+          "alt": "The WalkUp concept home page: the gold script logo over the painted brick wall of the upstairs lounge"
+        },
+        {
+          "image": "/uploads/walkup-2.jpg",
+          "alt": "The WalkUp concept menu: specialty cocktail cards on a limewashed background with a running tab"
+        }
+      ],
+      "title": "A bar site you climb",
+      "summary": "The WalkUp is a cocktail bar one flight up in downtown Cary, NC, right above happy's. This concept turns the stairs into the page: a 14-step meter fills as you scroll from the street to Suite 200."
     }
   ]
 }

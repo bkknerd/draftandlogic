@@ -1,0 +1,90 @@
+{
+  "title": "The WalkUp: a concept site for the bar upstairs",
+  "tag": "Concept site · cocktail bar, Cary, NC",
+  "shotSel": ".case.walkup .shot img",
+  "summaryLead": "The WalkUp is a cocktail bar one flight up at 126 West Chatham Street in downtown Cary, NC, directly above happy's. This concept redesign keeps the bar's real menu, photos and hours and rebuilds the site around what makes the place different: you have to climb to get there. It is a concept, not a launched site.",
+  "summaryMore": "The concept is a single hand-written HTML file with no framework and no build step. The look comes from the bar's gold script logo and the old painted Durham Hosiery Mill sign on its brick wall: night ink and sign-painter gold for the street, a limewashed menu for the bright room upstairs, set in Big Shoulders Display, Newsreader and Lekton.",
+  "chips": [
+    "Vanilla JS",
+    "Pure CSS3",
+    "Inline SVG logo",
+    "Concept"
+  ],
+  "stack": [
+    {
+      "name": "Delivery",
+      "detail": "One self-contained HTML file with every photo embedded as WebP, no framework, no build step and no database"
+    },
+    {
+      "name": "Markup and semantics",
+      "detail": "HTML5 landmarks, ARIA tabs with arrow-key support for the menu, and an accessible name on every menu button"
+    },
+    {
+      "name": "Styling and type",
+      "detail": "Hand-written CSS with design tokens, Big Shoulders Display for the sign-painter headings, Newsreader for body text and Lekton for prices"
+    },
+    {
+      "name": "Interaction",
+      "detail": "Vanilla JavaScript for the menu and running tab, the scroll staircase, the draggable review reel and light parallax, all skipped under reduced motion"
+    },
+    {
+      "name": "Brand assets",
+      "detail": "The logo and the Finest Quality lockup traced from the brand artwork into one reusable SVG symbol"
+    },
+    {
+      "name": "Forms",
+      "detail": "The email sign-up is front-end only in this concept. A live version would post to a mailing-list service"
+    }
+  ],
+  "chapters": [
+    {
+      "title": "The stairs, built into the scroll",
+      "demo": "wstairs",
+      "challenge": "The bar is up a flight of stairs above another bar, and first-timers walk past the door. The old site said \"up one flight of stairs\" in a sentence near the bottom.",
+      "solution": "The climb is the navigation. A 14-step staircase in the corner fills with gold as you scroll and names where you are, from Street level through the bar, the room and the regulars to Suite 200. \"Walk on up\" sits in the nav, and a hanging sign at the bottom points back down to happy's.",
+      "outcome": "The thing guests need to know, that it is upstairs, is the thing they remember about the site."
+    },
+    {
+      "title": "A menu you can plan a round with",
+      "demo": "wtab",
+      "challenge": "The menu changes every season and runs to 49 items across cocktails, beer, wine, snacks and zero proof. Guests order at the counter, so there is no cart to build.",
+      "solution": "The menu is data rendered into tabs. The five specialty cocktails get their own cards in the style of the painted wall, and every item adds to a running tab that slides up from the bottom. It is a tally to plan with, and it never leaves the page.",
+      "outcome": "A seasonal menu the bar can update one line at a time, with a reason to stay on it longer."
+    },
+    {
+      "title": "A logo that holds up at any size",
+      "demo": "wlogo",
+      "challenge": "The only logo file was a 560-pixel image. Stretched across a hero or a footer it went soft and blurry, which undercut the gold script the whole design leans on.",
+      "solution": "We traced the logo and the Finest Quality lockup from the brand artwork into vector paths and stored them once as SVG symbols. The nav, the hero and the footer all reuse the same symbol, and CSS sets the colour.",
+      "outcome": "A crisp logo on every screen, from the 38-pixel nav mark to the full-width footer."
+    }
+  ],
+  "stats": [
+    {
+      "value": "14",
+      "label": "steps in the scroll staircase"
+    },
+    {
+      "value": "49",
+      "label": "menu items as data"
+    },
+    {
+      "value": "0",
+      "label": "JavaScript frameworks"
+    }
+  ],
+  "results": [
+    {
+      "title": "The building, explained",
+      "text": "Upstairs, above happy's, is on the first screen, in the nav and in the scroll itself, so guests know where the door is before they arrive."
+    },
+    {
+      "title": "Built from the bar's own materials",
+      "text": "The gold script, the brick, the beams and the ghost sign on the wall set the palette and the type, so the page looks like the room."
+    },
+    {
+      "title": "Motion that respects people",
+      "text": "The logo reveal, the parallax and the ticker are all skipped for visitors who ask their device for reduced motion."
+    }
+  ]
+}

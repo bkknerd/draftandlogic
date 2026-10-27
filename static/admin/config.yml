@@ -1,4 +1,4 @@
-# Decap CMS 3.8.4 (self-hosted in this folder). Set `repo` below before first use.
+# Decap CMS 3.8.4 (self-hosted in this folder).
 backend:
   name: github
   repo: bkknerd/draftandlogic
@@ -183,10 +183,11 @@ collections:
             summary: "{{fields.label}}"
             fields:
               - { label: Name, name: label, widget: string }
-              - { label: Look, name: style, widget: select, options: [abx, namc, sum, iron, milo, happy], hint: "Picks the card's colour theme. New cards can reuse any of these." }
+              - { label: Look, name: style, widget: select, options: [abx, namc, sum, iron, milo, happy, walkup], hint: "Picks the card's colour theme. New cards can reuse any of these." }
               - { label: Large card, name: feature, widget: boolean, default: false, required: false }
               - { label: Image on the right, name: reverse, widget: boolean, default: false, required: false }
-              - { label: Case study ID, name: study, widget: string, required: false, hint: "summit, abaxent, namc, milo or happy. Leave empty for no case-study link." }
+              - { label: Case study ID, name: study, widget: string, required: false, hint: "summit, abaxent, namc, milo, happy or walkup. Leave empty for no case-study link." }
+              - { label: Small tag on the card (optional, e.g. Concept), name: tag, widget: string, required: false }
               - { label: Caption (cards without screenshots), name: note, widget: string, required: false }
               - label: Screenshots
                 name: shots
@@ -285,7 +286,7 @@ collections:
             summary: "{{fields.title}}"
             fields:
               - { label: Title, name: title, widget: string }
-              - { label: Interactive demo, name: demo, widget: select, options: [grain, score, type, sprite, intro, steps, edge, grid, sponsor, cal, patio, menu, pair, tab, climb, open], hint: "Demos are built into the site; choose which one this chapter shows." }
+              - { label: Interactive demo, name: demo, widget: select, options: [grain, score, type, sprite, intro, steps, edge, grid, sponsor, cal, patio, menu, pair, tab, climb, open, wstairs, wtab, wlogo], hint: "Demos are built into the site; choose which one this chapter shows." }
               - { label: Challenge, name: challenge, widget: text }
               - { label: Solution, name: solution, widget: text }
               - { label: Outcome, name: outcome, widget: text }
@@ -307,3 +308,4 @@ collections:
       - { name: namc, label: NAMC, file: content/case-studies/namc.json, format: json, fields: *studyfields }
       - { name: milo, label: "Milo's Cafe", file: content/case-studies/milo.json, format: json, fields: *studyfields }
       - { name: happy, label: "Happy's (concept)", file: content/case-studies/happy.json, format: json, fields: *studyfields }
+      - { name: walkup, label: "The WalkUp (concept)", file: content/case-studies/walkup.json, format: json, fields: *studyfields }
