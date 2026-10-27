@@ -30,7 +30,8 @@ data.analyticsHead = GA.enabled !== false && gaId && data.launch.comingSoon !== 
     const e = new Date(end); data.launchDateText = WDL[e.getUTCDay()] + ", " + MO[e.getUTCMonth()] + " " + e.getUTCDate();
     const t0 = new Date(); data.launchDaysLeft = String(Math.max(0, Math.round((end - Date.UTC(t0.getFullYear(), t0.getMonth(), t0.getDate())) / 864e5)));
   }
-  data.launchQuips = JSON.stringify(data.launch.quips && data.launch.quips.length ? data.launch.quips : ["Back soon."]).replace(/</g, "\\u003c");
+  const FQ = (data.launch.facts || []).filter((x) => x && x.text).map((x) => (x.kind ? x.kind + ": " : "") + x.text);
+  data.launchQuips = JSON.stringify({ hello: data.launch.hello || "Back soon.", facts: FQ.length ? FQ : ["Back soon."] }).replace(/</g, "\\u003c");
 }
 const on = (k) => !data[k] || data[k].show !== false;
 const NAVMAP = { "#approach": "approach", "#stack": "services", "#work": "work", "#process": "process", "#faq": "faq", "#contact": "contact" };

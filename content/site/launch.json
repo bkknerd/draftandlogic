@@ -17,12 +17,127 @@
   "dayToGo": "day to go",
   "todayWord": "Today",
   "dotLabel": "Dot, our mascot. Press to hear what Dot has to say.",
-  "quips": [
-    "Drawing first. Building second.",
-    "The plan is on the table. The code is next.",
-    "Measure twice, build once.",
-    "Sharpening the pencil.",
-    "I cross off one box a day.",
-    "No fragile plugins in here."
+  "hello": "Drawing first. Building second. Click me for a fact or a joke.",
+  "facts": [
+    {
+      "kind": "Fact",
+      "text": "SEO is search engine optimization. AEO is the same job for answer engines: be the page the answer comes from."
+    },
+    {
+      "kind": "Fact",
+      "text": "AEO tip: put the answer in the first sentence under the question. Machines and people both skim."
+    },
+    {
+      "kind": "Fact",
+      "text": "llms.txt is a plain-text brief of your site, written for AI tools. This site has one."
+    },
+    {
+      "kind": "Fact",
+      "text": "robots.txt has been around since 1994. It is still the first file a crawler asks for."
+    },
+    {
+      "kind": "Fact",
+      "text": "Structured data (JSON-LD) tells search engines what a page is in a format machines read directly."
+    },
+    {
+      "kind": "Fact",
+      "text": "FAQ schema marks up questions and answers so machines can read them. The page still has to be good."
+    },
+    {
+      "kind": "Fact",
+      "text": "Core Web Vitals measure loading (LCP), responsiveness (INP) and layout stability (CLS)."
+    },
+    {
+      "kind": "Fact",
+      "text": "INP replaced FID as a Core Web Vital in March 2024. It looks at every interaction, not just the first."
+    },
+    {
+      "kind": "Fact",
+      "text": "CLS is the page jumping while it loads. Reserve space for images and it mostly goes away."
+    },
+    {
+      "kind": "Fact",
+      "text": "Shopify started in the mid-2000s when its founders wanted to sell snowboards online and the tools were bad."
+    },
+    {
+      "kind": "Fact",
+      "text": "Shopify themes are written in Liquid, a template language Shopify made and open sourced."
+    },
+    {
+      "kind": "Fact",
+      "text": "Webflow lets you export the HTML and CSS it generates. Clean output is the point."
+    },
+    {
+      "kind": "Fact",
+      "text": "A canonical tag tells search engines which URL is the real one when the same content lives at several."
+    },
+    {
+      "kind": "Fact",
+      "text": "A sitemap.xml lists the pages you want crawled. It is a suggestion, not a command."
+    },
+    {
+      "kind": "Fact",
+      "text": "A 404 means not found. A 410 means gone for good. Search engines treat them a little differently."
+    },
+    {
+      "kind": "Fact",
+      "text": "WCAG AA asks for 4.5 to 1 contrast on normal text. Light grey on white usually fails."
+    },
+    {
+      "kind": "Fact",
+      "text": "Alt text is written for screen readers first. Search engines reading it is a bonus."
+    },
+    {
+      "kind": "Fact",
+      "text": "A headless CMS keeps your content in an API, separate from the front end. Edit once, publish anywhere."
+    },
+    {
+      "kind": "Fact",
+      "text": "Lighthouse is built into Chrome DevTools. Run it before you launch, not after."
+    },
+    {
+      "kind": "Fact",
+      "text": "The first website went live in 1991. It was about the web itself."
+    },
+    {
+      "kind": "Joke",
+      "text": "Why did the developer go broke? He used up all his cache."
+    },
+    {
+      "kind": "Joke",
+      "text": "There are 10 kinds of people: those who read binary and those who do not."
+    },
+    {
+      "kind": "Joke",
+      "text": "A SEO expert walks into a bar, pub, tavern, brewery, taproom..."
+    },
+    {
+      "kind": "Joke",
+      "text": "It works on my machine. Fine, we will ship your machine."
+    },
+    {
+      "kind": "Joke",
+      "text": "Why do developers like dark mode? Light attracts bugs."
+    },
+    {
+      "kind": "Joke",
+      "text": "The page you are looking for is on a different drawing board. That is a 404."
+    },
+    {
+      "kind": "Joke",
+      "text": "CSS is easy until you have to center a div."
+    },
+    {
+      "kind": "Joke",
+      "text": "There are two hard things in computing: cache invalidation, naming things, and off-by-one errors."
+    },
+    {
+      "kind": "Joke",
+      "text": "I am technically a very small circle. Do not tell the logo."
+    },
+    {
+      "kind": "Joke",
+      "text": "I tried to draw a straight line. Then I met a ruler. Humbling."
+    }
   ]
 }

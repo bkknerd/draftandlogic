@@ -31,7 +31,14 @@ collections:
           - { label: "Countdown label, one day", name: dayToGo, widget: string }
           - { label: "Word on launch day", name: todayWord, widget: string }
           - { label: "Dot, screen reader label", name: dotLabel, widget: string }
-          - { label: "Dot's sayings (shown one by one when Dot is clicked)", name: quips, widget: list, field: { label: Saying, name: saying, widget: string } }
+          - { label: "Dot says this first", name: hello, widget: string }
+          - label: "Dot's facts and jokes (a random one each time Dot is clicked)"
+            name: facts
+            widget: list
+            summary: "{{fields.kind}}: {{fields.text}}"
+            fields:
+              - { label: Type, name: kind, widget: select, options: [Fact, Joke], default: Fact }
+              - { label: Text, name: text, widget: string, hint: "Keep it under about 110 characters so it fits on a phone." }
           - { label: Email field label, name: emailLabel, widget: string }
           - { label: Button, name: button, widget: string }
           - { label: Thank you message, name: thanks, widget: string }
