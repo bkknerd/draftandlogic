@@ -198,3 +198,6 @@ L.push("# Draft and Logic", "", "> " + data.seo.description, "",
 if (!soon) fs.writeFileSync(path.join(out, "llms.txt"), L.join("\n"));
 console.log("Built " + Object.keys(studies).length + " case-study pages, sitemap.xml, llms.txt");
 
+
+// Deploy stamp: open /build.txt on the live site to see exactly which commit Netlify built.
+fs.writeFileSync(path.join(out, "build.txt"), "commit: " + (process.env.COMMIT_REF || "local build") + "\nbranch: " + (process.env.BRANCH || "n/a") + "\nbuilt: " + new Date().toISOString() + "\nhero: " + (data.hero && data.hero.intro ? data.hero.intro : "n/a") + "\ncomingSoon: " + (typeof soon !== "undefined" ? soon : "n/a") + "\n");

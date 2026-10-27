@@ -39,3 +39,9 @@
   [headers.values]
     Content-Type = "text/plain; charset=utf-8"
     Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/build.txt"
+  [headers.values]
+    Cache-Control = "no-store"
+    X-Robots-Tag = "noindex"
