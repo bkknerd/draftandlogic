@@ -18,6 +18,20 @@ const gaId = /^G-[A-Z0-9]{6,14}$/.test(GA.measurementId || "") ? GA.measurementI
 data.analyticsHead = GA.enabled !== false && gaId && data.launch.comingSoon !== true
   ? "<script>(function(){var n=navigator;if(n.doNotTrack==='1'||window.doNotTrack==='1'||n.globalPrivacyControl)return;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=" + gaId + "';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','" + gaId + "',{anonymize_ip:true})})();</script>"
   : "";
+// Coming-soon countdown: eight calendar cells ending on the launch date (content/site/launch.json -> launchDate, YYYY-MM-DD)
+{
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(data.launch.launchDate || "");
+  const WD = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], WDL = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const MO = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  data.launchDays = []; data.launchDaysLeft = ""; data.launchDateText = "";
+  if (m) {
+    const end = Date.UTC(+m[1], +m[2] - 1, +m[3]);
+    for (let i = 7; i >= 0; i--) { const d = new Date(end - i * 864e5); data.launchDays.push({ iso: d.toISOString().slice(0, 10), wd: WD[d.getUTCDay()], d: d.getUTCDate(), go: i === 0 }); }
+    const e = new Date(end); data.launchDateText = WDL[e.getUTCDay()] + ", " + MO[e.getUTCMonth()] + " " + e.getUTCDate();
+    const t0 = new Date(); data.launchDaysLeft = String(Math.max(0, Math.round((end - Date.UTC(t0.getFullYear(), t0.getMonth(), t0.getDate())) / 864e5)));
+  }
+  data.launchQuips = JSON.stringify(data.launch.quips && data.launch.quips.length ? data.launch.quips : ["Back soon."]).replace(/</g, "\\u003c");
+}
 const on = (k) => !data[k] || data[k].show !== false;
 const NAVMAP = { "#approach": "approach", "#stack": "services", "#work": "work", "#process": "process", "#faq": "faq", "#contact": "contact" };
 data.nav.items = (data.nav.items || []).filter((i) => !NAVMAP[i.href] || on(NAVMAP[i.href]));

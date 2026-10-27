@@ -24,6 +24,14 @@ collections:
           - { label: Headline, first line (drawn, faded), name: line1, widget: string }
           - { label: Headline, second line (built, blinks to solid), name: line2, widget: string }
           - { label: Message, name: message, widget: text }
+          - { label: "Launch date (the countdown ends here)", name: launchDate, widget: string, pattern: ['^\d{4}-\d{2}-\d{2}$', "Use YYYY-MM-DD, for example 2026-11-03"], hint: "Dot walks across eight calendar days ending on this date and crosses one off each day. Format YYYY-MM-DD." }
+          - { label: "Word before the date (Launching)", name: launchWord, widget: string }
+          - { label: "Tag on the launch day box", name: launchTag, widget: string }
+          - { label: "Countdown label, many days", name: daysToGo, widget: string }
+          - { label: "Countdown label, one day", name: dayToGo, widget: string }
+          - { label: "Word on launch day", name: todayWord, widget: string }
+          - { label: "Dot, screen reader label", name: dotLabel, widget: string }
+          - { label: "Dot's sayings (shown one by one when Dot is clicked)", name: quips, widget: list, field: { label: Saying, name: saying, widget: string } }
           - { label: Email field label, name: emailLabel, widget: string }
           - { label: Button, name: button, widget: string }
           - { label: Thank you message, name: thanks, widget: string }

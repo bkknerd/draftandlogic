@@ -9,5 +9,20 @@
   "contactEmail": "",
   "comingSoon": true,
   "line1": "Drawing in progress.",
-  "line2": "Back soon."
+  "line2": "Back soon.",
+  "launchDate": "2026-11-03",
+  "launchWord": "Launching",
+  "launchTag": "Launch",
+  "daysToGo": "days to go",
+  "dayToGo": "day to go",
+  "todayWord": "Today",
+  "dotLabel": "Dot, our mascot. Press to hear what Dot has to say.",
+  "quips": [
+    "Drawing first. Building second.",
+    "The plan is on the table. The code is next.",
+    "Measure twice, build once.",
+    "Sharpening the pencil.",
+    "I cross off one box a day.",
+    "No fragile plugins in here."
+  ]
 }
