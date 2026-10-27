@@ -708,8 +708,6 @@ body::before{display:none}
 ::selection{background:var(--lime);color:#0C0C0C}
 h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.025em;line-height:1}
 
-.tick{background:#0C0C0C;color:#F1EEE8}
-.tk-l{background:var(--lime);color:#0C0C0C;border-inline-end:0}
 
 .navwrap{position:sticky;top:0;z-index:60;max-width:none;padding:0;background:color-mix(in srgb,var(--bg) 88%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);transition:transform .55s cubic-bezier(.2,.7,.2,1)}
 .navwrap nav{max-width:1240px;margin:0 auto;padding:16px clamp(20px,5vw,56px)}
@@ -912,7 +910,6 @@ h1,h2,h3{font-weight:500;letter-spacing:-.035em}
 /* touch targets and focus */
 nav ul a{padding:10px 0;display:inline-block}
 nav ul li:last-child a{padding:11px 22px}
-.tk-p{min-block-size:44px}
 
 /* ===== v3.2: Bricolage display + process machine ===== */
 :root{--display:'Bricolage Grotesque','Geist','Helvetica Neue',Arial,sans-serif}
@@ -1109,27 +1106,11 @@ section{position:relative}
 .dim span{white-space:nowrap}
 @media(max-width:620px){.dim span{display:none}}
 @media (prefers-reduced-motion:reduce){.dim{transition:none}}
-.tick{display:flex;align-items:stretch;background:var(--fg);color:var(--bg);font:400 .78rem/1 var(--mono);letter-spacing:.03em;position:relative;z-index:5}
-.tk-l{flex:none;display:flex;align-items:center;padding:0 clamp(14px,2vw,22px);border-inline-end:1px solid currentColor;text-transform:uppercase;letter-spacing:.1em}
-.tk-v{flex:1;overflow:hidden;min-inline-size:0}
-.tk-t{display:flex;inline-size:max-content;margin:0;padding:0;list-style:none;animation:tk var(--d,80s) linear infinite}
-.tick:hover .tk-t,.tick:focus-within .tk-t,.tick.paused .tk-t{animation-play-state:paused}
-.tk-t li{display:flex;align-items:center;gap:12px;padding:13px 0;white-space:nowrap}
-.tk-t li::after{content:"";inline-size:5px;block-size:5px;margin-inline:clamp(24px,3vw,44px);border-radius:50%;background:currentColor;opacity:.5}
-.tk-t b{font-weight:400;padding:3px 8px;border:1px solid currentColor;border-radius:999px;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em}
-.tk-t a{color:inherit;text-decoration:none}.tk-t a:hover{text-decoration:underline;text-underline-offset:3px}
-.tk-t span{opacity:.7}
-.tick[hidden]{display:none}.tick{min-block-size:41px}
-.tk-p{flex:none;font:inherit;color:inherit;background:transparent;border:0;border-inline-start:1px solid currentColor;padding:0 clamp(14px,2vw,22px);cursor:pointer}
-.tick :focus-visible{outline:2px solid var(--bg);outline-offset:-4px}
-@keyframes tk{to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.tk-t{animation:none}.tk-v{overflow-x:auto}.tk-p,.tk-t [aria-hidden=true]{display:none}}
 </style>
 </head>
 <body>
 <div id="home">
 <a class="skip" href="#main">{{interface.skip}}</a>
-<aside class="tick" aria-label="{{interface.tickerAria}}"><span class="tk-l">{{ticker.label}}</span><div class="tk-v"><ul class="tk-t" id="tkt"></ul></div><button type="button" class="tk-p" aria-pressed="false">{{interface.pause}}</button></aside>
 <div class="wrap navwrap" id="navw">
   <nav aria-label="{{interface.navAria}}">
     <a class="logo" href="#top" aria-label="Draft and Logic"><svg class="wm" viewBox="0 0 292 46" role="img" aria-hidden="true"><g class="cl"><path d="M0 8H292M0 36H292M0 3V13M292 3V13M0 31V41M292 31V41"/><path class="mid" d="M0 22H292"/></g><g class="dw" fill="none"><g style="--i:0"><path d="M6 8V36M6 8H13A14 14 0 0 1 13 36H6"/></g><g style="--i:1"><path d="M34 36V8H42A7 7 0 0 1 42 22H34M42 22L50 36"/></g><g style="--i:2"><path d="M57 36L66 8L75 36M59.6 28H72.4"/></g><g style="--i:3"><path d="M82 36V8H96M82 22H93"/></g><g style="--i:4"><path d="M103 8H119M111 8V36"/></g></g><g transform="translate(134 8)"><path class="amp" pathLength="1" d="M20 28L4 9A5.5 5.5 0 0 1 15 9C15 14 7 17 3 21C0 26 5 28.5 9 28.5C14 28.5 18 24 19 19"/></g><g class="lw" fill="none"><g style="--i:5"><path pathLength="1" d="M171 8V36H185"/></g><g style="--i:6"><ellipse cx="204" cy="22" rx="12" ry="14" pathLength="1"/></g><g style="--i:7"><path pathLength="1" d="M244.2 13A12 14 0 1 0 247 22H236"/></g><g style="--i:8"><path pathLength="1" d="M254 8V36"/></g><g style="--i:9"><path pathLength="1" d="M282.2 13A12 14 0 1 0 282.2 31"/></g></g><circle class="nd" cx="204" cy="22" r="2.4"/></svg></a>
@@ -1144,15 +1125,15 @@ section{position:relative}
       <h1 class="dl-b">{{hero.line1}} <span>{{hero.line2}}</span></h1>
       <div class="dl-x" id="dlx" role="slider" tabindex="0" aria-label="{{interface.sliderAria}}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" aria-valuetext="100{{interface.sliderValue}}"><i class="l">{{interface.sliderLeft}}</i><b></b><i class="r">{{interface.sliderRight}}</i><em></em></div>
     </div>
-    <div class="hero-row"><p>{{hero.intro}}</p><a class="go mag" href="#contact">{{hero.cta}}</a></div>
+    <div class="hero-row"><p>{{hero.intro}}</p>{{#if contact.show}}<a class="go mag" href="#contact">{{hero.cta}}</a>{{/if}}</div>
   </header>
 </div>
 
-<div class="wrap partners">
+{{#if partners.show}}<div class="wrap partners">
   <p>{{partners.line}}</p>
   <div class="plogos">{{#each partners.logos}}<div class="t"><img src="{{this.image}}" alt="{{this.alt}}"></div>{{/each}}</div>
-</div>
-<section id="approach">
+</div>{{/if}}
+{{#if approach.show}}<section id="approach">
   <div class="wrap">
     <h2 class="lede">{{approach.heading}}</h2>
     <div class="cols">
@@ -1164,9 +1145,9 @@ section{position:relative}
       {{/each}}
     </div>
   </div>
-</section>
+</section>{{/if}}
 
-<section class="stack" id="stack">
+{{#if services.show}}<section class="stack" id="stack">
   <div class="wrap">
     <h2 class="lede">{{services.heading}}</h2>
     <p class="sub">{{services.intro}}</p>
@@ -1181,9 +1162,9 @@ section{position:relative}
     </div>
     <div class="ground" aria-hidden="true"></div>
   </div>
-</section>
+</section>{{/if}}
 
-<section id="work">
+{{#if work.show}}<section id="work">
   <div class="wrap">
     <div class="work-head">
       <h2>{{work.heading}}</h2>
@@ -1198,15 +1179,15 @@ section{position:relative}
 {{/each}}</div>
 <aside class="pv" id="pv" aria-hidden="true"></aside></div>
 
-    <div class="also">
+    {{#if work.alsoShow}}<div class="also">
       <h3>{{work.alsoHeading}}</h3>
       {{#each work.also}}<a href="{{this.url}}" target="_blank" rel="noopener">{{this.label}}</a>
       {{/each}}
-    </div>
+    </div>{{/if}}
   </div>
-</section>
+</section>{{/if}}
 
-<section id="process">
+{{#if process.show}}<section id="process">
   <div class="wrap">
     <h2 class="lede">{{process.heading}}</h2>
     <p class="why">{{process.why}}</p>
@@ -1227,9 +1208,9 @@ section{position:relative}
       </div>
     </div>
   </div>
-</section>
+</section>{{/if}}
 
-<section class="faq" id="faq">
+{{#if faq.show}}<section class="faq" id="faq">
   <div class="wrap">
     <h2 class="lede">{{faq.heading}}</h2>
     <div class="faq-l">
@@ -1237,9 +1218,9 @@ section{position:relative}
       {{/each}}
     </div>
   </div>
-</section>
+</section>{{/if}}
 
-<section class="contact" id="contact">
+{{#if contact.show}}<section class="contact" id="contact">
   <div class="wrap">
     <h2>{{contact.heading}}</h2>
     <p>{{contact.intro}}</p>
@@ -1259,7 +1240,7 @@ section{position:relative}
     </form>
     <aside class="tk" id="tk" aria-hidden="true"><div class="tk-h"><span>{{interface.briefTitle}}</span><b id="tks">{{interface.briefDraft}}</b></div><dl><dt>{{interface.briefTo}}</dt><dd>{{footer.name}}</dd><dt>{{interface.briefRe}}</dt><dd id="tkr">Start a project</dd><dt>{{interface.briefFrom}}</dt><dd id="tkf">&nbsp;</dd><dt>{{interface.briefBody}}</dt><dd id="tkb">&nbsp;</dd></dl></aside></div>
   </div>
-</section>
+</section>{{/if}}
 </main>
 <footer><div class="wrap"><a class="flogo" href="#top" aria-label="{{footer.name}}, {{interface.backToTop}}"><svg class="wm" viewBox="0 0 292 46" role="img" aria-hidden="true"><g class="cl"><path d="M0 8H292M0 36H292M0 3V13M292 3V13M0 31V41M292 31V41"/><path class="mid" d="M0 22H292"/></g><g class="dw" fill="none"><g style="--i:0"><path d="M6 8V36M6 8H13A14 14 0 0 1 13 36H6"/></g><g style="--i:1"><path d="M34 36V8H42A7 7 0 0 1 42 22H34M42 22L50 36"/></g><g style="--i:2"><path d="M57 36L66 8L75 36M59.6 28H72.4"/></g><g style="--i:3"><path d="M82 36V8H96M82 22H93"/></g><g style="--i:4"><path d="M103 8H119M111 8V36"/></g></g><g transform="translate(134 8)"><path class="amp" pathLength="1" d="M20 28L4 9A5.5 5.5 0 0 1 15 9C15 14 7 17 3 21C0 26 5 28.5 9 28.5C14 28.5 18 24 19 19"/></g><g class="lw" fill="none"><g style="--i:5"><path pathLength="1" d="M171 8V36H185"/></g><g style="--i:6"><ellipse cx="204" cy="22" rx="12" ry="14" pathLength="1"/></g><g style="--i:7"><path pathLength="1" d="M244.2 13A12 14 0 1 0 247 22H236"/></g><g style="--i:8"><path pathLength="1" d="M254 8V36"/></g><g style="--i:9"><path pathLength="1" d="M282.2 13A12 14 0 1 0 282.2 31"/></g></g><circle class="nd" cx="204" cy="22" r="2.4"/></svg></a><div class="foot-base"><span>{{footer.name}}</span><span>{{footer.copyright}}</span></div></div></footer>
 </div>
@@ -1277,11 +1258,11 @@ var wi=0;function split(el){Array.prototype.slice.call(el.childNodes).forEach(fu
 var hero=document.querySelector('.hero');
 var cs=document.getElementById('cases'),vb=document.querySelectorAll('.views button');
 vb.forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribute('data-v');cs.classList.add('swap');setTimeout(function(){cs.classList.remove('grid','list');if(v)cs.classList.add(v);vb.forEach(function(x){x.setAttribute('aria-pressed',x===b)});cs.classList.remove('swap')},280)})});
-var cf=document.getElementById('cf');cf.addEventListener('submit',function(ev){ev.preventDefault();var f=cf.elements;
-if(!f.n.value.trim()||!f.e.value.trim()||!f.m.value.trim()){document.getElementById('cfn').textContent='Please fill in all three fields.';return}
+var cf=document.getElementById('cf');if(cf)cf.addEventListener('submit',function(ev){ev.preventDefault();var f=cf.elements;
+if(!f.n.value.trim()||!f.e.value.trim()||!f.m.value.trim()){document.getElementById('cfn').textContent='{{j:interface.formEmpty}}';return}
 if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.e.value.trim())){document.getElementById('cfn').textContent='{{j:interface.formInvalid}}';f.e.focus();return}
 var bt=cf.querySelector('button[type=submit]'),nt=document.getElementById('cfn');bt.disabled=true;nt.textContent='{{j:interface.formSending}}';fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(cf)).toString()}).then(function(r){if(!r.ok)throw 0;cf.reset();cf.dispatchEvent(new Event('input'));nt.textContent='{{j:interface.formSent}}'}).catch(function(){nt.textContent='{{j:interface.formError}}'}).then(function(){bt.disabled=false})});
-cf.querySelectorAll('input[name=t]').forEach(function(r){r.addEventListener('change',function(){document.getElementById('ml').textContent=r.getAttribute('data-ml')})});
+if(cf)cf.querySelectorAll('input[name=t]').forEach(function(r){r.addEventListener('change',function(){document.getElementById('ml').textContent=r.getAttribute('data-ml')})});
 var tp=function(){return cf.querySelector('input[name=t]:checked').value};
 document.querySelectorAll('.ico *').forEach(function(e){e.setAttribute('pathLength','1')});
 var tt=document.getElementById('totop'),pr=tt.querySelector('.prg'),tk=false;
@@ -1301,7 +1282,7 @@ if(!rm&&'IntersectionObserver' in window){var o=new IntersectionObserver(functio
 var lb=document.getElementById('lb'),li=lb.querySelector('.lb-in'),lastF=null;
 function openLB(c){lastF=document.activeElement;li.innerHTML='';var t=document.createElement('p');t.className='lb-t';t.textContent=c.querySelector('.plate b').textContent;li.appendChild(t);c.querySelectorAll('.shot img:not(.dr)').forEach(function(im){var n=document.createElement('img');n.src=im.src;n.alt=im.alt;li.appendChild(n)});lb.hidden=false;document.body.style.overflow='hidden';lb.scrollTop=0;lb.querySelector('.lb-x').focus();cur.classList.remove('on')}
 function closeLB(){lb.hidden=true;document.body.style.overflow='';if(lastF)lastF.focus()}
-cs.addEventListener('click',function(e){var c=e.target.closest('.case.has-shot');if(!c||cs.classList.contains('list')||e.target.closest('a'))return;var st=c.getAttribute('data-study');if(st&&!e.target.closest('.vw')){location.hash='#/work/'+st;return}openLB(c)});
+if(cs)cs.addEventListener('click',function(e){var c=e.target.closest('.case.has-shot');if(!c||cs.classList.contains('list')||e.target.closest('a'))return;var st=c.getAttribute('data-study');if(st&&!e.target.closest('.vw')){location.hash='#/work/'+st;return}openLB(c)});
 lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('lb-x'))closeLB()});
 addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)closeLB()});
 var lg=document.querySelector('.logo');setTimeout(function(){lg.classList.add('set')},0);
@@ -1503,13 +1484,13 @@ function init(root){init2(root);init3(root);init4(root);init5(root);
 }
 function render(slug){var s=ST[slug],shot=document.querySelector(s.shotSel),src=shot?shot.src:'';
  var nav=s.chapters.map(function(c,i){return '<li><a href="#w-ch'+(i+1)+'" data-c="'+(i+1)+'">'+c.title+'</a></li>'}).join('');
- var ch=s.chapters.map(function(c,i){return '<section class="wc wrv" id="w-ch'+(i+1)+'" data-i="'+(i+1)+'"><p class="wn">0'+(i+1)+'</p><h2>'+c.title+'</h2><div class="wcs"><div><p class="wl">Challenge</p><p>'+c.challenge+'</p></div><div><p class="wl">Solution</p><p>'+c.solution+'</p></div></div>'+DEMO[c.demo]()+'<div class="wout"><p class="wl">Outcome</p><p>'+c.outcome+'</p></div></section>'}).join('');
- wp.innerHTML='<div class="rp" id="wrp"></div><div class="wrap jhead"><span id="wlogo"></span><nav><a href="#work">Back to work</a><a href="#contact">Start a project</a></nav></div>'
- +'<header class="wrap wh" role="group"><p class="sm"><b>Case study</b> · '+s.tag+'</p><h1>'+s.title+'</h1><div class="wh-grid"><div><p class="wlead">'+s.summary[0]+'</p><p class="wmut">'+s.summary[1]+'</p><div class="wchips">'+s.chips.map(function(c){return '<span>'+c+'</span>'}).join('')+'</div><div class="wcta"><a class="jbtn dark" href="#w-ch1">Try the demos</a></div></div><div class="wshot">'+(src?'<img src="'+src+'" alt="'+s.title+' home page">':'')+'</div></div></header>'
- +'<section class="wrap wstack wrv"><h2>Stack and architecture</h2><dl>'+s.stack.map(function(r){return '<div class="wsr"><dt>'+r[0]+'</dt><dd>'+r[1]+'</dd></div>'}).join('')+'</dl></section>'
- +'<div class="wrap wbody"><aside class="wnav"><p class="wl">Chapters</p><ol>'+nav+'</ol></aside><div class="wchs">'+ch+'</div></div>'
- +'<section class="wrap wres wrv"><h2>Results and impact</h2><div class="wst">'+s.stats.map(function(x){return '<div><b>'+x[0]+'</b><span>'+x[1]+'</span></div>'}).join('')+'</div><div class="wrc">'+s.results.map(function(r){return '<div><h3>'+r[0]+'</h3><p>'+r[1]+'</p></div>'}).join('')+'</div></section>'
- +'<section class="wrap wend wrv"><h2>Want a site this fast?</h2><a class="jbtn dark" href="#contact">Start a project</a><a class="jbtn" href="#work">Back to all work</a></section>';
+ var ch=s.chapters.map(function(c,i){return '<section class="wc wrv" id="w-ch'+(i+1)+'" data-i="'+(i+1)+'"><p class="wn">0'+(i+1)+'</p><h2>'+c.title+'</h2><div class="wcs"><div><p class="wl">{{j:interface.csChallenge}}</p><p>'+c.challenge+'</p></div><div><p class="wl">{{j:interface.csSolution}}</p><p>'+c.solution+'</p></div></div>'+DEMO[c.demo]()+'<div class="wout"><p class="wl">{{j:interface.csOutcome}}</p><p>'+c.outcome+'</p></div></section>'}).join('');
+ wp.innerHTML='<div class="rp" id="wrp"></div><div class="wrap jhead"><span id="wlogo"></span><nav><a href="#work">{{j:interface.csBackWork}}</a><a href="#contact">{{j:interface.csStart}}</a></nav></div>'
+ +'<header class="wrap wh" role="group"><p class="sm"><b>{{j:interface.csBadge}}</b> · '+s.tag+'</p><h1>'+s.title+'</h1><div class="wh-grid"><div><p class="wlead">'+s.summary[0]+'</p><p class="wmut">'+s.summary[1]+'</p><div class="wchips">'+s.chips.map(function(c){return '<span>'+c+'</span>'}).join('')+'</div><div class="wcta"><a class="jbtn dark" href="#w-ch1">{{j:interface.csTryDemos}}</a></div></div><div class="wshot">'+(src?'<img src="'+src+'" alt="'+s.title+' home page">':'')+'</div></div></header>'
+ +'<section class="wrap wstack wrv"><h2>{{j:interface.csStack}}</h2><dl>'+s.stack.map(function(r){return '<div class="wsr"><dt>'+r[0]+'</dt><dd>'+r[1]+'</dd></div>'}).join('')+'</dl></section>'
+ +'<div class="wrap wbody"><aside class="wnav"><p class="wl">{{j:interface.csChapters}}</p><ol>'+nav+'</ol></aside><div class="wchs">'+ch+'</div></div>'
+ +'<section class="wrap wres wrv"><h2>{{j:interface.csResults}}</h2><div class="wst">'+s.stats.map(function(x){return '<div><b>'+x[0]+'</b><span>'+x[1]+'</span></div>'}).join('')+'</div><div class="wrc">'+s.results.map(function(r){return '<div><h3>'+r[0]+'</h3><p>'+r[1]+'</p></div>'}).join('')+'</div></section>'
+ +'<section class="wrap wend wrv"><h2>{{j:interface.csEndHeading}}</h2><a class="jbtn dark" href="#contact">{{j:interface.csStart}}</a><a class="jbtn" href="#work">{{j:interface.csBackAll}}</a></section>';
  var lg=document.querySelector('.logo').cloneNode(true);lg.setAttribute('href','#');lg.classList.add('set');$('wlogo').appendChild(lg);
  init(wp);
  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(a){a.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});wp.querySelectorAll('.wrv').forEach(function(e){io.observe(e)});
@@ -1523,19 +1504,6 @@ function route(){var cu=$('cur');if(cu)cu.classList.remove('on');var h=location.
  if(m&&ST[m[1]]){home.hidden=true;render(m[1]);wp.hidden=false;document.title=(function(t){if(t.length<=52)return t;var c=t.slice(0,51);return c.slice(0,c.lastIndexOf(' '))+'\u2026'})(ST[m[1]].title)+' | Draft and Logic';top()}
  else if(!wp.hidden){wp.hidden=true;wp.innerHTML='';home.hidden=false;document.title='{{j:seo.title}}';var el=h.length>1&&document.getElementById(h.slice(1));if(el)el.scrollIntoView();else top()}}
 addEventListener('hashchange',route);route();
-})();
-</script>
-<script>
-(function(){
-var t=document.getElementById('tkt'),bar=t.closest('.tick'),btn=bar.querySelector('.tk-p');
-function build(items,dup){return items.map(function(n){var li=document.createElement('li');if(dup)li.setAttribute('aria-hidden','true');
- var b=document.createElement('b');b.textContent=n.tag||'News';var a=document.createElement('a');a.href=n.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=n.headline;if(dup)a.tabIndex=-1;
- var s=document.createElement('span');s.textContent=n.source||'';li.append(b,a,s);return li})}
-fetch('/content/news.json').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
- var it=(d.items||[]).filter(function(i){return i&&i.headline&&/^https?:\/\//.test(i.url||'')});if(!it.length)throw 0;
- build(it,0).concat(build(it,1)).forEach(function(l){t.appendChild(l)});
- t.style.setProperty('--d',Math.max(90,Math.round(t.scrollWidth/2/28))+'s')}).catch(function(){bar.hidden=true});
-btn.addEventListener('click',function(){var p=bar.classList.toggle('paused');btn.setAttribute('aria-pressed',p);btn.textContent=p?'{{j:interface.play}}':'{{j:interface.pause}}'});
 })();
 </script>
 <script>

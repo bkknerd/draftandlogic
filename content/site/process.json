@@ -1,4 +1,5 @@
 {
+  "show": true,
   "heading": "Four stages.",
   "why": "Layout, content and behavior are agreed on paper first, so the build is not redone.",
   "steps": [

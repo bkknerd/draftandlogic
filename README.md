@@ -5,7 +5,6 @@ A static site with every piece of content editable in a CMS. Content lives in JS
 ```
 content/site/*.json     page sections (hero, services, work cards, process, contact, footer, SEO, nav ...)
 content/case-studies/   the three case-study pages
-content/news.json       news ticker headlines
 src/index.template.html page layout, CSS and scripts
 static/                 files copied as-is: admin/, uploads/, robots.txt, sitemap.xml, 404.html, og.png
 build.mjs               content + template -> dist/ (generated, not committed)
@@ -39,7 +38,7 @@ One-time setup:
 3. Netlify → Site configuration → Access & security → OAuth → Install provider → GitHub, paste the ID and Secret.
 4. Open `/admin/` and choose Login with GitHub. Editors need write access to the repo.
 
-What editors can change: SEO and share text, navigation labels, hero, partner logos, approach, the seven services, work cards (add, remove, reorder, swap screenshots), other launched sites, process steps, contact form wording, footer, news ticker, and the full text of each case study.
+What editors can change: SEO and share text, navigation labels, hero, partner logos, approach, the seven services, work cards (add, remove, reorder, swap screenshots), other launched sites, process steps, contact form wording, footer, and the full text of each case study.
 
 Adding another case study: copy a file in `content/case-studies/`, add a card in the CMS under Work cards with its Case study ID, and add the file to `static/admin/config.yml`. Each chapter picks one of the built-in demos (grain, score, type, sprite, intro, steps, edge, grid, sponsor, cal, patio, menu, pair, tab, climb, open); a brand-new demo needs code in `src/index.template.html`.
 
@@ -51,7 +50,6 @@ Editing locally: change any JSON file, run `node build.mjs`, open `dist/index.ht
 - Open the live site with DevTools open and check the console for Content-Security-Policy violations (set in `netlify.toml`).
 - Submit `https://draftandlogic.com/sitemap.xml` in Google Search Console.
 - Test the contact form once and confirm the notification email arrives.
-- The news ticker is hand-curated: refresh it in the CMS every week or two.
 
 ## Design notes
 
@@ -94,4 +92,8 @@ Turn it off to launch: the full site returns to `/`, and the sitemap, `llms.txt`
 
 ## What is editable
 
-Everything on the page text side is in the CMS: all sections, the case studies, the news ticker, SEO fields, the small text (buttons, labels, form messages, the 404 page) and the coming soon page. Not in the CMS, because they are code: the interactive demos inside case studies and the Approach section, colors, fonts and layout. Images are uploaded through the CMS media library.
+Everything on the page text side is in the CMS: all sections, the case studies, SEO fields, the small text (buttons, labels, form messages, the 404 page) and the coming soon page. Not in the CMS, because they are code: the interactive demos inside case studies and the Approach section, colors, fonts and layout. Images are uploaded through the CMS media library.
+
+## Turning sections on and off
+
+Partner logos, Approach, Services, Work, Process, FAQ and Contact each have a "Show this section on the site" switch at the top of their CMS page (Work also has one for the "other launched sites" list). Switch one off, publish, and it leaves the page, the menu, the search structured data and `llms.txt`. If Work is off, the case-study pages are not published either. The hero and footer always show. If Contact is off, the hero button goes away too.

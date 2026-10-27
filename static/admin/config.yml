@@ -1,7 +1,7 @@
 # Decap CMS 3.8.4 (self-hosted in this folder). Set `repo` below before first use.
 backend:
   name: github
-  repo: bkknerd/draftandlogic
+  repo: YOUR-GITHUB-USER/draftandlogic
   branch: main
 
 media_folder: static/uploads
@@ -36,9 +36,6 @@ collections:
         format: json
         fields:
           - { label: Skip link, name: skip, widget: string }
-          - { label: News ticker pause button, name: pause, widget: string }
-          - { label: News ticker play button, name: play, widget: string }
-          - { label: News ticker screen reader label, name: tickerAria, widget: string }
           - { label: Main menu screen reader label, name: navAria, widget: string }
           - { label: Case study link, name: viewCase, widget: string }
           - { label: Hero slider, left label, name: sliderLeft, widget: string }
@@ -52,6 +49,18 @@ collections:
           - { label: Screenshot viewer close button, name: close, widget: string }
           - { label: Cursor label on work images, name: cursor, widget: string }
           - { label: Back to top label, name: backToTop, widget: string }
+          - { label: Case study page, badge, name: csBadge, widget: string }
+          - { label: Case study page, back to work link, name: csBackWork, widget: string }
+          - { label: Case study page, start a project link, name: csStart, widget: string }
+          - { label: Case study page, stack heading, name: csStack, widget: string }
+          - { label: Case study page, chapters label, name: csChapters, widget: string }
+          - { label: Case study page, challenge label, name: csChallenge, widget: string }
+          - { label: Case study page, solution label, name: csSolution, widget: string }
+          - { label: Case study page, outcome label, name: csOutcome, widget: string }
+          - { label: Case study page, results heading, name: csResults, widget: string }
+          - { label: Case study page, try the demos button, name: csTryDemos, widget: string }
+          - { label: Case study page, closing heading, name: csEndHeading, widget: string }
+          - { label: Case study page, back to all work button, name: csBackAll, widget: string }
           - { label: Contact brief card, title, name: briefTitle, widget: string }
           - { label: Contact brief card, draft status, name: briefDraft, widget: string }
           - { label: Contact brief card, ready status, name: briefReady, widget: string }
@@ -59,6 +68,7 @@ collections:
           - { label: Contact brief card, Re, name: briefRe, widget: string }
           - { label: Contact brief card, From, name: briefFrom, widget: string }
           - { label: Contact brief card, Brief, name: briefBody, widget: string }
+          - { label: Form, empty fields message, name: formEmpty, widget: string }
           - { label: Form, invalid email message, name: formInvalid, widget: string }
           - { label: Form, sending message, name: formSending, widget: string }
           - { label: Form, thank you message, name: formSent, widget: string }
@@ -103,6 +113,7 @@ collections:
         file: content/site/partners.json
         format: json
         fields:
+          - { label: "Show this section on the site", name: show, widget: boolean, default: true, hint: "Turn off to hide this whole section and its menu link. Takes about a minute after you save." }
           - { label: Line above logos, name: line, widget: string }
           - label: Logos
             name: logos
@@ -116,6 +127,7 @@ collections:
         file: content/site/approach.json
         format: json
         fields:
+          - { label: "Show this section on the site", name: show, widget: boolean, default: true, hint: "Turn off to hide this whole section and its menu link. Takes about a minute after you save." }
           - { label: Heading, name: heading, widget: string }
           - label: Columns
             name: columns
@@ -130,6 +142,7 @@ collections:
         file: content/site/services.json
         format: json
         fields:
+          - { label: "Show this section on the site", name: show, widget: boolean, default: true, hint: "Turn off to hide this whole section and its menu link. Takes about a minute after you save." }
           - { label: Heading, name: heading, widget: string }
           - { label: Intro, name: intro, widget: text }
           - label: Levels (seven, top to bottom; the count is fixed by the drawing)
@@ -147,6 +160,8 @@ collections:
         file: content/site/work.json
         format: json
         fields:
+          - { label: "Show this section on the site", name: show, widget: boolean, default: true, hint: "Turn off to hide this whole section and its menu link. Takes about a minute after you save." }
+          - { label: "Show the other launched sites list", name: alsoShow, widget: boolean, default: true }
           - { label: Heading, name: heading, widget: string }
           - { label: Intro, name: intro, widget: text }
           - { label: Heading for other launches, name: alsoHeading, widget: string }
@@ -188,6 +203,7 @@ collections:
         file: content/site/process.json
         format: json
         fields:
+          - { label: "Show this section on the site", name: show, widget: boolean, default: true, hint: "Turn off to hide this whole section and its menu link. Takes about a minute after you save." }
           - { label: Heading, name: heading, widget: string }
           - { label: Why drawing first, name: why, widget: text }
           - label: Steps
@@ -202,6 +218,7 @@ collections:
         file: content/site/faq.json
         format: json
         fields:
+          - { label: "Show this section on the site", name: show, widget: boolean, default: true, hint: "Turn off to hide this whole section and its menu link. Takes about a minute after you save." }
           - { label: Heading, name: heading, widget: string }
           - label: Questions
             name: items
@@ -215,6 +232,7 @@ collections:
         file: content/site/contact.json
         format: json
         fields:
+          - { label: "Show this section on the site", name: show, widget: boolean, default: true, hint: "Turn off to hide this whole section and its menu link. Takes about a minute after you save." }
           - { label: Heading, name: heading, widget: string }
           - { label: Intro, name: intro, widget: string }
           - { label: Topic question, name: legend, widget: string }
@@ -238,28 +256,6 @@ collections:
         fields:
           - { label: Name, name: name, widget: string }
           - { label: Copyright line, name: copyright, widget: string }
-      - name: ticker
-        label: News ticker label
-        file: content/site/ticker.json
-        format: json
-        fields:
-          - { label: Label, name: label, widget: string }
-      - name: news
-        label: News ticker headlines
-        file: content/news.json
-        format: json
-        fields:
-          - label: Headlines
-            name: items
-            widget: list
-            min: 3
-            max: 20
-            summary: "{{fields.tag}} — {{fields.headline}}"
-            fields:
-              - { label: Tag, name: tag, widget: string, hint: "One word, e.g. CSS, HTML, Awards" }
-              - { label: Headline, name: headline, widget: string, hint: "Write it in your own words, under ~100 characters" }
-              - { label: Source, name: source, widget: string, hint: "e.g. Frontend Focus · Oct 2026" }
-              - { label: Link, name: url, widget: string, hint: "Full https:// link to the article" }
 
   - name: studies
     label: Case studies

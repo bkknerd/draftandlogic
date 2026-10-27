@@ -10,7 +10,10 @@ const list = (d) => fs.readdirSync(path.join(root, d)).filter((f) => f.endsWith(
 // ---- content ----
 const data = {};
 for (const f of list("content/site")) data[f.replace(/\.json$/, "")] = rd("content/site/" + f);
-data.news = rd("content/news.json");
+// Section switches (content/site/<section>.json -> show). Hidden sections leave the page, the nav, the schema and llms.txt.
+const on = (k) => !data[k] || data[k].show !== false;
+const NAVMAP = { "#approach": "approach", "#stack": "services", "#work": "work", "#process": "process", "#faq": "faq", "#contact": "contact" };
+data.nav.items = (data.nav.items || []).filter((i) => !NAVMAP[i.href] || on(NAVMAP[i.href]));
 
 // Case studies: editor-friendly objects -> the array shapes the page script expects
 const studies = {};
@@ -41,7 +44,7 @@ const org = {
   address: { "@type": "PostalAddress", addressLocality: "Wake Forest", addressRegion: "NC", addressCountry: "US" },
   areaServed: { "@type": "Country", name: "United States" },
   knowsAbout: data.seo.topics,
-  hasOfferCatalog: { "@type": "OfferCatalog", name: "Services", itemListElement: data.services.levels.map((l) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: l.title, description: l.lead + " " + l.text, provider: { "@id": orgId } } })) },
+  hasOfferCatalog: !on("services") ? undefined : { "@type": "OfferCatalog", name: "Services", itemListElement: data.services.levels.map((l) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: l.title, description: l.lead + " " + l.text, provider: { "@id": orgId } } })) },
 };
 const homeGraph = [
   org,
@@ -49,7 +52,7 @@ const homeGraph = [
   { "@type": "WebPage", "@id": SITE + "/#webpage", url: SITE + "/", name: data.seo.title, description: data.seo.description, inLanguage: "en-US", isPartOf: { "@id": SITE + "/#website" }, about: { "@id": orgId }, primaryImageOfPage: { "@type": "ImageObject", url: SITE + "/og.png", width: 1200, height: 630 } },
   { "@type": "ItemList", name: data.work.heading, itemListElement: data.cases.items.filter((c) => c.study).map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c.label, url: SITE + "/work/" + c.study + "/" })) },
   { "@type": "FAQPage", mainEntity: data.faq.items.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) },
-];
+].filter((g) => !(g["@type"] === "ItemList" && !on("work")) && !(g["@type"] === "FAQPage" && !on("faq")));
 data.ldHome = ld({ "@context": "https://schema.org", "@graph": homeGraph });
 
 // ---- tiny template engine: {{x}} escaped, {{{x}}} raw, {{j:x}} JSON-escaped, {{#each x}}, {{#if x}}, this.y ----
@@ -81,7 +84,7 @@ function run(n, scope) {
   if (typeof n === "string") return n;
   if (n.c && !n.k) return n.c.map((x) => run(x, scope)).join("");
   if (n.raw !== undefined) { const v = val(n.raw, scope); if (v == null) throw new Error("Missing content: " + n.raw); return String(v); }
-  if (n.j !== undefined) { const v = val(n.j, scope); if (v == null) throw new Error("Missing content: " + n.j); return JSON.stringify(String(v)).slice(1, -1).replace(/</g, "\\u003c"); }
+  if (n.j !== undefined) { const v = val(n.j, scope); if (v == null) throw new Error("Missing content: " + n.j); return JSON.stringify(String(v)).slice(1, -1).replace(/</g, "\\u003c").replace(/'/g, "\\u0027"); }
   if (n.v !== undefined) { const v = val(n.v, scope); if (v == null) throw new Error("Missing content: " + n.v); return esc(v); }
   if (n.k === "#each") { const arr = val(n.a, scope); if (!Array.isArray(arr)) throw new Error("Not a list: " + n.a); return arr.map((it) => n.c.map((x) => run(x, [...scope, it])).join("")).join(""); }
   if (n.k === "#if") { const v = val(n.a, scope); const ok = Array.isArray(v) ? v.length > 0 : Boolean(v); return ok ? n.c.map((x) => run(x, scope)).join("") : ""; }
@@ -94,7 +97,6 @@ fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(out, { recursive: true });
 fs.cpSync(path.join(root, "static"), out, { recursive: true });
 fs.mkdirSync(path.join(out, "content"), { recursive: true });
-fs.copyFileSync(path.join(root, "content/news.json"), path.join(out, "content/news.json"));
 const render = (file) => {
   const h = run(parse(fs.readFileSync(path.join(root, file), "utf8")), [data]);
   if (/\{\{|\}\}\}/.test(h.replace(/<script[^>]*>[\s\S]*?<\/script>/g, ""))) throw new Error("Unresolved template tokens in " + file);
@@ -122,7 +124,7 @@ const attr = (v) => esc(v);
 const swap = (h, re, to) => { if (!re.test(h)) throw new Error("SEO swap missed: " + re); return h.replace(re, typeof to === "function" ? to : () => to); };
 const sitemap = [{ loc: SITE + "/", pri: "1.0" }];
 const today = new Date().toISOString().slice(0, 10);
-for (const [slug, st] of Object.entries(studies)) {
+for (const [slug, st] of Object.entries(on("work") ? studies : {})) {
   const raw = rd("content/case-studies/" + slug + ".json");
   const card = cardOf(slug);
   const url = SITE + "/work/" + slug + "/";
@@ -166,11 +168,11 @@ if (!soon) fs.writeFileSync(path.join(out, "sitemap.xml"), '<?xml version="1.0" 
 const L = [];
 L.push("# Draft and Logic", "", "> " + data.seo.description, "",
   data.seo.orgIntro, "",
-  "## Services", ...data.services.levels.map((l) => "- " + l.title + ": " + l.lead + " " + l.text), "",
-  "## Selected work", ...Object.entries(studies).map(([k, v]) => "- [" + v.title + "](" + SITE + "/work/" + k + "/): " + trim(rd("content/case-studies/" + k + ".json").summaryLead, 200)), "",
-  "## How a project runs", ...data.process.steps.map((x) => "- " + x.title + ": " + x.text), "",
-  "## Common questions", ...data.faq.items.flatMap((f) => ["- " + f.q, "  " + f.a]), "",
-  "## Contact", "- Start a project: " + SITE + "/#contact", "- " + data.contact.intro, "");
+  ...(on("services") ? ["## Services", ...data.services.levels.map((l) => "- " + l.title + ": " + l.lead + " " + l.text), ""] : []),
+  ...(on("work") ? ["## Selected work"] : []), ...Object.entries(on("work") ? studies : {}).map(([k, v]) => "- [" + v.title + "](" + SITE + "/work/" + k + "/): " + trim(rd("content/case-studies/" + k + ".json").summaryLead, 200)), "",
+  ...(on("process") ? ["## How a project runs", ...data.process.steps.map((x) => "- " + x.title + ": " + x.text), ""] : []),
+  ...(on("faq") ? ["## Common questions", ...data.faq.items.flatMap((f) => ["- " + f.q, "  " + f.a]), ""] : []),
+  ...(on("contact") ? ["## Contact", "- Start a project: " + SITE + "/#contact", "- " + data.contact.intro, ""] : []));
 if (!soon) fs.writeFileSync(path.join(out, "llms.txt"), L.join("\n"));
 console.log("Built " + Object.keys(studies).length + " case-study pages, sitemap.xml, llms.txt");
 

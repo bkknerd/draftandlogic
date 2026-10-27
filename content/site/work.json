@@ -1,4 +1,5 @@
 {
+  "show": true,
   "heading": "Selected work",
   "intro": "Five recent builds and one concept.",
   "alsoHeading": "Also launched",
@@ -15,5 +16,6 @@
       "label": "Persian Carpet",
       "url": "https://www.persiancarpet.com/"
     }
-  ]
+  ],
+  "alsoShow": true
 }

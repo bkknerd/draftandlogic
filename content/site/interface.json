@@ -1,8 +1,5 @@
 {
   "skip": "Skip to content",
-  "pause": "Pause",
-  "play": "Play",
-  "tickerAria": "Web design and development news",
   "navAria": "Main",
   "viewCase": "View the case study →",
   "mockUrl": "draftandlogic.com/your-site",
@@ -59,5 +56,18 @@
       "text": "live"
     }
   ],
-  "sliderValue": "% drawn"
+  "sliderValue": "% drawn",
+  "csBadge": "Case study",
+  "csBackWork": "Back to work",
+  "csStart": "Start a project",
+  "csStack": "Stack and architecture",
+  "csChapters": "Chapters",
+  "csChallenge": "Challenge",
+  "csSolution": "Solution",
+  "csOutcome": "Outcome",
+  "csResults": "Results and impact",
+  "csTryDemos": "Try the demos",
+  "csEndHeading": "Want a site this fast?",
+  "csBackAll": "Back to all work",
+  "formEmpty": "Please fill in all three fields."
 }
