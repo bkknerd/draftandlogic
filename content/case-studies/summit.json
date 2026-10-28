@@ -10,12 +10,6 @@
     "Show what comes out, not just what goes in.",
     "Keep the page light and quick."
   ],
-  "chips": [
-    "Netlify Edge",
-    "Pure CSS",
-    "SVG grain",
-    "Next.js app"
-  ],
   "features": [
     {
       "title": "Grain and fluid type",

@@ -10,12 +10,6 @@
     "Give prospects a direct line to the leadership team.",
     "Show the track record: projects, credentials and numbers."
   ],
-  "chips": [
-    "Vanilla JS",
-    "Hand-written CSS",
-    "Inline SVG sprite",
-    "Video hero"
-  ],
   "features": [
     {
       "title": "Scroll-driven video hero",

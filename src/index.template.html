@@ -468,7 +468,7 @@ section{padding:clamp(72px,10vw,150px) 0;border-top:1px solid var(--rule)}
 .wnums span{color:var(--mut)}
 .wsum{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(28px,5vw,80px);padding-top:clamp(24px,3vw,40px);padding-bottom:clamp(28px,4vw,56px);border-top:1px solid var(--rule)}
 .wsum .wstory{max-width:46rem;margin:0 0 22px;color:var(--fg);font-size:1.12rem;line-height:1.65}
-.wlists{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.wlists{display:block}
 .wl2{list-style:none;margin:0;padding:0}.wl2 li{padding:8px 0;border-top:1px solid var(--rule);font-size:.96rem}.wl2 li:last-child{border-bottom:1px solid var(--rule)}
 .wgo{padding-top:clamp(20px,3vw,36px);padding-bottom:clamp(28px,4vw,56px);border-top:1px solid var(--rule)}
 .wgo ol{list-style:none;counter-reset:g;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,3vw,40px)}
@@ -1591,7 +1591,7 @@ function render(slug){var s=ST[slug];
  wp.innerHTML='<div class="rp" id="wrp"></div><div class="wrap jhead"><span id="wlogo"></span><nav><a href="#work">{{j:interface.csBackWork}}</a><a href="#contact">{{j:interface.csStart}}</a></nav></div>'
  +'<header class="wrap wh" role="group"><p class="sm"><b>{{j:interface.csBadge}}</b> · '+s.tag+'</p><h1>'+s.title+'</h1><p class="wlead">'+s.summary+'</p>'+(s.services.length?'<ul class="svc">'+li(s.services)+'</ul>':'')+'</header>'
  +(s.numbers.length?'<section class="wrap wnum wrv"><h2 class="wh2">{{j:interface.csNumbers}}</h2><div class="wnums">'+s.numbers.map(function(n){return '<div><b>'+n[0]+'</b><span>'+n[1]+'</span></div>'}).join('')+'</div></section>':'')
- +'<section class="wrap wsum wrv"><div>'+(s.story?'<p class="wstory">'+s.story+'</p>':'')+(s.url?'<a class="jbtn dark" href="'+s.url+'" target="_blank" rel="noopener">{{j:interface.csVisit}}</a>':'')+'</div><div class="wlists"><div><h2 class="wh2">{{j:interface.csDid}}</h2><ul class="wl2">'+li(s.services)+'</ul></div><div><h2 class="wh2">{{j:interface.csPlatforms}}</h2><ul class="wl2">'+li(s.chips)+'</ul></div></div></section>'
+ +'<section class="wrap wsum wrv"><div>'+(s.story?'<p class="wstory">'+s.story+'</p>':'')+(s.url?'<a class="jbtn dark" href="'+s.url+'" target="_blank" rel="noopener">{{j:interface.csVisit}}</a>':'')+'</div><div class="wlists"><div><h2 class="wh2">{{j:interface.csDid}}</h2><ul class="wl2">'+li(s.services)+'</ul></div></div></section>'
  +(s.goals.length?'<section class="wrap wgo wrv"><h2 class="wh2">{{j:interface.csGoals}}</h2><ol>'+li(s.goals)+'</ol></section>':'')
  +'<section class="wrap wfeat"><h2>{{j:interface.csFeatures}}</h2><div class="wfg">'+fs+'</div></section>'
  +(s.quote?'<section class="wrap wq wrv"><blockquote><p>'+s.quote[0]+'</p>'+(s.quote[1]?'<footer>'+s.quote[1]+(s.quote[2]?', '+s.quote[2]:'')+'</footer>':'')+'</blockquote></section>':'')

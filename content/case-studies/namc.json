@@ -10,12 +10,6 @@
     "Take pressure off a small admin team during peak registration.",
     "Give every attendee a digital pass and a way to find the right meetings."
   ],
-  "chips": [
-    "Netlify Edge",
-    "Static-first",
-    "Serverless forms",
-    "WCAG 2.1 AA"
-  ],
   "features": [
     {
       "title": "Tickets and sponsorships",

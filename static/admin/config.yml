@@ -71,7 +71,6 @@ collections:
           - { label: Case study page, numbers heading, name: csNumbers, widget: string }
           - { label: Case study page, goals heading, name: csGoals, widget: string }
           - { label: Case study page, what we did heading, name: csDid, widget: string }
-          - { label: Case study page, platforms heading, name: csPlatforms, widget: string }
           - { label: Case study page, visit site button, name: csVisit, widget: string }
           - { label: Case study page, more work heading, name: csRelated, widget: string }
           - { label: Case study page, services label, name: csServices, widget: string }
@@ -315,7 +314,6 @@ collections:
               - { label: Number, name: value, widget: string }
               - { label: Label, name: label, widget: string }
           - { label: Goals (shown as a numbered list), name: goals, widget: list, required: false, field: { label: Goal, name: goal, widget: string } }
-          - { label: Platforms and tools, name: chips, widget: list, field: { label: Tool, name: chip, widget: string } }
           - label: Client quote
             name: quote
             widget: object

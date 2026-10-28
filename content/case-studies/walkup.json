@@ -10,12 +10,6 @@
     "Make the climb the navigation.",
     "Keep the menu easy to plan a round with."
   ],
-  "chips": [
-    "Vanilla JS",
-    "Pure CSS",
-    "Inline SVG logo",
-    "Concept"
-  ],
   "features": [
     {
       "title": "Scroll staircase",

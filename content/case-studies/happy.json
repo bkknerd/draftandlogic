@@ -10,12 +10,6 @@
     "Make a long menu easy to browse on a phone.",
     "Make the hours easy to find."
   ],
-  "chips": [
-    "Vanilla JS",
-    "Pure CSS",
-    "Native dialog",
-    "Concept"
-  ],
   "features": [
     {
       "title": "The smiley wall",

@@ -51,7 +51,6 @@ for (const f of list("content/case-studies")) {
     img: ((s.features || []).find((x) => x.image) || {}).image || "",
     blurb: (((data.cases.items || []).find((c) => c.study === f.replace(/\.json$/, ""))) || {}).summary || "",
     services: ((data.cases.items || []).find((c) => c.study === f.replace(/\.json$/, "")) || {}).services || [],
-    chips: s.chips,
     features: (s.features || []).map((f) => [f.title, f.text, f.image || "", f.alt || "", f.story || ""]),
   };
 }
@@ -161,7 +160,7 @@ for (const [slug, st] of Object.entries(on("work") ? studies : {})) {
   const graph = [
     { "@type": "WebPage", "@id": url + "#webpage", url, name: st.title, description: desc, inLanguage: "en-US", isPartOf: { "@id": SITE + "/#website" }, about: { "@id": orgId }, primaryImageOfPage: { "@type": "ImageObject", url: img }, breadcrumb: { "@id": url + "#crumbs" } },
     { "@type": "BreadcrumbList", "@id": url + "#crumbs", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: SITE + "/" }, { "@type": "ListItem", position: 2, name: "Selected work", item: SITE + "/#work" }, { "@type": "ListItem", position: 3, name: st.title, item: url }] },
-    { "@type": "Article", "@id": url + "#article", headline: trim(st.title, 110), description: desc, image: img, mainEntityOfPage: { "@id": url + "#webpage" }, author: { "@id": orgId }, publisher: { "@id": orgId }, articleSection: "Case study", keywords: (st.chips || []).join(", ") },
+    { "@type": "Article", "@id": url + "#article", headline: trim(st.title, 110), description: desc, image: img, mainEntityOfPage: { "@id": url + "#webpage" }, author: { "@id": orgId }, publisher: { "@id": orgId }, articleSection: "Case study", keywords: (st.services || []).join(", ") },
     org,
   ];
   const feats = (raw.features || []).map((f) => "<li><b>" + esc(f.title) + ".</b> " + esc(f.text) + "</li>").join("");
