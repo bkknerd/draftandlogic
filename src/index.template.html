@@ -460,6 +460,17 @@ section{padding:clamp(72px,10vw,150px) 0;border-top:1px solid var(--rule)}
 .wend{padding-top:clamp(56px,8vw,112px);padding-bottom:clamp(64px,9vw,128px);display:flex;gap:14px;flex-wrap:wrap;align-items:center}.wend h2{width:100%;margin-bottom:12px}
 .wrv{opacity:0;transform:translateY(32px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}.wrv.in{opacity:1;transform:none}
 .wh .wlead{max-width:40rem;margin:0 0 18px}
+.svc{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:14px 0 0;padding:0}
+.svc li{padding:4px 11px;border:1px solid var(--rule);border-radius:999px;font-size:.8rem;line-height:1.5;color:var(--mut);background:var(--paper)}
+.sfil{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 clamp(24px,3vw,40px)}
+.sfil button{font:inherit;font-size:.9rem;border:1px solid var(--fg);border-radius:999px;background:none;color:var(--fg);padding:8px 16px;cursor:pointer;transition:background .3s,color .3s}
+.sfil button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.wh .wstory{max-width:46rem;margin:0 0 22px;color:var(--mut);font-size:1.08rem;line-height:1.65}
+.wsv{margin:0 0 18px}.wsv .svc{margin-top:6px}
+#cases .case[hidden]{display:none}
+#cases .case .info ul.svc{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 6px;padding:0;border:0;list-style:none}
+#cases .case .info ul.svc li{display:block;padding:3px 10px;border:1px solid var(--rule);border-radius:999px;font-size:.78rem;line-height:1.5;color:var(--mut);background:var(--paper)}
+#cases .case .info ul.svc li::before{display:none}
 .wfeat{padding-top:clamp(28px,4vw,56px);padding-bottom:clamp(40px,6vw,80px);border-top:1.5px solid var(--fg)}
 .wfeat h2{font:300 clamp(2rem,4.4vw,3.6rem)/1 var(--display);letter-spacing:-.03em;margin-bottom:clamp(24px,4vw,44px)}
 .wfg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,3.4vw,52px) clamp(20px,3vw,44px)}
@@ -1214,10 +1225,11 @@ section{position:relative}
       <p>{{work.intro}}</p>
     </div>
 
+    <div class="sfil" id="sfil" role="group" aria-label="{{interface.filterLabel}}" data-all="{{interface.filterAll}}"></div>
     <div class="work-grid">
-    <div id="cases">{{#each cases.items}}<article class="case{{#if this.shots}} has-shot{{/if}}{{#if this.feature}} feature{{/if}}{{#if this.reverse}} rev{{/if}} {{this.style}}"{{#if this.study}} data-study="{{this.study}}"{{/if}}>
+    <div id="cases">{{#each cases.items}}<article class="case{{#if this.shots}} has-shot{{/if}}{{#if this.feature}} feature{{/if}}{{#if this.reverse}} rev{{/if}} {{this.style}}"{{#if this.study}} data-study="{{this.study}}"{{/if}} data-svc="{{this.svcAttr}}">
       <div class="plate"><div><b>{{this.label}}</b>{{#if this.tag}}<span class="ctag">{{this.tag}}</span>{{/if}}{{#each this.shots}}<div class="shot"><img src="{{this.image}}" alt="{{this.alt}}" loading="lazy"></div>{{/each}}{{#if this.note}}<small>{{this.note}}</small>{{/if}}</div></div>
-      <div class="info"><div><h3>{{this.title}}</h3><div class="ir"><p>{{this.summary}}</p>{{#if this.study}}<a class="cs-go" href="/work/{{this.study}}/">{{interface.viewCase}}</a>{{/if}}</div></div></div>
+      <div class="info"><div><h3>{{this.title}}</h3><div class="ir"><p>{{this.summary}}</p>{{#if this.svcAttr}}<ul class="svc">{{#each this.svcList}}<li>{{this.s}}</li>{{/each}}</ul>{{/if}}{{#if this.study}}<a class="cs-go" href="/work/{{this.study}}/">{{interface.viewCase}}</a>{{/if}}</div></div></div>
     </article>
 {{/each}}</div>
 <aside class="pv" id="pv" aria-hidden="true"></aside></div>
@@ -1549,7 +1561,7 @@ function init(root){initWU(root);init2(root);init3(root);init4(root);init5(root)
 function render(slug){var s=ST[slug];
  var fs=s.features.map(function(f,i){var im=f[2]?'<img src="'+f[2]+'" alt="'+f[3]+'" loading="'+(i<2?'eager':'lazy')+'">':'';return '<figure class="wf'+(i===0&&f[2]?' big':'')+(f[2]?'':' nt')+' wrv">'+im+'<figcaption><h3>'+f[0]+'</h3><p>'+f[1]+'</p></figcaption></figure>'}).join('');
  wp.innerHTML='<div class="rp" id="wrp"></div><div class="wrap jhead"><span id="wlogo"></span><nav><a href="#work">{{j:interface.csBackWork}}</a><a href="#contact">{{j:interface.csStart}}</a></nav></div>'
- +'<header class="wrap wh" role="group"><p class="sm"><b>{{j:interface.csBadge}}</b> · '+s.tag+'</p><h1>'+s.title+'</h1><p class="wlead">'+s.summary+'</p><div class="wchips">'+s.chips.map(function(c){return '<span>'+c+'</span>'}).join('')+'</div></header>'
+ +'<header class="wrap wh" role="group"><p class="sm"><b>{{j:interface.csBadge}}</b> · '+s.tag+'</p><h1>'+s.title+'</h1><p class="wlead">'+s.summary+'</p>'+(s.story?'<p class="wstory">'+s.story+'</p>':'')+(s.services.length?'<div class="wsv"><p class="wl">{{j:interface.csServices}}</p><ul class="svc">'+s.services.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul></div>':'')+'<div class="wchips">'+s.chips.map(function(c){return '<span>'+c+'</span>'}).join('')+'</div></header>'
  +'<section class="wrap wfeat"><h2>{{j:interface.csFeatures}}</h2><div class="wfg">'+fs+'</div></section>'
  +'<section class="wrap wend wrv"><h2>{{j:interface.csEndHeading}}</h2><a class="jbtn dark" href="#contact">{{j:interface.csStart}}</a><a class="jbtn" href="#work">{{j:interface.csBackAll}}</a></section>';
  var lg=document.querySelector('.logo').cloneNode(true);lg.setAttribute('href','#');lg.classList.add('set');$('wlogo').appendChild(lg);
@@ -1694,6 +1706,17 @@ var png=document.createElement('link');png.rel='icon';png.type='image/png';png.i
 document.head.appendChild(png);
 var t0=performance.now();setInterval(function(){png.href=frame(performance.now()-t0)},160);
 })();
+</script>
+<script>
+(function(){var bar=document.getElementById('sfil'),cs=document.getElementById('cases');if(!bar||!cs)return;
+var cards=[].slice.call(cs.querySelectorAll('.case')),seen={},names=[];
+cards.forEach(function(c){(c.getAttribute('data-svc')||'').split('|').forEach(function(x){if(x&&!seen[x]){seen[x]=1;names.push(x)}})});
+if(!names.length){bar.hidden=true;return}
+function mk(l,v){var b=document.createElement('button');b.type='button';b.textContent=l;b.setAttribute('data-v',v);b.setAttribute('aria-pressed',v===''?'true':'false');bar.appendChild(b)}
+mk(bar.getAttribute('data-all')||'All','');names.forEach(function(n){mk(n,n)});
+bar.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var v=b.getAttribute('data-v');
+[].slice.call(bar.children).forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+cards.forEach(function(c){var on=!v||(c.getAttribute('data-svc')||'').split('|').indexOf(v)>-1;c.hidden=!on})})})();
 </script>
 </body>
 </html>

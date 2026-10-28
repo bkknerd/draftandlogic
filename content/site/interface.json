@@ -70,5 +70,8 @@
   "csTryDemos": "Try the demos",
   "csEndHeading": "Want a site this fast?",
   "csBackAll": "Back to all work",
-  "formEmpty": "Please fill in all three fields."
+  "formEmpty": "Please fill in all three fields.",
+  "csServices": "Services",
+  "filterAll": "All",
+  "filterLabel": "Filter by service"
 }

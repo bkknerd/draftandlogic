@@ -44,6 +44,8 @@ for (const f of list("content/case-studies")) {
   studies[f.replace(/\.json$/, "")] = {
     title: s.title, tag: s.tag,
     summary: s.summaryLead,
+    story: s.story || "",
+    services: ((data.cases.items || []).find((c) => c.study === f.replace(/\.json$/, "")) || {}).services || [],
     chips: s.chips,
     features: (s.features || []).map((f) => [f.title, f.text, f.image || "", f.alt || ""]),
   };
@@ -54,6 +56,7 @@ data.studiesJson = JSON.stringify(studies).replace(/</g, "\\u003c").replace(/\u2
 const SITE = "https://draftandlogic.com";
 const ld = (o) => JSON.stringify(o).replace(/</g, "\\u003c").replace(/\u2028/g, "\\u2028").replace(/\u2029/g, "\\u2029");
 const orgId = SITE + "/#org";
+for (const it of data.cases.items || []) { it.svcList = (it.services || []).map((x) => ({ s: x })); it.svcAttr = (it.services || []).join("|"); }
 const cardOf = (slug) => (data.cases.items || []).find((c) => c.study === slug);
 const trim = (t, n) => { t = String(t).replace(/\s+/g, " ").trim(); if (t.length <= n) return t; const cut = t.slice(0, n - 1); return cut.slice(0, cut.lastIndexOf(" ")) + "\u2026"; };
 const org = {

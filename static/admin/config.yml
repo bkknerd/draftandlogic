@@ -68,6 +68,9 @@ collections:
           - { label: Case study page, back to work link, name: csBackWork, widget: string }
           - { label: Case study page, start a project link, name: csStart, widget: string }
           - { label: Case study page, features heading, name: csFeatures, widget: string }
+          - { label: Case study page, services label, name: csServices, widget: string }
+          - { label: Work filter, all label, name: filterAll, widget: string }
+          - { label: Work filter, group label, name: filterLabel, widget: string }
           - { label: Case study page, stack heading, name: csStack, widget: string }
           - { label: Case study page, chapters label, name: csChapters, widget: string }
           - { label: Case study page, challenge label, name: csChallenge, widget: string }
@@ -222,6 +225,7 @@ collections:
                   - { label: Description (alt text), name: alt, widget: string }
               - { label: Headline, name: title, widget: string }
               - { label: Summary, name: summary, widget: text }
+              - { label: Services we delivered, name: services, widget: list, required: false, field: { label: Service, name: service, widget: string }, hint: "Shown as tags on the card and the case page, and used by the filter. Use the same wording across projects." }
       - name: process
         label: Process
         file: content/site/process.json
@@ -292,7 +296,8 @@ collections:
         fields: &studyfields
           - { label: Title, name: title, widget: string }
           - { label: Tag line, name: tag, widget: string }
-          - { label: Summary (lead), name: summaryLead, widget: text }
+          - { label: One-line summary (also used for search results), name: summaryLead, widget: text }
+          - { label: "Client story (3 to 5 sentences, who they are, what they needed, what we built)", name: story, widget: text }
           - { label: Chips, name: chips, widget: list, field: { label: Chip, name: chip, widget: string } }
           - label: Features
             name: features

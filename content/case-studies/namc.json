@@ -2,6 +2,7 @@
   "title": "Engineering the NAMC National Event Portal",
   "tag": "National conference and events portal",
   "summaryLead": "The digital home for a national conference: tickets, sponsors, schedule and passes.",
+  "story": "The National Association of Minority Contractors runs national gatherings that depend on a small admin team. Ticket sales, sponsorships, schedules and attendee access were spread across separate tools. They came to us for one event site that could carry the whole experience through peak registration. We built it static-first on Netlify, with serverless forms for sponsor applications, calendar sync for the agenda, a way for small businesses to find the right meetings, and a digital pass for every attendee.",
   "chips": [
     "Netlify Edge",
     "Static-first",

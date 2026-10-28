@@ -2,6 +2,7 @@
   "title": "Engineering Summit",
   "tag": "Shopify implementation intelligence",
   "summaryLead": "A marketing site that explains a Shopify planning product in seconds.",
+  "story": "Summit is a product for Shopify agencies and consultants that turns scattered discovery notes into requirements, risk assessments, roadmaps and QA plans. Its audience lives in spreadsheets and inboxes, so the marketing site had to explain the product quickly and show its output, not just describe it. We built a lightweight, framework-free landing site where the workflow section and the score ring do most of the explaining.",
   "chips": [
     "Netlify Edge",
     "Pure CSS",
