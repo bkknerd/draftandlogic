@@ -4,27 +4,27 @@
   "items": [
     {
       "q": "Which platforms do you build on?",
-      "a": "We choose the platform that fits your needs: Webflow, Shopify or composable architecture. We are official partners of Netlify, Webflow, Shopify and Sanity."
+      "a": "Webflow, Shopify or composable architecture, whichever fits. We are official partners of Netlify, Webflow, Shopify and Sanity."
     },
     {
       "q": "Who owns the code and the accounts?",
-      "a": "You do. You keep 100% ownership of your code, design assets and accounts from day one."
+      "a": "You do. Code, design assets and accounts are yours from day one."
     },
     {
       "q": "Do I see the design before you build it?",
-      "a": "Yes. Layout, content and behavior are drawn and agreed on paper first. You review drawings of every key page before we write code, so changes are cheap."
+      "a": "Yes. Drawings of every key page are agreed before we write code."
     },
     {
       "q": "What does a project include?",
-      "a": "Design, development, CMS setup, technical SEO, accessibility checks and analytics, plus launch support. We stay on for the first weeks after launch and offer ongoing maintenance."
+      "a": "Design, development, CMS setup, technical SEO, accessibility checks, analytics and launch support. Ongoing maintenance is optional."
     },
     {
       "q": "Do you handle SEO and AI search visibility?",
-      "a": "Yes. Technical SEO, structured data, and AEO and GEO (optimization for answer engines and generative AI) are built in, so search engines and AI tools can read and cite your site accurately."
+      "a": "Yes. Technical SEO, structured data and AEO and GEO (optimization for answer engines and generative AI) are built in."
     },
     {
       "q": "How much does a project cost?",
-      "a": "It depends on scope and platform. Send a short brief through the form and we reply with a written quote within two working days."
+      "a": "It depends on scope and platform. Send a short brief and we reply with a written quote within two working days."
     },
     {
       "q": "How long does a project take?",
@@ -32,7 +32,7 @@
     },
     {
       "q": "How do we start?",
-      "a": "Tell us what you are building using the form below. We reply within two working days."
+      "a": "Send a brief through the form below. We reply within two working days."
     }
   ]
 }

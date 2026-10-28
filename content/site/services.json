@@ -1,42 +1,42 @@
 {
   "show": true,
-  "heading": "Seven services, one team.",
-  "intro": "We build, optimize and maintain your site. No handoffs between vendors, and one team accountable when something breaks.",
+  "heading": "Seven services.",
+  "intro": "We build, optimize and maintain your site, with one team accountable when something breaks.",
   "levels": [
     {
       "title": "CMS Architecture",
-      "lead": "Fast publishing, no developer needed.",
-      "text": "Custom CMS setups your team can edit without breaking the design."
+      "lead": "Edit without a developer.",
+      "text": "A CMS your team can update without breaking the design."
     },
     {
       "title": "CRO & Analytics",
-      "lead": "Know what converts.",
-      "text": "Tracking and tests that show what turns visitors into leads."
+      "lead": "Tracking and tests.",
+      "text": "Measure which pages turn visitors into leads, then test changes."
     },
     {
       "title": "AEO & GEO",
-      "lead": "Readable by AI search.",
-      "text": "Structured content and markup so AI tools can cite your site accurately."
+      "lead": "Cited by AI search.",
+      "text": "Structured content and schema so answer engines can read and quote your site."
     },
     {
       "title": "Technical SEO",
-      "lead": "Speed and crawlability.",
-      "text": "Clean markup, fast pages and correct metadata."
+      "lead": "Fast and crawlable.",
+      "text": "Clean markup, correct metadata, quick pages."
     },
     {
       "title": "ADA Compliance",
-      "lead": "Accessible by default.",
-      "text": "Semantic markup, keyboard support and contrast checks built in."
+      "lead": "Accessible from the start.",
+      "text": "Semantic markup, keyboard support and contrast checks."
     },
     {
       "title": "Maintenance & Support",
-      "lead": "Updates and uptime monitoring.",
-      "text": "Security patches, monitoring and fixes after launch."
+      "lead": "Updates and monitoring.",
+      "text": "Security patches, uptime monitoring and fixes after launch."
     },
     {
       "title": "Website Development",
-      "lead": "Custom builds, clean deploys.",
-      "text": "Fast, secure sites on clean code, with no bloat."
+      "lead": "Custom builds.",
+      "text": "Fast, secure sites on clean code."
     }
   ]
 }
