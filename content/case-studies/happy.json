@@ -1,90 +1,31 @@
 {
   "title": "happy's: a concept site for a downtown Cary cocktail bar",
-  "tag": "Concept site · cocktail bar and event space, Cary, NC",
-  "shotSel": ".case.happy .shot img",
+  "tag": "Concept site · cocktail bar, Cary, NC",
   "summaryLead": "A concept site for a downtown Cary cocktail bar. Not a launched project.",
-  "summaryMore": "One hand-written HTML file built around the bar's smiley wall: cream and tomato, heavy lowercase type.",
   "chips": [
     "Vanilla JS",
-    "Pure CSS3",
+    "Pure CSS",
     "Native dialog",
     "Concept"
   ],
-  "stack": [
+  "features": [
     {
-      "name": "Delivery",
-      "detail": "One self-contained HTML file. No framework, build step or database."
+      "title": "The smiley wall",
+      "text": "The bar's own wall sets the hero and the cream and tomato palette.",
+      "image": "/uploads/happy-f1.jpg",
+      "alt": "happy's concept home page"
     },
     {
-      "name": "Accessibility",
-      "detail": "HTML5 landmarks, a native dialog with focus return, aria-pressed toggles."
+      "title": "Colour-coded menu",
+      "text": "60 items in ten sections, with category chips, live search and a running tab (for fun).",
+      "image": "/uploads/happy-f2.jpg",
+      "alt": "happy's concept menu cards"
     },
     {
-      "name": "Type",
-      "detail": "Bricolage Grotesque, Hanken Grotesk and Space Mono."
-    },
-    {
-      "name": "Menu",
-      "detail": "60 items in ten sections as data, with chips, search and one delegated click handler."
-    },
-    {
-      "name": "Walk up",
-      "detail": "Twelve CSS-only 3D steps inside a native dialog."
-    },
-    {
-      "name": "Forms",
-      "detail": "Sign-up is front-end only in this concept."
-    }
-  ],
-  "chapters": [
-    {
-      "title": "A menu that is fun to use",
-      "demo": "tab",
-      "challenge": "Sixty items across ten sections is a wall of text on a phone.",
-      "solution": "Colour-coded cards with chips, search and a running \"tab (for fun)\".",
-      "outcome": "Quick to scan and easy to keep current."
-    },
-    {
-      "title": "The walk up climb",
-      "demo": "climb",
-      "challenge": "\"The walk up\" is part of the bar's identity, and a plain link would not carry it.",
-      "solution": "A CSS-only 3D staircase in a native dialog, skipped for reduced motion.",
-      "outcome": "A memorable moment with no video or library."
-    },
-    {
-      "title": "Hours that stay current",
-      "demo": "open",
-      "challenge": "Hours are irregular, and visitors want one clear answer.",
-      "solution": "Hours stored as data and checked against Eastern time.",
-      "outcome": "One answer in the nav, with no manual updates."
-    }
-  ],
-  "stats": [
-    {
-      "value": "60",
-      "label": "menu items"
-    },
-    {
-      "value": "12",
-      "label": "stairs, all CSS"
-    },
-    {
-      "value": "0",
-      "label": "JavaScript frameworks"
-    }
-  ],
-  "results": [
-    {
-      "title": "Personality",
-      "text": "The page borrows the bar's smiley wall and type."
-    },
-    {
-      "title": "Practical answers",
-      "text": "Menu, hours and address are never far away."
-    },
-    {
-      "title": "Respects motion settings",
-      "text": "The climb, confetti and cursor are skipped for reduced motion."
+      "title": "The walk up",
+      "text": "Twelve CSS-only 3D steps in a native dialog. Skipped for reduced motion.",
+      "image": "/uploads/happy-f3.jpg",
+      "alt": "happy's walk up staircase"
     }
   ]
 }

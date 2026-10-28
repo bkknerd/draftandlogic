@@ -1,91 +1,29 @@
 {
   "title": "Engineering Summit",
-  "tag": "Shopify Implementation Intelligence",
-  "shotSel": ".case.sum .shot img",
+  "tag": "Shopify implementation intelligence",
   "summaryLead": "A marketing site that explains a Shopify planning product in seconds.",
-  "summaryMore": "Framework-free HTML and CSS, with the grain, score ring and fluid type all done in CSS.",
   "chips": [
     "Netlify Edge",
-    "HTML5",
-    "Pure CSS3",
-    "Framework-free landing site",
-    "Next.js 14 app"
+    "Pure CSS",
+    "SVG grain",
+    "Next.js app"
   ],
-  "stack": [
+  "features": [
     {
-      "name": "Hosting",
-      "detail": "Netlify Edge CDN."
+      "title": "Grain and fluid type",
+      "text": "Paper grain from an SVG filter and headlines that scale with clamp(). No extra requests.",
+      "image": "/uploads/sum-1.jpg",
+      "alt": "Summit home page"
     },
     {
-      "name": "Scope",
-      "detail": "This covers the framework-free landing site. The Summit app itself runs on Next.js and Supabase."
+      "title": "Workflow",
+      "text": "From discovery notes to requirements, risk assessment, roadmap and QA plan.",
+      "image": "/uploads/sum-2.jpg",
+      "alt": "Summit workflow section"
     },
     {
-      "name": "Styling",
-      "detail": "Hand-written CSS with design tokens, Grid and clamp()."
-    },
-    {
-      "name": "Type",
-      "detail": "Newsreader, Manrope and DM Mono from Google Fonts."
-    },
-    {
-      "name": "Grain",
-      "detail": "An SVG feTurbulence filter as a data URI. No image request."
-    },
-    {
-      "name": "Score ring",
-      "detail": "A CSS conic-gradient with a centred pseudo-element. No chart library."
-    }
-  ],
-  "chapters": [
-    {
-      "title": "Paper grain with no image",
-      "demo": "grain",
-      "challenge": "Add tactile texture without extra requests.",
-      "solution": "An SVG noise filter as a data URI on a fixed layer.",
-      "outcome": "Zero extra requests and sharp on any screen."
-    },
-    {
-      "title": "A score ring in pure CSS",
-      "demo": "score",
-      "challenge": "Show a data-rich score card without Chart.js or D3.",
-      "solution": "A conic-gradient donut with a centred pseudo-element.",
-      "outcome": "A crisp ring with no runtime dependency."
-    },
-    {
-      "title": "Fluid headline type",
-      "demo": "type",
-      "challenge": "Big headlines with no layout shift or breakpoint overrides.",
-      "solution": "CSS clamp() with viewport units.",
-      "outcome": "Headlines scale smoothly from phone to desktop."
-    }
-  ],
-  "stats": [
-    {
-      "value": "0",
-      "label": "JavaScript frameworks"
-    },
-    {
-      "value": "0",
-      "label": "charting libraries"
-    },
-    {
-      "value": "0",
-      "label": "extra requests for texture"
-    }
-  ],
-  "results": [
-    {
-      "title": "Speed",
-      "text": "A static page with no framework runtime."
-    },
-    {
-      "title": "Maintainability",
-      "text": "One set of CSS variables controls the design."
-    },
-    {
-      "title": "Resilience",
-      "text": "Few dependencies, so little to maintain."
+      "title": "CSS score ring",
+      "text": "A conic-gradient donut with no chart library."
     }
   ]
 }

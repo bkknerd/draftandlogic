@@ -42,13 +42,10 @@ const studies = {};
 for (const f of list("content/case-studies")) {
   const s = rd("content/case-studies/" + f);
   studies[f.replace(/\.json$/, "")] = {
-    title: s.title, tag: s.tag, shotSel: s.shotSel,
-    summary: [s.summaryLead, s.summaryMore],
+    title: s.title, tag: s.tag,
+    summary: s.summaryLead,
     chips: s.chips,
-    stack: s.stack.map((r) => [r.name, r.detail]),
-    chapters: s.chapters,
-    stats: s.stats.map((r) => [r.value, r.label]),
-    results: s.results.map((r) => [r.title, r.text]),
+    features: (s.features || []).map((f) => [f.title, f.text, f.image || "", f.alt || ""]),
   };
 }
 data.studiesJson = JSON.stringify(studies).replace(/</g, "\\u003c").replace(/\u2028/g, "\\u2028").replace(/\u2029/g, "\\u2029");
@@ -159,11 +156,8 @@ for (const [slug, st] of Object.entries(on("work") ? studies : {})) {
     { "@type": "Article", "@id": url + "#article", headline: trim(st.title, 110), description: desc, image: img, mainEntityOfPage: { "@id": url + "#webpage" }, author: { "@id": orgId }, publisher: { "@id": orgId }, articleSection: "Case study", keywords: (st.chips || []).join(", ") },
     org,
   ];
-  const ch = (raw.chapters || []).map((c) => "<h2>" + esc(c.title) + "</h2><h3>Challenge</h3><p>" + esc(c.challenge) + "</p><h3>Solution</h3><p>" + esc(c.solution) + "</p><h3>Outcome</h3><p>" + esc(c.outcome) + "</p>").join("");
-  const stat = (raw.stats || []).map((r) => "<li>" + esc(r.value) + " " + esc(r.label) + "</li>").join("");
-  const res = (raw.results || []).map((r) => "<li><b>" + esc(r.title) + ".</b> " + esc(r.text) + "</li>").join("");
-  const stk = (raw.stack || []).map((r) => "<li><b>" + esc(r.name) + ":</b> " + esc(r.detail) + "</li>").join("");
-  const plain = '<noscript><article><h1>' + esc(st.title) + '</h1><p>' + esc(raw.summaryLead) + '</p><p>' + esc(raw.summaryMore) + '</p><h2>Stack and architecture</h2><ul>' + stk + '</ul>' + ch + '<h2>Results and impact</h2><ul>' + stat + '</ul><ul>' + res + '</ul><p><a href="/">Draft and Logic home</a> | <a href="/#contact">Start a project</a></p></article></noscript>';
+  const feats = (raw.features || []).map((f) => "<li><b>" + esc(f.title) + ".</b> " + esc(f.text) + "</li>").join("");
+  const plain = '<noscript><article><h1>' + esc(st.title) + '</h1><p>' + esc(raw.summaryLead) + '</p><h2>Features</h2><ul>' + feats + '</ul><p><a href="/">Draft and Logic home</a> | <a href="/#contact">Start a project</a></p></article></noscript>';
   let h = html;
   h = swap(h, /<title>[\s\S]*?<\/title>/, "<title>" + attr(title) + "</title>");
   h = swap(h, /<meta name="description" content="[^"]*">/, '<meta name="description" content="' + attr(desc) + '">');

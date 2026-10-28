@@ -1,91 +1,35 @@
 {
   "title": "Milo's Cafe: a neighborhood site with a live patio",
-  "tag": "Café and restaurant website, Morrisville, NC",
-  "shotSel": ".case.milo .shot img",
-  "summaryLead": "A one-page café site that answers three questions: what is on the menu, are you open, can we sit outside.",
-  "summaryMore": "Hand-written HTML, CSS and JavaScript, with a live patio scene from the free Open-Meteo weather service.",
+  "tag": "Café website, Morrisville, NC",
+  "summaryLead": "A one-page café site: the menu, whether it is open, and whether the patio is worth it today.",
   "chips": [
     "Vanilla JS",
-    "Pure CSS3",
     "Inline SVG",
     "Open-Meteo weather",
     "SpotOn ordering"
   ],
-  "stack": [
+  "features": [
     {
-      "name": "Delivery",
-      "detail": "One self-contained HTML file. No framework, build step or database."
+      "title": "One page, two actions",
+      "text": "Order buttons go to SpotOn, and a sticky Order and Call bar keeps both in reach.",
+      "image": "/uploads/milo-f1.jpg",
+      "alt": "Milo's Cafe home page"
     },
     {
-      "name": "Accessibility",
-      "detail": "HTML5 landmarks, ARIA tabs, live regions and a name on every control."
+      "title": "Live patio scene",
+      "text": "An SVG scene follows time of day and weather, with a feels-like verdict and a day slider.",
+      "image": "/uploads/milo-f2.jpg",
+      "alt": "Milo's patio scene at golden hour"
     },
     {
-      "name": "Type",
-      "detail": "Newsreader for headlines, Hanken Grotesk for body."
+      "title": "Searchable menu",
+      "text": "69 items as data, with live search, a meat-free filter and guest favourites.",
+      "image": "/uploads/milo-f3.jpg",
+      "alt": "Milo's menu with Food and Drinks tabs"
     },
     {
-      "name": "Menu",
-      "detail": "69 items as structured data, with search, a meat-free filter and guest favourites."
-    },
-    {
-      "name": "Patio scene",
-      "detail": "Inline SVG driven by time of day and weather. Falls back to the day's hours if the request fails."
-    },
-    {
-      "name": "Ordering",
-      "detail": "Buttons link to the café's SpotOn page. No cart on the site."
-    }
-  ],
-  "chapters": [
-    {
-      "title": "A patio you can check first",
-      "demo": "patio",
-      "challenge": "A photo cannot say whether today is a patio day.",
-      "solution": "An SVG scene driven by time and weather, with a verdict and a day slider.",
-      "outcome": "A quick answer to \"should we sit outside?\", refreshed every 30 seconds."
-    },
-    {
-      "title": "A menu that is data, not a PDF",
-      "demo": "menu",
-      "challenge": "PDF menus cannot be searched and are hard to read on a phone.",
-      "solution": "69 items rendered into tabs with live search and a meat-free filter.",
-      "outcome": "Found in seconds, and a seasonal change is a one-line edit."
-    },
-    {
-      "title": "Help for the undecided",
-      "demo": "pair",
-      "challenge": "First-timers face dozens of items with no starting point.",
-      "solution": "A \"pair it\" tool picks a food and drink combination by mood.",
-      "outcome": "A low-pressure way in, with no account or tracking."
-    }
-  ],
-  "stats": [
-    {
-      "value": "69",
-      "label": "searchable menu items"
-    },
-    {
-      "value": "0",
-      "label": "JavaScript frameworks"
-    },
-    {
-      "value": "30s",
-      "label": "patio scene refresh"
-    }
-  ],
-  "results": [
-    {
-      "title": "Answers up front",
-      "text": "Hours and the patio verdict sit in the top bar, with a sticky Order and Call bar."
-    },
-    {
-      "title": "A usable menu",
-      "text": "Real text that search engines and screen readers can read."
-    },
-    {
-      "title": "Motion that respects people",
-      "text": "Intro, cursor, marquee and count-up are skipped for reduced motion."
+      "title": "Pair it",
+      "text": "Pick a food mood and a drink mood and it suggests a combination."
     }
   ]
 }

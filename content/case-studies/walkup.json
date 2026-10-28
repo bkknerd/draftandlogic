@@ -1,90 +1,29 @@
 {
   "title": "The WalkUp: a concept site for the bar upstairs",
   "tag": "Concept site · cocktail bar, Cary, NC",
-  "shotSel": ".case.walkup .shot img",
-  "summaryLead": "A concept site for a cocktail bar one flight up in downtown Cary. Not a launched project.",
-  "summaryMore": "One hand-written HTML file in night ink and sign-painter gold, built around the climb.",
+  "summaryLead": "A concept site for the cocktail bar one flight up in downtown Cary. Not a launched project.",
   "chips": [
     "Vanilla JS",
-    "Pure CSS3",
+    "Pure CSS",
     "Inline SVG logo",
     "Concept"
   ],
-  "stack": [
+  "features": [
     {
-      "name": "Delivery",
-      "detail": "One self-contained HTML file with embedded WebP photos. No framework or build step."
+      "title": "Scroll staircase",
+      "text": "A 14-step meter fills with gold as you scroll from the street to Suite 200.",
+      "image": "/uploads/walkup-1.jpg",
+      "alt": "The WalkUp concept home page"
     },
     {
-      "name": "Accessibility",
-      "detail": "HTML5 landmarks and ARIA tabs with arrow-key support."
+      "title": "Menu and running tab",
+      "text": "49 items in tabs, five specialty cocktail cards and a tab that never leaves the page.",
+      "image": "/uploads/walkup-2.jpg",
+      "alt": "The WalkUp concept menu"
     },
     {
-      "name": "Type",
-      "detail": "Big Shoulders Display, Newsreader and Lekton."
-    },
-    {
-      "name": "Interaction",
-      "detail": "Menu and running tab, scroll staircase, draggable review reel. Skipped for reduced motion."
-    },
-    {
-      "name": "Brand assets",
-      "detail": "Logo traced into one reusable SVG symbol."
-    },
-    {
-      "name": "Forms",
-      "detail": "Sign-up is front-end only in this concept."
-    }
-  ],
-  "chapters": [
-    {
-      "title": "The stairs, built into the scroll",
-      "demo": "wstairs",
-      "challenge": "First-timers walk past the door because it is upstairs.",
-      "solution": "A 14-step staircase fills with gold as you scroll.",
-      "outcome": "Guests remember that it is upstairs."
-    },
-    {
-      "title": "A menu you can plan a round with",
-      "demo": "wtab",
-      "challenge": "49 items change seasonally, and guests order at the counter.",
-      "solution": "Menu data in tabs, with a running tab that slides up.",
-      "outcome": "Easy to update one line at a time."
-    },
-    {
-      "title": "A logo that holds up at any size",
-      "demo": "wlogo",
-      "challenge": "The only logo file was a soft 560-pixel image.",
-      "solution": "Traced into vector SVG symbols reused across the page.",
-      "outcome": "Crisp from the nav mark to the footer."
-    }
-  ],
-  "stats": [
-    {
-      "value": "14",
-      "label": "steps in the scroll staircase"
-    },
-    {
-      "value": "49",
-      "label": "menu items as data"
-    },
-    {
-      "value": "0",
-      "label": "JavaScript frameworks"
-    }
-  ],
-  "results": [
-    {
-      "title": "The building, explained",
-      "text": "The first screen, nav and scroll all say it is upstairs."
-    },
-    {
-      "title": "Built from the room",
-      "text": "The palette and type come from the sign and brick."
-    },
-    {
-      "title": "Motion that respects people",
-      "text": "Logo reveal and parallax are skipped for reduced motion."
+      "title": "Vector logo",
+      "text": "Traced into one SVG symbol, reused in the nav, hero and footer."
     }
   ]
 }

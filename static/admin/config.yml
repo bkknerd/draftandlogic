@@ -67,6 +67,7 @@ collections:
           - { label: Case study page, badge, name: csBadge, widget: string }
           - { label: Case study page, back to work link, name: csBackWork, widget: string }
           - { label: Case study page, start a project link, name: csStart, widget: string }
+          - { label: Case study page, features heading, name: csFeatures, widget: string }
           - { label: Case study page, stack heading, name: csStack, widget: string }
           - { label: Case study page, chapters label, name: csChapters, widget: string }
           - { label: Case study page, challenge label, name: csChallenge, widget: string }
@@ -291,41 +292,18 @@ collections:
         fields: &studyfields
           - { label: Title, name: title, widget: string }
           - { label: Tag line, name: tag, widget: string }
-          - { label: Screenshot selector (do not change), name: shotSel, widget: hidden }
           - { label: Summary (lead), name: summaryLead, widget: text }
-          - { label: Summary (more), name: summaryMore, widget: text }
           - { label: Chips, name: chips, widget: list, field: { label: Chip, name: chip, widget: string } }
-          - label: Stack and architecture
-            name: stack
-            widget: list
-            summary: "{{fields.name}}"
-            fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Detail, name: detail, widget: text }
-          - label: Chapters
-            name: chapters
+          - label: Features
+            name: features
             widget: list
             summary: "{{fields.title}}"
+            hint: "Short title, one line of text, and a screenshot. The first feature is shown full width."
             fields:
               - { label: Title, name: title, widget: string }
-              - { label: Interactive demo, name: demo, widget: select, options: [grain, score, type, sprite, intro, steps, edge, grid, sponsor, cal, patio, menu, pair, tab, climb, open, wstairs, wtab, wlogo], hint: "Demos are built into the site; choose which one this chapter shows." }
-              - { label: Challenge, name: challenge, widget: text }
-              - { label: Solution, name: solution, widget: text }
-              - { label: Outcome, name: outcome, widget: text }
-          - label: Headline numbers
-            name: stats
-            widget: list
-            summary: "{{fields.value}} {{fields.label}}"
-            fields:
-              - { label: Number, name: value, widget: string }
-              - { label: Label, name: label, widget: string }
-          - label: Results and impact
-            name: results
-            widget: list
-            summary: "{{fields.title}}"
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: Text, name: text, widget: text }
+              - { label: Text, name: text, widget: string }
+              - { label: Screenshot, name: image, widget: image, required: false }
+              - { label: Screenshot description, name: alt, widget: string, required: false }
       - { name: abaxent, label: Abaxent, file: content/case-studies/abaxent.json, format: json, fields: *studyfields }
       - { name: namc, label: NAMC, file: content/case-studies/namc.json, format: json, fields: *studyfields }
       - { name: milo, label: "Milo's Cafe", file: content/case-studies/milo.json, format: json, fields: *studyfields }

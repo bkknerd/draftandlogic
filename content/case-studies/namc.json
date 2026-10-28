@@ -1,91 +1,35 @@
 {
   "title": "Engineering the NAMC National Event Portal",
   "tag": "National conference and events portal",
-  "shotSel": ".case.namc .shot img",
   "summaryLead": "The digital home for a national conference: tickets, sponsors, schedule and passes.",
-  "summaryMore": "A static-first build on Netlify, with serverless forms and calendar sync.",
   "chips": [
     "Netlify Edge",
-    "Composable architecture",
-    "WCAG 2.1 AA",
+    "Static-first",
     "Serverless forms",
-    ".ics calendar sync"
+    "WCAG 2.1 AA"
   ],
-  "stack": [
+  "features": [
     {
-      "name": "Hosting",
-      "detail": "Netlify Edge CDN."
+      "title": "Tickets and sponsorships",
+      "text": "Tier selection and vector logo upload are validated before they reach the admin team.",
+      "image": "/uploads/namc-1.jpg",
+      "alt": "NAMC National Conference 2027 home page"
     },
     {
-      "name": "Architecture",
-      "detail": "Static-first and composable, with no server rendering or database."
+      "title": "Schedule with calendar sync",
+      "text": "A scannable agenda. One tap builds an .ics file for Apple, Google or Outlook."
     },
     {
-      "name": "Accessibility",
-      "detail": "Structured to WCAG 2.1 AA, with keyboard and screen-reader support."
+      "title": "Meeting finder",
+      "text": "Helps small businesses find the right meetings."
     },
     {
-      "name": "Styling",
-      "detail": "Modern CSS with Grid, fluid type and design tokens."
+      "title": "Digital pass",
+      "text": "Every attendee gets a digital pass."
     },
     {
-      "name": "Calendar sync",
-      "detail": "Generated .ics files for Apple, Google and Outlook."
-    },
-    {
-      "name": "Sponsor workflow",
-      "detail": "Serverless form endpoints validate uploads and notify the admin team."
-    }
-  ],
-  "chapters": [
-    {
-      "title": "Fast under conference traffic",
-      "demo": "edge",
-      "challenge": "Serve updates, agenda and sponsors quickly during peak announcements.",
-      "solution": "Pre-built static pages served from the edge.",
-      "outcome": "Pages stay quick when traffic spikes."
-    },
-    {
-      "title": "Sponsor onboarding",
-      "demo": "sponsor",
-      "challenge": "Let sponsors pick a tier and upload vector logos without admin back-and-forth.",
-      "solution": "Serverless form endpoints validate files and route notifications.",
-      "outcome": "A short sign-up flow with automatic hand-off."
-    },
-    {
-      "title": "Schedule and calendar sync",
-      "demo": "cal",
-      "challenge": "Give attendees a scannable schedule they can add to any calendar.",
-      "solution": "A CSS Grid agenda plus generated .ics files.",
-      "outcome": "One tap adds a session or a whole track."
-    }
-  ],
-  "stats": [
-    {
-      "value": "0",
-      "label": "JavaScript frameworks"
-    },
-    {
-      "value": "0",
-      "label": "database dependencies"
-    },
-    {
-      "value": "AA",
-      "label": "WCAG 2.1 target"
-    }
-  ],
-  "results": [
-    {
-      "title": "Speed",
-      "text": "Static pages from the edge, with no database to wait on."
-    },
-    {
-      "title": "Accessibility",
-      "text": "Built to WCAG 2.1 AA targets."
-    },
-    {
-      "title": "Less admin",
-      "text": "Sponsor sign-up and notifications are automated."
+      "title": "Accessible",
+      "text": "Built to WCAG 2.1 AA targets, with keyboard and screen-reader support."
     }
   ]
 }

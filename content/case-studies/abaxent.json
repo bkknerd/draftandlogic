@@ -1,104 +1,37 @@
 {
   "title": "Engineering Abaxent",
   "tag": "Technology solutions network",
-  "shotSel": ".case.abx .shot img",
   "summaryLead": "A fast, framework-free site for a network of technology professionals.",
-  "summaryMore": "Hand-written CSS, a scroll-driven video hero and one self-contained page.",
   "chips": [
-    "Static and edge hosting",
-    "HTML5 and ARIA",
-    "Pure CSS3",
     "Vanilla JS",
-    "Inline SVG sprites",
-    "Scroll-driven video hero"
+    "Hand-written CSS",
+    "Inline SVG sprite",
+    "Video hero"
   ],
-  "stack": [
-    {
-      "name": "Hosting",
-      "detail": "Static files on an edge CDN."
-    },
-    {
-      "name": "Runtime",
-      "detail": "Vanilla JavaScript. No framework or UI library."
-    },
-    {
-      "name": "Styling",
-      "detail": "Hand-written CSS with design tokens, Grid and clamp(). Dark mode via prefers-color-scheme."
-    },
-    {
-      "name": "Hero media",
-      "detail": "Muted looping MP4 with a poster frame. Paused for reduced motion."
-    },
-    {
-      "name": "Brand graphics",
-      "detail": "One inline SVG sprite, recoloured with CSS variables."
-    },
-    {
-      "name": "Type",
-      "detail": "System sans stack plus one italic serif accent, Instrument Serif."
-    }
-  ],
-  "chapters": [
-    {
-      "title": "Brand shapes with no image files",
-      "demo": "sprite",
-      "challenge": "Keep the pyramid motif sharp at any size without raster images.",
-      "solution": "An inline SVG sprite coloured through CSS variables.",
-      "outcome": "Vector-sharp on every screen, with no image payload."
-    },
-    {
-      "title": "Intro and full-screen menu",
-      "demo": "intro",
-      "challenge": "A cinematic intro that does not delay first paint.",
-      "solution": "CSS keyframe overlays toggled by small state classes.",
-      "outcome": "The intro clears itself and the content stays reachable."
-    },
+  "features": [
     {
       "title": "Scroll-driven video hero",
-      "challenge": "Open on a film without hurting speed, scroll or keyboard use.",
-      "solution": "Hero media grows to full-bleed on a CSS variable. The menu uses inert, aria-expanded and Escape.",
-      "outcome": "A cinematic first screen that respects motion preferences."
+      "text": "The film grows from an inset frame to full-bleed as you scroll. It pauses for reduced motion.",
+      "image": "/uploads/abx-f1.jpg",
+      "alt": "Abaxent hero: Technology brokers. Not vendors."
     },
     {
-      "title": "Fluid layout",
-      "demo": "steps",
-      "challenge": "Keep multi-column layouts readable from phone to ultra-wide.",
-      "solution": "CSS Grid with fluid clamping and per-item width variables.",
-      "outcome": "Readable at every width, with few breakpoints."
+      "title": "Four-step method",
+      "text": "A pyramid drawn from one inline SVG sprite, with no image files.",
+      "image": "/uploads/abx-f2.jpg",
+      "alt": "How a technology broker works, with the pyramid graphic"
     },
     {
-      "title": "Credential and project carousels",
-      "challenge": "Show twelve credentials and nine project photos without a carousel library.",
-      "solution": "Native scroll-snap with drag, active-slide state and disabled end buttons.",
-      "outcome": "Touch, mouse and keyboard all browse the same content."
-    }
-  ],
-  "stats": [
-    {
-      "value": "0",
-      "label": "JavaScript frameworks"
+      "title": "Impact numbers",
+      "text": "22 years, 93% partner retention, 75+ partners, 3.2x economic impact.",
+      "image": "/uploads/abx-f3.jpg",
+      "alt": "Abaxent impact statistics"
     },
     {
-      "value": "0",
-      "label": "raster images for brand shapes"
-    },
-    {
-      "value": "12",
-      "label": "column fluid grid"
-    }
-  ],
-  "results": [
-    {
-      "title": "Performance",
-      "text": "Fast first paint from one static page with no framework runtime."
-    },
-    {
-      "title": "Maintainability",
-      "text": "One token set drives the whole design."
-    },
-    {
-      "title": "Resilience",
-      "text": "Plain web standards, so there is little to break or update."
+      "title": "Leadership",
+      "text": "Portraits, bios and direct contact lines for the three leaders.",
+      "image": "/uploads/abx-f4.jpg",
+      "alt": "Abaxent leadership team"
     }
   ]
 }
