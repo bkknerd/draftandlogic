@@ -30,7 +30,21 @@
     },
     {
       "title": "Pair it",
-      "text": "Pick a food mood and a drink mood and it suggests a combination."
+      "text": "Pick a food mood and a drink mood and it suggests a combination.",
+      "image": "/uploads/milo-f4.jpg",
+      "alt": "Milo's Pair it tool"
+    },
+    {
+      "title": "Guest reviews",
+      "text": "A rating and review quotes in one block.",
+      "image": "/uploads/milo-f5.jpg",
+      "alt": "Milo's guest reviews"
+    },
+    {
+      "title": "On a phone",
+      "text": "Hero, patio scene and menu on a 390-pixel screen.",
+      "image": "/uploads/milo-f6.jpg",
+      "alt": "Milo's on a phone"
     }
   ]
 }

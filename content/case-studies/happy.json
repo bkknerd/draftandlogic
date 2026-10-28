@@ -27,6 +27,24 @@
       "text": "Twelve CSS-only 3D steps in a native dialog. Skipped for reduced motion.",
       "image": "/uploads/happy-f3.jpg",
       "alt": "happy's walk up staircase"
+    },
+    {
+      "title": "Reviews and rating",
+      "text": "A 4.8 rating from 26 reviews, with highlights as colour-coded cards.",
+      "image": "/uploads/happy-f4.jpg",
+      "alt": "happy's reviews section"
+    },
+    {
+      "title": "Hours and sign-up",
+      "text": "Hours table, address, directions and an email sign-up.",
+      "image": "/uploads/happy-f5.jpg",
+      "alt": "happy's hours section"
+    },
+    {
+      "title": "On a phone",
+      "text": "Hero, menu and hours on a 390-pixel screen.",
+      "image": "/uploads/happy-f6.jpg",
+      "alt": "happy's on a phone"
     }
   ]
 }
