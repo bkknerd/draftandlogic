@@ -44,7 +44,12 @@ for (const f of list("content/case-studies")) {
   studies[f.replace(/\.json$/, "")] = {
     title: s.title, tag: s.tag,
     summary: s.summaryLead,
-    story: s.story || "",
+    story: s.story || "", url: s.url || "",
+    numbers: (s.numbers || []).filter((x) => x && x.value).map((x) => [x.value, x.label]),
+    goals: s.goals || [],
+    quote: s.quote && s.quote.text ? [s.quote.text, s.quote.name || "", s.quote.role || ""] : null,
+    img: ((s.features || []).find((x) => x.image) || {}).image || "",
+    blurb: (((data.cases.items || []).find((c) => c.study === f.replace(/\.json$/, ""))) || {}).summary || "",
     services: ((data.cases.items || []).find((c) => c.study === f.replace(/\.json$/, "")) || {}).services || [],
     chips: s.chips,
     features: (s.features || []).map((f) => [f.title, f.text, f.image || "", f.alt || "", f.story || ""]),

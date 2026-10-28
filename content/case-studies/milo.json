@@ -3,6 +3,13 @@
   "tag": "Café website, Morrisville, NC",
   "summaryLead": "A one-page site that shows the menu, whether they're open and whether to sit outside.",
   "story": "Milo's is a European-style café in Morrisville, NC, known for focaccia sandwiches, Lavazza espresso and crepes. Before heading out, people want three things: the menu, the hours, and whether the patio is worth it today. They asked for a site that answers all three without digging. We made it one page, with a searchable menu, a patio scene that reads the weather, and links straight to online ordering.",
+  "url": "",
+  "numbers": [],
+  "goals": [
+    "Show the menu without a PDF.",
+    "Say at a glance whether the café is open.",
+    "Help people decide if the patio is worth it today."
+  ],
   "chips": [
     "Vanilla JS",
     "Inline SVG",
@@ -49,5 +56,10 @@
       "image": "/uploads/milo-f6.jpg",
       "alt": "Milo's on a phone"
     }
-  ]
+  ],
+  "quote": {
+    "text": "",
+    "name": "",
+    "role": ""
+  }
 }

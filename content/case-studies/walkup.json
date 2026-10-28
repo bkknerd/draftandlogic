@@ -3,6 +3,13 @@
   "tag": "Concept site · cocktail bar, Cary, NC",
   "summaryLead": "A concept site for the cocktail bar one flight up in downtown Cary. Not a launched project.",
   "story": "The WalkUp is a cocktail bar one flight up in downtown Cary, NC, right above happy's. People walk past the door all the time because they don't know it's upstairs. This concept is our own work, and it turns that into the page: a 14-step meter fills as you scroll from the street up to Suite 200, and the menu and running tab wait at the top.",
+  "url": "",
+  "numbers": [],
+  "goals": [
+    "Tell first-timers the bar is upstairs.",
+    "Make the climb the navigation.",
+    "Keep the menu easy to plan a round with."
+  ],
   "chips": [
     "Vanilla JS",
     "Pure CSS",
@@ -55,5 +62,10 @@
       "image": "/uploads/walkup-f5.jpg",
       "alt": "The WalkUp on a phone"
     }
-  ]
+  ],
+  "quote": {
+    "text": "",
+    "name": "",
+    "role": ""
+  }
 }

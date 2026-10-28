@@ -68,6 +68,12 @@ collections:
           - { label: Case study page, back to work link, name: csBackWork, widget: string }
           - { label: Case study page, start a project link, name: csStart, widget: string }
           - { label: Case study page, features heading, name: csFeatures, widget: string }
+          - { label: Case study page, numbers heading, name: csNumbers, widget: string }
+          - { label: Case study page, goals heading, name: csGoals, widget: string }
+          - { label: Case study page, what we did heading, name: csDid, widget: string }
+          - { label: Case study page, platforms heading, name: csPlatforms, widget: string }
+          - { label: Case study page, visit site button, name: csVisit, widget: string }
+          - { label: Case study page, more work heading, name: csRelated, widget: string }
           - { label: Case study page, services label, name: csServices, widget: string }
           - { label: Work filter, all label, name: filterAll, widget: string }
           - { label: Work filter, group label, name: filterLabel, widget: string }
@@ -298,7 +304,27 @@ collections:
           - { label: Tag line, name: tag, widget: string }
           - { label: One-line summary (also used for search results), name: summaryLead, widget: text }
           - { label: "Client story (3 to 5 sentences, who they are, what they needed, what we built)", name: story, widget: text }
-          - { label: Chips, name: chips, widget: list, field: { label: Chip, name: chip, widget: string } }
+          - { label: Website address (adds a Visit site button), name: url, widget: string, required: false }
+          - label: By the numbers
+            name: numbers
+            widget: list
+            required: false
+            hint: "Only add real results, such as conversion rate or load time. Leave empty to hide the block."
+            summary: "{{fields.value}} {{fields.label}}"
+            fields:
+              - { label: Number, name: value, widget: string }
+              - { label: Label, name: label, widget: string }
+          - { label: Goals (shown as a numbered list), name: goals, widget: list, required: false, field: { label: Goal, name: goal, widget: string } }
+          - { label: Platforms and tools, name: chips, widget: list, field: { label: Tool, name: chip, widget: string } }
+          - label: Client quote
+            name: quote
+            widget: object
+            required: false
+            hint: "Leave empty to hide the quote."
+            fields:
+              - { label: Quote, name: text, widget: text, required: false }
+              - { label: Name, name: name, widget: string, required: false }
+              - { label: Role, name: role, widget: string, required: false }
           - label: Features
             name: features
             widget: list

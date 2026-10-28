@@ -3,6 +3,13 @@
   "tag": "Technology solutions network",
   "summaryLead": "A website for a technology broker that has to explain what a broker is.",
   "story": "Abaxent is a Wisconsin technology broker that has been at it for 22 years. It works with every major vendor but represents the buyer, which isn't what people expect from someone selling technology, and the old site didn't make that clear. They wanted visitors to get it quickly and to reach the leadership team without hunting. So we started the site with one question, what is a technology broker, and let the rest answer it: how a deal works, the numbers behind it, past projects and certifications.",
+  "url": "",
+  "numbers": [],
+  "goals": [
+    "Make the broker model easy to grasp.",
+    "Give prospects a direct line to the leadership team.",
+    "Show the track record: projects, credentials and numbers."
+  ],
   "chips": [
     "Vanilla JS",
     "Hand-written CSS",
@@ -54,5 +61,10 @@
       "image": "/uploads/abx-f7.jpg",
       "alt": "Abaxent on a phone"
     }
-  ]
+  ],
+  "quote": {
+    "text": "",
+    "name": "",
+    "role": ""
+  }
 }

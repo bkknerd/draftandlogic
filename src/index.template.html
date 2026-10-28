@@ -460,6 +460,30 @@ section{padding:clamp(72px,10vw,150px) 0;border-top:1px solid var(--rule)}
 .wend{padding-top:clamp(56px,8vw,112px);padding-bottom:clamp(64px,9vw,128px);display:flex;gap:14px;flex-wrap:wrap;align-items:center}.wend h2{width:100%;margin-bottom:12px}
 .wrv{opacity:0;transform:translateY(32px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}.wrv.in{opacity:1;transform:none}
 .wh .wlead{max-width:40rem;margin:0 0 18px}
+.wh .svc{margin:0 0 6px}
+.wh2{font:500 .88rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin:0 0 14px}
+.wnum{padding-top:clamp(20px,3vw,36px);padding-bottom:clamp(20px,3vw,36px);border-top:1px solid var(--rule)}
+.wnums{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
+.wnums b{display:block;font:300 clamp(2.8rem,6vw,4.8rem)/.95 var(--display);letter-spacing:-.04em}
+.wnums span{color:var(--mut)}
+.wsum{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(28px,5vw,80px);padding-top:clamp(24px,3vw,40px);padding-bottom:clamp(28px,4vw,56px);border-top:1px solid var(--rule)}
+.wsum .wstory{max-width:46rem;margin:0 0 22px;color:var(--fg);font-size:1.12rem;line-height:1.65}
+.wlists{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.wl2{list-style:none;margin:0;padding:0}.wl2 li{padding:8px 0;border-top:1px solid var(--rule);font-size:.96rem}.wl2 li:last-child{border-bottom:1px solid var(--rule)}
+.wgo{padding-top:clamp(20px,3vw,36px);padding-bottom:clamp(28px,4vw,56px);border-top:1px solid var(--rule)}
+.wgo ol{list-style:none;counter-reset:g;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,3vw,40px)}
+.wgo li{counter-increment:g;padding-top:14px;border-top:1.5px solid var(--fg);font-size:1.08rem;line-height:1.4}
+.wgo li::before{content:"0" counter(g);display:block;margin-bottom:8px;font:500 .85rem var(--mono);color:var(--blue)}
+.wq{padding-top:clamp(28px,4vw,56px);padding-bottom:clamp(28px,4vw,56px);border-top:1.5px solid var(--fg)}
+.wq blockquote{margin:0;max-width:52rem}.wq p{font:300 clamp(1.7rem,3.4vw,2.6rem)/1.15 var(--display);letter-spacing:-.025em;margin:0 0 16px}
+.wq footer{color:var(--mut)}
+.wrelsec{padding-top:clamp(28px,4vw,56px);padding-bottom:clamp(28px,4vw,56px);border-top:1px solid var(--rule)}
+.wrels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
+.wrel{display:block;text-decoration:none;color:inherit}
+.wrel img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:6px;border:1px solid var(--rule)}
+.wrel h3{font:400 1.35rem/1.15 var(--display);letter-spacing:-.02em;margin:14px 0 4px;transition:color .3s}.wrel:hover h3{color:var(--blue)}
+.wrel p{margin:0;color:var(--mut)}
+@media(max-width:820px){.wsum,.wgo ol,.wrels,.wlists{grid-template-columns:1fr}}
 .svc{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:14px 0 0;padding:0}
 .svc li{padding:4px 11px;border:1px solid var(--rule);border-radius:999px;font-size:.8rem;line-height:1.5;color:var(--mut);background:var(--paper)}
 .sfil{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 clamp(24px,3vw,40px)}
@@ -1560,10 +1584,18 @@ function init(root){initWU(root);init2(root);init3(root);init4(root);init5(root)
   tw.addEventListener('input',tu);addEventListener('resize',tu);setTimeout(tu,0);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(tu)}
 }
 function render(slug){var s=ST[slug];
+ var li=function(a){return a.map(function(x){return '<li>'+x+'</li>'}).join('')};
  var fs=s.features.map(function(f,i){var im=f[2]?'<img src="'+f[2]+'" alt="'+f[3]+'" loading="'+(i<2?'eager':'lazy')+'">':'';return '<figure class="wf'+(i===0&&f[2]?' big':'')+(f[2]?'':' nt')+' wrv">'+im+'<figcaption><h3>'+f[0]+'</h3><p>'+f[1]+'</p>'+(f[4]?'<p class="wfs">'+f[4]+'</p>':'')+'</figcaption></figure>'}).join('');
+ var ks=Object.keys(ST),ix=ks.indexOf(slug),rel=[ks[(ix+1)%ks.length],ks[(ix+2)%ks.length]].filter(function(k,i,a){return k!==slug&&a.indexOf(k)===i});
+ var rl=rel.map(function(k){var r=ST[k];return '<a class="wrel" href="#/work/'+k+'">'+(r.img?'<img src="'+r.img+'" alt="" loading="lazy">':'')+'<h3>'+r.title+'</h3><p>'+r.blurb+'</p><ul class="svc">'+li(r.services)+'</ul></a>'}).join('');
  wp.innerHTML='<div class="rp" id="wrp"></div><div class="wrap jhead"><span id="wlogo"></span><nav><a href="#work">{{j:interface.csBackWork}}</a><a href="#contact">{{j:interface.csStart}}</a></nav></div>'
- +'<header class="wrap wh" role="group"><p class="sm"><b>{{j:interface.csBadge}}</b> · '+s.tag+'</p><h1>'+s.title+'</h1><p class="wlead">'+s.summary+'</p>'+(s.story?'<p class="wstory">'+s.story+'</p>':'')+(s.services.length?'<div class="wsv"><p class="wl">{{j:interface.csServices}}</p><ul class="svc">'+s.services.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul></div>':'')+'<div class="wchips">'+s.chips.map(function(c){return '<span>'+c+'</span>'}).join('')+'</div></header>'
+ +'<header class="wrap wh" role="group"><p class="sm"><b>{{j:interface.csBadge}}</b> · '+s.tag+'</p><h1>'+s.title+'</h1><p class="wlead">'+s.summary+'</p>'+(s.services.length?'<ul class="svc">'+li(s.services)+'</ul>':'')+'</header>'
+ +(s.numbers.length?'<section class="wrap wnum wrv"><h2 class="wh2">{{j:interface.csNumbers}}</h2><div class="wnums">'+s.numbers.map(function(n){return '<div><b>'+n[0]+'</b><span>'+n[1]+'</span></div>'}).join('')+'</div></section>':'')
+ +'<section class="wrap wsum wrv"><div>'+(s.story?'<p class="wstory">'+s.story+'</p>':'')+(s.url?'<a class="jbtn dark" href="'+s.url+'" target="_blank" rel="noopener">{{j:interface.csVisit}}</a>':'')+'</div><div class="wlists"><div><h2 class="wh2">{{j:interface.csDid}}</h2><ul class="wl2">'+li(s.services)+'</ul></div><div><h2 class="wh2">{{j:interface.csPlatforms}}</h2><ul class="wl2">'+li(s.chips)+'</ul></div></div></section>'
+ +(s.goals.length?'<section class="wrap wgo wrv"><h2 class="wh2">{{j:interface.csGoals}}</h2><ol>'+li(s.goals)+'</ol></section>':'')
  +'<section class="wrap wfeat"><h2>{{j:interface.csFeatures}}</h2><div class="wfg">'+fs+'</div></section>'
+ +(s.quote?'<section class="wrap wq wrv"><blockquote><p>'+s.quote[0]+'</p>'+(s.quote[1]?'<footer>'+s.quote[1]+(s.quote[2]?', '+s.quote[2]:'')+'</footer>':'')+'</blockquote></section>':'')
+ +(rl?'<section class="wrap wrelsec wrv"><h2 class="wh2">{{j:interface.csRelated}}</h2><div class="wrels">'+rl+'</div></section>':'')
  +'<section class="wrap wend wrv"><h2>{{j:interface.csEndHeading}}</h2><a class="jbtn dark" href="#contact">{{j:interface.csStart}}</a><a class="jbtn" href="#work">{{j:interface.csBackAll}}</a></section>';
  var lg=document.querySelector('.logo').cloneNode(true);lg.setAttribute('href','#');lg.classList.add('set');$('wlogo').appendChild(lg);
  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(a){a.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});wp.querySelectorAll('.wrv').forEach(function(e){io.observe(e)})}else{wp.querySelectorAll('.wrv').forEach(function(e){e.classList.add('in')})}

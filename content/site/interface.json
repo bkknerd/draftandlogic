@@ -73,5 +73,11 @@
   "formEmpty": "Please fill in all three fields.",
   "csServices": "Services",
   "filterAll": "All",
-  "filterLabel": "Filter by service"
+  "filterLabel": "Filter by service",
+  "csNumbers": "By the numbers",
+  "csGoals": "Goals",
+  "csDid": "What we did",
+  "csPlatforms": "Platforms and tools",
+  "csVisit": "Visit site",
+  "csRelated": "More work"
 }

@@ -3,6 +3,13 @@
   "tag": "Concept site · cocktail bar, Cary, NC",
   "summaryLead": "A concept site for a cocktail bar in downtown Cary. Not a launched project.",
   "story": "happy's is a cocktail bar and event space in downtown Cary, NC, known for a wall covered in smiley faces. This one is our own concept, made to show how that personality, a long menu and odd hours could fit on one loud, friendly page. It's a single hand-written file, with a searchable menu and a climb up the stairs to the walk up.",
+  "url": "",
+  "numbers": [],
+  "goals": [
+    "Capture the personality of the smiley wall.",
+    "Make a long menu easy to browse on a phone.",
+    "Make the hours easy to find."
+  ],
   "chips": [
     "Vanilla JS",
     "Pure CSS",
@@ -48,5 +55,10 @@
       "image": "/uploads/happy-f6.jpg",
       "alt": "happy's on a phone"
     }
-  ]
+  ],
+  "quote": {
+    "text": "",
+    "name": "",
+    "role": ""
+  }
 }

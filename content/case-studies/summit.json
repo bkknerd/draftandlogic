@@ -3,6 +3,13 @@
   "tag": "Shopify implementation intelligence",
   "summaryLead": "A landing page for a Shopify planning product, built to explain it fast.",
   "story": "Summit is a product for Shopify agencies and consultants. It takes scattered discovery notes and turns them into requirements, risk assessments, roadmaps and QA plans. The people who'd use it live in spreadsheets and inboxes, so the site had to show what comes out, not just describe it. We kept it light and framework-free, and let the workflow section and the score ring do the explaining.",
+  "url": "",
+  "numbers": [],
+  "goals": [
+    "Explain the product in seconds.",
+    "Show what comes out, not just what goes in.",
+    "Keep the page light and quick."
+  ],
   "chips": [
     "Netlify Edge",
     "Pure CSS",
@@ -28,5 +35,10 @@
       "text": "A score ring drawn in CSS, with no chart library.",
       "story": "We didn't want Chart.js or D3 for one ring. It's a CSS conic-gradient with a smaller circle on top, so it draws instantly."
     }
-  ]
+  ],
+  "quote": {
+    "text": "",
+    "name": "",
+    "role": ""
+  }
 }

@@ -3,6 +3,13 @@
   "tag": "National conference and events portal",
   "summaryLead": "One site for tickets, sponsors, the schedule and attendee passes.",
   "story": "The National Association of Minority Contractors runs big national gatherings with a small admin team. Tickets, sponsorships, schedules and attendee access lived in different places, and peak registration was when it hurt most. They asked for one event site that could handle all of it. We built it as a fast static site on Netlify, with serverless forms for sponsor applications, a calendar download for the agenda, a way for small businesses to find the right meetings, and a digital pass for every attendee.",
+  "url": "",
+  "numbers": [],
+  "goals": [
+    "Put tickets, sponsorships and the schedule in one place.",
+    "Take pressure off a small admin team during peak registration.",
+    "Give every attendee a digital pass and a way to find the right meetings."
+  ],
   "chips": [
     "Netlify Edge",
     "Static-first",
@@ -34,5 +41,10 @@
       "title": "Accessible",
       "text": "Built to WCAG 2.1 AA, with keyboard and screen reader support."
     }
-  ]
+  ],
+  "quote": {
+    "text": "",
+    "name": "",
+    "role": ""
+  }
 }
