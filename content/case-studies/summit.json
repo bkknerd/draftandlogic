@@ -14,7 +14,8 @@
       "title": "Grain and fluid type",
       "text": "Paper grain from an SVG filter and headlines that scale with clamp(). No extra requests.",
       "image": "/uploads/sum-1.jpg",
-      "alt": "Summit home page"
+      "alt": "Summit home page",
+      "story": "The paper-and-grain texture comes from an SVG noise filter embedded as a data URI, so it costs no image request. Headlines scale with clamp(), with no breakpoint overrides."
     },
     {
       "title": "Workflow",
@@ -24,7 +25,8 @@
     },
     {
       "title": "CSS score ring",
-      "text": "A conic-gradient donut with no chart library."
+      "text": "A conic-gradient donut with no chart library.",
+      "story": "The score card shows a ring without Chart.js or D3. It is a conic-gradient with a centred pseudo-element, so it renders instantly with no runtime."
     }
   ]
 }

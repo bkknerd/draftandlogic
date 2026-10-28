@@ -47,7 +47,7 @@ for (const f of list("content/case-studies")) {
     story: s.story || "",
     services: ((data.cases.items || []).find((c) => c.study === f.replace(/\.json$/, "")) || {}).services || [],
     chips: s.chips,
-    features: (s.features || []).map((f) => [f.title, f.text, f.image || "", f.alt || ""]),
+    features: (s.features || []).map((f) => [f.title, f.text, f.image || "", f.alt || "", f.story || ""]),
   };
 }
 data.studiesJson = JSON.stringify(studies).replace(/</g, "\\u003c").replace(/\u2028/g, "\\u2028").replace(/\u2029/g, "\\u2029");

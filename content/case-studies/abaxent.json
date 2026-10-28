@@ -14,13 +14,15 @@
       "title": "Scroll-driven video hero",
       "text": "The film grows from an inset frame to full-bleed as you scroll. It pauses for reduced motion.",
       "image": "/uploads/abx-f1.jpg",
-      "alt": "Abaxent hero: Technology brokers. Not vendors."
+      "alt": "Abaxent hero: Technology brokers. Not vendors.",
+      "story": "A film opens the page, but nothing blocks the scroll. The video is embedded with a poster frame, so the first screen needs no extra request, and it pauses itself for visitors who prefer reduced motion."
     },
     {
       "title": "Four-step method",
       "text": "A pyramid drawn from one inline SVG sprite, with no image files.",
       "image": "/uploads/abx-f2.jpg",
-      "alt": "How a technology broker works, with the pyramid graphic"
+      "alt": "How a technology broker works, with the pyramid graphic",
+      "story": "Brokering is hard to picture, so the method is drawn as a pyramid. It is one SVG symbol recoloured with CSS, so it stays sharp at any size and adds no image weight."
     },
     {
       "title": "Impact numbers",

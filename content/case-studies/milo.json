@@ -20,19 +20,22 @@
       "title": "Live patio scene",
       "text": "An SVG scene follows time of day and weather, with a feels-like verdict and a day slider.",
       "image": "/uploads/milo-f2.jpg",
-      "alt": "Milo's patio scene at golden hour"
+      "alt": "Milo's patio scene at golden hour",
+      "story": "A photo cannot say whether today is a patio day. The scene reads current conditions for Morrisville and turns them into a one-line verdict. If the weather request fails, the page falls back to the day's hours."
     },
     {
       "title": "Searchable menu",
       "text": "69 items as data, with live search, a meat-free filter and guest favourites.",
       "image": "/uploads/milo-f3.jpg",
-      "alt": "Milo's menu with Food and Drinks tabs"
+      "alt": "Milo's menu with Food and Drinks tabs",
+      "story": "Menus often live in PDFs that cannot be searched. Here every item is data, so a seasonal change is a one-line edit."
     },
     {
       "title": "Pair it",
       "text": "Pick a food mood and a drink mood and it suggests a combination.",
       "image": "/uploads/milo-f4.jpg",
-      "alt": "Milo's Pair it tool"
+      "alt": "Milo's Pair it tool",
+      "story": "First-time visitors face dozens of items. Pair it gives them a starting point from hand-picked lists, with no account and no tracking."
     },
     {
       "title": "Guest reviews",

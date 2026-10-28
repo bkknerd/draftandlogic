@@ -479,6 +479,7 @@ section{padding:clamp(72px,10vw,150px) 0;border-top:1px solid var(--rule)}
 .wf figcaption{padding-top:14px}
 .wf h3{font:400 clamp(1.25rem,2vw,1.6rem)/1.15 var(--display);letter-spacing:-.02em;margin:0 0 4px}
 .wf p{margin:0;color:var(--mut);max-width:44rem}
+.wf p.wfs{margin-top:10px;color:var(--fg);font-size:.98rem;line-height:1.6;opacity:.82}
 .wf.nt{padding-top:16px;border-top:1px solid var(--rule)}.wf.nt figcaption{padding-top:0}
 @media(max-width:820px){.wfg{grid-template-columns:1fr}}
 @media(max-width:900px){.wh-grid,.wcs,.wrc,.wst{grid-template-columns:1fr}.wbody{grid-template-columns:minmax(0,1fr)}.wnav{display:none}.wsr{grid-template-columns:1fr;gap:6px}.wd-c{grid-template-columns:1fr}}
@@ -1559,7 +1560,7 @@ function init(root){initWU(root);init2(root);init3(root);init4(root);init5(root)
   tw.addEventListener('input',tu);addEventListener('resize',tu);setTimeout(tu,0);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(tu)}
 }
 function render(slug){var s=ST[slug];
- var fs=s.features.map(function(f,i){var im=f[2]?'<img src="'+f[2]+'" alt="'+f[3]+'" loading="'+(i<2?'eager':'lazy')+'">':'';return '<figure class="wf'+(i===0&&f[2]?' big':'')+(f[2]?'':' nt')+' wrv">'+im+'<figcaption><h3>'+f[0]+'</h3><p>'+f[1]+'</p></figcaption></figure>'}).join('');
+ var fs=s.features.map(function(f,i){var im=f[2]?'<img src="'+f[2]+'" alt="'+f[3]+'" loading="'+(i<2?'eager':'lazy')+'">':'';return '<figure class="wf'+(i===0&&f[2]?' big':'')+(f[2]?'':' nt')+' wrv">'+im+'<figcaption><h3>'+f[0]+'</h3><p>'+f[1]+'</p>'+(f[4]?'<p class="wfs">'+f[4]+'</p>':'')+'</figcaption></figure>'}).join('');
  wp.innerHTML='<div class="rp" id="wrp"></div><div class="wrap jhead"><span id="wlogo"></span><nav><a href="#work">{{j:interface.csBackWork}}</a><a href="#contact">{{j:interface.csStart}}</a></nav></div>'
  +'<header class="wrap wh" role="group"><p class="sm"><b>{{j:interface.csBadge}}</b> · '+s.tag+'</p><h1>'+s.title+'</h1><p class="wlead">'+s.summary+'</p>'+(s.story?'<p class="wstory">'+s.story+'</p>':'')+(s.services.length?'<div class="wsv"><p class="wl">{{j:interface.csServices}}</p><ul class="svc">'+s.services.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul></div>':'')+'<div class="wchips">'+s.chips.map(function(c){return '<span>'+c+'</span>'}).join('')+'</div></header>'
  +'<section class="wrap wfeat"><h2>{{j:interface.csFeatures}}</h2><div class="wfg">'+fs+'</div></section>'

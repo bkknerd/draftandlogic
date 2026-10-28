@@ -307,6 +307,7 @@ collections:
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Text, name: text, widget: string }
+              - { label: Story (optional, 1 to 2 sentences on why we built it this way), name: story, widget: text, required: false }
               - { label: Screenshot, name: image, widget: image, required: false }
               - { label: Screenshot description, name: alt, widget: string, required: false }
       - { name: abaxent, label: Abaxent, file: content/case-studies/abaxent.json, format: json, fields: *studyfields }

@@ -14,17 +14,46 @@
       "title": "Scroll staircase",
       "text": "A 14-step meter fills with gold as you scroll from the street to Suite 200.",
       "image": "/uploads/walkup-1.jpg",
-      "alt": "The WalkUp concept home page"
+      "alt": "The WalkUp concept home page",
+      "story": "First-timers walk past the door because the bar is upstairs. So the climb is the navigation: a 14-step meter fills as you scroll and names where you are, from the street to Suite 200."
     },
     {
       "title": "Menu and running tab",
       "text": "49 items in tabs, five specialty cocktail cards and a tab that never leaves the page.",
       "image": "/uploads/walkup-2.jpg",
-      "alt": "The WalkUp concept menu"
+      "alt": "The WalkUp concept menu",
+      "story": "The menu changes with the season and guests order at the counter, so there is no cart. Items add to a running tab that slides up, a tally to plan a round with."
     },
     {
-      "title": "Vector logo",
-      "text": "Traced into one SVG symbol, reused in the nav, hero and footer."
+      "title": "Vector logo and hero",
+      "text": "The gold script is traced into one SVG symbol and reused in the nav, hero and footer.",
+      "image": "/uploads/walkup-f1.jpg",
+      "alt": "The WalkUp hero with the gold script logo",
+      "story": "The only logo file was a 560-pixel image that went soft when stretched. We traced it into vector paths, so it stays crisp from the nav mark to the footer."
+    },
+    {
+      "title": "The room",
+      "text": "Photos of the exposed-brick lounge, with the staircase meter running above them.",
+      "image": "/uploads/walkup-f2.jpg",
+      "alt": "The WalkUp room section"
+    },
+    {
+      "title": "Reviews",
+      "text": "Review quotes on a night-ink block, set against the cream menu.",
+      "image": "/uploads/walkup-f3.jpg",
+      "alt": "The WalkUp reviews"
+    },
+    {
+      "title": "Visit",
+      "text": "Address, hours by day, seating and an email sign-up.",
+      "image": "/uploads/walkup-f4.jpg",
+      "alt": "The WalkUp visit section"
+    },
+    {
+      "title": "On a phone",
+      "text": "Hero, menu and room on a 390-pixel screen.",
+      "image": "/uploads/walkup-f5.jpg",
+      "alt": "The WalkUp on a phone"
     }
   ]
 }

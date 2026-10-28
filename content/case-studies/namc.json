@@ -14,11 +14,13 @@
       "title": "Tickets and sponsorships",
       "text": "Tier selection and vector logo upload are validated before they reach the admin team.",
       "image": "/uploads/namc-1.jpg",
-      "alt": "NAMC National Conference 2027 home page"
+      "alt": "NAMC National Conference 2027 home page",
+      "story": "Sponsors choose a tier and upload vector logos. A serverless form checks the files and routes a notification to the admin team, so nobody chases attachments by email."
     },
     {
       "title": "Schedule with calendar sync",
-      "text": "A scannable agenda. One tap builds an .ics file for Apple, Google or Outlook."
+      "text": "A scannable agenda. One tap builds an .ics file for Apple, Google or Outlook.",
+      "story": "Attendees need a schedule they can scan on a phone and keep. One tap builds a standard .ics file that Apple, Google and Outlook all open."
     },
     {
       "title": "Meeting finder",

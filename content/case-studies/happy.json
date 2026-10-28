@@ -20,13 +20,15 @@
       "title": "Colour-coded menu",
       "text": "60 items in ten sections, with category chips, live search and a running tab (for fun).",
       "image": "/uploads/happy-f2.jpg",
-      "alt": "happy's concept menu cards"
+      "alt": "happy's concept menu cards",
+      "story": "Sixty items across ten sections is a wall of text on a phone. Chips, search and a running tab make it feel closer to a game. The tab is a toy and never leaves the page."
     },
     {
       "title": "The walk up",
       "text": "Twelve CSS-only 3D steps in a native dialog. Skipped for reduced motion.",
       "image": "/uploads/happy-f3.jpg",
-      "alt": "happy's walk up staircase"
+      "alt": "happy's walk up staircase",
+      "story": "The stairs are part of how the bar describes itself, so a plain link would not carry it. The climb is CSS only, with no video or library, and it is skipped for reduced motion."
     },
     {
       "title": "Reviews and rating",
