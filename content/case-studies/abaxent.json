@@ -1,8 +1,8 @@
 {
-  "title": "Engineering Abaxent",
+  "title": "Abaxent: explaining what a broker does",
   "tag": "Technology solutions network",
-  "summaryLead": "A fast, framework-free site for a network of technology professionals.",
-  "story": "Abaxent is a Wisconsin technology brokerage with 22 years of vendor relationships and WBE, MBE, SBE and DBE certifications. Its model is unusual: it represents the buyer, not the vendor. The old site did little to explain that. They came to us to make the idea easy to grasp and to give prospects a direct line to the leadership team. We built a fast, accessible site around one question, what is a technology broker, then walked visitors through how brokering works, the impact it has, past projects and credentials.",
+  "summaryLead": "A website for a technology broker that has to explain what a broker is.",
+  "story": "Abaxent is a Wisconsin technology broker that has been at it for 22 years. It works with every major vendor but represents the buyer, which isn't what people expect from someone selling technology, and the old site didn't make that clear. They wanted visitors to get it quickly and to reach the leadership team without hunting. So we started the site with one question, what is a technology broker, and let the rest answer it: how a deal works, the numbers behind it, past projects and certifications.",
   "chips": [
     "Vanilla JS",
     "Hand-written CSS",
@@ -12,45 +12,45 @@
   "features": [
     {
       "title": "Scroll-driven video hero",
-      "text": "The film grows from an inset frame to full-bleed as you scroll. It pauses for reduced motion.",
+      "text": "The film starts in a frame and opens to full width as you scroll.",
       "image": "/uploads/abx-f1.jpg",
       "alt": "Abaxent hero: Technology brokers. Not vendors.",
-      "story": "A film opens the page, but nothing blocks the scroll. The video is embedded with a poster frame, so the first screen needs no extra request, and it pauses itself for visitors who prefer reduced motion."
+      "story": "We wanted a film on the first screen without slowing the page down. The video and its poster frame live inside the page, so there's no extra request, and it stops playing for anyone who has reduced motion turned on."
     },
     {
       "title": "Four-step method",
-      "text": "A pyramid drawn from one inline SVG sprite, with no image files.",
+      "text": "How a broker works, drawn as a four-step pyramid.",
       "image": "/uploads/abx-f2.jpg",
       "alt": "How a technology broker works, with the pyramid graphic",
-      "story": "Brokering is hard to picture, so the method is drawn as a pyramid. It is one SVG symbol recoloured with CSS, so it stays sharp at any size and adds no image weight."
+      "story": "A broker is hard to picture, so we drew one. The pyramid is a single SVG shape recolored in CSS, which keeps it sharp at any size and means there's no image to load."
     },
     {
       "title": "Impact numbers",
-      "text": "22 years, 93% partner retention, 75+ partners, 3.2x economic impact.",
+      "text": "22 years, 93% partner retention, 75+ partners and 3.2x economic impact, right up front.",
       "image": "/uploads/abx-f3.jpg",
       "alt": "Abaxent impact statistics"
     },
     {
       "title": "Leadership",
-      "text": "Portraits, bios and direct contact lines for the three leaders.",
+      "text": "Portraits, short bios and direct lines for the three leaders.",
       "image": "/uploads/abx-f4.jpg",
       "alt": "Abaxent leadership team"
     },
     {
       "title": "Why we're different",
-      "text": "Four reasons, stated plainly: brokers not vendors, no bench, 22 years, certified.",
+      "text": "Four short reasons in plain language: brokers not vendors, no bench, 22 years, certified.",
       "image": "/uploads/abx-f5.jpg",
       "alt": "Abaxent why we are different section"
     },
     {
       "title": "Full-screen menu",
-      "text": "Opens in brand crimson from one button and closes on Escape.",
+      "text": "A crimson full-screen menu that opens from one button and closes with Escape.",
       "image": "/uploads/abx-f6.jpg",
       "alt": "Abaxent full-screen menu"
     },
     {
       "title": "On a phone",
-      "text": "The hero, method steps and impact numbers on a 390-pixel screen.",
+      "text": "The hero, method and numbers on a phone.",
       "image": "/uploads/abx-f7.jpg",
       "alt": "Abaxent on a phone"
     }

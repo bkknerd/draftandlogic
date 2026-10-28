@@ -1,8 +1,8 @@
 {
   "title": "Milo's Cafe: a neighborhood site with a live patio",
   "tag": "Café website, Morrisville, NC",
-  "summaryLead": "A one-page café site: the menu, whether it is open, and whether the patio is worth it today.",
-  "story": "Milo's is a European-style café in Morrisville, NC, known for focaccia sandwiches, Lavazza espresso and crepes. A hungry visitor wants three answers before leaving the house: what is on the menu, is the café open, and is it worth sitting outside. They came to us for a site that answers all three at a glance. We built a one-page site with a searchable menu, a live patio scene that reads the weather, and direct links to online ordering.",
+  "summaryLead": "A one-page site that shows the menu, whether they're open and whether to sit outside.",
+  "story": "Milo's is a European-style café in Morrisville, NC, known for focaccia sandwiches, Lavazza espresso and crepes. Before heading out, people want three things: the menu, the hours, and whether the patio is worth it today. They asked for a site that answers all three without digging. We made it one page, with a searchable menu, a patio scene that reads the weather, and links straight to online ordering.",
   "chips": [
     "Vanilla JS",
     "Inline SVG",
@@ -12,40 +12,40 @@
   "features": [
     {
       "title": "One page, two actions",
-      "text": "Order buttons go to SpotOn, and a sticky Order and Call bar keeps both in reach.",
+      "text": "Order buttons go to their SpotOn page, and a sticky bar keeps Order and Call within reach.",
       "image": "/uploads/milo-f1.jpg",
       "alt": "Milo's Cafe home page"
     },
     {
       "title": "Live patio scene",
-      "text": "An SVG scene follows time of day and weather, with a feels-like verdict and a day slider.",
+      "text": "An illustrated patio that follows the time of day and the weather, with a slider for the day.",
       "image": "/uploads/milo-f2.jpg",
       "alt": "Milo's patio scene at golden hour",
-      "story": "A photo cannot say whether today is a patio day. The scene reads current conditions for Morrisville and turns them into a one-line verdict. If the weather request fails, the page falls back to the day's hours."
+      "story": "A photo can't tell you if today is a patio day. The scene reads current conditions for Morrisville and gives a one-line verdict. If the weather service is down, it shows the day's hours instead."
     },
     {
       "title": "Searchable menu",
-      "text": "69 items as data, with live search, a meat-free filter and guest favourites.",
+      "text": "All 69 items are searchable, with a meat-free filter and a star on guest favorites.",
       "image": "/uploads/milo-f3.jpg",
       "alt": "Milo's menu with Food and Drinks tabs",
-      "story": "Menus often live in PDFs that cannot be searched. Here every item is data, so a seasonal change is a one-line edit."
+      "story": "Menus often sit in a PDF nobody can search. Here every item is its own entry, so adding a seasonal drink takes one line."
     },
     {
       "title": "Pair it",
-      "text": "Pick a food mood and a drink mood and it suggests a combination.",
+      "text": "Pick a food mood and a drink mood and it suggests a pairing.",
       "image": "/uploads/milo-f4.jpg",
       "alt": "Milo's Pair it tool",
-      "story": "First-time visitors face dozens of items. Pair it gives them a starting point from hand-picked lists, with no account and no tracking."
+      "story": "First-timers face a long menu and don't know where to start. Pair it picks from lists we chose by hand. No account, no tracking."
     },
     {
       "title": "Guest reviews",
-      "text": "A rating and review quotes in one block.",
+      "text": "The rating and a few guest quotes in one block.",
       "image": "/uploads/milo-f5.jpg",
       "alt": "Milo's guest reviews"
     },
     {
       "title": "On a phone",
-      "text": "Hero, patio scene and menu on a 390-pixel screen.",
+      "text": "The hero, patio and menu on a phone.",
       "image": "/uploads/milo-f6.jpg",
       "alt": "Milo's on a phone"
     }

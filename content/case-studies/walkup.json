@@ -2,7 +2,7 @@
   "title": "The WalkUp: a concept site for the bar upstairs",
   "tag": "Concept site · cocktail bar, Cary, NC",
   "summaryLead": "A concept site for the cocktail bar one flight up in downtown Cary. Not a launched project.",
-  "story": "The WalkUp is a cocktail bar one flight up in downtown Cary, NC, right above happy's. First-time visitors walk past the door because they do not know it is upstairs. This concept is our own work, built to turn that fact into the page itself. A 14-step meter fills as you scroll from the street to Suite 200, and the menu and running tab sit in the room at the top.",
+  "story": "The WalkUp is a cocktail bar one flight up in downtown Cary, NC, right above happy's. People walk past the door all the time because they don't know it's upstairs. This concept is our own work, and it turns that into the page: a 14-step meter fills as you scroll from the street up to Suite 200, and the menu and running tab wait at the top.",
   "chips": [
     "Vanilla JS",
     "Pure CSS",
@@ -12,46 +12,46 @@
   "features": [
     {
       "title": "Scroll staircase",
-      "text": "A 14-step meter fills with gold as you scroll from the street to Suite 200.",
+      "text": "A 14-step gold meter fills as you scroll from the street to Suite 200.",
       "image": "/uploads/walkup-1.jpg",
       "alt": "The WalkUp concept home page",
-      "story": "First-timers walk past the door because the bar is upstairs. So the climb is the navigation: a 14-step meter fills as you scroll and names where you are, from the street to Suite 200."
+      "story": "Since people miss the door, the climb is the navigation. The meter fills as you scroll and tells you where you are on the way up."
     },
     {
       "title": "Menu and running tab",
-      "text": "49 items in tabs, five specialty cocktail cards and a tab that never leaves the page.",
+      "text": "49 items in tabs, five specialty cocktail cards, and a tab that stays on the page.",
       "image": "/uploads/walkup-2.jpg",
       "alt": "The WalkUp concept menu",
-      "story": "The menu changes with the season and guests order at the counter, so there is no cart. Items add to a running tab that slides up, a tally to plan a round with."
+      "story": "The menu changes with the season and guests order at the counter, so there's no cart. Tapping an item adds it to a running tab, which is just a tally to plan a round."
     },
     {
       "title": "Vector logo and hero",
-      "text": "The gold script is traced into one SVG symbol and reused in the nav, hero and footer.",
+      "text": "The gold script logo, rebuilt as vector art and used in the nav, hero and footer.",
       "image": "/uploads/walkup-f1.jpg",
       "alt": "The WalkUp hero with the gold script logo",
-      "story": "The only logo file was a 560-pixel image that went soft when stretched. We traced it into vector paths, so it stays crisp from the nav mark to the footer."
+      "story": "The only logo file was a small image that went blurry when stretched. We traced it into vector paths, so it stays sharp from the nav to the footer."
     },
     {
       "title": "The room",
-      "text": "Photos of the exposed-brick lounge, with the staircase meter running above them.",
+      "text": "Photos of the exposed-brick lounge, with the staircase meter running alongside.",
       "image": "/uploads/walkup-f2.jpg",
       "alt": "The WalkUp room section"
     },
     {
       "title": "Reviews",
-      "text": "Review quotes on a night-ink block, set against the cream menu.",
+      "text": "Guest quotes on a dark blue block, set against the cream menu.",
       "image": "/uploads/walkup-f3.jpg",
       "alt": "The WalkUp reviews"
     },
     {
       "title": "Visit",
-      "text": "Address, hours by day, seating and an email sign-up.",
+      "text": "Address, hours, seating and an email sign-up.",
       "image": "/uploads/walkup-f4.jpg",
       "alt": "The WalkUp visit section"
     },
     {
       "title": "On a phone",
-      "text": "Hero, menu and room on a 390-pixel screen.",
+      "text": "The hero, menu and room on a phone.",
       "image": "/uploads/walkup-f5.jpg",
       "alt": "The WalkUp on a phone"
     }

@@ -1,7 +1,7 @@
 {
   "show": true,
   "heading": "Seven services.",
-  "intro": "We build, optimize and maintain your site, with one team accountable when something breaks.",
+  "intro": "We build, optimize and maintain your site. One team, so you know who to call when something breaks.",
   "levels": [
     {
       "title": "CMS Architecture",
@@ -11,17 +11,17 @@
     {
       "title": "CRO & Analytics",
       "lead": "Tracking and tests.",
-      "text": "Measure which pages turn visitors into leads, then test changes."
+      "text": "We measure which pages turn visitors into leads, then test changes."
     },
     {
       "title": "AEO & GEO",
-      "lead": "Cited by AI search.",
-      "text": "Structured content and schema so answer engines can read and quote your site."
+      "lead": "Found by AI search.",
+      "text": "Structured content and schema, so answer engines can read and quote your site."
     },
     {
       "title": "Technical SEO",
-      "lead": "Fast and crawlable.",
-      "text": "Clean markup, correct metadata, quick pages."
+      "lead": "Fast and easy to crawl.",
+      "text": "Clean markup, correct metadata and quick pages."
     },
     {
       "title": "ADA Compliance",

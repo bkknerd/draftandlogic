@@ -1,8 +1,8 @@
 {
-  "title": "Engineering Summit",
+  "title": "Summit: a landing page for a Shopify planning tool",
   "tag": "Shopify implementation intelligence",
-  "summaryLead": "A marketing site that explains a Shopify planning product in seconds.",
-  "story": "Summit is a product for Shopify agencies and consultants that turns scattered discovery notes into requirements, risk assessments, roadmaps and QA plans. Its audience lives in spreadsheets and inboxes, so the marketing site had to explain the product quickly and show its output, not just describe it. We built a lightweight, framework-free landing site where the workflow section and the score ring do most of the explaining.",
+  "summaryLead": "A landing page for a Shopify planning product, built to explain it fast.",
+  "story": "Summit is a product for Shopify agencies and consultants. It takes scattered discovery notes and turns them into requirements, risk assessments, roadmaps and QA plans. The people who'd use it live in spreadsheets and inboxes, so the site had to show what comes out, not just describe it. We kept it light and framework-free, and let the workflow section and the score ring do the explaining.",
   "chips": [
     "Netlify Edge",
     "Pure CSS",
@@ -12,21 +12,21 @@
   "features": [
     {
       "title": "Grain and fluid type",
-      "text": "Paper grain from an SVG filter and headlines that scale with clamp(). No extra requests.",
+      "text": "A paper-like grain, and headlines that resize smoothly from phone to desktop.",
       "image": "/uploads/sum-1.jpg",
       "alt": "Summit home page",
-      "story": "The paper-and-grain texture comes from an SVG noise filter embedded as a data URI, so it costs no image request. Headlines scale with clamp(), with no breakpoint overrides."
+      "story": "The grain is an SVG noise filter embedded in the page, so it doesn't cost an image request. Headline sizes come from one CSS function, clamp(), instead of a pile of breakpoints."
     },
     {
       "title": "Workflow",
-      "text": "From discovery notes to requirements, risk assessment, roadmap and QA plan.",
+      "text": "How discovery notes become requirements, a risk assessment, a roadmap and a QA plan.",
       "image": "/uploads/sum-2.jpg",
       "alt": "Summit workflow section"
     },
     {
       "title": "CSS score ring",
-      "text": "A conic-gradient donut with no chart library.",
-      "story": "The score card shows a ring without Chart.js or D3. It is a conic-gradient with a centred pseudo-element, so it renders instantly with no runtime."
+      "text": "A score ring drawn in CSS, with no chart library.",
+      "story": "We didn't want Chart.js or D3 for one ring. It's a CSS conic-gradient with a smaller circle on top, so it draws instantly."
     }
   ]
 }

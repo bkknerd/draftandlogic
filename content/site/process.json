@@ -1,11 +1,11 @@
 {
   "show": true,
   "heading": "Four stages.",
-  "why": "Layout, content and behavior are agreed on paper first, so the build is not redone.",
+  "why": "We agree on layout, content and behavior on paper first, so nothing gets rebuilt.",
   "steps": [
     {
       "title": "Listen",
-      "text": "We map requirements, goals and timelines up front."
+      "text": "We start with your goals, requirements and timeline."
     },
     {
       "title": "Draft",

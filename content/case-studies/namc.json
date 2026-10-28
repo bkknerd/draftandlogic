@@ -1,8 +1,8 @@
 {
-  "title": "Engineering the NAMC National Event Portal",
+  "title": "NAMC: one site for a national conference",
   "tag": "National conference and events portal",
-  "summaryLead": "The digital home for a national conference: tickets, sponsors, schedule and passes.",
-  "story": "The National Association of Minority Contractors runs national gatherings that depend on a small admin team. Ticket sales, sponsorships, schedules and attendee access were spread across separate tools. They came to us for one event site that could carry the whole experience through peak registration. We built it static-first on Netlify, with serverless forms for sponsor applications, calendar sync for the agenda, a way for small businesses to find the right meetings, and a digital pass for every attendee.",
+  "summaryLead": "One site for tickets, sponsors, the schedule and attendee passes.",
+  "story": "The National Association of Minority Contractors runs big national gatherings with a small admin team. Tickets, sponsorships, schedules and attendee access lived in different places, and peak registration was when it hurt most. They asked for one event site that could handle all of it. We built it as a fast static site on Netlify, with serverless forms for sponsor applications, a calendar download for the agenda, a way for small businesses to find the right meetings, and a digital pass for every attendee.",
   "chips": [
     "Netlify Edge",
     "Static-first",
@@ -12,19 +12,19 @@
   "features": [
     {
       "title": "Tickets and sponsorships",
-      "text": "Tier selection and vector logo upload are validated before they reach the admin team.",
+      "text": "Sponsors pick a tier and upload their logo. The admin team gets the details.",
       "image": "/uploads/namc-1.jpg",
       "alt": "NAMC National Conference 2027 home page",
-      "story": "Sponsors choose a tier and upload vector logos. A serverless form checks the files and routes a notification to the admin team, so nobody chases attachments by email."
+      "story": "Sponsors choose a tier and send vector logo files through a form. It checks the files and notifies the admin team, so nobody is chasing attachments by email."
     },
     {
       "title": "Schedule with calendar sync",
-      "text": "A scannable agenda. One tap builds an .ics file for Apple, Google or Outlook.",
-      "story": "Attendees need a schedule they can scan on a phone and keep. One tap builds a standard .ics file that Apple, Google and Outlook all open."
+      "text": "A schedule that's easy to scan on a phone, with a one-tap calendar download.",
+      "story": "People want to see the day on their phone and keep it. One tap makes a calendar file that Apple, Google and Outlook all open."
     },
     {
       "title": "Meeting finder",
-      "text": "Helps small businesses find the right meetings."
+      "text": "Helps small businesses find the meetings worth their time."
     },
     {
       "title": "Digital pass",
@@ -32,7 +32,7 @@
     },
     {
       "title": "Accessible",
-      "text": "Built to WCAG 2.1 AA targets, with keyboard and screen-reader support."
+      "text": "Built to WCAG 2.1 AA, with keyboard and screen reader support."
     }
   ]
 }
