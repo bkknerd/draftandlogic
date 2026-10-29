@@ -1,33 +1,33 @@
 {
   "title": "Summit: a landing page for a Shopify planning tool",
   "tag": "Shopify implementation intelligence",
-  "summaryLead": "A landing page for a Shopify planning product, built to explain it fast.",
-  "story": "Summit is a product for Shopify agencies and consultants. It takes scattered discovery notes and turns them into requirements, risk assessments, roadmaps and QA plans. The people who'd use it live in spreadsheets and inboxes, so the site had to show what comes out, not just describe it. We kept it light and framework-free, and let the workflow section and the score ring do the explaining.",
+  "summaryLead": "A landing page for a Shopify planning product.",
+  "story": "Summit is for Shopify agencies and consultants. You give it scattered discovery notes and it hands back requirements, a risk assessment, a roadmap and a QA plan. Its users live in spreadsheets and inboxes, so the page has to show what comes out, not just describe it. We kept it light, with no framework. A paper grain sets the tone, and the workflow section and the score ring do the explaining.",
   "url": "",
   "numbers": [],
   "goals": [
-    "Explain the product in seconds.",
-    "Show what comes out, not just what goes in.",
+    "Explain the product in a few seconds.",
+    "Show what comes out, not only what goes in.",
     "Keep the page light and quick."
   ],
   "features": [
     {
       "title": "Grain and fluid type",
-      "text": "A paper-like grain, and headlines that resize smoothly from phone to desktop.",
+      "text": "A paper-like grain, and headlines that scale smoothly from phone to desktop.",
       "image": "/uploads/sum-1.jpg",
       "alt": "Summit home page",
-      "story": "The grain is an SVG noise filter embedded in the page, so it doesn't cost an image request. Headline sizes come from one CSS function, clamp(), instead of a pile of breakpoints."
+      "story": "The grain is an SVG noise filter inside the page, so there's no image request. Headline sizes come from one clamp() instead of a pile of breakpoints."
     },
     {
       "title": "Workflow",
-      "text": "How discovery notes become requirements, a risk assessment, a roadmap and a QA plan.",
+      "text": "Discovery notes go in. Requirements, a risk assessment, a roadmap and a QA plan come out.",
       "image": "/uploads/sum-2.jpg",
       "alt": "Summit workflow section"
     },
     {
       "title": "CSS score ring",
       "text": "A score ring drawn in CSS, with no chart library.",
-      "story": "We didn't want Chart.js or D3 for one ring. It's a CSS conic-gradient with a smaller circle on top, so it draws instantly."
+      "story": "It didn't need Chart.js or D3 for one ring. It's a conic-gradient with a smaller circle on top, so it draws instantly."
     }
   ],
   "quote": {

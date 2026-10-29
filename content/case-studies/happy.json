@@ -1,12 +1,12 @@
 {
   "title": "happy's: a concept site for a Cary cocktail bar",
   "tag": "Concept site · cocktail bar, Cary, NC",
-  "summaryLead": "A concept site for a cocktail bar in downtown Cary. Not a launched project.",
-  "story": "happy's is a cocktail bar and event space in downtown Cary, NC, known for a wall covered in smiley faces. This one is our own concept, made to show how that personality, a long menu and odd hours could fit on one loud, friendly page. It's a single hand-written file, with a searchable menu and a climb up the stairs to the walk up.",
+  "summaryLead": "A concept site for a cocktail bar in downtown Cary. Our own idea, not a launched project.",
+  "story": "happy's is a cocktail bar and event space in downtown Cary with a wall covered in smiley faces. This is our own concept. We wanted to see if that personality, a long menu and odd hours could fit on one loud, friendly page. Cream, tomato, cobalt and pink come off the wall. Bricolage Grotesque does the shouting and Space Mono keeps the prices tidy.",
   "url": "",
   "numbers": [],
   "goals": [
-    "Capture the personality of the smiley wall.",
+    "Carry the smiley wall's personality.",
     "Make a long menu easy to browse on a phone.",
     "Make the hours easy to find."
   ],
@@ -15,21 +15,22 @@
       "title": "The smiley wall",
       "text": "The bar's own wall sets the hero and the cream and tomato colors.",
       "image": "/uploads/happy-f1.jpg",
-      "alt": "happy's concept home page"
+      "alt": "happy's concept home page",
+      "story": "Borders and ink are a hard 1.5px line, so the page feels printed, like a sticker. The hero background changes color with a short fade."
     },
     {
       "title": "Color-coded menu",
-      "text": "60 items in ten sections, with filters, search and a running tab just for fun.",
+      "text": "60 items in ten sections, with filters, search and a running tab.",
       "image": "/uploads/happy-f2.jpg",
       "alt": "happy's concept menu cards",
       "story": "Sixty items is a lot to scroll on a phone. Filters and search help you find a drink, and the tab adds up whatever you tap, like a game. It never leaves the page."
     },
     {
       "title": "The walk up",
-      "text": "A 3D staircase made only of CSS, in a native dialog.",
+      "text": "A 3D staircase built only from CSS, in a native dialog.",
       "image": "/uploads/happy-f3.jpg",
       "alt": "happy's walk up staircase",
-      "story": "The stairs are part of how the bar talks about itself, and a plain link wouldn't carry that. The climb is pure CSS, no video, and it's skipped for anyone with reduced motion on."
+      "story": "The stairs are how the bar talks about itself, and a plain link wouldn't carry that. It's pure CSS, no video, and it's skipped for anyone with reduced motion on."
     },
     {
       "title": "Reviews and rating",

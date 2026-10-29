@@ -1,57 +1,58 @@
 {
-  "title": "Abaxent: explaining what a broker does",
+  "title": "Abaxent: a broker that works for the buyer",
   "tag": "Technology solutions network",
-  "summaryLead": "A website for a technology broker that has to explain what a broker is.",
-  "story": "Abaxent is a Wisconsin technology broker that has been at it for 22 years. It works with every major vendor but represents the buyer, which isn't what people expect from someone selling technology, and the old site didn't make that clear. They wanted visitors to get it quickly and to reach the leadership team without hunting. So we started the site with one question, what is a technology broker, and let the rest answer it: how a deal works, the numbers behind it, past projects and certifications.",
+  "summaryLead": "Abaxent brokers technology for the buyer. The old site read like a vendor's, so we rebuilt it around saying so.",
+  "story": "Abaxent has brokered technology in Wisconsin for 22 years. They work with every big vendor, but they sit on the buyer's side, and the old site never said so. Visitors figured they were one more reseller. The new site opens with the question people actually have, what's a technology broker, and the rest of the page answers it. It's Helvetica, white and one crimson, with a single italic serif on the word in each heading that matters. Then the four-step method, the numbers and the people.",
   "url": "",
   "numbers": [],
   "goals": [
-    "Make the broker model easy to grasp.",
-    "Give prospects a direct line to the leadership team.",
-    "Show the track record: projects, credentials and numbers."
+    "Get across what a broker does in the first scroll.",
+    "Let people reach the leadership team without hunting.",
+    "Back it up with projects, credentials and numbers."
   ],
   "features": [
     {
       "title": "Scroll-driven video hero",
-      "text": "The film starts in a frame and opens to full width as you scroll.",
+      "text": "A short film sits in a frame. Scroll, and it opens out to full width.",
       "image": "/uploads/abx-f1.jpg",
       "alt": "Abaxent hero: Technology brokers. Not vendors.",
-      "story": "We wanted a film on the first screen without slowing the page down. The video and its poster frame live inside the page, so there's no extra request, and it stops playing for anyone who has reduced motion turned on."
+      "story": "We wanted a film up top without a slow page. The video and its poster are inside the page file, so there's nothing extra to load, and it stops for anyone with reduced motion on."
     },
     {
       "title": "Four-step method",
       "text": "How a broker works, drawn as a four-step pyramid.",
       "image": "/uploads/abx-f2.jpg",
       "alt": "How a technology broker works, with the pyramid graphic",
-      "story": "A broker is hard to picture, so we drew one. The pyramid is a single SVG shape recolored in CSS, which keeps it sharp at any size and means there's no image to load."
+      "story": "Nobody can picture what a broker does, so we drew it. The pyramid is one SVG shape recolored in CSS. It stays sharp at any size and there's no image to load."
     },
     {
       "title": "Impact numbers",
-      "text": "22 years, 93% partner retention, 75+ partners and 3.2x economic impact, right up front.",
+      "text": "22 years, 93% partner retention, 75+ partners and 3.2x economic impact, all up high.",
       "image": "/uploads/abx-f3.jpg",
       "alt": "Abaxent impact statistics"
     },
     {
       "title": "Leadership",
-      "text": "Portraits, short bios and direct lines for the three leaders.",
+      "text": "Photos, short bios and direct lines for the three leaders.",
       "image": "/uploads/abx-f4.jpg",
       "alt": "Abaxent leadership team"
     },
     {
       "title": "Why we're different",
-      "text": "Four short reasons in plain language: brokers not vendors, no bench, 22 years, certified.",
+      "text": "Four short reasons: brokers, not vendors; no bench; 22 years; certified.",
       "image": "/uploads/abx-f5.jpg",
-      "alt": "Abaxent why we are different section"
+      "alt": "Abaxent why we are different section",
+      "story": "The serif italic only shows up on the one word in each heading that carries the point. That's the whole type trick."
     },
     {
       "title": "Full-screen menu",
-      "text": "A crimson full-screen menu that opens from one button and closes with Escape.",
+      "text": "One button opens a crimson menu over the whole screen. Escape closes it.",
       "image": "/uploads/abx-f6.jpg",
       "alt": "Abaxent full-screen menu"
     },
     {
       "title": "On a phone",
-      "text": "The hero, method and numbers on a phone.",
+      "text": "The hero, the method and the numbers on a phone.",
       "image": "/uploads/abx-f7.jpg",
       "alt": "Abaxent on a phone"
     }

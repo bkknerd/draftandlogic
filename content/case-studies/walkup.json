@@ -1,14 +1,14 @@
 {
   "title": "The WalkUp: a concept site for the bar upstairs",
   "tag": "Concept site · cocktail bar, Cary, NC",
-  "summaryLead": "A concept site for the cocktail bar one flight up in downtown Cary. Not a launched project.",
-  "story": "The WalkUp is a cocktail bar one flight up in downtown Cary, NC, right above happy's. People walk past the door all the time because they don't know it's upstairs. This concept is our own work, and it turns that into the page: a 14-step meter fills as you scroll from the street up to Suite 200, and the menu and running tab wait at the top.",
+  "summaryLead": "A concept site for the cocktail bar one flight up in downtown Cary. Our own idea, not a launched project.",
+  "story": "The WalkUp is a cocktail bar one flight up in downtown Cary, above happy's. People walk past the door because they don't know it's there. This concept turns that into the page. A 14-step gold meter fills as you scroll from the street up to Suite 200. It's dark and warm, set entirely in Lekton, a mono face, so it reads like a typed menu.",
   "url": "",
   "numbers": [],
   "goals": [
     "Tell first-timers the bar is upstairs.",
     "Make the climb the navigation.",
-    "Keep the menu easy to plan a round with."
+    "Make the menu easy to plan a round from."
   ],
   "features": [
     {
@@ -16,31 +16,32 @@
       "text": "A 14-step gold meter fills as you scroll from the street to Suite 200.",
       "image": "/uploads/walkup-1.jpg",
       "alt": "The WalkUp concept home page",
-      "story": "Since people miss the door, the climb is the navigation. The meter fills as you scroll and tells you where you are on the way up."
+      "story": "People miss the door, so the climb is the navigation. The steps drop in one at a time, 110 milliseconds apart, and the meter tells you where you are on the way up."
     },
     {
       "title": "Menu and running tab",
       "text": "49 items in tabs, five specialty cocktail cards, and a tab that stays on the page.",
       "image": "/uploads/walkup-2.jpg",
       "alt": "The WalkUp concept menu",
-      "story": "The menu changes with the season and guests order at the counter, so there's no cart. Tapping an item adds it to a running tab, which is just a tally to plan a round."
+      "story": "The menu changes with the season and guests order at the counter, so there's no cart. Tapping an item adds it to a running tab, just a tally for planning a round."
     },
     {
       "title": "Vector logo and hero",
-      "text": "The gold script logo, rebuilt as vector art and used in the nav, hero and footer.",
+      "text": "The gold script logo, redrawn as vector art for the nav, hero and footer.",
       "image": "/uploads/walkup-f1.jpg",
       "alt": "The WalkUp hero with the gold script logo",
-      "story": "The only logo file was a small image that went blurry when stretched. We traced it into vector paths, so it stays sharp from the nav to the footer."
+      "story": "The only logo file was a small image that went blurry when stretched. We traced it into vector paths, so it stays sharp at any size."
     },
     {
       "title": "The room",
-      "text": "Photos of the exposed-brick lounge, with the staircase meter running alongside.",
+      "text": "The exposed-brick lounge, with the staircase meter alongside.",
       "image": "/uploads/walkup-f2.jpg",
-      "alt": "The WalkUp room section"
+      "alt": "The WalkUp room section",
+      "story": "The hero fades up from black, like the lights coming up. The menu is framed in printed-menu brackets."
     },
     {
       "title": "Reviews",
-      "text": "Guest quotes on a dark blue block, set against the cream menu.",
+      "text": "Guest quotes on a dark blue block, against the cream menu.",
       "image": "/uploads/walkup-f3.jpg",
       "alt": "The WalkUp reviews"
     },

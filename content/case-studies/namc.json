@@ -1,40 +1,41 @@
 {
-  "title": "NAMC National Conference: one site to attend, sponsor and exhibit",
+  "title": "NAMC National Conference: one site to attend, sponsor or exhibit",
   "tag": "Conference website, Milwaukee, WI",
-  "summaryLead": "The 2027 national conference site for the NAMC Wisconsin Chapter, built from the 2026 B2B Forum site.",
-  "story": "NAMC Wisconsin hosts the 58th National Conference in Milwaukee, June 28 to 30, 2027. Their earlier forum site was text and links: the schedule and the map sat behind separate buttons, and sponsor tiers were mentioned without much weight. The new site starts with one question, what are you here to do? Attend, sponsor or exhibit, each with its price on the card. Everything after that, from the city to the keynote to the sponsor levels, supports one of those three choices.",
+  "summaryLead": "The 2027 conference site for NAMC Wisconsin, built on the 2026 B2B Forum site.",
+  "story": "NAMC Wisconsin is hosting the 58th National Conference in Milwaukee, June 28 to 30, 2027. The forum site they'd been using was mostly text and links. The schedule and the map were behind buttons, and sponsor levels barely got a mention. We started the new one with a question: what are you here to do? Attend, sponsor or exhibit, with the price on each card. The rest of the page backs up one of those three. It's navy, red and gold on warm paper, set in Bebas Neue over Barlow.",
   "url": "",
   "numbers": [],
   "goals": [
-    "Ask visitors what they came to do, and send them there.",
-    "Put prices on the first screen: $400 early bird, $5,000 to $50,000 sponsor levels, $1,500 booths.",
-    "Put dates, venue and gala pricing in one view, with Register and Add to Calendar."
+    "Ask visitors what they came for and send them there.",
+    "Show prices right away: $400 early bird, $5,000 to $50,000 for sponsors, $1,500 for a booth.",
+    "Keep dates, venue and gala pricing in one place, with Register and Add to Calendar."
   ],
   "features": [
     {
       "title": "Three paths on the first screen",
-      "text": "Attend, Sponsor or Exhibit, each with its price and a link in, next to a countdown to the conference.",
+      "text": "Attend, Sponsor or Exhibit, each with its price, next to a countdown.",
       "image": "/uploads/namc-f1.jpg",
       "alt": "NAMC National Conference home page",
-      "story": "The old site had a Buy Tickets button and little else. People arrive wanting very different things, so the first screen asks which one they are."
+      "story": "The old site had a Buy Tickets button and not much else. People show up wanting different things, so the first screen asks which one they are."
     },
     {
       "title": "Sponsor levels and the host city",
-      "text": "Sponsor tiers across the top, with the Pfister Hotel and the Milwaukee skyline below.",
+      "text": "Sponsor levels across the top, then the Pfister Hotel and the Milwaukee skyline.",
       "image": "/uploads/namc-f2.jpg",
       "alt": "NAMC sponsors and Milwaukee photography"
     },
     {
       "title": "A case for Milwaukee",
-      "text": "A short list of reasons to come, beside a night shot of the city.",
+      "text": "A short list of reasons to come, next to a night shot of the city.",
       "image": "/uploads/namc-f3.jpg",
       "alt": "Why Milwaukee section"
     },
     {
       "title": "The keynote and the city in numbers",
-      "text": "Keynote speaker Khia Chukudebelu of Microsoft, then 73 construction companies, 5 Fortune 500 headquarters and a $100 billion regional economy.",
+      "text": "The keynote speaker, Khia Chukudebelu of Microsoft, then Milwaukee in numbers: 73 construction companies, 5 Fortune 500 headquarters, a $100 billion regional economy.",
       "image": "/uploads/namc-f4.jpg",
-      "alt": "Keynote speaker and Milwaukee by the numbers"
+      "alt": "Keynote speaker and Milwaukee by the numbers",
+      "story": "People get a circle with a gold ring. Places get a square crop under one even overlay. Once you see the rule, you stop noticing it."
     },
     {
       "title": "Why partner with NAMC",
@@ -44,31 +45,32 @@
     },
     {
       "title": "Past forums and sponsors",
-      "text": "A link to videos from earlier forums, and the sponsor levels again for anyone who skipped ahead.",
+      "text": "Videos from earlier forums, and the sponsor levels again for anyone who skipped ahead.",
       "image": "/uploads/namc-f6.jpg",
       "alt": "Forum videos and sponsor levels"
     },
     {
       "title": "Closing on the same three choices",
-      "text": "The page ends where it began: Attend, Sponsor, Exhibit.",
+      "text": "The page ends where it started: attend, sponsor, exhibit.",
       "image": "/uploads/namc-f7.jpg",
       "alt": "NAMC closing call to action"
     },
     {
       "title": "Dates and pricing in one view",
-      "text": "Venue, dates, what registration includes and gala pricing together, where the old page had them behind buttons.",
+      "text": "Venue, dates, what registration includes and gala pricing, together. The old page had them behind buttons.",
       "image": "/uploads/namc-b2.jpg",
-      "alt": "The earlier NAMC information page"
+      "alt": "The earlier NAMC information page",
+      "story": "Hover only changes color. Nothing jumps or slides, and one focus ring color works on light, dark and gold."
     },
     {
       "title": "Where we started",
-      "text": "The 2026 B2B Forum site: a photo, a date, a Buy Tickets button, and the schedule and map behind separate buttons.",
+      "text": "The 2026 B2B Forum site: a photo, a date, a Buy Tickets button, and the schedule and map behind buttons.",
       "image": "/uploads/namc-b1.jpg",
       "alt": "The earlier NAMC forum site"
     },
     {
       "title": "On a phone",
-      "text": "The same three choices, with the dates and a Register button pinned to the bottom of the screen.",
+      "text": "The same three choices, with the dates and a Register button pinned to the bottom.",
       "image": "/uploads/namc-f9.jpg",
       "alt": "NAMC on a phone"
     }

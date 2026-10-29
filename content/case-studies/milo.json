@@ -1,8 +1,8 @@
 {
   "title": "Milo's Cafe: a neighborhood café with a patio that follows the sky",
   "tag": "Café website, Morrisville, NC",
-  "summaryLead": "A one-page site for a Morrisville café: the menu, the patio and a way to order.",
-  "story": "Milo's is a European-style café in Morrisville, NC, run by Menad and Liliana Haliche. People look it up for three things: what's on the menu, what it costs, and whether the patio is worth it today. We redesigned the site around those questions. The top of the page is an illustrated patio that follows the real weather and time of day. The menu is on the page, not in a PDF. Ordering is one tap away.",
+  "summaryLead": "A one-page site for a Morrisville café. Menu, prices, patio, and a way to order.",
+  "story": "Milo's is a European-style café in Morrisville, run by Menad and Liliana Haliche. When people look it up they want three things: what's on the menu, what it costs, and whether the patio's worth it today. The new site answers all three. At the top is an illustrated patio that follows the real weather and time of day. The menu is on the page instead of a PDF, and ordering is one tap. It's porcelain, cobalt and one gold, with the gold saved for the order button.",
   "url": "",
   "numbers": [
     {
@@ -16,58 +16,60 @@
   ],
   "goals": [
     "Put the menu and prices on the page.",
-    "Let people see whether the patio is worth it today.",
-    "Send them to order in one tap."
+    "Show whether the patio's worth it today.",
+    "Make ordering one tap."
   ],
   "features": [
     {
       "title": "A hero that says what it is",
-      "text": "A short headline, two buttons and the patio right underneath.",
+      "text": "A short headline, two buttons, and the patio right underneath.",
       "image": "/uploads/milo-f1.jpg",
-      "alt": "Milo's Cafe home page with the patio scene"
+      "alt": "Milo's Cafe home page with the patio scene",
+      "story": "Headlines are Fraunces and body text is Instrument Sans. Sizes step up on a major-third scale from 17px."
     },
     {
       "title": "The patio, drawn live",
-      "text": "The sun, clouds, rain and wind follow the real sky over Morrisville. A slider moves through the day.",
+      "text": "The sun, clouds, rain and wind follow the real sky over Morrisville. A slider scrubs through the day.",
       "image": "/uploads/milo-f2.jpg",
       "alt": "Milo's patio scene in the morning",
-      "story": "A photo can't tell you if today is a patio day. This one can. If the weather feed is down, the scene falls back to a plain daytime sky."
+      "story": "A photo can't tell you if today's a patio day. This can. The line work is hand-drawn with a slight wobble, the trees sway, and the umbrellas close at night. If the weather feed drops, you get a plain daytime sky."
     },
     {
       "title": "Their story, up front",
-      "text": "Who opened it, what they serve and the sandwich-shop award, beside a photo of the front door. A Pair it picker below suggests a food and drink for first-timers.",
+      "text": "Who opened it, what they serve and the sandwich-shop award, next to a photo of the front door. Below it, a Pair it picker for first-timers.",
       "image": "/uploads/milo-f3.jpg",
       "alt": "Milo's story section",
-      "story": "First-timers face a long menu and don't know where to start. Pair it picks from lists we chose by hand. No account, no tracking."
+      "story": "First-timers hit a long menu and don't know where to start. Pair it picks from lists we wrote by hand. No account, no tracking."
     },
     {
       "title": "A menu you can search",
-      "text": "Food and drinks, a meat-free filter, category jumps and a star on guest favorites.",
+      "text": "Food and drinks, a meat-free filter, jump links, and a star on guest favorites.",
       "image": "/uploads/milo-f4.jpg",
       "alt": "Milo's menu with Food and Drinks tabs",
-      "story": "Menus usually live in a PDF nobody can search. Here each item is its own entry, so a new seasonal drink is one line to add."
+      "story": "Menus usually sit in a PDF nobody can search. Here every dish is its own entry, so a new seasonal drink is one line to add."
     },
     {
       "title": "Prices on the page",
-      "text": "Toast, salads, focaccia and crepes, each with a short description and the price.",
+      "text": "Toast, salads, focaccia and crepes, each with a short description and a price.",
       "image": "/uploads/milo-f5.jpg",
-      "alt": "Milo's menu, salads and crepes"
+      "alt": "Milo's menu, salads and crepes",
+      "story": "Dotted lines run from each dish to its price, like a printed menu. The cups beside the drinks stay still until you hover, then they pour."
     },
     {
       "title": "Inside and out",
-      "text": "The gravel patio, the green wall and the bench room, so people know what they're walking into.",
+      "text": "The gravel patio, the green wall and the bench room, so you know what you're walking into.",
       "image": "/uploads/milo-f8.jpg",
       "alt": "Milo's dining room"
     },
     {
       "title": "Reviews in their own words",
-      "text": "The rating, a pulled quote and short lines from guests.",
+      "text": "The rating, one pulled quote and short lines from guests.",
       "image": "/uploads/milo-f6.jpg",
       "alt": "Milo's guest reviews"
     },
     {
       "title": "Instagram and the room",
-      "text": "Photos from their own feed, plus the patio, the green wall and the bench room.",
+      "text": "Photos pulled from their own Instagram.",
       "image": "/uploads/milo-f7.jpg",
       "alt": "Milo's Instagram gallery"
     },
