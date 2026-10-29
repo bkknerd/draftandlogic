@@ -2,71 +2,48 @@
   "title": "NAMC National Conference: one site to attend, sponsor or exhibit",
   "tag": "Conference website, Milwaukee, WI",
   "summaryLead": "The 2027 conference site for NAMC Wisconsin, built on the 2026 B2B Forum site.",
-  "story": "NAMC Wisconsin is hosting the 58th National Conference in Milwaukee, June 28 to 30, 2027. The forum site they'd been using was mostly text and links. The schedule and the map were behind buttons, and sponsor levels barely got a mention. We started the new one with a question: what are you here to do? Attend, sponsor or exhibit, with the price on each card. The rest of the page backs up one of those three. It's navy, red and gold on warm paper, set in Bebas Neue over Barlow.",
+  "story": "NAMC Wisconsin is hosting the 58th National Conference in Milwaukee, June 28 to 30, 2027. The forum site they'd been using was mostly text and links. The schedule and the map were behind buttons, and sponsor levels barely got a mention. The new site is a full event site with its own pages for sponsors, exhibitors, registration, the program and NAMC's history. The home page starts with a question: what are you here to do? It's navy, red and gold on warm paper, set in Bebas Neue over Barlow.",
   "url": "",
   "numbers": [],
   "goals": [
     "Ask visitors what they came for and send them there.",
     "Show prices right away: $400 early bird, $5,000 to $50,000 for sponsors, $1,500 for a booth.",
-    "Keep dates, venue and gala pricing in one place, with Register and Add to Calendar."
+    "Keep dates, venue and gala pricing in one place."
   ],
   "features": [
     {
-      "title": "Three paths on the first screen",
-      "text": "Attend, Sponsor or Exhibit, each with its price, next to a countdown.",
-      "image": "/uploads/namc-f1.jpg",
-      "alt": "NAMC National Conference home page",
-      "story": "The old site had a Buy Tickets button and not much else. People show up wanting different things, so the first screen asks which one they are."
+      "title": "Sponsor levels, side by side",
+      "text": "Six levels from $5,000 to $50,000 as color cards, each with Select and Benefits. Choose one and the sign-up form opens below.",
+      "image": "/uploads/namc-s1.jpg",
+      "alt": "NAMC sponsorship levels",
+      "story": "Each level gets its own color, so you can tell Presenting from Copper at a glance. The Herb Miller Briefcase Program sits right under them."
     },
     {
-      "title": "Sponsor levels and the host city",
-      "text": "Sponsor levels across the top, then the Pfister Hotel and the Milwaukee skyline.",
-      "image": "/uploads/namc-f2.jpg",
-      "alt": "NAMC sponsors and Milwaukee photography"
+      "title": "Registration with a running total",
+      "text": "Early bird and standard tickets, gala tables and booths. Pick what you want and the order total updates beside them.",
+      "image": "/uploads/namc-s2.jpg",
+      "alt": "NAMC registration with an order summary",
+      "story": "Registration opens January 1, so until then the same page collects emails for a notice."
     },
     {
-      "title": "A case for Milwaukee",
-      "text": "A short list of reasons to come, next to a night shot of the city.",
-      "image": "/uploads/namc-f3.jpg",
-      "alt": "Why Milwaukee section"
+      "title": "Exhibiting, in one place",
+      "text": "The $1,500 booth, what's included, and the sign-up form.",
+      "image": "/uploads/namc-s3.jpg",
+      "alt": "NAMC exhibitor page"
     },
     {
-      "title": "The keynote and the city in numbers",
-      "text": "The keynote speaker, Khia Chukudebelu of Microsoft, then Milwaukee in numbers: 73 construction companies, 5 Fortune 500 headquarters, a $100 billion regional economy.",
-      "image": "/uploads/namc-f4.jpg",
-      "alt": "Keynote speaker and Milwaukee by the numbers",
-      "story": "People get a circle with a gold ring. Places get a square crop under one even overlay. Once you see the rule, you stop noticing it."
-    },
-    {
-      "title": "Why partner with NAMC",
-      "text": "Four reasons to sponsor, and a welcome from Mayor Cavalier Johnson.",
-      "image": "/uploads/namc-f5.jpg",
-      "alt": "Why partner with NAMC and the mayor's welcome"
-    },
-    {
-      "title": "Past forums and sponsors",
-      "text": "Videos from earlier forums, and the sponsor levels again for anyone who skipped ahead.",
-      "image": "/uploads/namc-f6.jpg",
-      "alt": "Forum videos and sponsor levels"
-    },
-    {
-      "title": "Closing on the same three choices",
-      "text": "The page ends where it started: attend, sponsor, exhibit.",
-      "image": "/uploads/namc-f7.jpg",
-      "alt": "NAMC closing call to action"
-    },
-    {
-      "title": "Dates and pricing in one view",
-      "text": "Venue, dates, what registration includes and gala pricing, together. The old page had them behind buttons.",
-      "image": "/uploads/namc-b2.jpg",
-      "alt": "The earlier NAMC information page",
+      "title": "A timeline that travels",
+      "text": "Press Play and a marker moves from Oakland, 1969, to Milwaukee. Arrow keys work too.",
+      "image": "/uploads/namc-s4.jpg",
+      "alt": "NAMC history timeline",
       "story": "Hover only changes color. Nothing jumps or slides, and one focus ring color works on light, dark and gold."
     },
     {
-      "title": "Where we started",
-      "text": "The 2026 B2B Forum site: a photo, a date, a Buy Tickets button, and the schedule and map behind buttons.",
-      "image": "/uploads/namc-b1.jpg",
-      "alt": "The earlier NAMC forum site"
+      "title": "The keynote and the city",
+      "text": "Khia Chukudebelu of Microsoft, then Milwaukee in numbers: 73 construction companies, 5 Fortune 500 headquarters, a $100 billion regional economy.",
+      "image": "/uploads/namc-f4.jpg",
+      "alt": "Keynote speaker and Milwaukee by the numbers",
+      "story": "People get a circle with a gold ring. Places get a square crop under one even overlay. Once you see the rule, you stop noticing it."
     },
     {
       "title": "On a phone",
@@ -79,5 +56,25 @@
     "text": "",
     "name": "",
     "role": ""
-  }
+  },
+  "compare": [
+    {
+      "title": "The first screen",
+      "beforeText": "A photo, a date and a Buy Tickets button. Everything else was a click away.",
+      "afterText": "Attend, Sponsor or Exhibit, each with its price, next to a countdown to the conference.",
+      "beforeImage": "/uploads/namc-b1.jpg",
+      "afterImage": "/uploads/namc-f1.jpg",
+      "beforeAlt": "The 2026 B2B Forum site",
+      "afterAlt": "The 2027 conference home page"
+    },
+    {
+      "title": "Dates, venue and pricing",
+      "beforeText": "The schedule and the casino map were behind buttons. Date and venue were plain text.",
+      "afterText": "Venue, dates, what registration includes and gala pricing in one view, with Register and Add to Calendar.",
+      "beforeImage": "/uploads/namc-b2.jpg",
+      "afterImage": "/uploads/namc-info.jpg",
+      "beforeAlt": "The earlier information page",
+      "afterAlt": "The new information page"
+    }
+  ]
 }

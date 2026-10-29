@@ -68,6 +68,9 @@ collections:
           - { label: Case study page, back to work link, name: csBackWork, widget: string }
           - { label: Case study page, start a project link, name: csStart, widget: string }
           - { label: Case study page, features heading, name: csFeatures, widget: string }
+          - { label: Case study page, before and after heading, name: csCompare, widget: string }
+          - { label: Case study page, before tag, name: csBefore, widget: string }
+          - { label: Case study page, after tag, name: csAfter, widget: string }
           - { label: Case study page, numbers heading, name: csNumbers, widget: string }
           - { label: Case study page, goals heading, name: csGoals, widget: string }
           - { label: Case study page, what we did heading, name: csDid, widget: string }
@@ -323,6 +326,20 @@ collections:
               - { label: Quote, name: text, widget: text, required: false }
               - { label: Name, name: name, widget: string, required: false }
               - { label: Role, name: role, widget: string, required: false }
+          - label: Before and after
+            name: compare
+            widget: list
+            required: false
+            summary: "{{fields.title}}"
+            hint: "Old site on the left, new site on the right. Leave empty to hide the block."
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Before text, name: beforeText, widget: text }
+              - { label: After text, name: afterText, widget: text }
+              - { label: Before image, name: beforeImage, widget: image }
+              - { label: After image, name: afterImage, widget: image }
+              - { label: Before image description, name: beforeAlt, widget: string, required: false }
+              - { label: After image description, name: afterAlt, widget: string, required: false }
           - label: Features
             name: features
             widget: list

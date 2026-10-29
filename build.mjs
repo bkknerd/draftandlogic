@@ -51,6 +51,7 @@ for (const f of list("content/case-studies")) {
     img: ((s.features || []).find((x) => x.image) || {}).image || "",
     blurb: (((data.cases.items || []).find((c) => c.study === f.replace(/\.json$/, ""))) || {}).summary || "",
     services: ((data.cases.items || []).find((c) => c.study === f.replace(/\.json$/, "")) || {}).services || [],
+    compare: (s.compare || []).map((c) => [c.title, c.beforeText || "", c.afterText || "", c.beforeImage || "", c.afterImage || "", c.beforeAlt || "", c.afterAlt || ""]),
     features: (s.features || []).map((f) => [f.title, f.text, f.image || "", f.alt || "", f.story || ""]),
   };
 }
