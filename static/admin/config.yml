@@ -198,6 +198,9 @@ collections:
           - { label: "Show the other launched sites list", name: alsoShow, widget: boolean, default: true }
           - { label: Heading, name: heading, widget: string }
           - { label: Intro, name: intro, widget: text }
+          - { label: Link text to the All work page, name: allLink, widget: string, required: false }
+          - { label: All work page heading, name: allHeading, widget: string, required: false }
+          - { label: All work page intro, name: allIntro, widget: text, required: false }
           - { label: Heading for other launches, name: alsoHeading, widget: string }
           - label: Other launched sites
             name: also
@@ -218,6 +221,7 @@ collections:
             fields:
               - { label: Name, name: label, widget: string }
               - { label: Look, name: style, widget: select, options: [abx, namc, sum, iron, milo, happy, walkup], hint: "Picks the card's colour theme. New cards can reuse any of these." }
+              - { label: Show on the home page, name: home, widget: boolean, default: false, required: false, hint: "Keep this to three cards. Every card appears on the All work page." }
               - { label: Large card, name: feature, widget: boolean, default: false, required: false }
               - { label: Image on the right, name: reverse, widget: boolean, default: false, required: false }
               - { label: Case study ID, name: study, widget: string, required: false, hint: "summit, abaxent, namc, milo, happy or walkup. Leave empty for no case-study link." }

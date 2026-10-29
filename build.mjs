@@ -55,6 +55,7 @@ for (const f of list("content/case-studies")) {
     features: (s.features || []).map((f) => [f.title, f.text, f.image || "", f.alt || "", f.story || ""]),
   };
 }
+data.cardsJson = JSON.stringify((data.cases.items || []).map((c) => ({ slug: c.study || "", label: c.label, tag: c.tag || "", title: c.title, summary: c.summary, img: (c.shots && c.shots[0] && c.shots[0].image) || "", alt: (c.shots && c.shots[0] && c.shots[0].alt) || "", services: c.services || [] }))).replace(/</g, "\\u003c");
 data.studiesJson = JSON.stringify(studies).replace(/</g, "\\u003c").replace(/\u2028/g, "\\u2028").replace(/\u2029/g, "\\u2029");
 
 // ---- SEO / AEO: structured data, per-study pages, sitemap, llms.txt ----
@@ -185,6 +186,35 @@ for (const [slug, st] of Object.entries(on("work") ? studies : {})) {
   fs.mkdirSync(path.join(out, "work", slug), { recursive: true });
   fs.writeFileSync(path.join(out, "work", slug, "index.html"), h);
   sitemap.push({ loc: url, pri: "0.8", img });
+}
+
+// ---- All work page: /work/ ----
+if (on("work")) {
+  const wk = data.work;
+  const url = SITE + "/work/";
+  const title = "All work | Draft and Logic";
+  const desc = trim(wk.allIntro || "Client builds and concepts from Draft and Logic.", 158);
+  const items = (data.cases.items || []);
+  const graph = [
+    { "@type": "CollectionPage", "@id": url + "#webpage", url, name: wk.allHeading || "All work", description: desc, inLanguage: "en-US", isPartOf: { "@id": SITE + "/#website" }, about: { "@id": orgId } },
+    { "@type": "ItemList", itemListElement: items.filter((c) => c.study).map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c.label, url: SITE + "/work/" + c.study + "/" })) },
+    org,
+  ];
+  const plain = '<noscript><article><h1>' + esc(wk.allHeading || "All work") + '</h1><ul>' + items.map((c) => "<li>" + (c.study ? '<a href="/work/' + c.study + '/">' + esc(c.label) + "</a>" : esc(c.label)) + ": " + esc(c.summary) + "</li>").join("") + '</ul><p><a href="/">Draft and Logic home</a> | <a href="/#contact">Start a project</a></p></article></noscript>';
+  let h = html;
+  h = swap(h, /<title>[\s\S]*?<\/title>/, "<title>" + attr(title) + "</title>");
+  h = swap(h, /<meta name="description" content="[^"]*">/, '<meta name="description" content="' + attr(desc) + '">');
+  h = swap(h, /<link rel="canonical" href="[^"]*">/, '<link rel="canonical" href="' + url + '">');
+  h = swap(h, /<meta property="og:url" content="[^"]*">/, '<meta property="og:url" content="' + url + '">');
+  h = swap(h, /<meta property="og:title" content="[^"]*">/, '<meta property="og:title" content="' + attr(title) + '">');
+  h = swap(h, /<meta property="og:description" content="[^"]*">/, '<meta property="og:description" content="' + attr(desc) + '">');
+  h = swap(h, /<meta name="twitter:title" content="[^"]*">/, '<meta name="twitter:title" content="' + attr(title) + '">');
+  h = swap(h, /<meta name="twitter:description" content="[^"]*">/, '<meta name="twitter:description" content="' + attr(desc) + '">');
+  h = swap(h, /<script type="application\/ld\+json" id="ld">[\s\S]*?<\/script>/, '<script type="application/ld+json" id="ld">' + ld({ "@context": "https://schema.org", "@graph": graph }) + "</script><script>if(!location.hash)history.replaceState(null,'','#/work')</script>");
+  h = swap(h, /<body([^>]*)>/, (m) => m + plain);
+  fs.mkdirSync(path.join(out, "work"), { recursive: true });
+  fs.writeFileSync(path.join(out, "work", "index.html"), h);
+  sitemap.push({ loc: url, pri: "0.9" });
 }
 if (!soon) fs.writeFileSync(path.join(out, "sitemap.xml"), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' + sitemap.map((u) => "  <url><loc>" + u.loc + "</loc><lastmod>" + today + "</lastmod><priority>" + u.pri + "</priority>" + (u.img ? "<image:image><image:loc>" + u.img + "</image:loc></image:image>" : "") + "</url>").join("\n") + "\n</urlset>\n");
 

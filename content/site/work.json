@@ -1,7 +1,7 @@
 {
   "show": true,
   "heading": "Selected work",
-  "intro": "Five recent builds and two concepts.",
+  "intro": "Three recent builds.",
   "alsoHeading": "Also launched",
   "also": [
     {
@@ -17,5 +17,8 @@
       "url": "https://www.persiancarpet.com/"
     }
   ],
-  "alsoShow": true
+  "alsoShow": true,
+  "allLink": "See all work",
+  "allHeading": "All work",
+  "allIntro": "Client builds and our own concepts. Filter by the service we delivered."
 }

@@ -21,7 +21,8 @@
         "Technical SEO",
         "AEO & GEO",
         "ADA Compliance"
-      ]
+      ],
+      "home": true
     },
     {
       "style": "namc",
@@ -50,7 +51,8 @@
         "ADA Compliance",
         "CRO & Analytics",
         "Maintenance & Support"
-      ]
+      ],
+      "home": true
     },
     {
       "style": "milo",
@@ -78,7 +80,8 @@
         "AEO & GEO",
         "ADA Compliance",
         "CRO & Analytics"
-      ]
+      ],
+      "home": true
     },
     {
       "style": "sum",
@@ -105,7 +108,8 @@
         "Technical SEO",
         "AEO & GEO",
         "CRO & Analytics"
-      ]
+      ],
+      "home": false
     },
     {
       "style": "iron",
@@ -131,7 +135,8 @@
         "Website Development",
         "Technical SEO",
         "CRO & Analytics"
-      ]
+      ],
+      "home": false
     },
     {
       "style": "happy",
@@ -156,7 +161,8 @@
       "services": [
         "Website Development",
         "ADA Compliance"
-      ]
+      ],
+      "home": false
     },
     {
       "style": "walkup",
@@ -181,7 +187,8 @@
       "services": [
         "Website Development",
         "ADA Compliance"
-      ]
+      ],
+      "home": false
     }
   ]
 }
