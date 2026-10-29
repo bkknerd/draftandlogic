@@ -1,53 +1,80 @@
 {
-  "title": "Milo's Cafe: a neighborhood site with a live patio",
+  "title": "Milo's Cafe: a neighborhood café with a patio that follows the sky",
   "tag": "Café website, Morrisville, NC",
-  "summaryLead": "A one-page site that shows the menu, whether they're open and whether to sit outside.",
-  "story": "Milo's is a European-style café in Morrisville, NC, known for focaccia sandwiches, Lavazza espresso and crepes. Before heading out, people want three things: the menu, the hours, and whether the patio is worth it today. They asked for a site that answers all three without digging. We made it one page, with a searchable menu, a patio scene that reads the weather, and links straight to online ordering.",
+  "summaryLead": "A one-page site for a Morrisville café: the menu, the patio and a way to order.",
+  "story": "Milo's is a European-style café in Morrisville, NC, run by Menad and Liliana Haliche. People look it up for three things: what's on the menu, what it costs, and whether the patio is worth it today. We redesigned the site around those questions. The top of the page is an illustrated patio that follows the real weather and time of day. The menu is on the page, not in a PDF. Ordering is one tap away.",
   "url": "",
-  "numbers": [],
+  "numbers": [
+    {
+      "value": "4.7",
+      "label": "Google rating, 498 reviews"
+    },
+    {
+      "value": "#1",
+      "label": "Best Sandwich Shop in the Triangle, N&O readers' poll 2026"
+    }
+  ],
   "goals": [
-    "Show the menu without a PDF.",
-    "Say at a glance whether the café is open.",
-    "Help people decide if the patio is worth it today."
+    "Put the menu and prices on the page.",
+    "Let people see whether the patio is worth it today.",
+    "Send them to order in one tap."
   ],
   "features": [
     {
-      "title": "One page, two actions",
-      "text": "Order buttons go to their SpotOn page, and a sticky bar keeps Order and Call within reach.",
+      "title": "A hero that says what it is",
+      "text": "A short headline, two buttons and the patio right underneath.",
       "image": "/uploads/milo-f1.jpg",
-      "alt": "Milo's Cafe home page"
+      "alt": "Milo's Cafe home page with the patio scene"
     },
     {
-      "title": "Live patio scene",
-      "text": "An illustrated patio that follows the time of day and the weather, with a slider for the day.",
+      "title": "The patio, drawn live",
+      "text": "The sun, clouds, rain and wind follow the real sky over Morrisville. A slider moves through the day.",
       "image": "/uploads/milo-f2.jpg",
-      "alt": "Milo's patio scene at golden hour",
-      "story": "A photo can't tell you if today is a patio day. The scene reads current conditions for Morrisville and gives a one-line verdict. If the weather service is down, it shows the day's hours instead."
+      "alt": "Milo's patio scene in the morning",
+      "story": "A photo can't tell you if today is a patio day. This one can. If the weather feed is down, the scene falls back to a plain daytime sky."
     },
     {
-      "title": "Searchable menu",
-      "text": "All 69 items are searchable, with a meat-free filter and a star on guest favorites.",
+      "title": "Their story, up front",
+      "text": "Who opened it, what they serve and the sandwich-shop award, beside a photo of the front door. A Pair it picker below suggests a food and drink for first-timers.",
       "image": "/uploads/milo-f3.jpg",
-      "alt": "Milo's menu with Food and Drinks tabs",
-      "story": "Menus often sit in a PDF nobody can search. Here every item is its own entry, so adding a seasonal drink takes one line."
-    },
-    {
-      "title": "Pair it",
-      "text": "Pick a food mood and a drink mood and it suggests a pairing.",
-      "image": "/uploads/milo-f4.jpg",
-      "alt": "Milo's Pair it tool",
+      "alt": "Milo's story section",
       "story": "First-timers face a long menu and don't know where to start. Pair it picks from lists we chose by hand. No account, no tracking."
     },
     {
-      "title": "Guest reviews",
-      "text": "The rating and a few guest quotes in one block.",
+      "title": "A menu you can search",
+      "text": "Food and drinks, a meat-free filter, category jumps and a star on guest favorites.",
+      "image": "/uploads/milo-f4.jpg",
+      "alt": "Milo's menu with Food and Drinks tabs",
+      "story": "Menus usually live in a PDF nobody can search. Here each item is its own entry, so a new seasonal drink is one line to add."
+    },
+    {
+      "title": "Prices on the page",
+      "text": "Toast, salads, focaccia and crepes, each with a short description and the price.",
       "image": "/uploads/milo-f5.jpg",
+      "alt": "Milo's menu, salads and crepes"
+    },
+    {
+      "title": "Inside and out",
+      "text": "The gravel patio, the green wall and the bench room, so people know what they're walking into.",
+      "image": "/uploads/milo-f8.jpg",
+      "alt": "Milo's dining room"
+    },
+    {
+      "title": "Reviews in their own words",
+      "text": "The rating, a pulled quote and short lines from guests.",
+      "image": "/uploads/milo-f6.jpg",
       "alt": "Milo's guest reviews"
     },
     {
+      "title": "Instagram and the room",
+      "text": "Photos from their own feed, plus the patio, the green wall and the bench room.",
+      "image": "/uploads/milo-f7.jpg",
+      "alt": "Milo's Instagram gallery"
+    },
+    {
       "title": "On a phone",
-      "text": "The hero, patio and menu on a phone.",
-      "image": "/uploads/milo-f6.jpg",
+      "text": "Order and Call stay pinned to the bottom of the screen.",
+      "image": "/uploads/milo-f9.jpg",
       "alt": "Milo's on a phone"
     }
   ],

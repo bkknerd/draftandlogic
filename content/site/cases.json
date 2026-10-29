@@ -62,11 +62,11 @@
         },
         {
           "image": "/uploads/milo-2.jpg",
-          "alt": "Milo's Cafe patio scene at golden hour with a time-of-day slider and sky options"
+          "alt": "Milo's Cafe patio scene in the morning with a time-of-day slider"
         }
       ],
-      "title": "A café site that tells you whether it's a patio day",
-      "summary": "The menu, the hours and the patio forecast on one page, for a café in Morrisville, NC.",
+      "title": "A café site with a patio that follows the sky",
+      "summary": "The menu, prices and a live patio scene on one page, for a café in Morrisville, NC.",
       "tag": "",
       "services": [
         "Website Development",
