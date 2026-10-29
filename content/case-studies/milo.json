@@ -2,7 +2,7 @@
   "title": "Milo's Cafe: a neighborhood café with a patio that follows the sky",
   "tag": "Café website, Morrisville, NC",
   "summaryLead": "A one-page site for a Morrisville café. Menu, prices, patio, and a way to order.",
-  "story": "Milo's is a European-style café in Morrisville, run by Menad and Liliana Haliche. When people look it up they want three things: what's on the menu, what it costs, and whether the patio's worth it today. The new site answers all three. At the top is an illustrated patio that follows the real weather and time of day. The menu is on the page instead of a PDF, and ordering is one tap. It's porcelain, cobalt and one gold, with the gold saved for the order button.",
+  "story": "Milo's is a European-style café in Morrisville, run by Menad and Liliana Haliche. When people look it up they want three things: what's on the menu, what it costs, and whether the patio's worth it today. The new site answers all three. At the top is an illustrated patio that follows the real weather and time of day. The menu is on the page instead of a PDF, and every drink has a little glass that pours when you tap it. Ordering is one tap. It's porcelain, cobalt and one gold, with the gold saved for the order button.",
   "url": "",
   "numbers": [
     {
@@ -33,6 +33,13 @@
       "image": "/uploads/milo-f2.jpg",
       "alt": "Milo's patio scene in the morning",
       "story": "A photo can't tell you if today's a patio day. This can. The line work is hand-drawn with a slight wobble, the trees sway, and the umbrellas close at night. If the weather feed drops, you get a plain daytime sky."
+    },
+    {
+      "title": "Drinks that pour",
+      "text": "Every drink has a small glass beside its price. Hover or tap it and the layers pour in, with a line saying what's in it.",
+      "image": "/uploads/milo-f10.jpg",
+      "alt": "Milo's drinks menu with the Americano glass open",
+      "story": "Nobody knows what a cortado is until they see one. The glass fills layer by layer, in the order the drink is built, and steam drifts off the top. Under it, a line like \"1 part espresso, 2 parts hot water\". Each drink has its own colors, from espresso to matcha. It's a small SVG with CSS, so it stays quiet until someone asks."
     },
     {
       "title": "Their story, up front",

@@ -14,8 +14,8 @@
     {
       "title": "Scroll-driven video hero",
       "text": "A short film sits in a frame. Scroll, and it opens out to full width.",
-      "image": "/uploads/abx-f1.jpg",
-      "alt": "Abaxent hero: Technology brokers. Not vendors.",
+      "image": "/uploads/abx-v1.jpg",
+      "alt": "Abaxent hero film opening below the headline",
       "story": "We wanted a film up top without a slow page. The video and its poster are inside the page file, so there's nothing extra to load, and it stops for anyone with reduced motion on."
     },
     {
@@ -61,5 +61,25 @@
     "text": "",
     "name": "",
     "role": ""
-  }
+  },
+  "compare": [
+    {
+      "title": "The first screen",
+      "beforeText": "A night photo of an arena with a grey text box over it. The headline reads \"At Our Core, We Are Solution Providers…\".",
+      "afterText": "\"Technology brokers. Not vendors.\" One line says what they are, and the pyramid mark sits beside it.",
+      "beforeImage": "/uploads/abx-b1.jpg",
+      "afterImage": "/uploads/abx-a1.jpg",
+      "beforeAlt": "The original abaxent.com home page",
+      "afterAlt": "The new Abaxent home page"
+    },
+    {
+      "title": "News and press",
+      "beforeText": "A small carousel of three cards with arrows and dots, then the footer.",
+      "afterText": "Three large cards in the brand colors, with a View all news button.",
+      "beforeImage": "/uploads/abx-b2.jpg",
+      "afterImage": "/uploads/abx-a2.jpg",
+      "beforeAlt": "The original Abaxent news carousel and footer",
+      "afterAlt": "The new Abaxent in focus section"
+    }
+  ]
 }
