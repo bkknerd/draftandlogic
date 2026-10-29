@@ -1,39 +1,76 @@
 {
-  "title": "NAMC: one site for a national conference",
-  "tag": "National conference and events portal",
-  "summaryLead": "One site for tickets, sponsors, the schedule and attendee passes.",
-  "story": "The National Association of Minority Contractors runs big national gatherings with a small admin team. Tickets, sponsorships, schedules and attendee access lived in different places, and peak registration was when it hurt most. They asked for one event site that could handle all of it. We built it as a fast static site on Netlify, with serverless forms for sponsor applications, a calendar download for the agenda, a way for small businesses to find the right meetings, and a digital pass for every attendee.",
+  "title": "NAMC National Conference: one site to attend, sponsor and exhibit",
+  "tag": "Conference website, Milwaukee, WI",
+  "summaryLead": "The 2027 national conference site for the NAMC Wisconsin Chapter, built from the 2026 B2B Forum site.",
+  "story": "NAMC Wisconsin hosts the 58th National Conference in Milwaukee, June 28 to 30, 2027. Their earlier forum site was text and links: the schedule and the map sat behind separate buttons, and sponsor tiers were mentioned without much weight. The new site starts with one question, what are you here to do? Attend, sponsor or exhibit, each with its price on the card. Everything after that, from the city to the keynote to the sponsor levels, supports one of those three choices.",
   "url": "",
   "numbers": [],
   "goals": [
-    "Put tickets, sponsorships and the schedule in one place.",
-    "Take pressure off a small admin team during peak registration.",
-    "Give every attendee a digital pass and a way to find the right meetings."
+    "Ask visitors what they came to do, and send them there.",
+    "Put prices on the first screen: $400 early bird, $5,000 to $50,000 sponsor levels, $1,500 booths.",
+    "Put dates, venue and gala pricing in one view, with Register and Add to Calendar."
   ],
   "features": [
     {
-      "title": "Tickets and sponsorships",
-      "text": "Sponsors pick a tier and upload their logo. The admin team gets the details.",
-      "image": "/uploads/namc-1.jpg",
-      "alt": "NAMC National Conference 2027 home page",
-      "story": "Sponsors choose a tier and send vector logo files through a form. It checks the files and notifies the admin team, so nobody is chasing attachments by email."
+      "title": "Three paths on the first screen",
+      "text": "Attend, Sponsor or Exhibit, each with its price and a link in, next to a countdown to the conference.",
+      "image": "/uploads/namc-f1.jpg",
+      "alt": "NAMC National Conference home page",
+      "story": "The old site had a Buy Tickets button and little else. People arrive wanting very different things, so the first screen asks which one they are."
     },
     {
-      "title": "Schedule with calendar sync",
-      "text": "A schedule that's easy to scan on a phone, with a one-tap calendar download.",
-      "story": "People want to see the day on their phone and keep it. One tap makes a calendar file that Apple, Google and Outlook all open."
+      "title": "Sponsor levels and the host city",
+      "text": "Sponsor tiers across the top, with the Pfister Hotel and the Milwaukee skyline below.",
+      "image": "/uploads/namc-f2.jpg",
+      "alt": "NAMC sponsors and Milwaukee photography"
     },
     {
-      "title": "Meeting finder",
-      "text": "Helps small businesses find the meetings worth their time."
+      "title": "A case for Milwaukee",
+      "text": "A short list of reasons to come, beside a night shot of the city.",
+      "image": "/uploads/namc-f3.jpg",
+      "alt": "Why Milwaukee section"
     },
     {
-      "title": "Digital pass",
-      "text": "Every attendee gets a digital pass."
+      "title": "The keynote and the city in numbers",
+      "text": "Keynote speaker Khia Chukudebelu of Microsoft, then 73 construction companies, 5 Fortune 500 headquarters and a $100 billion regional economy.",
+      "image": "/uploads/namc-f4.jpg",
+      "alt": "Keynote speaker and Milwaukee by the numbers"
     },
     {
-      "title": "Accessible",
-      "text": "Built to WCAG 2.1 AA, with keyboard and screen reader support."
+      "title": "Why partner with NAMC",
+      "text": "Four reasons to sponsor, and a welcome from Mayor Cavalier Johnson.",
+      "image": "/uploads/namc-f5.jpg",
+      "alt": "Why partner with NAMC and the mayor's welcome"
+    },
+    {
+      "title": "Past forums and sponsors",
+      "text": "A link to videos from earlier forums, and the sponsor levels again for anyone who skipped ahead.",
+      "image": "/uploads/namc-f6.jpg",
+      "alt": "Forum videos and sponsor levels"
+    },
+    {
+      "title": "Closing on the same three choices",
+      "text": "The page ends where it began: Attend, Sponsor, Exhibit.",
+      "image": "/uploads/namc-f7.jpg",
+      "alt": "NAMC closing call to action"
+    },
+    {
+      "title": "Dates and pricing in one view",
+      "text": "Venue, dates, what registration includes and gala pricing together, where the old page had them behind buttons.",
+      "image": "/uploads/namc-b2.jpg",
+      "alt": "The earlier NAMC information page"
+    },
+    {
+      "title": "Where we started",
+      "text": "The 2026 B2B Forum site: a photo, a date, a Buy Tickets button, and the schedule and map behind separate buttons.",
+      "image": "/uploads/namc-b1.jpg",
+      "alt": "The earlier NAMC forum site"
+    },
+    {
+      "title": "On a phone",
+      "text": "The same three choices, with the dates and a Register button pinned to the bottom of the screen.",
+      "image": "/uploads/namc-f9.jpg",
+      "alt": "NAMC on a phone"
     }
   ],
   "quote": {

@@ -32,12 +32,16 @@
       "note": "",
       "shots": [
         {
-          "image": "/uploads/namc-1.jpg",
+          "image": "/uploads/namc-f1.jpg",
           "alt": "NAMC National Conference 2027 home page"
+        },
+        {
+          "image": "/uploads/namc-f4.jpg",
+          "alt": "NAMC keynote speaker and Milwaukee by the numbers"
         }
       ],
-      "title": "Tickets, sponsors, schedule and passes",
-      "summary": "Ticket and sponsor sales, a schedule people can save, and a digital pass for every attendee, for the National Association of Minority Contractors.",
+      "title": "One question on the first screen: attend, sponsor or exhibit",
+      "summary": "The 2027 national conference site for NAMC Wisconsin, with prices up front and one path for each kind of visitor.",
       "tag": "",
       "services": [
         "Website Development",
