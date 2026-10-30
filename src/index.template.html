@@ -1008,7 +1008,7 @@ h1,h2,h3{font-weight:500;letter-spacing:-.035em}
 .dl-d,.dl-b{font:500 clamp(2.6rem,7.2vw,6.9rem)/.98 var(--display);letter-spacing:-.05em;margin:0;text-wrap:balance}
 .dl-d{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(90deg,var(--rule) 0 1px,transparent 1px 8.3333%)}
 .dl-d span{position:relative;display:block;color:transparent;-webkit-text-stroke:1px var(--fg);border-bottom:1px dashed var(--pencil)}
-.dl-d span::after{content:attr(data-m);position:absolute;right:0;bottom:6px;font:400 .8125rem/1 var(--mono);letter-spacing:.08em;color:var(--mut);-webkit-text-stroke:0;text-transform:uppercase}
+.dl-d span::after{display:none;content:attr(data-m);position:absolute;right:0;bottom:6px;font:400 .8125rem/1 var(--mono);letter-spacing:.08em;color:var(--mut);-webkit-text-stroke:0;text-transform:uppercase}
 .dl-b{position:relative;z-index:1;background:var(--bg);clip-path:inset(0 0 0 var(--x))}
 .dl-b span{display:block;color:var(--mut)}
 .dl-x{position:absolute;z-index:3;top:-10px;bottom:-10px;left:var(--x);width:0;outline:none}
@@ -1231,17 +1231,7 @@ section{position:relative}
 #work{padding-bottom:clamp(24px,4vw,56px)}
 .dl-x{opacity:0;transition:opacity .3s}.dl:hover .dl-x,.dl:focus-within .dl-x,.dl-x:focus-visible{opacity:1}
 #work{padding-top:clamp(8px,2vw,24px)}#work .wrap>h2:first-child{margin-top:0}
-.hstrip{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,2vw,28px);margin-top:clamp(32px,5vw,72px)}
-.hf{display:block;text-decoration:none;color:var(--fg)}
-.hfw{position:relative;display:block;aspect-ratio:16/10;overflow:hidden;border:1px solid var(--fg);border-radius:10px;background:#F1EEE8 repeating-linear-gradient(90deg,rgba(12,12,12,.08) 0 1px,transparent 1px 8.3333%),repeating-linear-gradient(0deg,rgba(12,12,12,.08) 0 1px,transparent 1px 12.5%)}
-.hfw img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
-.hfw img.w{filter:grayscale(1) contrast(4) brightness(1.5);mix-blend-mode:multiply;opacity:.55}
-.hfw img.f{clip-path:inset(0 calc((1 - var(--p,1))*100%) 0 0);border-right:2px solid var(--lime)}
 
-.hf small{display:block;margin-top:10px;font:400 .8125rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
-.hf:hover small{color:var(--fg)}
-@media(max-width:700px){.hstrip{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin-right:-20px;padding-right:20px;gap:12px}.hf{flex:0 0 78%;scroll-snap-align:start}}
-.hero{min-height:0!important;justify-content:flex-start;gap:clamp(20px,3vw,40px);padding-top:clamp(24px,3vw,48px);padding-bottom:clamp(40px,6vw,88px)}.hero .hero-row{margin-top:0}.hstrip{margin-top:clamp(8px,2vw,28px)}
 .dl{cursor:auto;touch-action:auto;user-select:auto;-webkit-user-select:auto}
 .dl-b{clip-path:none!important;background:none}
 .dl-b span{display:block;width:fit-content;background:var(--bg);clip-path:inset(0 calc(100% - var(--r,100%)) 0 0)}
@@ -1250,6 +1240,7 @@ section{position:relative}
 .dl-c.done{animation:dlblink .55s steps(1) infinite}
 @keyframes dlblink{50%{opacity:0}}
 .hero h1.dl-b span.l1{color:var(--fg)}
+.dl-d{transition:opacity .8s}.dl.done .dl-d{opacity:0}.hero{min-height:calc(100svh - 360px)!important}
 </style>
 {{{analyticsHead}}}
 </head>
@@ -1270,7 +1261,6 @@ section{position:relative}
       <h1 class="dl-b"><span class="l1">{{hero.line1}}</span> <span class="l2">{{hero.line2}}</span></h1>
     </div>
     <div class="hero-row"><p>{{hero.intro}}</p>{{#if contact.show}}<a class="go mag" href="#contact">{{hero.cta}}</a>{{/if}}</div>
-    <div class="hstrip" id="hstrip">{{#each cases.items}}{{#if this.home}}<a class="hf" href="/work/{{this.study}}/" aria-label="{{this.label}}: {{this.title}}"><span class="hfw"><img class="w" src="{{this.img1}}" alt="" aria-hidden="true" width="1440" height="900"><img class="f" src="{{this.img1}}" alt="{{this.alt1}}" width="1440" height="900"></span><small>{{this.label}}</small></a>{{/if}}{{/each}}</div>
   </header>
 </div>
 
@@ -1725,7 +1715,7 @@ function f(t){if(t0===null)t0=t;var e=t-t0,cur=null;
 sp.forEach(function(x,i){var k=Math.max(0,Math.min(1,(e-T[i][0])/T[i][1])),r=ease(k)*100;x.style.setProperty('--r',r+'%');if(k>0&&k<1)cur=[x,k]});
 if(!cur&&e>T[1][0]+T[1][1])cur=[sp[1],1];
 if(cur){var x=cur[0],k=cur[1];car.style.cssText='display:block;top:'+x.offsetTop+'px;height:'+x.offsetHeight+'px;left:'+(x.offsetLeft+x.offsetWidth*ease(k))+'px';car.className='dl-c'+(e>T[1][0]+T[1][1]?' done':'')}
-if(e<T[1][0]+T[1][1]+2200)requestAnimationFrame(f);else car.style.display='none'}
+if(e<T[1][0]+T[1][1]+2200)requestAnimationFrame(f);else{car.style.display='none';dl.classList.add('done')}}
 requestAnimationFrame(f);
 })();
 </script>
@@ -1828,12 +1818,6 @@ bar.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)
 [].slice.call(bar.children).forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
 cards.forEach(function(c){var on=!v||(c.getAttribute('data-svc')||'').split('|').indexOf(v)>-1;c.hidden=!on})})})();
 </script>
-<script>
-(function(){var st=document.getElementById('hstrip');if(!st)return;var fs=[].slice.call(st.querySelectorAll('.hf'));
-if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
-function upd(){var vh=innerHeight;fs.forEach(function(f,i){var r=f.getBoundingClientRect(),p=(vh*0.92-r.top)/(vh*0.5)-i*0.08;p=Math.max(0,Math.min(1,p));f.style.setProperty('--p',p.toFixed(3))})}
-upd();var t=0;addEventListener('scroll',function(){if(t)return;t=requestAnimationFrame(function(){t=0;upd()})},{passive:true});addEventListener('resize',upd);
-})();
-</script>
+
 </body>
 </html>
