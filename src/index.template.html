@@ -1231,6 +1231,17 @@ section{position:relative}
 #work{padding-bottom:clamp(24px,4vw,56px)}
 .dl-x{opacity:0;transition:opacity .3s}.dl:hover .dl-x,.dl:focus-within .dl-x,.dl-x:focus-visible{opacity:1}
 #work{padding-top:clamp(8px,2vw,24px)}#work .wrap>h2:first-child{margin-top:0}
+.hstrip{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,2vw,28px);margin-top:clamp(32px,5vw,72px)}
+.hf{display:block;text-decoration:none;color:var(--fg)}
+.hfw{position:relative;display:block;aspect-ratio:16/10;overflow:hidden;border:1px solid var(--fg);border-radius:10px;background:#F1EEE8 repeating-linear-gradient(90deg,rgba(12,12,12,.08) 0 1px,transparent 1px 8.3333%),repeating-linear-gradient(0deg,rgba(12,12,12,.08) 0 1px,transparent 1px 12.5%)}
+.hfw img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.hfw img.w{filter:grayscale(1) contrast(4) brightness(1.5);mix-blend-mode:multiply;opacity:.55}
+.hfw img.f{clip-path:inset(0 calc((1 - var(--p,1))*100%) 0 0);border-right:2px solid var(--lime)}
+
+.hf small{display:block;margin-top:10px;font:400 .8125rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.hf:hover small{color:var(--fg)}
+@media(max-width:700px){.hstrip{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin-right:-20px;padding-right:20px;gap:12px}.hf{flex:0 0 78%;scroll-snap-align:start}}
+.hero{min-height:0!important;justify-content:flex-start;gap:clamp(20px,3vw,40px);padding-top:clamp(24px,3vw,48px);padding-bottom:clamp(40px,6vw,88px)}.hero .hero-row{margin-top:0}.hstrip{margin-top:clamp(8px,2vw,28px)}
 </style>
 {{{analyticsHead}}}
 </head>
@@ -1252,6 +1263,7 @@ section{position:relative}
       <div class="dl-x" id="dlx" role="slider" tabindex="0" aria-label="{{interface.sliderAria}}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" aria-valuetext="100{{interface.sliderValue}}"><i class="l">{{interface.sliderLeft}}</i><b></b><i class="r">{{interface.sliderRight}}</i><em></em></div>
     </div>
     <div class="hero-row"><p>{{hero.intro}}</p>{{#if contact.show}}<a class="go mag" href="#contact">{{hero.cta}}</a>{{/if}}</div>
+    <div class="hstrip" id="hstrip">{{#each cases.items}}{{#if this.home}}<a class="hf" href="/work/{{this.study}}/" aria-label="{{this.label}}: {{this.title}}"><span class="hfw"><img class="w" src="{{this.img1}}" alt="" aria-hidden="true" width="1440" height="900"><img class="f" src="{{this.img1}}" alt="{{this.alt1}}" width="1440" height="900"></span><small>{{this.label}}</small></a>{{/if}}{{/each}}</div>
   </header>
 </div>
 
@@ -1807,6 +1819,13 @@ mk(bar.getAttribute('data-all')||'All','');names.forEach(function(n){mk(n,n)});
 bar.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var v=b.getAttribute('data-v');
 [].slice.call(bar.children).forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
 cards.forEach(function(c){var on=!v||(c.getAttribute('data-svc')||'').split('|').indexOf(v)>-1;c.hidden=!on})})})();
+</script>
+<script>
+(function(){var st=document.getElementById('hstrip');if(!st)return;var fs=[].slice.call(st.querySelectorAll('.hf'));
+if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+function upd(){var vh=innerHeight;fs.forEach(function(f,i){var r=f.getBoundingClientRect(),p=(vh*0.92-r.top)/(vh*0.5)-i*0.08;p=Math.max(0,Math.min(1,p));f.style.setProperty('--p',p.toFixed(3))})}
+upd();var t=0;addEventListener('scroll',function(){if(t)return;t=requestAnimationFrame(function(){t=0;upd()})},{passive:true});addEventListener('resize',upd);
+})();
 </script>
 </body>
 </html>
