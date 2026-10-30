@@ -1,16 +1,16 @@
 {
   "items": [
     {
+      "label": "Work",
+      "href": "#work"
+    },
+    {
       "label": "Approach",
       "href": "#approach"
     },
     {
       "label": "Services",
       "href": "#stack"
-    },
-    {
-      "label": "Work",
-      "href": "#work"
     },
     {
       "label": "Process",

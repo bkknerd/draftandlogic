@@ -1252,6 +1252,26 @@ section{position:relative}
   <p>{{partners.line}}</p>
   <div class="plogos">{{#each partners.logos}}<div class="t"><img src="{{this.image}}" alt="{{this.alt}}"></div>{{/each}}</div>
 </div>{{/if}}
+{{#if work.show}}<section id="work">
+  <div class="wrap">
+    <div class="work-head">
+      <h2>{{work.heading}}</h2>
+      <p>{{work.intro}}</p>
+    </div>
+
+    <div class="hcards" id="cases">{{#each cases.items}}{{#if this.home}}<a class="hcard" href="{{#if this.study}}/work/{{this.study}}/{{/if}}"><img src="{{this.img1}}" alt="{{this.alt1}}" loading="lazy" width="1440" height="900"><div class="hb"><small>{{this.label}}{{#if this.tag}} · {{this.tag}}{{/if}}</small><h3>{{this.title}}</h3><p>{{this.summary}}</p>{{#if this.svcAttr}}<ul class="svc">{{#each this.svcList}}<li>{{this.s}}</li>{{/each}}</ul>{{/if}}<span class="hgo">{{interface.viewCase}}</span></div></a>{{/if}}
+{{/each}}</div>
+
+    {{#if work.allLink}}<p class="allwork"><a class="jbtn dark" href="/work/">{{work.allLink}}</a></p>{{/if}}
+
+    {{#if work.alsoShow}}<div class="also">
+      <h3>{{work.alsoHeading}}</h3>
+      {{#each work.also}}<a href="{{this.url}}" target="_blank" rel="noopener">{{this.label}}</a>
+      {{/each}}
+    </div>{{/if}}
+  </div>
+</section>{{/if}}
+
 {{#if approach.show}}<section id="approach">
   <div class="wrap">
     <h2 class="lede">{{approach.heading}}</h2>
@@ -1280,26 +1300,6 @@ section{position:relative}
 <div class="lv" style="--n:1"><h3>{{services.levels.6.title}}</h3><p><b>{{services.levels.6.lead}}</b> <span class="lt">{{services.levels.6.text}}</span></p><svg class="ico" viewBox="-40 -40 80 80" fill="none" stroke="#17262A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g><rect x="-28" y="-26" width="56" height="14" rx="2"/><rect x="-28" y="-7" width="56" height="14" rx="2"/><rect x="-28" y="12" width="56" height="14" rx="2"/><path d="M14-19H20M14 0H20M14 19H20"/></g></svg></div>
     </div>
     <div class="ground" aria-hidden="true"></div>
-  </div>
-</section>{{/if}}
-
-{{#if work.show}}<section id="work">
-  <div class="wrap">
-    <div class="work-head">
-      <h2>{{work.heading}}</h2>
-      <p>{{work.intro}}</p>
-    </div>
-
-    <div class="hcards" id="cases">{{#each cases.items}}{{#if this.home}}<a class="hcard" href="{{#if this.study}}/work/{{this.study}}/{{/if}}"><img src="{{this.img1}}" alt="{{this.alt1}}" loading="lazy" width="1440" height="900"><div class="hb"><small>{{this.label}}{{#if this.tag}} · {{this.tag}}{{/if}}</small><h3>{{this.title}}</h3><p>{{this.summary}}</p>{{#if this.svcAttr}}<ul class="svc">{{#each this.svcList}}<li>{{this.s}}</li>{{/each}}</ul>{{/if}}<span class="hgo">{{interface.viewCase}}</span></div></a>{{/if}}
-{{/each}}</div>
-
-    {{#if work.allLink}}<p class="allwork"><a class="jbtn dark" href="/work/">{{work.allLink}}</a></p>{{/if}}
-
-    {{#if work.alsoShow}}<div class="also">
-      <h3>{{work.alsoHeading}}</h3>
-      {{#each work.also}}<a href="{{this.url}}" target="_blank" rel="noopener">{{this.label}}</a>
-      {{/each}}
-    </div>{{/if}}
   </div>
 </section>{{/if}}
 
