@@ -73,7 +73,7 @@
       ],
       "title": "A café site with a patio that follows the sky",
       "summary": "Menu, prices and a live patio scene on one page, for a café in Morrisville.",
-      "tag": "",
+      "tag": "Launching Nov 2026",
       "services": [
         "Website Development",
         "Technical SEO",
@@ -144,22 +144,23 @@
       "reverse": false,
       "study": "happy",
       "label": "happy's",
-      "note": "Concept site, not a launched project",
+      "note": "",
       "shots": [
         {
           "image": "/uploads/happy-1.jpg",
-          "alt": "happy's concept home page: a wall of smiley faces behind the headline come by, feel good"
+          "alt": "happy's home page: a wall of smiley faces behind the headline come by, feel good"
         },
         {
           "image": "/uploads/happy-2.jpg",
-          "alt": "happy's concept walk-up teaser: a three-dimensional staircase climbing toward a doorway"
+          "alt": "happy's walk-up page: the upstairs cocktail bar behind a staircase"
         }
       ],
-      "title": "A cocktail bar site built around the smiley wall",
-      "summary": "A concept for a bar in downtown Cary. The smiley wall, a long menu and odd hours on one loud page.",
-      "tag": "Concept",
+      "title": "A bar site that looks like the bar",
+      "summary": "The smiley wall, a sticker-style menu and a staircase you can climb, for a cocktail bar in downtown Cary.",
+      "tag": "",
       "services": [
         "Website Development",
+        "CMS Architecture",
         "ADA Compliance"
       ],
       "home": false

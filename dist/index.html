@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Draft and Logic | Coming soon</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Draft and Logic is a web studio in Wake Forest, NC. The new site is being finished. Leave your email and we will tell you when it is live.">
+<meta name="theme-color" content="#F1EEE8">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" id="fav"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Geist:wght@300..700&family=Geist+Mono:wght@400..500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F1EEE8;--fg:#0C0C0C;--mut:#58554D;--rule:#D8D3C8;--lime:#D4FF3A;--display:'Bricolage Grotesque','Helvetica Neue',Arial,sans-serif;--body:'Geist','Helvetica Neue',Arial,sans-serif;--mono:'Geist Mono',ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme:dark){:root{--bg:#0C0C0C;--fg:#F1EEE8;--mut:#A7A399;--rule:#2A2A27}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:auto}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:var(--bg);color:var(--fg);font:400 1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+header{padding-block:clamp(14px,3vh,32px)}
+.wm{height:30px;width:auto;display:block;overflow:visible;color:var(--fg)}
+.wm .cl{fill:none;stroke:var(--fg);stroke-width:.8;opacity:.35}.wm .cl .mid{stroke-dasharray:2 3;opacity:.7}
+.wm .dw,.wm .lw,.wm .amp{stroke:currentColor;stroke-width:2.6;stroke-linecap:square;stroke-linejoin:miter;fill:none}
+.wm .amp{stroke:var(--fg)}.wm .nd{fill:var(--fg)}
+main{flex:1;display:grid;align-content:center;padding-block:clamp(8px,2.4vh,40px)}
+.cols{display:grid;grid-template-columns:1fr;grid-template-areas:"h" "c" "r";gap:clamp(10px,2.2vh,28px) clamp(24px,5vw,72px);align-items:start}
+.cols h1{grid-area:h}.cols .cal{grid-area:c}.cols .rest{grid-area:r}
+@media (min-width:900px){.cols{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);grid-template-areas:"h c" "r c";align-items:center}}
+h1{text-wrap:balance;margin:0;font:700 clamp(2.3rem,min(8.4vw,9.5vh),5.6rem)/.95 var(--display);letter-spacing:-.045em}
+h1 span{display:block}
+.draft{color:var(--mut)}
+.built{animation:cut 3.2s steps(1) infinite}
+@keyframes cut{0%{color:var(--mut)}50%{color:var(--fg)}}
+@media (prefers-reduced-motion:reduce){.built{animation:none;color:var(--fg)}}
+p.msg{max-width:38rem;margin:0;font-size:clamp(1rem,2.2vh,1.15rem);line-height:1.5;color:var(--mut)}
+form{display:flex;flex-wrap:wrap;gap:10px;margin-top:clamp(10px,2vh,20px);max-width:38rem}
+label{flex:1 1 240px;display:grid;gap:6px;font:400 .72rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+input{font:inherit;font-size:1.05rem;letter-spacing:0;text-transform:none;color:var(--fg);background:transparent;border:0;border-bottom:2px solid var(--fg);padding:10px 0;border-radius:0}
+input:focus-visible{outline:2px solid var(--fg);outline-offset:4px}
+button{align-self:end;font:500 1rem var(--body);background:var(--lime);color:#0C0C0C;border:2px solid #0C0C0C;border-radius:999px;padding:12px 26px;cursor:pointer}
+button:hover{background:#0C0C0C;color:var(--lime)}button:focus-visible{outline:2px solid var(--fg);outline-offset:3px}button[disabled]{opacity:.6;cursor:wait}
+.note{min-height:1.4em;margin:8px 0 0;color:var(--fg)}
+.alt{margin:8px 0 0;color:var(--mut)}.alt a{color:var(--fg)}
+
+/* Dot: the small character from the logo, counting down to launch */
+.cal{max-width:46rem;inline-size:100%}
+.cal-h{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:0 0 4px}
+.cal-n{font:700 clamp(2.6rem,min(9vw,10vh),5rem)/.9 var(--display);letter-spacing:-.04em}
+.cal-t{font:400 .8rem/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.cal-w{position:relative;padding-top:clamp(84px,12vh,108px)}
+.dot{position:absolute;top:0;left:0;inline-size:calc(100%/8);display:flex;justify-content:center;transition:left .42s steps(4,end);padding:0;background:none;border:0;border-radius:0;cursor:pointer;color:var(--fg);z-index:2}
+.dot:hover{background:none;color:var(--fg)}
+.dot svg{inline-size:clamp(60px,10vh,84px);block-size:auto;display:block;overflow:visible}
+.dot .bd{animation:bob 1.2s steps(2) infinite}
+.dot.hop .bd{animation:hop .36s steps(3) 1}
+.dot .ew{fill:var(--bg)}.dot .pu{fill:var(--fg);transform:translate(calc(var(--px,0)*2.4px),calc(var(--py,0)*2.4px))}
+.dot .eye{animation:blink 4.4s steps(1) infinite;transform-origin:center;transform-box:fill-box}
+.dot .mo{fill:none;stroke:var(--bg);stroke-width:2.2;stroke-linecap:round}
+.dot .bo{fill:var(--fg)}.dot .li{fill:none;stroke:var(--fg);stroke-width:3;stroke-linecap:round}
+.dot .pe{fill:var(--lime);stroke:#0C0C0C;stroke-width:1.6;stroke-linejoin:round}
+.dot .sh{fill:var(--fg);opacity:.16}
+@keyframes bob{50%{transform:translateY(-3px)}}
+@keyframes hop{0%{transform:translateY(0)}40%{transform:translateY(-22px) rotate(-6deg)}70%{transform:translateY(-10px) rotate(4deg)}100%{transform:translateY(0)}}
+@keyframes blink{0%,94%{transform:scaleY(1)}95%,98%{transform:scaleY(.1)}}
+.say{position:absolute;bottom:calc(100% - 34px);left:0;z-index:3;inline-size:max-content;max-inline-size:min(17rem,calc(100vw - 40px));background:var(--fg);color:var(--bg);padding:8px 12px;border-radius:12px 12px 12px 2px;font:500 .9rem/1.3 var(--body);opacity:0;pointer-events:none}
+.say.on{opacity:1;animation:pop .3s steps(3) 1}
+@keyframes pop{0%{transform:translateY(8px) scale(.7)}100%{transform:none}}
+.days{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(8,1fr);gap:clamp(3px,1vw,8px)}
+.day{position:relative;border:2px solid var(--fg);border-radius:6px;padding:8px 2px 6px;text-align:center;font:400 .62rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mut);background:transparent;min-inline-size:0}
+.day b{display:block;margin-top:6px;font:700 clamp(1.1rem,3.6vw,1.9rem)/1 var(--display);letter-spacing:-.03em;color:var(--fg)}
+.day.past b,.day.past{opacity:.5}
+.day .x{position:absolute;inset:0;pointer-events:none;opacity:0}
+.day .x::before,.day .x::after{content:"";position:absolute;left:12%;right:12%;top:50%;height:2px;background:var(--fg);transform:rotate(38deg)}
+.day .x::after{transform:rotate(-38deg)}
+.day.past .x{opacity:1}
+.day.go{background:var(--lime);border-color:#0C0C0C;color:#0C0C0C}
+.day.go b{color:#0C0C0C}
+.day.go em{display:block;margin-top:5px;font-style:normal;font-size:.55rem;letter-spacing:.1em}
+.day.now{box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--fg)}
+@media (max-width:599px){.cal-w{padding-top:116px}.dot{top:52px}.say{max-inline-size:100%;bottom:calc(100% - 86px)}.day{font-size:.52rem;letter-spacing:.04em}.day.go em{font-size:.46rem;letter-spacing:0;margin-top:4px}p.msg{font-size:.98rem}}
+@media (prefers-reduced-motion:reduce){.dot,.dot .bd,.dot .eye,.say.on{animation:none;transition:none}}
+footer{padding-block:14px;border-top:1px solid var(--rule);font:400 .72rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a href="/" aria-label="Draft and Logic" style="display:inline-block;color:inherit"><svg class="wm" viewBox="0 0 292 46" role="img" aria-label="Draft and Logic"><g class="cl"><path d="M0 8H292M0 36H292M0 3V13M292 3V13M0 31V41M292 31V41"/><path class="mid" d="M0 22H292"/></g><g class="dw" fill="none"><g style="--i:0"><path d="M6 8V36M6 8H13A14 14 0 0 1 13 36H6"/></g><g style="--i:1"><path d="M34 36V8H42A7 7 0 0 1 42 22H34M42 22L50 36"/></g><g style="--i:2"><path d="M57 36L66 8L75 36M59.6 28H72.4"/></g><g style="--i:3"><path d="M82 36V8H96M82 22H93"/></g><g style="--i:4"><path d="M103 8H119M111 8V36"/></g></g><g transform="translate(134 8)"><path class="amp" pathLength="1" d="M20 28L4 9A5.5 5.5 0 0 1 15 9C15 14 7 17 3 21C0 26 5 28.5 9 28.5C14 28.5 18 24 19 19"/></g><g class="lw" fill="none"><g style="--i:5"><path pathLength="1" d="M171 8V36H185"/></g><g style="--i:6"><ellipse cx="204" cy="22" rx="12" ry="14" pathLength="1"/></g><g style="--i:7"><path pathLength="1" d="M244.2 13A12 14 0 1 0 247 22H236"/></g><g style="--i:8"><path pathLength="1" d="M254 8V36"/></g><g style="--i:9"><path pathLength="1" d="M282.2 13A12 14 0 1 0 282.2 31"/></g></g><circle class="nd" cx="204" cy="22" r="2.4"/></svg></a></div></header>
+<main id="main"><div class="wrap">
+  <div class="cols">
+  <h1><span class="draft">Drawing in progress.</span><span class="built">Back soon.</span></h1>
+  <div class="cal" id="cal" data-launch="2026-11-03">
+    <p class="cal-h"><span class="cal-n" id="caln">4</span><span class="cal-t" id="calt">days to go</span></p>
+    <p class="cal-t">Launching Tuesday, November 3</p>
+    <div class="cal-w">
+      <button type="button" class="dot" id="dot" aria-label="Dot, our mascot. Press to hear what Dot has to say."><svg viewBox="0 0 80 92" aria-hidden="true"><ellipse class="sh" cx="40" cy="88" rx="20" ry="3.4"/><path class="li" d="M32 72V84M48 72V84M32 84H27M48 84H53"/><g class="bd"><path class="li" d="M15 52L8 60M65 52L72 60"/><circle class="bo" cx="40" cy="48" r="27"/><g class="eye"><circle class="ew" cx="30" cy="43" r="8"/><circle class="pu" cx="30" cy="43" r="3.6"/></g><g class="eye"><circle class="ew" cx="50" cy="43" r="8"/><circle class="pu" cx="50" cy="43" r="3.6"/></g><path class="mo" d="M31 58Q40 66 49 58"/><g transform="rotate(14 54 20)"><path class="pe" d="M50 2H58V22L54 28L50 22Z"/><path d="M50 22H58" stroke="#0C0C0C" stroke-width="1.4"/></g></g></svg></button>
+      <p class="say" id="say" role="status"></p>
+      <ol class="days" id="days"><li class="day" data-date="2026-10-27"><span>Tue</span><b>27</b><i class="x"></i></li><li class="day" data-date="2026-10-28"><span>Wed</span><b>28</b><i class="x"></i></li><li class="day" data-date="2026-10-29"><span>Thu</span><b>29</b><i class="x"></i></li><li class="day" data-date="2026-10-30"><span>Fri</span><b>30</b><i class="x"></i></li><li class="day" data-date="2026-10-31"><span>Sat</span><b>31</b><i class="x"></i></li><li class="day" data-date="2026-11-01"><span>Sun</span><b>1</b><i class="x"></i></li><li class="day" data-date="2026-11-02"><span>Mon</span><b>2</b><i class="x"></i></li><li class="day go" data-date="2026-11-03"><span>Tue</span><b>3</b><em>Launch</em><i class="x"></i></li></ol>
+    </div>
+  </div>
+  <div class="rest">
+  <p class="msg">Draft and Logic is a web studio in Wake Forest, NC. The new site is being finished. Leave your email and we will tell you when it is live.</p>
+  <form name="notify" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="nf" novalidate>
+    <input type="hidden" name="form-name" value="notify"><p hidden><label>Leave empty<input name="bot-field"></label></p>
+    <label>Your email<input name="e" type="email" autocomplete="email" required></label>
+    <button type="submit">Notify me</button>
+  </form>
+  <p class="note" id="nn" role="status"></p>
+  
+  </div>
+  </div>
+</div></main>
+<footer><div class="wrap"><span>Draft and Logic</span><span>© 2026</span></div></footer>
+<script>
+(function(){var f=document.getElementById('nf'),n=document.getElementById('nn');
+f.addEventListener('submit',function(ev){ev.preventDefault();
+if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.e.value.trim())){n.textContent='That email address looks incomplete.';f.e.focus();return}
+var b=f.querySelector('button');b.disabled=true;n.textContent='Sending…';
+fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
+.then(function(r){if(!r.ok)throw 0;f.reset();n.textContent='Thank you. We will email you when the site is live.'})
+.catch(function(){n.textContent='That did not send. Please try again in a moment.'}).then(function(){b.disabled=false})});})();
+
+(function(){var cal=document.getElementById('cal');if(!cal)return;
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches,dot=document.getElementById('dot'),say=document.getElementById('say'),days=[].slice.call(document.querySelectorAll('#days .day')),n=days.length,QQ={"hello":"Drawing first. Building second. Click me for a fact or a joke.","facts":["Fact: SEO is search engine optimization. AEO is the same job for answer engines: be the page the answer comes from.","Fact: AEO tip: put the answer in the first sentence under the question. Machines and people both skim.","Fact: llms.txt is a plain-text brief of your site, written for AI tools. This site has one.","Fact: robots.txt has been around since 1994. It is still the first file a crawler asks for.","Fact: Structured data (JSON-LD) tells search engines what a page is in a format machines read directly.","Fact: FAQ schema marks up questions and answers so machines can read them. The page still has to be good.","Fact: Core Web Vitals measure loading (LCP), responsiveness (INP) and layout stability (CLS).","Fact: INP replaced FID as a Core Web Vital in March 2024. It looks at every interaction, not just the first.","Fact: CLS is the page jumping while it loads. Reserve space for images and it mostly goes away.","Fact: Shopify started in the mid-2000s when its founders wanted to sell snowboards online and the tools were bad.","Fact: Shopify themes are written in Liquid, a template language Shopify made and open sourced.","Fact: Webflow lets you export the HTML and CSS it generates. Clean output is the point.","Fact: A canonical tag tells search engines which URL is the real one when the same content lives at several.","Fact: A sitemap.xml lists the pages you want crawled. It is a suggestion, not a command.","Fact: A 404 means not found. A 410 means gone for good. Search engines treat them a little differently.","Fact: WCAG AA asks for 4.5 to 1 contrast on normal text. Light grey on white usually fails.","Fact: Alt text is written for screen readers first. Search engines reading it is a bonus.","Fact: A headless CMS keeps your content in an API, separate from the front end. Edit once, publish anywhere.","Fact: Lighthouse is built into Chrome DevTools. Run it before you launch, not after.","Fact: The first website went live in 1991. It was about the web itself.","Joke: Why did the developer go broke? He used up all his cache.","Joke: There are 10 kinds of people: those who read binary and those who do not.","Joke: A SEO expert walks into a bar, pub, tavern, brewery, taproom...","Joke: It works on my machine. Fine, we will ship your machine.","Joke: Why do developers like dark mode? Light attracts bugs.","Joke: The page you are looking for is on a different drawing board. That is a 404.","Joke: CSS is easy until you have to center a div.","Joke: There are two hard things in computing: cache invalidation, naming things, and off-by-one errors.","Joke: I am technically a very small circle. Do not tell the logo.","Joke: I tried to draw a straight line. Then I met a ruler. Humbling."]},Q=QQ.facts,bag=[],last=-1,st;
+function pick(){if(!bag.length){bag=Q.map(function(_,i){return i});for(var i=bag.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),x=bag[i];bag[i]=bag[j];bag[j]=x}if(bag[bag.length-1]===last&&bag.length>1){bag.unshift(bag.pop())}}last=bag.pop();return Q[last]}
+function parse(s){var a=s.split('-');return new Date(+a[0],a[1]-1,+a[2])}
+var launch=parse(cal.getAttribute('data-launch')),now=new Date(),today=new Date(now.getFullYear(),now.getMonth(),now.getDate()),left=Math.round((launch-today)/864e5);
+var idx=Math.max(0,Math.min(n-1,n-1-left)),nEl=document.getElementById('caln'),tEl=document.getElementById('calt');
+if(left<=0){nEl.textContent='Today';tEl.textContent=''}else{nEl.textContent=left;tEl.textContent=left===1?'day to go':'days to go'}
+function place(i){dot.style.left=(i*100/n)+'%'}
+function mark(i){days.forEach(function(d,k){d.classList.toggle('past',k<i);d.classList.toggle('now',k===i)})}
+function hop(){dot.classList.remove('hop');void dot.offsetWidth;dot.classList.add('hop')}
+function talk(s){say.textContent=s;say.classList.add('on');var W=cal.querySelector('.cal-w'),w=W.clientWidth,bw=say.offsetWidth,dc=(parseFloat(dot.style.left)||0)/100*w+w/n/2,x=dc+34;
+if(innerWidth<600){say.style.left='0px';say.style.top='';say.style.bottom=''}else{if(x+bw>w)x=dc-34-bw;x=Math.max(0,x);say.style.left=x+'px';var r=dot.getBoundingClientRect(),wr=W.getBoundingClientRect(),cy=r.top-wr.top+r.height/2;say.style.bottom='auto';say.style.top=Math.max(0,cy-say.offsetHeight/2)+'px'}
+clearTimeout(st);st=setTimeout(function(){say.classList.remove('on')},Math.min(9000,2600+s.length*55))}
+place(0);mark(0);
+if(rm){place(idx);mark(idx)}else{var k=0;(function step(){if(k>=idx){setTimeout(function(){talk(QQ.hello)},500);return}k++;place(k);hop();mark(k);setTimeout(step,300)})()}
+dot.addEventListener('click',function(){hop();talk(pick())});
+if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!rm)addEventListener('pointermove',function(e){var r=dot.getBoundingClientRect(),x=e.clientX-(r.left+r.width/2),y=e.clientY-(r.top+r.height/2),m=Math.max(1,Math.hypot(x,y));dot.style.setProperty('--px',(x/m).toFixed(2));dot.style.setProperty('--py',(y/m).toFixed(2))},{passive:true});
+addEventListener('resize',function(){place(dot.dataset.i||idx)});
+})();
+</script>
+</body></html>

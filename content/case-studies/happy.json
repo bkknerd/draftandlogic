@@ -1,52 +1,67 @@
 {
-  "title": "happy's: a concept site for a Cary cocktail bar",
-  "tag": "Concept site · cocktail bar, Cary, NC",
-  "summaryLead": "A concept site for a cocktail bar in downtown Cary. Our own idea, not a launched project.",
-  "story": "happy's is a cocktail bar and event space in downtown Cary with a wall covered in smiley faces. This is our own concept. We wanted to see if that personality, a long menu and odd hours could fit on one loud, friendly page. Cream, tomato, cobalt and pink come off the wall. Bricolage Grotesque does the shouting and Space Mono keeps the prices tidy.",
+  "title": "happy's: a bar site that looks like the bar",
+  "tag": "Bar website, Cary, NC",
+  "summaryLead": "A cocktail bar and event space in downtown Cary, with a site the owners can edit themselves.",
+  "story": "happy's has a wall covered in smiley faces, a menu that changes, live music every Saturday and a second bar upstairs. A template site would flatten all of that. The goal was a page that feels like walking in: loud, friendly, and easy to use on a phone at the door. The palette comes off the wall: cream, tomato, cobalt and pink, with Bricolage Grotesque doing the shouting and Space Mono keeping the prices tidy. Menu, hours, events, photos and reviews all live in the CMS, so the staff update them without calling us.",
   "url": "",
   "numbers": [],
   "goals": [
-    "Carry the smiley wall's personality.",
-    "Make a long menu easy to browse on a phone.",
-    "Make the hours easy to find."
+    "Carry the smiley wall's personality onto the page.",
+    "Make a long drink menu easy to browse on a phone.",
+    "Let the staff change the menu, hours and music lineup themselves."
   ],
   "features": [
     {
       "title": "The smiley wall",
-      "text": "The bar's own wall sets the hero and the cream and tomato colors.",
+      "text": "The bar's own wall is the hero, and its colors run the whole site.",
       "image": "/uploads/happy-f1.jpg",
-      "alt": "happy's concept home page",
-      "story": "Borders and ink are a hard 1.5px line, so the page feels printed, like a sticker. The hero background changes color with a short fade."
+      "alt": "happy's home page",
+      "story": "Borders are a hard ink line and cards sit on an offset shadow, so everything reads like a sticker. The hero tint shifts slowly between the wall's colors."
     },
     {
-      "title": "Color-coded menu",
-      "text": "60 items in ten sections, with filters, search and a running tab.",
+      "title": "A menu that works like a menu",
+      "text": "Cards colored by section, with filter chips and a search box.",
       "image": "/uploads/happy-f2.jpg",
-      "alt": "happy's concept menu cards",
-      "story": "Sixty items is a lot to scroll on a phone. Filters and search help you find a drink, and the tab adds up whatever you tap, like a game. It never leaves the page."
+      "alt": "happy's menu cards, colored by section",
+      "story": "Specials, draft, shots, zero proof and snacks each get their own color, so you can find the section before you read it. Search handles the rest. Prices are edited in the CMS."
     },
     {
       "title": "The walk up",
-      "text": "A 3D staircase built only from CSS, in a native dialog.",
+      "text": "A staircase that opens the upstairs bar's page.",
       "image": "/uploads/happy-f3.jpg",
-      "alt": "happy's walk up staircase",
-      "story": "The stairs are how the bar talks about itself, and a plain link wouldn't carry that. It's pure CSS, no video, and it's skipped for anyone with reduced motion on."
+      "alt": "the walk up staircase animation",
+      "story": "The upstairs bar is the bar's best secret, so the link to it climbs a staircase. It opens in a native dialog, and it's skipped for anyone with reduced motion turned on."
     },
     {
-      "title": "Reviews and rating",
-      "text": "A 4.8 rating from 26 reviews, with highlights on colored cards.",
+      "title": "Lately at happy's",
+      "text": "A photo strip of the wall, the cocktails and the snacks.",
       "image": "/uploads/happy-f4.jpg",
-      "alt": "happy's reviews section"
+      "alt": "happy's photo strip with captions",
+      "story": "Slightly crooked snapshots with a caption each. The photos swap from the CMS."
+    },
+    {
+      "title": "Saturday live music",
+      "text": "The month's lineup, a poster and a card for booking the bar.",
+      "image": "/uploads/happy-f5.jpg",
+      "alt": "happy's events section with the October lineup",
+      "story": "The lineup is a list in the CMS, and past dates strike themselves out. Birthdays and work nights get their own card with a way to ask about a date."
+    },
+    {
+      "title": "Reviews",
+      "text": "A 4.8 from 26 Google reviews, pulled forward on colored cards.",
+      "image": "/uploads/happy-f7.jpg",
+      "alt": "happy's reviews section with a 4.8 rating"
     },
     {
       "title": "Hours and sign-up",
-      "text": "Hours, address, directions and an email sign-up.",
-      "image": "/uploads/happy-f5.jpg",
-      "alt": "happy's hours section"
+      "text": "Plain-text hours, the address, directions and an email list.",
+      "image": "/uploads/happy-f8.jpg",
+      "alt": "happy's hours and email sign-up",
+      "story": "Hours are a simple table, with today's row marked. Directions and the phone number are one tap."
     },
     {
       "title": "On a phone",
-      "text": "The hero, menu and hours on a phone.",
+      "text": "Hero, menu and events at 390px wide.",
       "image": "/uploads/happy-f6.jpg",
       "alt": "happy's on a phone"
     }
