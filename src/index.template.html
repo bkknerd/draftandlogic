@@ -1224,6 +1224,12 @@ section{position:relative}
 @media(max-width:620px){.dim span{display:none}}
 @media (prefers-reduced-motion:reduce){.dim{transition:none}}
 @media(max-width:720px){.stack .lv{padding-top:16px;padding-bottom:16px;gap:4px}.stack .lv .lt{display:none}.stack .lv .ico{width:36px;height:36px}.stack .lv h3{font-size:1.6rem}.stp{min-height:0!important;padding:20px 0}}
+.hero{display:flex;flex-direction:column;align-items:stretch;min-height:calc(100svh - 220px);justify-content:center;gap:clamp(40px,6vw,88px);padding-bottom:clamp(48px,7vw,96px)}
+.dl-d span{-webkit-text-stroke:1.25px var(--fg)}
+@media(max-width:700px){.dl-x i{display:block;top:-18px;font-size:.8125rem}.hero{min-height:calc(100svh - 200px)}}
+.partners{padding-top:clamp(64px,8vw,112px);padding-bottom:clamp(56px,7vw,96px)}
+#work{padding-bottom:clamp(24px,4vw,56px)}
+.dl-x{opacity:0;transition:opacity .3s}.dl:hover .dl-x,.dl:focus-within .dl-x,.dl-x:focus-visible{opacity:1}
 </style>
 {{{analyticsHead}}}
 </head>
@@ -1248,10 +1254,6 @@ section{position:relative}
   </header>
 </div>
 
-{{#if partners.show}}<div class="wrap partners">
-  <p>{{partners.line}}</p>
-  <div class="plogos">{{#each partners.logos}}<div class="t"><img src="{{this.image}}" alt="{{this.alt}}"></div>{{/each}}</div>
-</div>{{/if}}
 {{#if work.show}}<section id="work">
   <div class="wrap">
     <div class="work-head">
@@ -1272,6 +1274,10 @@ section{position:relative}
   </div>
 </section>{{/if}}
 
+{{#if partners.show}}<div class="wrap partners">
+  <p>{{partners.line}}</p>
+  <div class="plogos">{{#each partners.logos}}<div class="t"><img src="{{this.image}}" alt="{{this.alt}}"></div>{{/each}}</div>
+</div>{{/if}}
 {{#if approach.show}}<section id="approach">
   <div class="wrap">
     <h2 class="lede">{{approach.heading}}</h2>
@@ -1687,7 +1693,7 @@ addEventListener('hashchange',function(){var cur=location.hash;if(!rm&&wp&&(isS(
 <script>
 (function(){
 var dl=document.getElementById('dl'),sl=document.getElementById('dlx');if(!dl||!sl)return;
-var rm=matchMedia('(prefers-reduced-motion:reduce)').matches,hb=dl.querySelector('.dl-b'),sp=dl.querySelectorAll('.dl-d span'),pos=100,tgt=100,run=false,live=false,REST=38;
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches,hb=dl.querySelector('.dl-b'),sp=dl.querySelectorAll('.dl-d span'),pos=100,tgt=100,run=false,live=false,REST=0;
 function note(){var c=getComputedStyle(hb),fs=Math.round(parseFloat(c.fontSize)),lh=Math.round(parseFloat(c.lineHeight)||fs);sp.forEach(function(x,i){x.setAttribute('data-m','H1 · '+fs+'/'+lh+'px')})}
 function draw(p){pos=p;dl.style.setProperty('--x',p+'%');sl.setAttribute('aria-valuenow',Math.round(p));sl.setAttribute('aria-valuetext',Math.round(p)+'{{j:interface.sliderValue}}')}
 function loop(){var d=tgt-pos;if(Math.abs(d)<.05){draw(tgt);run=false;return}draw(pos+d*(rm?1:.55));requestAnimationFrame(loop)}
