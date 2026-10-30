@@ -55,14 +55,15 @@ for (const f of list("content/case-studies")) {
     features: (s.features || []).map((f) => [f.title, f.text, f.image || "", f.alt || "", f.story || ""]),
   };
 }
-data.cardsJson = JSON.stringify((data.cases.items || []).map((c) => ({ slug: c.study || "", label: c.label, tag: c.tag || "", title: c.title, summary: c.summary, img: (c.shots && c.shots[0] && c.shots[0].image) || "", alt: (c.shots && c.shots[0] && c.shots[0].alt) || "", services: c.services || [] }))).replace(/</g, "\\u003c");
+const thumb = (u) => { const t = u.replace(/\.jpg$/, "-sm.jpg"); return t !== u && fs.existsSync("static" + t) ? t : u; };
+data.cardsJson = JSON.stringify((data.cases.items || []).map((c) => ({ slug: c.study || "", label: c.label, tag: c.tag || "", title: c.title, summary: c.summary, img: thumb((c.shots && c.shots[0] && c.shots[0].image) || ""), alt: (c.shots && c.shots[0] && c.shots[0].alt) || "", services: c.services || [] }))).replace(/</g, "\\u003c");
 data.studiesJson = JSON.stringify(studies).replace(/</g, "\\u003c").replace(/\u2028/g, "\\u2028").replace(/\u2029/g, "\\u2029");
 
 // ---- SEO / AEO: structured data, per-study pages, sitemap, llms.txt ----
 const SITE = "https://draftandlogic.com";
 const ld = (o) => JSON.stringify(o).replace(/</g, "\\u003c").replace(/\u2028/g, "\\u2028").replace(/\u2029/g, "\\u2029");
 const orgId = SITE + "/#org";
-for (const it of data.cases.items || []) { it.svcList = (it.services || []).map((x) => ({ s: x })); it.svcAttr = (it.services || []).join("|"); }
+for (const it of data.cases.items || []) { it.svcList = (it.services || []).map((x) => ({ s: x })); it.svcAttr = (it.services || []).join("|"); it.img1 = (it.shots && it.shots[0] && it.shots[0].image) || ""; it.img1 = thumb(it.img1); it.alt1 = (it.shots && it.shots[0] && it.shots[0].alt) || ""; }
 const cardOf = (slug) => (data.cases.items || []).find((c) => c.study === slug);
 const trim = (t, n) => { t = String(t).replace(/\s+/g, " ").trim(); if (t.length <= n) return t; const cut = t.slice(0, n - 1); return cut.slice(0, cut.lastIndexOf(" ")) + "\u2026"; };
 const org = {
