@@ -1242,6 +1242,14 @@ section{position:relative}
 .hf:hover small{color:var(--fg)}
 @media(max-width:700px){.hstrip{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin-right:-20px;padding-right:20px;gap:12px}.hf{flex:0 0 78%;scroll-snap-align:start}}
 .hero{min-height:0!important;justify-content:flex-start;gap:clamp(20px,3vw,40px);padding-top:clamp(24px,3vw,48px);padding-bottom:clamp(40px,6vw,88px)}.hero .hero-row{margin-top:0}.hstrip{margin-top:clamp(8px,2vw,28px)}
+.dl{cursor:auto;touch-action:auto;user-select:auto;-webkit-user-select:auto}
+.dl-b{clip-path:none!important;background:none}
+.dl-b span{display:block;width:fit-content;background:var(--bg);clip-path:inset(0 calc(100% - var(--r,100%)) 0 0)}
+.dl-b .l1{color:var(--fg)}
+.dl-c{display:none;position:absolute;z-index:3;width:5px;margin-left:2px;background:var(--lime);border-radius:2px;pointer-events:none}
+.dl-c.done{animation:dlblink .55s steps(1) infinite}
+@keyframes dlblink{50%{opacity:0}}
+.hero h1.dl-b span.l1{color:var(--fg)}
 </style>
 {{{analyticsHead}}}
 </head>
@@ -1259,8 +1267,7 @@ section{position:relative}
   <header class="hero" id="top">
     <div class="dl" id="dl">
       <div class="dl-d" aria-hidden="true"><span>{{hero.line1}}</span><span>{{hero.line2}}</span></div>
-      <h1 class="dl-b">{{hero.line1}} <span>{{hero.line2}}</span></h1>
-      <div class="dl-x" id="dlx" role="slider" tabindex="0" aria-label="{{interface.sliderAria}}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" aria-valuetext="100{{interface.sliderValue}}"><i class="l">{{interface.sliderLeft}}</i><b></b><i class="r">{{interface.sliderRight}}</i><em></em></div>
+      <h1 class="dl-b"><span class="l1">{{hero.line1}}</span> <span class="l2">{{hero.line2}}</span></h1>
     </div>
     <div class="hero-row"><p>{{hero.intro}}</p>{{#if contact.show}}<a class="go mag" href="#contact">{{hero.cta}}</a>{{/if}}</div>
     <div class="hstrip" id="hstrip">{{#each cases.items}}{{#if this.home}}<a class="hf" href="/work/{{this.study}}/" aria-label="{{this.label}}: {{this.title}}"><span class="hfw"><img class="w" src="{{this.img1}}" alt="" aria-hidden="true" width="1440" height="900"><img class="f" src="{{this.img1}}" alt="{{this.alt1}}" width="1440" height="900"></span><small>{{this.label}}</small></a>{{/if}}{{/each}}</div>
@@ -1704,21 +1711,22 @@ addEventListener('hashchange',function(){var cur=location.hash;if(!rm&&wp&&(isS(
 })();
 </script>
 <script>
-(function(){
-var dl=document.getElementById('dl'),sl=document.getElementById('dlx');if(!dl||!sl)return;
-var rm=matchMedia('(prefers-reduced-motion:reduce)').matches,hb=dl.querySelector('.dl-b'),sp=dl.querySelectorAll('.dl-d span'),pos=100,tgt=100,run=false,live=false,REST=0;
-function note(){var c=getComputedStyle(hb),fs=Math.round(parseFloat(c.fontSize)),lh=Math.round(parseFloat(c.lineHeight)||fs);sp.forEach(function(x,i){x.setAttribute('data-m','H1 · '+fs+'/'+lh+'px')})}
-function draw(p){pos=p;dl.style.setProperty('--x',p+'%');sl.setAttribute('aria-valuenow',Math.round(p));sl.setAttribute('aria-valuetext',Math.round(p)+'{{j:interface.sliderValue}}')}
-function loop(){var d=tgt-pos;if(Math.abs(d)<.05){draw(tgt);run=false;return}draw(pos+d*(rm?1:.55));requestAnimationFrame(loop)}
-function go(p){tgt=Math.max(0,Math.min(100,p));if(!run){run=true;requestAnimationFrame(loop)}}
-function fromX(cx){var r=dl.getBoundingClientRect();return(cx-r.left)/r.width*100}
+(function(){var dl=document.getElementById('dl');if(!dl)return;var sp=[].slice.call(dl.querySelectorAll('.dl-b span'));
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+var dd=[].slice.call(dl.querySelectorAll('.dl-d span'));
+function note(){var h=dl.querySelector('.dl-b'),c=getComputedStyle(h),fs=Math.round(parseFloat(c.fontSize)),lh=Math.round(parseFloat(c.lineHeight)||fs);dd.forEach(function(x){x.setAttribute('data-m','H1 · '+fs+'/'+lh+'px')})}
 note();addEventListener('resize',note);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(note);
-if(rm){draw(50)}else{draw(100);setTimeout(function(){var t0=null;(function f(t){if(live)return;if(t0===null)t0=t;var k=Math.min(1,(t-t0)/600),e=1-Math.pow(1-k,3);draw(100-(100-REST)*e);tgt=pos;if(k<1)requestAnimationFrame(f)})(performance.now())},500)}
-var hero=document.querySelector('.hero');
-if(matchMedia('(hover:hover) and (pointer:fine)').matches){hero.addEventListener('mousemove',function(e){var r=dl.getBoundingClientRect();if(e.clientY<r.top-120||e.clientY>r.bottom+120)return;live=true;go(fromX(e.clientX))})}
-dl.addEventListener('pointerdown',function(e){live=true;go(fromX(e.clientX));try{dl.setPointerCapture(e.pointerId)}catch(x){}});
-dl.addEventListener('pointermove',function(e){if(e.pointerType!=='mouse'&&e.buttons)go(fromX(e.clientX))});
-sl.addEventListener('keydown',function(e){var k=e.key,d=k==='ArrowLeft'||k==='ArrowDown'?-6:k==='ArrowRight'||k==='ArrowUp'?6:0;if(k==='Home'){live=true;go(0);e.preventDefault();return}if(k==='End'){live=true;go(100);e.preventDefault();return}if(d){live=true;go(tgt+d);e.preventDefault()}});
+if(rm)return;
+var car=document.createElement('i');car.className='dl-c';car.setAttribute('aria-hidden','true');dl.appendChild(car);
+sp.forEach(function(x){x.style.setProperty('--r','0%')});
+var T=[[450,1000],[1450,1150]],t0=null;
+function ease(k){return 1-Math.pow(1-k,3)}
+function f(t){if(t0===null)t0=t;var e=t-t0,cur=null;
+sp.forEach(function(x,i){var k=Math.max(0,Math.min(1,(e-T[i][0])/T[i][1])),r=ease(k)*100;x.style.setProperty('--r',r+'%');if(k>0&&k<1)cur=[x,k]});
+if(!cur&&e>T[1][0]+T[1][1])cur=[sp[1],1];
+if(cur){var x=cur[0],k=cur[1];car.style.cssText='display:block;top:'+x.offsetTop+'px;height:'+x.offsetHeight+'px;left:'+(x.offsetLeft+x.offsetWidth*ease(k))+'px';car.className='dl-c'+(e>T[1][0]+T[1][1]?' done':'')}
+if(e<T[1][0]+T[1][1]+2200)requestAnimationFrame(f);else car.style.display='none'}
+requestAnimationFrame(f);
 })();
 </script>
 <script>
