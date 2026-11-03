@@ -142,6 +142,8 @@ collections:
           - { label: Headline (second line), name: line2, widget: string }
           - { label: Intro, name: intro, widget: text }
           - { label: Button text, name: cta, widget: string }
+          - { label: Second button text, name: cta2, widget: string }
+          - { label: Status line (leave empty to hide), name: status, widget: string, required: false }
       - name: partners
         label: Partner logos
         file: content/site/partners.json
@@ -177,13 +179,14 @@ collections:
         format: json
         fields:
           - { label: "Show this section on the site", name: show, widget: boolean, default: true, hint: "Turn off to hide this whole section and its menu link. Takes about a minute after you save." }
+          - { label: Section label, name: label, widget: string, required: false }
           - { label: Heading, name: heading, widget: string }
-          - { label: Intro, name: intro, widget: text }
-          - label: Levels (seven, top to bottom; the count is fixed by the drawing)
+          - { label: Intro, name: intro, widget: text, required: false }
+          - label: Levels (six, top to bottom; the count is fixed by the drawing)
             name: levels
             widget: list
-            min: 7
-            max: 7
+            min: 6
+            max: 6
             summary: "{{fields.title}}"
             fields:
               - { label: Title, name: title, widget: string }
@@ -244,8 +247,9 @@ collections:
         format: json
         fields:
           - { label: "Show this section on the site", name: show, widget: boolean, default: true, hint: "Turn off to hide this whole section and its menu link. Takes about a minute after you save." }
+          - { label: Section label, name: label, widget: string, required: false }
           - { label: Heading, name: heading, widget: string }
-          - { label: Why drawing first, name: why, widget: text }
+          - { label: Intro line, name: why, widget: text }
           - label: Steps
             name: steps
             widget: list

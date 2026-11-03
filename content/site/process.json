@@ -1,23 +1,24 @@
 {
   "show": true,
-  "heading": "Four stages.",
-  "why": "We agree on layout, content and behavior on paper first, so nothing gets rebuilt.",
+  "heading": "Blueprint First. Code Second.",
+  "why": "We don't guess or write speculative code. Every engagement follows a strict discovery and structural pipeline before development starts.",
   "steps": [
     {
-      "title": "Listen",
-      "text": "We start with your goals, requirements and timeline."
+      "title": "Blueprinting & Scoping",
+      "text": "Defining functional requirements, user flows, data schemas, and technical specs up front."
     },
     {
-      "title": "Draft",
-      "text": "You review drawings of every key page before we build."
+      "title": "Wireframing & UI Architecture",
+      "text": "Structuring site layouts, content hierarchy, and visual design systems in high fidelity."
     },
     {
-      "title": "Build",
-      "text": "We code the site and test it on real devices."
+      "title": "Engineering & CMS Integration",
+      "text": "Building clean, component-based codebases paired with intuitive editing workflows."
     },
     {
-      "title": "Launch",
-      "text": "We go live, train your team and stay on for the first weeks."
+      "title": "Audit, Security & Launch",
+      "text": "Rigorous testing across browser compatibility, accessibility standards, speed benchmarks, and security checks."
     }
-  ]
+  ],
+  "label": "// Methodology"
 }
