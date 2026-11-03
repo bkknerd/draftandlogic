@@ -1,55 +1,49 @@
 {
-  "title": "The WalkUp: a site for the bar upstairs",
+  "title": "The WalkUp: a bar that's easy to find, one flight up",
   "tag": "Cocktail bar, Cary, NC · Launching Nov 2026",
-  "summaryLead": "A site for the cocktail bar one flight up in downtown Cary, above happy's.",
-  "story": "The WalkUp is a cocktail bar one flight up in downtown Cary, above happy's. People walk past the door because they don't know it's there. The site turns that into the page. A 14-step gold meter fills as you scroll from the street up to Suite 200. It's dark and warm, set entirely in Lekton, a mono face, so it reads like a typed menu.",
+  "summaryLead": "A site for the cocktail bar above happy's in downtown Cary: a seasonal menu you can tap through, the room in real photos, and a clear way upstairs.",
+  "story": "The WalkUp sits one flight above happy's, and people walk past the door without knowing it's there. The site starts with that: \"A little above the usual,\" the address, and \"upstairs, above Happy's\" right under the headline. The menu is the Fall / Winter 2026 list. Tap a drink to add it to a tab you use to plan the round, since everyone orders at the counter, or tap a glass to see what's in it. Photos of the exposed brick, timber beams and plants show the room. The site also links across to happy's, because that's how most people arrive.",
   "url": "",
   "numbers": [],
   "goals": [
     "Tell first-timers the bar is upstairs.",
-    "Make the climb the navigation.",
-    "Make the menu easy to plan a round from."
+    "Let people look through the seasonal menu before they come.",
+    "Show the room, hours and price, and take a message without a booking system."
   ],
   "features": [
     {
-      "title": "Scroll staircase",
-      "text": "A 14-step gold meter fills as you scroll from the street to Suite 200.",
+      "title": "A little above the usual",
+      "text": "The hero gives the neighborhood, the floor and the way up before anything else.",
       "image": "/uploads/walkup-1.jpg",
       "alt": "The WalkUp home page",
-      "story": "People miss the door, so the climb is the navigation. The steps drop in one at a time, 110 milliseconds apart, and the meter tells you where you are on the way up."
+      "story": "People miss the door, so the first screen says it's upstairs, above happy's, with the address under the headline. Two buttons go to the menu or to the visit details."
     },
     {
-      "title": "Menu and running tab",
-      "text": "49 items in tabs, five specialty cocktail cards, and a tab that stays on the page.",
+      "title": "Menu, glass by glass",
+      "text": "The seasonal Fall / Winter 2026 list, with a tab for planning and ingredients one tap away.",
       "image": "/uploads/walkup-2.jpg",
       "alt": "The WalkUp menu",
-      "story": "The menu changes with the season and guests order at the counter, so there's no cart. Tapping an item adds it to a running tab, just a tally for planning a round."
-    },
-    {
-      "title": "Vector logo and hero",
-      "text": "The gold script logo, redrawn as vector art for the nav, hero and footer.",
-      "image": "/uploads/walkup-f1.jpg",
-      "alt": "The WalkUp hero with the gold script logo",
-      "story": "The only logo file was a small image that went blurry when stretched. We traced it into vector paths, so it stays sharp at any size."
+      "story": "The menu changes often and guests order at the counter, so there's no cart. Tapping an item adds it to a tally for planning a round. Tapping a glass shows its ingredients, one drink at a time, and the page says plainly the drawings aren't recipes."
     },
     {
       "title": "The room",
-      "text": "The exposed-brick lounge, with the staircase meter alongside.",
+      "text": "Four photos: the bar, the upper lounge, the menu at the bar and the lounge seating.",
       "image": "/uploads/walkup-f2.jpg",
       "alt": "The WalkUp room section",
-      "story": "The hero fades up from black, like the lights coming up. The menu is framed in printed-menu brackets."
+      "story": "Exposed brick, timber beams and plants are the draw, so the room gets real photos with short captions instead of a description."
     },
     {
       "title": "Reviews",
-      "text": "Guest quotes on a dark blue block, against the cream menu.",
+      "text": "A section for what guests say.",
       "image": "/uploads/walkup-f3.jpg",
       "alt": "The WalkUp reviews"
     },
     {
-      "title": "Visit",
-      "text": "Address, hours, seating and an email sign-up.",
+      "title": "Hours, details and a message form",
+      "text": "Address, hours, seating, price range, directions, and a contact form.",
       "image": "/uploads/walkup-f4.jpg",
-      "alt": "The WalkUp visit section"
+      "alt": "The WalkUp visit section",
+      "story": "Hours are plain text. The sign-up and the message form go through Netlify Forms, with a consent checkbox on the email list and a note that the form doesn't book tables or place orders."
     },
     {
       "title": "On a phone",
