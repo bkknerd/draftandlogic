@@ -1300,6 +1300,7 @@ section{position:relative}
 </div>{{/if}}
 {{#if approach.show}}<section id="approach">
   <div class="wrap">
+    {{#if approach.label}}<p class="eyebrow">{{approach.label}}</p>{{/if}}
     <h2 class="lede">{{approach.heading}}</h2>
     <div class="cols">
       {{#each approach.columns}}<div class="col">

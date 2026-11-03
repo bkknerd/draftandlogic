@@ -164,6 +164,7 @@ collections:
         format: json
         fields:
           - { label: "Show this section on the site", name: show, widget: boolean, default: true, hint: "Turn off to hide this whole section and its menu link. Takes about a minute after you save." }
+          - { label: Section label, name: label, widget: string, required: false }
           - { label: Heading, name: heading, widget: string }
           - label: Columns
             name: columns
