@@ -1,53 +1,61 @@
 {
   "title": "The WalkUp: a bar that's easy to find, one flight up",
   "tag": "Cocktail bar, Cary, NC · Launching Nov 2026",
-  "summaryLead": "A site for the cocktail bar above happy's in downtown Cary: a seasonal menu you can tap through, the room in real photos, and a clear way upstairs.",
-  "story": "The WalkUp sits one flight above happy's, and people walk past the door without knowing it's there. The site starts with that: \"A little above the usual,\" the address, and \"upstairs, above Happy's\" right under the headline. The menu is the Fall / Winter 2026 list. Tap a drink to add it to a tab you use to plan the round, since everyone orders at the counter, or tap a glass to see what's in it. Photos of the exposed brick, timber beams and plants show the room. The site also links across to happy's, because that's how most people arrive.",
+  "summaryLead": "A site for the cocktail bar above happy's in downtown Cary. It's written like a printed menu, with a seasonal drink list, glasses that pour, and real photos of the room.",
+  "story": "The WalkUp sits one flight above happy's, and people walk past the door without knowing it's there. The page opens on the room itself with the lights coming up on exposed brick, and says it in the headline: a little above the usual. The type is a Georgia italic with Lekton, a typewriter-style mono, for the details, set in cream, forest green and gold. Numbered labels and a small staircase rule between sections give it the feel of a printed menu, and the steps point you up the page.",
   "url": "",
   "numbers": [],
   "goals": [
     "Tell first-timers the bar is upstairs.",
-    "Let people look through the seasonal menu before they come.",
-    "Show the room, hours and price, and take a message without a booking system."
+    "Let people read the seasonal menu before they come.",
+    "Show the room, the hours and the price, and take a message without a booking system."
   ],
   "features": [
     {
       "title": "A little above the usual",
-      "text": "The hero gives the neighborhood, the floor and the way up before anything else.",
+      "text": "The hero is the room, with the lights coming up on the brick.",
       "image": "/uploads/walkup-1.jpg",
-      "alt": "The WalkUp home page",
-      "story": "People miss the door, so the first screen says it's upstairs, above happy's, with the address under the headline. Two buttons go to the menu or to the visit details."
+      "alt": "The WalkUp home page: exposed brick and timber beams behind the headline A little above the usual",
+      "story": "The photo starts dark and fades up over a couple of seconds, like walking in. The address line sits at the bottom: 126 West Chatham Street, upstairs, above happy's. Two buttons go to the menu or the visit details."
     },
     {
-      "title": "Menu, glass by glass",
-      "text": "The seasonal Fall / Winter 2026 list, with a tab for planning and ingredients one tap away.",
+      "title": "The menu, in tabs",
+      "text": "Cocktails, beer, wine, snacks, non-alcoholic and the printed menu, with prices and a running tab.",
       "image": "/uploads/walkup-2.jpg",
-      "alt": "The WalkUp menu",
-      "story": "The menu changes often and guests order at the counter, so there's no cart. Tapping an item adds it to a tally for planning a round. Tapping a glass shows its ingredients, one drink at a time, and the page says plainly the drawings aren't recipes."
+      "alt": "The WalkUp menu with tabs for cocktails, beer, wine, snacks and non-alcoholic",
+      "story": "The Fall / Winter 2026 list changes often, so it's one tab per section and easy to edit. Tapping an item adds it to a tab. It's only a tally for planning a round, since everyone orders at the counter."
+    },
+    {
+      "title": "Glasses that pour",
+      "text": "Each specialty cocktail has a small glass that fills with its ingredients.",
+      "image": "/uploads/walkup-f1.jpg",
+      "alt": "The WalkUp specialty cocktails with small glasses beside each drink",
+      "story": "Hover a glass, or tap it on a phone, and it fills layer by layer so you can see what's in the drink. There's a replay link under each one. The page says the drawings aren't recipes, because they aren't."
     },
     {
       "title": "The room",
-      "text": "Four photos: the bar, the upper lounge, the menu at the bar and the lounge seating.",
+      "text": "Four photos, in an uneven layout, with a short caption on each.",
       "image": "/uploads/walkup-f2.jpg",
-      "alt": "The WalkUp room section",
-      "story": "Exposed brick, timber beams and plants are the draw, so the room gets real photos with short captions instead of a description."
+      "alt": "The WalkUp room: the long bar and the upper lounge",
+      "story": "The brick, timber beams and plants are the reason to come, so the room gets real photos: the bar, the upper lounge, the menu at the bar and the lounge seating."
     },
     {
       "title": "Reviews",
-      "text": "A section for what guests say.",
+      "text": "Two large quotes from Google reviews, with the reviewer's name under each.",
       "image": "/uploads/walkup-f3.jpg",
-      "alt": "The WalkUp reviews"
+      "alt": "The WalkUp reviews section, Good nights. Kind words.",
+      "story": "Quotes are set big in the serif, with a thin gold rule above and below. A button opens more."
     },
     {
-      "title": "Hours, details and a message form",
-      "text": "Address, hours, seating, price range, directions, and a contact form.",
+      "title": "Visit",
+      "text": "Plain-text hours, the address, phone, email, price and an email sign-up.",
       "image": "/uploads/walkup-f4.jpg",
-      "alt": "The WalkUp visit section",
-      "story": "Hours are plain text. The sign-up and the message form go through Netlify Forms, with a consent checkbox on the email list and a note that the form doesn't book tables or place orders."
+      "alt": "The WalkUp visit section with hours, address and email sign-up",
+      "story": "The section turns dark green, like the room at night. Hours are a simple table, with indoor and outdoor seating and a $10 to $20 price per person. Sign-up and the message form go through Netlify Forms, with a note that the page doesn't book tables or take orders."
     },
     {
       "title": "On a phone",
-      "text": "The hero, menu and room on a phone.",
+      "text": "The hero, menu tabs and room photos at 390px wide.",
       "image": "/uploads/walkup-f5.jpg",
       "alt": "The WalkUp on a phone"
     }
