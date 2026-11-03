@@ -152,7 +152,7 @@
       ],
       "title": "A bar site that looks like the bar",
       "summary": "The smiley wall, a sticker-style menu and a staircase you can climb, for a cocktail bar in downtown Cary.",
-      "tag": "Launching soon",
+      "tag": "Launching Nov 2026",
       "services": [
         "Custom Web Development",
         "Content Management Systems",
@@ -166,20 +166,20 @@
       "reverse": false,
       "study": "walkup",
       "label": "The WalkUp",
-      "tag": "Concept",
-      "note": "Concept site, not a launched project",
+      "tag": "Launching Nov 2026",
+      "note": "",
       "shots": [
         {
           "image": "/uploads/walkup-1.jpg",
-          "alt": "The WalkUp concept home page: the gold script logo over the painted brick wall of the upstairs lounge"
+          "alt": "The WalkUp home page: the gold script logo over the painted brick wall of the upstairs lounge"
         },
         {
           "image": "/uploads/walkup-2.jpg",
-          "alt": "The WalkUp concept menu: specialty cocktail cards on a limewashed background with a running tab"
+          "alt": "The WalkUp menu: specialty cocktail cards on a limewashed background with a running tab"
         }
       ],
       "title": "A bar site you climb",
-      "summary": "A concept for the bar one flight up in downtown Cary. A gold meter fills as you scroll from the street to Suite 200.",
+      "summary": "A site for the bar one flight up in downtown Cary. A gold meter fills as you scroll from the street to Suite 200.",
       "services": [
         "Custom Web Development",
         "ADA Accessibility Compliance"

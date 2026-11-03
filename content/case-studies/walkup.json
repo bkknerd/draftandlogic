@@ -1,8 +1,8 @@
 {
-  "title": "The WalkUp: a concept site for the bar upstairs",
-  "tag": "Concept site · cocktail bar, Cary, NC",
-  "summaryLead": "A concept site for the cocktail bar one flight up in downtown Cary. Our own idea, not a launched project.",
-  "story": "The WalkUp is a cocktail bar one flight up in downtown Cary, above happy's. People walk past the door because they don't know it's there. This concept turns that into the page. A 14-step gold meter fills as you scroll from the street up to Suite 200. It's dark and warm, set entirely in Lekton, a mono face, so it reads like a typed menu.",
+  "title": "The WalkUp: a site for the bar upstairs",
+  "tag": "Cocktail bar, Cary, NC · Launching Nov 2026",
+  "summaryLead": "A site for the cocktail bar one flight up in downtown Cary, above happy's.",
+  "story": "The WalkUp is a cocktail bar one flight up in downtown Cary, above happy's. People walk past the door because they don't know it's there. The site turns that into the page. A 14-step gold meter fills as you scroll from the street up to Suite 200. It's dark and warm, set entirely in Lekton, a mono face, so it reads like a typed menu.",
   "url": "",
   "numbers": [],
   "goals": [
@@ -15,14 +15,14 @@
       "title": "Scroll staircase",
       "text": "A 14-step gold meter fills as you scroll from the street to Suite 200.",
       "image": "/uploads/walkup-1.jpg",
-      "alt": "The WalkUp concept home page",
+      "alt": "The WalkUp home page",
       "story": "People miss the door, so the climb is the navigation. The steps drop in one at a time, 110 milliseconds apart, and the meter tells you where you are on the way up."
     },
     {
       "title": "Menu and running tab",
       "text": "49 items in tabs, five specialty cocktail cards, and a tab that stays on the page.",
       "image": "/uploads/walkup-2.jpg",
-      "alt": "The WalkUp concept menu",
+      "alt": "The WalkUp menu",
       "story": "The menu changes with the season and guests order at the counter, so there's no cart. Tapping an item adds it to a running tab, just a tally for planning a round."
     },
     {
