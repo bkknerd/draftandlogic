@@ -44,7 +44,7 @@ export const handler = async (event) => {
           {
             idProperty: "email",
             id: email,
-            properties: {
+            properties: Object.fromEntries(Object.entries({
               email,
               firstname: firstname || "",
               lastname: rest.join(" "),
@@ -53,7 +53,7 @@ export const handler = async (event) => {
               company: business,
               website: clean(d.current_site),
               lifecyclestage: "lead",
-            },
+            }).filter(([, v]) => v)),
           },
         ],
       },
