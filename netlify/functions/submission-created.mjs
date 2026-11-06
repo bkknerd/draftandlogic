@@ -52,7 +52,6 @@ export const handler = async (event) => {
               jobtitle: clean(d.contact_role),
               company: business,
               website: clean(d.current_site),
-              lifecyclestage: "lead",
             }).filter(([, v]) => v)),
           },
         ],
