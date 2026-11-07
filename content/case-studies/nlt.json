@@ -1,0 +1,79 @@
+{
+  "title": "New Life Tabernacle: a church site the staff can run",
+  "tag": "Church website, Brooklyn, NY",
+  "summaryLead": "An eight-page site for a church on Bedford Avenue, with a sign-in the church staff use to update it themselves.",
+  "story": "New Life Tabernacle was founded by Archbishop Eric R. Figueroa Sr. in 1983 and has worshipped at 1476 Bedford Avenue in Brooklyn ever since. Sunday Worship streams on Facebook, full services go to YouTube, and giving runs through Cash App, Zelle and PayPal. The site puts all of that in one place: Sunday's time and the address first, then video, events, the pastors, the church's two ministries and giving. The look starts from the church's logo, an open book with rays rising from it, drawn on the home page as light. It's black, white and burgundy with gold, set in Source Serif 4 over Hanken Grotesk. Church staff sign in with an email and password and edit every section themselves.",
+  "url": "",
+  "numbers": [],
+  "goals": [
+    "Put Sunday's time, the address and a way to watch on the first screen.",
+    "Make giving one tap: the handle, a copy button and a link to the app.",
+    "Let church staff change events, videos, service times and pastors without calling us."
+  ],
+  "features": [
+    {
+      "title": "We believe God.",
+      "text": "The church's own line, over the logo's open book and rising light.",
+      "image": "/uploads/nlt-f1.jpg",
+      "alt": "New Life Tabernacle home page with the headline we believe God. over gold light rays",
+      "story": "The rays are drawn on a canvas and lean toward the cursor, and the letters thin out as it passes. Both hold still for anyone with reduced motion turned on."
+    },
+    {
+      "title": "A word for today",
+      "text": "Pick how you feel and get a King James verse for it. Eleven feelings, four verses each.",
+      "image": "/uploads/nlt-f2.jpg",
+      "alt": "A list of feelings beside a card showing Jeremiah 29:11",
+      "story": "There's also a box to say it in your own words. Under the verse: another verse, copy, and a link to the full chapter. The verses are a list in the CMS."
+    },
+    {
+      "title": "Watch",
+      "text": "The latest service plays in place. Facebook Live, YouTube and the Mass Choir on Spotify are one click each.",
+      "image": "/uploads/nlt-f3.jpg",
+      "alt": "The watch page with the latest Sunday service and four ways to watch"
+    },
+    {
+      "title": "Events that write their own calendar links",
+      "text": "Staff enter a date and time. The big date on the poster and the Google Calendar link fill in from it.",
+      "image": "/uploads/nlt-f4.jpg",
+      "alt": "Event posters for the Convocation Live Recording and Watch Night",
+      "story": "Each poster picks one of four colors from the church's palette. Weekly events like Wednesday Prayer repeat in the calendar link."
+    },
+    {
+      "title": "Three pastors, one scroll",
+      "text": "The portrait and bio change as you scroll, with a tab for each pastor.",
+      "image": "/uploads/nlt-f5.jpg",
+      "alt": "Archbishop Eric R. Figueroa Sr. with his bio and tabs for the other two pastors",
+      "story": "On a phone it becomes a plain list."
+    },
+    {
+      "title": "Giving",
+      "text": "Cash App, Zelle and PayPal, each with a copy button, plus the address for mailing an offering.",
+      "image": "/uploads/nlt-f6.jpg",
+      "alt": "The give page with Cash App, Zelle and PayPal details"
+    },
+    {
+      "title": "First visit",
+      "text": "Address, transit, parking, the phone number and what to expect on a first Sunday.",
+      "image": "/uploads/nlt-f9.jpg",
+      "alt": "The visit page with the address, getting here notes and first Sunday tips"
+    },
+    {
+      "title": "Staff sign-in",
+      "text": "A branded sign-in, then one question: what would you like to change?",
+      "image": "/uploads/nlt-f7.jpg",
+      "alt": "The staff dashboard with tiles for events, videos and service times",
+      "story": "Each tile opens that section in the editor. While signed in, every section of the live site shows an Edit button. Each change is a commit, so any edit can be put back."
+    },
+    {
+      "title": "On a phone",
+      "text": "Home, the verse card and giving at 390px wide.",
+      "image": "/uploads/nlt-f8.jpg",
+      "alt": "New Life Tabernacle on a phone"
+    }
+  ],
+  "quote": {
+    "text": "",
+    "name": "",
+    "role": ""
+  }
+}

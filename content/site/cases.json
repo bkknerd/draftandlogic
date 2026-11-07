@@ -82,6 +82,34 @@
       "home": true
     },
     {
+      "style": "nlt",
+      "feature": true,
+      "reverse": false,
+      "study": "nlt",
+      "label": "NLT BKNY",
+      "note": "",
+      "shots": [
+        {
+          "image": "/uploads/nlt-1.jpg",
+          "alt": "New Life Tabernacle home page with the headline we believe God."
+        },
+        {
+          "image": "/uploads/nlt-2.jpg",
+          "alt": "A word for today: a list of feelings beside a verse from Scripture"
+        }
+      ],
+      "title": "A church site the staff can run",
+      "summary": "Service times, video, events and giving for a Brooklyn church, with an email sign-in so staff update it themselves.",
+      "tag": "",
+      "services": [
+        "Custom Web Development",
+        "Content Management Systems",
+        "Technical SEO & Performance",
+        "ADA Accessibility Compliance"
+      ],
+      "home": false
+    },
+    {
       "style": "sum",
       "feature": true,
       "reverse": false,

@@ -224,11 +224,11 @@ collections:
             summary: "{{fields.label}}"
             fields:
               - { label: Name, name: label, widget: string }
-              - { label: Look, name: style, widget: select, options: [abx, namc, sum, iron, milo, happy, walkup], hint: "Picks the card's colour theme. New cards can reuse any of these." }
+              - { label: Look, name: style, widget: select, options: [abx, namc, sum, iron, milo, happy, walkup, nlt], hint: "Picks the card's colour theme. New cards can reuse any of these." }
               - { label: Show on the home page, name: home, widget: boolean, default: false, required: false, hint: "Keep this to three cards. Every card appears on the All work page." }
               - { label: Large card, name: feature, widget: boolean, default: false, required: false }
               - { label: Image on the right, name: reverse, widget: boolean, default: false, required: false }
-              - { label: Case study ID, name: study, widget: string, required: false, hint: "summit, abaxent, namc, milo, happy or walkup. Leave empty for no case-study link." }
+              - { label: Case study ID, name: study, widget: string, required: false, hint: "summit, abaxent, namc, milo, nlt, happy or walkup. Leave empty for no case-study link." }
               - { label: Small tag on the card (optional, e.g. Concept), name: tag, widget: string, required: false }
               - { label: Caption (cards without screenshots), name: note, widget: string, required: false }
               - label: Screenshots
@@ -363,5 +363,6 @@ collections:
       - { name: abaxent, label: Abaxent, file: content/case-studies/abaxent.json, format: json, fields: *studyfields }
       - { name: namc, label: NAMC, file: content/case-studies/namc.json, format: json, fields: *studyfields }
       - { name: milo, label: "Milo's Cafe", file: content/case-studies/milo.json, format: json, fields: *studyfields }
+      - { name: nlt, label: New Life Tabernacle, file: content/case-studies/nlt.json, format: json, fields: *studyfields }
       - { name: happy, label: "Happy's (concept)", file: content/case-studies/happy.json, format: json, fields: *studyfields }
       - { name: walkup, label: "The WalkUp (concept)", file: content/case-studies/walkup.json, format: json, fields: *studyfields }
