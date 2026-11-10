@@ -11,11 +11,11 @@ const list = (d) => fs.readdirSync(path.join(root, d)).filter((f) => f.endsWith(
 const data = {};
 for (const f of list("content/site")) data[f.replace(/\.json$/, "")] = rd("content/site/" + f);
 // Section switches (content/site/<section>.json -> show). Hidden sections leave the page, the nav, the schema and llms.txt.
-// Google Analytics (content/site/analytics.json). Loaded on the live site only: never on the coming-soon page, 404 or admin.
+// Google Analytics (content/site/analytics.json). Loaded on the coming-soon page and the full site, never on the 404 or admin.
 // Visitors who send Do Not Track or Global Privacy Control are not measured.
 const GA = data.analytics || {};
 const gaId = /^G-[A-Z0-9]{6,14}$/.test(GA.measurementId || "") ? GA.measurementId : "";
-data.analyticsHead = GA.enabled !== false && gaId && data.launch.comingSoon !== true
+data.analyticsHead = GA.enabled !== false && gaId
   ? "<script>(function(){var n=navigator;if(n.doNotTrack==='1'||window.doNotTrack==='1'||n.globalPrivacyControl)return;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=" + gaId + "';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','" + gaId + "',{anonymize_ip:true})})();</script>"
   : "";
 // Coming-soon countdown: eight calendar cells ending on the launch date (content/site/launch.json -> launchDate, YYYY-MM-DD)
