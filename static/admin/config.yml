@@ -299,6 +299,16 @@ collections:
         file: content/site/footer.json
         format: json
         fields:
+          - { label: Service area line, name: area, widget: string }
+          - { label: Email, name: email, widget: string }
+          - { label: Phone (for links and search, with +1), name: phone, widget: string }
+          - { label: Phone (as shown), name: phoneDisplay, widget: string }
+          - { label: Google Business Profile link (leave empty to hide), name: gbpUrl, widget: string, required: false }
+          - { label: Google Business Profile link text, name: gbpLabel, widget: string }
+          - { label: GitHub link (structured data), name: github, widget: string, required: false }
+          - { label: Founder name (structured data), name: founderName, widget: string, required: false }
+          - { label: Founder title, name: founderTitle, widget: string, required: false }
+          - { label: Founder LinkedIn, name: founderLinkedin, widget: string, required: false }
           - { label: Name, name: name, widget: string }
           - { label: Copyright line, name: copyright, widget: string }
 

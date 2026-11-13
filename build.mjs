@@ -71,7 +71,12 @@ const org = {
   description: data.seo.description, image: SITE + "/og.png",
   logo: { "@type": "ImageObject", url: SITE + "/favicon-192.png", width: 192, height: 192 },
   address: { "@type": "PostalAddress", addressLocality: "Wake Forest", addressRegion: "NC", addressCountry: "US" },
-  areaServed: { "@type": "Country", name: "United States" },
+  areaServed: [{ "@type": "City", name: "Wake Forest" }, { "@type": "City", name: "Cary" }, { "@type": "City", name: "Raleigh" }, { "@type": "Country", name: "United States" }],
+  telephone: data.footer.phone || undefined, email: data.footer.email || undefined,
+  contactPoint: (data.footer.email || data.footer.phone) ? { "@type": "ContactPoint", contactType: "sales", email: data.footer.email || undefined, telephone: data.footer.phone || undefined, areaServed: "US", availableLanguage: "English" } : undefined,
+  hasMap: data.footer.gbpUrl || undefined,
+  sameAs: [data.footer.github, data.footer.gbpUrl].filter(Boolean),
+  founder: data.footer.founderName ? { "@type": "Person", "@id": SITE + "/#founder", name: data.footer.founderName, jobTitle: data.footer.founderTitle || undefined, worksFor: { "@id": orgId }, sameAs: data.footer.founderLinkedin ? [data.footer.founderLinkedin] : undefined } : undefined,
   knowsAbout: data.seo.topics,
   hasOfferCatalog: !on("services") ? undefined : { "@type": "OfferCatalog", name: "Services", itemListElement: data.services.levels.map((l) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: l.title, description: l.lead + " " + l.text, provider: { "@id": orgId } } })) },
 };
@@ -227,7 +232,7 @@ L.push("# Draft and Logic", "", "> " + data.seo.description, "",
   ...(on("work") ? ["## Selected work"] : []), ...Object.entries(on("work") ? studies : {}).map(([k, v]) => "- [" + v.title + "](" + SITE + "/work/" + k + "/): " + trim(rd("content/case-studies/" + k + ".json").summaryLead, 200)), "",
   ...(on("process") ? ["## How a project runs", ...data.process.steps.map((x) => "- " + x.title + ": " + x.text), ""] : []),
   ...(on("faq") ? ["## Common questions", ...data.faq.items.flatMap((f) => ["- " + f.q, "  " + f.a]), ""] : []),
-  ...(on("contact") ? ["## Contact", "- Start a project: " + SITE + "/#contact", "- " + data.contact.intro, ""] : []));
+  ...(on("contact") ? ["## Contact", "- Start a project: " + SITE + "/#contact", "- " + data.contact.intro, ...(data.footer.email ? ["- Email: " + data.footer.email] : []), ...(data.footer.phoneDisplay ? ["- Phone: " + data.footer.phoneDisplay] : []), ...(data.footer.area ? ["- " + data.footer.area] : []), ""] : []));
 if (!soon) fs.writeFileSync(path.join(out, "llms.txt"), L.join("\n"));
 console.log("Built " + Object.keys(studies).length + " case-study pages, sitemap.xml, llms.txt");
 
