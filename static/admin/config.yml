@@ -297,6 +297,7 @@ collections:
           - { label: Email field label, name: emailLabel, widget: string }
           - { label: Message field label, name: messageLabel, widget: string }
           - { label: Send button, name: button, widget: string }
+          - { label: "Web3Forms access key (paste here and messages are emailed to you)", name: web3formsKey, widget: string, required: false, hint: "Free key from web3forms.com. Leave empty to use Netlify Forms instead." }
       - name: footer
         label: Footer
         file: content/site/footer.json

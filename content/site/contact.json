@@ -24,5 +24,6 @@
   "nameLabel": "Your name",
   "emailLabel": "Your email",
   "messageLabel": "What are you building, and by when?",
-  "button": "Send message"
+  "button": "Send message",
+  "web3formsKey": ""
 }

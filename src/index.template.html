@@ -1367,7 +1367,7 @@ section{position:relative}
   <div class="wrap">
     <h2>{{contact.heading}}</h2>
     <p>{{contact.intro}}</p>
-  <div class="cx"><form class="cf" id="cf" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+  <div class="cx"><form class="cf" id="cf" name="contact" method="POST" data-w3="{{contact.web3formsKey}}" data-netlify="true" netlify-honeypot="bot-field" novalidate>
 <input type="hidden" name="form-name" value="contact"><p hidden><label>Leave empty<input name="bot-field"></label></p>
       <fieldset class="full topics"><legend>{{contact.legend}}</legend>
         <label><input type="radio" name="t" value="Start a project" data-ml="{{contact.topics.0.ml}}" checked><span>{{contact.topics.0.label}}</span></label>
@@ -1403,7 +1403,7 @@ vb.forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribut
 var cf=document.getElementById('cf');if(cf)cf.addEventListener('submit',function(ev){ev.preventDefault();var f=cf.elements;
 if(!f.n.value.trim()||!f.e.value.trim()||!f.m.value.trim()){document.getElementById('cfn').textContent='{{j:interface.formEmpty}}';return}
 if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.e.value.trim())){document.getElementById('cfn').textContent='{{j:interface.formInvalid}}';f.e.focus();return}
-var bt=cf.querySelector('button[type=submit]'),nt=document.getElementById('cfn');bt.disabled=true;nt.textContent='{{j:interface.formSending}}';fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(cf)).toString()}).then(function(r){if(!r.ok)throw 0;cf.reset();cf.dispatchEvent(new Event('input'));window.gtag&&gtag('event','generate_lead');nt.textContent='{{j:interface.formSent}}'}).catch(function(){nt.textContent='{{j:interface.formError}}'}).then(function(){bt.disabled=false})});
+var bt=cf.querySelector('button[type=submit]'),nt=document.getElementById('cfn');bt.disabled=true;nt.textContent='{{j:interface.formSending}}';var w3=cf.getAttribute('data-w3'),rq=w3?fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({access_key:w3,subject:'Draft and Logic: '+tp(),from_name:'Draft and Logic website',name:f.n.value.trim(),email:f.e.value.trim(),message:f.m.value.trim(),topic:tp(),botcheck:f['bot-field'].value})}).then(function(r){return r.json()}).then(function(j){if(!j.success)throw 0}):fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(cf)).toString()}).then(function(r){if(!r.ok)throw 0});rq.then(function(){cf.reset();cf.dispatchEvent(new Event('input'));window.gtag&&gtag('event','generate_lead');nt.textContent='{{j:interface.formSent}}'}).catch(function(){nt.textContent='{{j:interface.formError}}'}).then(function(){bt.disabled=false})});
 if(cf)cf.querySelectorAll('input[name=t]').forEach(function(r){r.addEventListener('change',function(){document.getElementById('ml').textContent=r.getAttribute('data-ml')})});
 var tp=function(){return cf.querySelector('input[name=t]:checked').value};
 document.querySelectorAll('.ico *').forEach(function(e){e.setAttribute('pathLength','1')});
