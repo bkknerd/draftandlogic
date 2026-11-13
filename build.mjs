@@ -69,7 +69,7 @@ const trim = (t, n) => { t = String(t).replace(/\s+/g, " ").trim(); if (t.length
 const org = {
   "@type": ["ProfessionalService", "Organization"], "@id": orgId, name: "Draft and Logic", url: SITE + "/",
   description: data.seo.description, image: SITE + "/og.png",
-  logo: { "@type": "ImageObject", url: SITE + "/favicon-192.png", width: 192, height: 192 },
+  logo: { "@type": "ImageObject", url: SITE + "/favicon-512.png", width: 512, height: 512 },
   address: { "@type": "PostalAddress", addressLocality: "Wake Forest", addressRegion: "NC", addressCountry: "US" },
   areaServed: [{ "@type": "City", name: "Wake Forest" }, { "@type": "City", name: "Cary" }, { "@type": "City", name: "Raleigh" }, { "@type": "Country", name: "United States" }],
   telephone: data.footer.phone || undefined, email: data.footer.email || undefined,
