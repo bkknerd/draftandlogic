@@ -39,6 +39,9 @@ collections:
             fields:
               - { label: Type, name: kind, widget: select, options: [Fact, Joke], default: Fact }
               - { label: Text, name: text, widget: string, hint: "Keep it under about 110 characters so it fits on a phone." }
+          - { label: "Coming soon teaser, label", name: soonLabel, widget: string, required: false }
+          - { label: "Coming soon teaser, project name (empty hides it)", name: soonName, widget: string, required: false }
+          - { label: "Coming soon teaser, text", name: soonText, widget: string, required: false }
           - { label: Email field label, name: emailLabel, widget: string }
           - { label: Button, name: button, widget: string }
           - { label: Thank you message, name: thanks, widget: string }

@@ -6,7 +6,7 @@
   "contactText": "Starting a project now? Email us:",
   "button": "Notify me",
   "emailLabel": "Your email",
-  "contactEmail": "",
+  "contactEmail": "hello@draftandlogic.com",
   "comingSoon": true,
   "line1": "Drawing in progress.",
   "line2": "Back soon.",
@@ -139,5 +139,8 @@
       "kind": "Joke",
       "text": "I tried to draw a straight line. Then I met a ruler. Humbling."
     }
-  ]
+  ],
+  "soonLabel": "Also coming soon",
+  "soonName": "happy's",
+  "soonText": "The cocktail bar website for Cary, NC. Launching Nov 2026."
 }
