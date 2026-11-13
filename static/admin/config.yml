@@ -306,7 +306,7 @@ collections:
           - { label: Email, name: email, widget: string }
           - { label: Phone (for links and search, with +1), name: phone, widget: string }
           - { label: Phone (as shown), name: phoneDisplay, widget: string }
-          - { label: Google Business Profile link (leave empty to hide), name: gbpUrl, widget: string, required: false }
+          - { label: Google Business Profile link (used in search schema only, not shown on the page), name: gbpUrl, widget: string, required: false }
           - { label: Google Business Profile link text, name: gbpLabel, widget: string }
           - { label: GitHub link (structured data), name: github, widget: string, required: false }
           - { label: Founder name (structured data), name: founderName, widget: string, required: false }
