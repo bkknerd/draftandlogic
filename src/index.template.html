@@ -939,8 +939,9 @@ section{border-top:0}
 .contact .cf label,.contact .cf legend{color:#2E3600}
 .contact .cf input,.contact .cf textarea{color:#0C0C0C;border-bottom:1px solid #0C0C0C}
 .contact .cf input:focus,.contact .cf textarea:focus{border-color:#0C0C0C;box-shadow:0 1px 0 #0C0C0C}
-.contact .cf button{background:#0C0C0C;color:var(--lime);padding:18px 34px;font-size:1.05rem}
-.contact .cf button:hover{background:#26300A}
+.contact a.mailgo{display:inline-flex;align-items:center;margin-top:clamp(28px,4vw,44px);background:#0C0C0C;color:var(--lime);padding:18px 34px;border-radius:999px;font-size:1.05rem;font-weight:500;text-decoration:none}
+.contact a.mailgo:hover{background:#26300A}.contact a.mailgo:focus-visible{outline:2px solid #0C0C0C;outline-offset:3px}
+.contact p.mailaddr{margin:14px 0 0;font-size:.95rem}
 .contact .cf .note{color:#2E3600}
 .contact .cf .topics label{color:#0C0C0C}
 .contact .cf .topics span{border-color:#0C0C0C}
@@ -1367,21 +1368,8 @@ section{position:relative}
   <div class="wrap">
     <h2>{{contact.heading}}</h2>
     <p>{{contact.intro}}</p>
-  <div class="cx"><form class="cf" id="cf" name="contact" method="POST" data-w3="{{contact.web3formsKey}}" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-<input type="hidden" name="form-name" value="contact"><p hidden><label>Leave empty<input name="bot-field"></label></p>
-      <fieldset class="full topics"><legend>{{contact.legend}}</legend>
-        <label><input type="radio" name="t" value="Start a project" data-ml="{{contact.topics.0.ml}}" checked><span>{{contact.topics.0.label}}</span></label>
-        <label><input type="radio" name="t" value="Website care and support" data-ml="{{contact.topics.1.ml}}"><span>{{contact.topics.1.label}}</span></label>
-        <label><input type="radio" name="t" value="Question" data-ml="{{contact.topics.2.ml}}"><span>{{contact.topics.2.label}}</span></label>
-        <label><input type="radio" name="t" value="General message" data-ml="{{contact.topics.3.ml}}"><span>{{contact.topics.3.label}}</span></label>
-      </fieldset>
-      <label>{{contact.nameLabel}}<input name="n" autocomplete="name" required></label>
-      <label>{{contact.emailLabel}}<input name="e" type="email" autocomplete="email" required></label>
-      <label class="full"><span id="ml">{{contact.messageLabel}}</span><textarea name="m" rows="4" required></textarea></label>
-      <button type="submit">{{contact.button}}</button>
-      <p class="note" id="cfn" role="status"></p>
-    </form>
-    <aside class="tk" id="tk" aria-hidden="true"><div class="tk-h"><span>{{interface.briefTitle}}</span><b id="tks">{{interface.briefDraft}}</b></div><dl><dt>{{interface.briefTo}}</dt><dd>{{footer.name}}</dd><dt>{{interface.briefRe}}</dt><dd id="tkr">Start a project</dd><dt>{{interface.briefFrom}}</dt><dd id="tkf">&nbsp;</dd><dt>{{interface.briefBody}}</dt><dd id="tkb">&nbsp;</dd></dl></aside></div>
+  <a class="mailgo" href="mailto:{{footer.email}}">{{contact.button}}</a>
+  <p class="mailaddr">{{footer.email}}</p>
   </div>
 </section>{{/if}}
 </main>
@@ -1400,12 +1388,7 @@ var wi=0;function split(el){Array.prototype.slice.call(el.childNodes).forEach(fu
 var hero=document.querySelector('.hero');
 var cs=document.getElementById('cases'),vb=document.querySelectorAll('.views button');
 vb.forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribute('data-v');cs.classList.add('swap');setTimeout(function(){cs.classList.remove('grid','list');if(v)cs.classList.add(v);vb.forEach(function(x){x.setAttribute('aria-pressed',x===b)});cs.classList.remove('swap')},280)})});
-var cf=document.getElementById('cf');if(cf)cf.addEventListener('submit',function(ev){ev.preventDefault();var f=cf.elements;
-if(!f.n.value.trim()||!f.e.value.trim()||!f.m.value.trim()){document.getElementById('cfn').textContent='{{j:interface.formEmpty}}';return}
-if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.e.value.trim())){document.getElementById('cfn').textContent='{{j:interface.formInvalid}}';f.e.focus();return}
-var bt=cf.querySelector('button[type=submit]'),nt=document.getElementById('cfn');bt.disabled=true;nt.textContent='{{j:interface.formSending}}';var w3=cf.getAttribute('data-w3'),rq=w3?fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({access_key:w3,subject:'Draft and Logic: '+tp(),from_name:'Draft and Logic website',name:f.n.value.trim(),email:f.e.value.trim(),message:f.m.value.trim(),topic:tp(),botcheck:f['bot-field'].value})}).then(function(r){return r.json()}).then(function(j){if(!j.success)throw 0}):fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(cf)).toString()}).then(function(r){if(!r.ok)throw 0});rq.then(function(){cf.reset();cf.dispatchEvent(new Event('input'));window.gtag&&gtag('event','generate_lead');nt.textContent='{{j:interface.formSent}}'}).catch(function(){nt.textContent='{{j:interface.formError}}'}).then(function(){bt.disabled=false})});
-if(cf)cf.querySelectorAll('input[name=t]').forEach(function(r){r.addEventListener('change',function(){document.getElementById('ml').textContent=r.getAttribute('data-ml')})});
-var tp=function(){return cf.querySelector('input[name=t]:checked').value};
+
 document.querySelectorAll('.ico *').forEach(function(e){e.setAttribute('pathLength','1')});
 var tt=document.getElementById('totop'),pr=tt.querySelector('.prg'),tk=false;
 function up(){var y=window.scrollY,m=document.documentElement.scrollHeight-innerHeight;tt.classList.toggle('show',y>innerHeight*.7);pr.style.strokeDashoffset=1-(m>0?Math.min(1,y/m):0);tk=false}
@@ -1769,15 +1752,6 @@ if(cols.length>1){
  function run(){var n=0;[].forEach.call(L.querySelectorAll('li'),function(li){var ok=(f==='all'||(f==='free'&&li.dataset.p==='free')||(f==='Sat'&&li.dataset.d==='Sat'))&&(!q||li.dataset.t.indexOf(q)>-1);li.hidden=!ok;if(ok)n++});$('#apn',L).textContent=n+' of '+data.length+' shown'}
  L.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;f=b.dataset.f;[].forEach.call(L.querySelectorAll('button'),function(x){x.setAttribute('aria-pressed',x===b)});run()});
  $('#apq',L).addEventListener('input',function(e){q=e.target.value.trim().toLowerCase();run()});run();
-}
-/* contact brief */
-var cf=document.getElementById('cf'),tk=document.getElementById('tk');
-if(cf&&tk){
- function up(){var t=cf.querySelector('input[name=t]:checked'),n=cf.n.value.trim(),e=cf.e.value.trim(),m=cf.m.value.trim();
-  document.getElementById('tkr').textContent=t?t.value:'';document.getElementById('tkf').textContent=(n||e)?(n+(n&&e?' · ':'')+e):' ';
-  document.getElementById('tkb').textContent=m?(m.length>110?m.slice(0,110)+'…':m):' ';
-  var ok=n&&e&&m;tk.classList.toggle('ok',!!ok);document.getElementById('tks').textContent=ok?'{{j:interface.briefReady}}':'{{j:interface.briefDraft}}'}
- cf.addEventListener('input',up);cf.addEventListener('change',up);up();
 }
 /* case study rail */
 var wp=document.getElementById('wpage');

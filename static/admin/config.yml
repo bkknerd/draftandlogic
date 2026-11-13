@@ -276,28 +276,14 @@ collections:
               - { label: Question, name: q, widget: string }
               - { label: Answer, name: a, widget: text, hint: "Plain sentences. Shown on the page and in search structured data." }
       - name: contact
-        label: Contact form
+        label: Contact section
         file: content/site/contact.json
         format: json
         fields:
-          - { label: "Show this section on the site", name: show, widget: boolean, default: true, hint: "Turn off to hide this whole section and its menu link. Takes about a minute after you save." }
+          - { label: "Show this section on the site", name: show, widget: boolean, default: true, hint: "Turn off to hide this whole section and its menu link." }
           - { label: Heading, name: heading, widget: string }
-          - { label: Intro, name: intro, widget: string }
-          - { label: Topic question, name: legend, widget: string }
-          - label: Topic buttons (four, order is fixed)
-            name: topics
-            widget: list
-            min: 4
-            max: 4
-            summary: "{{fields.label}}"
-            fields:
-              - { label: Label, name: label, widget: string }
-              - { label: "Message field label when this topic is picked", name: ml, widget: string }
-          - { label: Name field label, name: nameLabel, widget: string }
-          - { label: Email field label, name: emailLabel, widget: string }
-          - { label: Message field label, name: messageLabel, widget: string }
-          - { label: Send button, name: button, widget: string }
-          - { label: "Web3Forms access key (paste here and messages are emailed to you)", name: web3formsKey, widget: string, required: false, hint: "Free key from web3forms.com. Leave empty to use Netlify Forms instead." }
+          - { label: Text, name: intro, widget: string }
+          - { label: "Button text (opens the visitor's email app, addressed to the email in Footer)", name: button, widget: string }
       - name: footer
         label: Footer
         file: content/site/footer.json
