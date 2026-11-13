@@ -1,31 +1,28 @@
 {
   "items": [
     {
-      "style": "happy",
+      "style": "abx",
       "feature": true,
       "reverse": false,
-      "study": "happy",
-      "label": "happy's",
+      "study": "abaxent",
+      "label": "Abaxent",
       "note": "",
       "shots": [
         {
-          "image": "/uploads/happy-1.jpg",
-          "alt": "happy's home page: a wall of smiley faces behind the headline come by, feel good"
-        },
-        {
-          "image": "/uploads/happy-2.jpg",
-          "alt": "happy's walk-up page: the upstairs cocktail bar behind a staircase"
+          "image": "/uploads/abx-1.jpg",
+          "alt": "Abaxent website home page"
         }
       ],
-      "title": "A bar site that looks like the bar",
-      "summary": "The smiley wall, a sticker-style menu and a staircase you can climb, for a cocktail bar in downtown Cary.",
-      "tag": "Launching Nov 2026",
+      "title": "A broker that works for the buyer",
+      "summary": "Abaxent has brokered technology in Wisconsin for 22 years, and the old site read like one more reseller. The new one opens on a single question, what's a broker, then answers it with a four-step method, 93% partner retention and the three people who run it.",
+      "tag": "",
       "services": [
         "Custom Web Development",
-        "Content Management Systems",
+        "Site Modernization & Audits",
+        "Technical SEO & Performance",
         "ADA Accessibility Compliance"
       ],
-      "home": true
+      "home": false
     },
     {
       "style": "namc",
@@ -165,28 +162,31 @@
       "home": false
     },
     {
-      "style": "abx",
+      "style": "happy",
       "feature": true,
       "reverse": false,
-      "study": "abaxent",
-      "label": "Abaxent",
+      "study": "happy",
+      "label": "happy's",
       "note": "",
       "shots": [
         {
-          "image": "/uploads/abx-1.jpg",
-          "alt": "Abaxent website home page"
+          "image": "/uploads/happy-1.jpg",
+          "alt": "happy's home page: a wall of smiley faces behind the headline come by, feel good"
+        },
+        {
+          "image": "/uploads/happy-2.jpg",
+          "alt": "happy's walk-up page: the upstairs cocktail bar behind a staircase"
         }
       ],
-      "title": "A broker that works for the buyer",
-      "summary": "Abaxent has brokered technology in Wisconsin for 22 years, and the old site read like one more reseller. The new one opens on a single question, what's a broker, then answers it with a four-step method, 93% partner retention and the three people who run it.",
-      "tag": "",
+      "title": "A bar site that looks like the bar",
+      "summary": "The smiley wall, a sticker-style menu and a staircase you can climb, for a cocktail bar in downtown Cary.",
+      "tag": "Launching Nov 2026",
       "services": [
         "Custom Web Development",
-        "Site Modernization & Audits",
-        "Technical SEO & Performance",
+        "Content Management Systems",
         "ADA Accessibility Compliance"
       ],
-      "home": false
+      "home": true
     },
     {
       "style": "walkup",
