@@ -956,10 +956,6 @@ footer{padding:0;border-top:0;background:#0C0C0C;color:#A7A399}
 
 .cur{background:var(--lime)!important;color:#0C0C0C!important}
 .totop{background:var(--paper);color:var(--fg)}
-.wipe{position:fixed;inset:0;z-index:9998;background:var(--lime);transform:translateY(100%);pointer-events:none}
-.wipe.go{transform:translateY(0)}
-.wipe.out{transform:translateY(-100%);transition:transform .75s cubic-bezier(.76,0,.24,1)}
-@media (prefers-reduced-motion:reduce){.wipe{display:none}}
 
 /* case study pages */
 .jhead nav a{font-size:.95rem}
@@ -1392,7 +1388,6 @@ section{position:relative}
 <footer><div class="wrap"><a class="flogo" href="#top" aria-label="{{footer.name}}, {{interface.backToTop}}"><svg class="wm" viewBox="0 0 292 46" role="img" aria-hidden="true"><g class="cl"><path d="M0 8H292M0 36H292M0 3V13M292 3V13M0 31V41M292 31V41"/><path class="mid" d="M0 22H292"/></g><g class="dw" fill="none"><g style="--i:0"><path d="M6 8V36M6 8H13A14 14 0 0 1 13 36H6"/></g><g style="--i:1"><path d="M34 36V8H42A7 7 0 0 1 42 22H34M42 22L50 36"/></g><g style="--i:2"><path d="M57 36L66 8L75 36M59.6 28H72.4"/></g><g style="--i:3"><path d="M82 36V8H96M82 22H93"/></g><g style="--i:4"><path d="M103 8H119M111 8V36"/></g></g><g transform="translate(134 8)"><path class="amp" pathLength="1" d="M20 28L4 9A5.5 5.5 0 0 1 15 9C15 14 7 17 3 21C0 26 5 28.5 9 28.5C14 28.5 18 24 19 19"/></g><g class="lw" fill="none"><g style="--i:5"><path pathLength="1" d="M171 8V36H185"/></g><g style="--i:6"><ellipse cx="204" cy="22" rx="12" ry="14" pathLength="1"/></g><g style="--i:7"><path pathLength="1" d="M244.2 13A12 14 0 1 0 247 22H236"/></g><g style="--i:8"><path pathLength="1" d="M254 8V36"/></g><g style="--i:9"><path pathLength="1" d="M282.2 13A12 14 0 1 0 282.2 31"/></g></g><circle class="nd" cx="204" cy="22" r="2.4"/></svg></a><div class="foot-info"><p>{{footer.area}}</p><p><a href="mailto:{{footer.email}}">{{footer.email}}</a> · <a href="tel:{{footer.phone}}">{{footer.phoneDisplay}}</a></p></div><div class="foot-base"><span>{{footer.name}}</span><span>{{footer.copyright}}</span></div></div></footer>
 </div>
 <div id="wpage" role="main" aria-label="Case study" hidden></div>
-<div class="wipe" id="wipe" aria-hidden="true"></div>
 <div class="cur" id="cur" aria-hidden="true"><span>{{interface.cursor}}</span></div>
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="{{interface.shotsAria}}" hidden><button class="lb-x" type="button">{{interface.close}}</button><div class="lb-in"></div></div>
 <button class="totop" id="totop" type="button" aria-label="{{interface.backToTop}}"><svg viewBox="0 0 56 56" aria-hidden="true"><circle class="trk" cx="28" cy="28" r="25"/><circle class="prg" cx="28" cy="28" r="25" pathLength="1"/><g class="ar"><path d="M28 38V19M20 27L28 19L36 27"/></g></svg></button>
@@ -1710,9 +1705,7 @@ if(cs&&pv){var ims=[];[].slice.call(cs.querySelectorAll('.case.has-shot')).forEa
 if(fine&&!rm){document.querySelectorAll('.mag').forEach(function(m){
  m.addEventListener('mousemove',function(e){var r=m.getBoundingClientRect();m.style.transition='translate .15s';m.style.translate=((e.clientX-(r.left+r.width/2))*.25)+'px '+((e.clientY-(r.top+r.height/2))*.3)+'px'});
  m.addEventListener('mouseleave',function(){m.style.transition='translate .7s cubic-bezier(.2,.7,.2,1)';m.style.translate='0 0'})})}
-var wp=document.getElementById('wipe'),prev=location.hash;
-function isS(h){return /^#\/work\//.test(h||'')}
-addEventListener('hashchange',function(){var cur=location.hash;if(!rm&&wp&&(isS(cur)||isS(prev))){wp.className='wipe go';void wp.offsetWidth;requestAnimationFrame(function(){wp.className='wipe out';setTimeout(function(){wp.className='wipe'},260)})}prev=cur});
+
 })();
 </script>
 <script>
