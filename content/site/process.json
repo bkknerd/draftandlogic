@@ -1,5 +1,5 @@
 {
-  "show": true,
+  "show": false,
   "heading": "Blueprint first. Code second.",
   "why": "We don't write speculative code. Every project goes through discovery and a signed-off structure before development starts.",
   "steps": [
