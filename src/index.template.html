@@ -8,7 +8,7 @@
 <script type="application/ld+json" id="ld">{{{ldHome}}}</script><meta name="description" content="{{seo.description}}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Geist:wght@300..700&family=Geist+Mono:wght@400..500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400..500&display=swap" rel="stylesheet">
 <style>
 :root{
   --vellum:#EDF2F3; --paper:#F8FAFB; --graphite:#17262A; --pencil:#5F767C; --rule:#CCD9DC; --blue:#3E6E79; --sage:#A0B9BF;
@@ -1250,6 +1250,10 @@ section{position:relative}
 @media(max-width:700px){.hero .hero-row{flex-direction:column;align-items:flex-start;gap:20px}}
 .hero p.hstat{font-size:.8125rem;line-height:1.4;max-width:none;margin:clamp(20px,3vw,32px) 0 0;color:var(--mut);animation:none}
 .foot-info{width:100%;padding:28px 0 8px;font:400 .8125rem/1.7 var(--mono);letter-spacing:.08em;color:#A7A399}.foot-info p{margin:0}.foot-info a{color:inherit;text-decoration:underline;text-underline-offset:3px}.foot-info a:hover{color:#F1EEE8}
+/* ===== studio type: Matter over Helvetica Neue ===== */
+{{{fontFaces}}}
+:root{--display:'Matter','Helvetica Neue',Helvetica,Arial,sans-serif;--body:'Helvetica Neue',Helvetica,Arial,sans-serif}
+body{font-family:var(--body)}
 </style>
 {{{analyticsHead}}}
 </head>

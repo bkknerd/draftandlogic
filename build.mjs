@@ -15,6 +15,10 @@ for (const f of list("content/site")) data[f.replace(/\.json$/, "")] = rd("conte
 // Visitors who send Do Not Track or Global Privacy Control are not measured.
 const GA = data.analytics || {};
 const gaId = /^G-[A-Z0-9]{6,14}$/.test(GA.measurementId || "") ? GA.measurementId : "";
+// Matter (licensed, not in the repo until the web font files are added): static/fonts/Matter-Regular|Medium|Bold.woff2
+data.fontFaces = [["Regular", 400], ["Medium", 500], ["Bold", 700]]
+  .filter(([n]) => fs.existsSync(path.join("static", "fonts", "Matter-" + n + ".woff2")))
+  .map(([n, w]) => "@font-face{font-family:'Matter';src:url(/fonts/Matter-" + n + ".woff2) format('woff2');font-weight:" + w + ";font-style:normal;font-display:swap}").join("");
 data.analyticsHead = GA.enabled !== false && gaId
   ? "<script>(function(){var n=navigator;if(n.doNotTrack==='1'||window.doNotTrack==='1'||n.globalPrivacyControl)return;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=" + gaId + "';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','" + gaId + "',{anonymize_ip:true})})();</script>"
   : "";
