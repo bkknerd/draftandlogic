@@ -12,6 +12,12 @@
   ],
   "features": [
     {
+      "title": "A scroll through the home page",
+      "image": "/uploads/nlt-scroll-poster.jpg",
+      "video": "/uploads/nlt-scroll.mp4",
+      "alt": "Screen recording scrolling down the New Life Tabernacle home page"
+    },
+    {
       "title": "We believe God.",
       "text": "The church's own line, over the logo's open book and rising light.",
       "image": "/uploads/nlt-f1.jpg",
@@ -65,10 +71,15 @@
       "story": "Each tile opens that section in the editor. While signed in, every section of the live site shows an Edit button. Each change is a commit, so any edit can be put back."
     },
     {
+      "title": "The whole home page",
+      "image": "/uploads/nlt-fullpage.jpg",
+      "alt": "The full New Life Tabernacle home page from top to bottom"
+    },
+    {
       "title": "On a phone",
       "text": "Home, the verse card and giving at 390px wide.",
-      "image": "/uploads/nlt-f8.jpg",
-      "alt": "New Life Tabernacle on a phone"
+      "image": "/uploads/nlt-phone.jpg",
+      "alt": "New Life Tabernacle home page on a phone"
     }
   ],
   "quote": {

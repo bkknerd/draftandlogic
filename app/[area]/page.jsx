@@ -4,6 +4,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import Contact from '@/components/Contact';
 import Reveal from '@/components/Reveal';
+import Drafted from '@/components/Drafted';
 import { ArrowLink, DimArrow } from '@/components/Icons';
 import { getSite, getAreas, getCases, thumb, trim, SITE_URL } from '@/lib/content';
 import { org, ldJson, orgId } from '@/lib/schema';
@@ -78,7 +79,7 @@ export default function Area({ params }) {
               {cases.map((c) => (
                 <li key={c.slug} className="wcard">
                   <Link href={`/work/${c.slug}/`}>
-                    <span className="wcard-img">{c.shots[0] && <img src={thumb(c.shots[0].src)} alt={c.shots[0].alt} loading="lazy" width="1440" height="900" />}</span>
+                    {c.shots[0] ? <Drafted className="wcard-img" src={c.shots[0].thumb} draft={c.shots[0].draft} alt={c.shots[0].alt} /> : <span className="wcard-img" />}
                     <span className="wcard-top"><span className="wcard-name">{c.label}</span><DimArrow /></span>
                     <span className="wcard-title">{c.title}</span>
                   </Link>

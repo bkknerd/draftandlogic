@@ -12,6 +12,12 @@
   ],
   "features": [
     {
+      "title": "A scroll through the home page",
+      "image": "/uploads/namc-scroll-poster.jpg",
+      "video": "/uploads/namc-scroll.mp4",
+      "alt": "Screen recording scrolling down the NAMC National Conference 2027 home page"
+    },
+    {
       "title": "Sponsor levels, side by side",
       "text": "Six levels from $5,000 to $50,000 as color cards, each with Select and Benefits. Choose one and the sign-up form opens below.",
       "image": "/uploads/namc-s1.jpg",
@@ -46,10 +52,15 @@
       "story": "People get a circle with a gold ring. Places get a square crop under one even overlay. Once you see the rule, you stop noticing it."
     },
     {
+      "title": "The whole home page",
+      "image": "/uploads/namc-fullpage.jpg",
+      "alt": "The full NAMC National Conference 2027 home page from top to bottom"
+    },
+    {
       "title": "On a phone",
       "text": "The same three choices, with the dates and a Register button pinned to the bottom.",
-      "image": "/uploads/namc-f9.jpg",
-      "alt": "NAMC on a phone"
+      "image": "/uploads/namc-phone.jpg",
+      "alt": "NAMC National Conference 2027 home page on a phone"
     }
   ],
   "quote": {

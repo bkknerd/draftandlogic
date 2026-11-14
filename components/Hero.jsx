@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { reducedMotion } from '@/lib/hooks';
 import { ArrowLink } from './Icons';
 import { onReady } from './Loader';
+import Drafted from './Drafted';
 
 /** hero: { kicker, lines: [[a,b],[a,b]], intro, cta, cta2, status }; reel: [{ slug, label, src, alt }] */
 export default function Hero({ hero, reel = [] }) {
@@ -69,9 +70,7 @@ export default function Hero({ hero, reel = [] }) {
             {reel.map((r, i) => (
               <li key={r.slug} style={{ '--n': i }}>
                 <Link href={`/work/${r.slug}/`}>
-                  <span className="reel-img">
-                    <img src={r.src} alt={r.alt} width="1280" height="800" loading={i < 4 ? 'eager' : 'lazy'} />
-                  </span>
+                  <Drafted className="reel-img" src={r.src} draft={r.draft} alt={r.alt} eager={i < 4} delay={500 + i * 140} />
                   <span className="reel-name">{r.label}</span>
                 </Link>
               </li>

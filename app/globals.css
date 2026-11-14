@@ -122,7 +122,10 @@ html:not(.js) .loader { display: none; }
 .loader-in { width: min(560px, 78vw); }
 .loader-wm { width: 100%; height: auto; color: var(--fg); }
 .loader-bar { margin-top: 28px; height: 2px; background: var(--rule); overflow: hidden; }
-.loader-bar i { display: block; height: 100%; background: var(--fg); transform: scaleX(0); transform-origin: left; animation: fill 1.3s var(--ease) .1s forwards; }
+.loader-bar i { display: block; height: 100%; background: var(--fg); transform: scaleX(0); transform-origin: left; animation: fill .85s var(--ease) .05s forwards; }
+/* the opening logo draws faster than the nav and footer ones, so the page is not held back */
+.js .loader .wm-draw .ink path, .js .loader .wm-draw .ink ellipse { animation-duration: .5s; animation-delay: calc(var(--i) * 34ms + 40ms); }
+.js .loader .wm-draw .nd { animation-delay: .5s; }
 @keyframes fill { to { transform: scaleX(1); } }
 
 /* nav */
@@ -504,3 +507,14 @@ html:not(.js) .ln { overflow: visible; }
 .prose { max-width: 46rem; margin-left: max(0px, calc((100vw - 1240px) / 2)); padding-bottom: var(--sec); display: grid; gap: 36px; }
 .prose p { color: var(--mut); font-size: 1.08rem; }
 @media (max-width: 760px) { .area-cols { grid-template-columns: minmax(0, 1fr); } }
+
+/* draft to built: the line drawing of a screen shows first, then the real page wipes across it */
+.dr { position: relative; display: block; overflow: hidden; }
+.dr-d { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.dr-r { position: relative; display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.js .dr.has-d .dr-r { clip-path: inset(0 100% 0 0); }
+.js .dr.has-d.in .dr-r { clip-path: inset(0); transition: clip-path 1.15s var(--snap) var(--dd, 0ms), transform 1s var(--ease); }
+.dr-l { position: absolute; top: 0; bottom: 0; left: 0; width: 2px; background: var(--ink); opacity: 0; }
+.js .dr.in .dr-l { animation: drl 1.15s var(--snap) var(--dd, 0ms) both; }
+@keyframes drl { 0% { left: 0; opacity: 1; } 96% { opacity: 1; } 100% { left: 100%; opacity: 0; } }
+.frame .dr-r { aspect-ratio: 16 / 10; height: auto; }

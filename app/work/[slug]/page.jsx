@@ -4,6 +4,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import Contact from '@/components/Contact';
 import Reveal from '@/components/Reveal';
+import Drafted from '@/components/Drafted';
 import { ArrowLink, DimArrow } from '@/components/Icons';
 import { getAreas, getSite, getCases, getStudy, getStudySlugs, thumb, trim, SITE_URL } from '@/lib/content';
 import { org, ldJson, orgId } from '@/lib/schema';
@@ -77,7 +78,7 @@ export default function CaseStudy({ params }) {
         {hero && (
           <Reveal className="wrap cs-hero">
             <figure className="frame">
-              <img src={hero.src} alt={hero.alt} width="1440" height="900" fetchPriority="high" />
+              <Drafted src={hero.web} draft={hero.draft} alt={hero.alt} eager />
             </figure>
           </Reveal>
         )}
@@ -126,7 +127,7 @@ export default function CaseStudy({ params }) {
                       src && (
                         <figure key={k} className={`ba-fig ${k}`}>
                           <span className="ba-tag">{tag}</span>
-                          <span className="frame"><img src={thumb(src)} alt={alt || ''} loading="lazy" width="1440" height="900" /></span>
+                          <span className="frame"><img src={src} alt={alt || ''} loading="lazy" width="1440" height="900" /></span>
                         </figure>
                       )
                   )}
@@ -146,7 +147,7 @@ export default function CaseStudy({ params }) {
                 <Reveal as="figure" key={f.title} className={`shot ${f.video ? 'wide' : f.shape || 'wide'} ${n === 0 ? 'first' : ''}`}>
                   {f.video ? (
                     <span className="frame">
-                      <video src={f.video} poster={f.image || undefined} controls muted loop playsInline preload="metadata" aria-label={f.alt || f.title} />
+                      <video src={f.video} poster={f.poster || undefined} controls muted loop playsInline preload="metadata" aria-label={f.alt || f.title} />
                     </span>
                   ) : (
                     <span className="frame" tabIndex={f.shape === 'full' ? 0 : undefined} role={f.shape === 'full' ? 'group' : undefined} aria-label={f.shape === 'full' ? `${f.title}, full page, scrolls` : undefined}>
@@ -179,7 +180,7 @@ export default function CaseStudy({ params }) {
               {more.map((c) => (
                 <li key={c.slug} className="wcard">
                   <Link href={`/work/${c.slug}/`}>
-                    <span className="wcard-img">{c.shots[0] && <img src={thumb(c.shots[0].src)} alt={c.shots[0].alt} loading="lazy" width="1440" height="900" />}</span>
+                    {c.shots[0] ? <Drafted className="wcard-img" src={c.shots[0].thumb} draft={c.shots[0].draft} alt={c.shots[0].alt} /> : <span className="wcard-img" />}
                     <span className="wcard-top"><span className="wcard-name">{c.label}</span><DimArrow /></span>
                     <span className="wcard-title">{c.title}</span>
                   </Link>

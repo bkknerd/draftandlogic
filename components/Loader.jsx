@@ -29,13 +29,13 @@ export default function Loader() {
     if (seen || reducedMotion()) { setState('gone'); markReady(); return; }
 
     html.classList.add('dl-locked');
-    const t1 = setTimeout(() => setState('out'), 1500);
+    const t1 = setTimeout(() => setState('out'), 950);
     const t2 = setTimeout(() => {
       setState('gone');
       html.classList.remove('dl-locked');
       try { sessionStorage.setItem(KEY, '1'); } catch {}
-    }, 2200);
-    const t3 = setTimeout(markReady, 1700); // hero starts as the sheet lifts
+    }, 1650);
+    const t3 = setTimeout(markReady, 1000); // hero starts as the sheet lifts
     return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); html.classList.remove('dl-locked'); };
   }, []);
 

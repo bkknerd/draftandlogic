@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import { DimArrow } from './Icons';
+import Drafted from './Drafted';
 
 /** All work: cards with a filter by the service delivered. */
 export default function WorkGrid({ cases, allLabel = 'All', filterLabel = 'Filter by service' }) {
@@ -23,9 +24,7 @@ export default function WorkGrid({ cases, allLabel = 'All', filterLabel = 'Filte
           const shot = c.shots[0];
           const inner = (
             <>
-              <span className="wcard-img">
-                {shot ? <img src={shot.thumb || shot.src} alt={shot.alt} loading="lazy" width="1440" height="900" /> : <span className="wcard-ph" />}
-              </span>
+              {shot ? <Drafted className="wcard-img" src={shot.thumb} draft={shot.draft} alt={shot.alt} /> : <span className="wcard-img"><span className="wcard-ph" /></span>}
               <span className="wcard-top">
                 <span className="wcard-name">{c.label}</span>
                 {c.slug && <DimArrow />}

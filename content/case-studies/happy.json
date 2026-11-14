@@ -12,6 +12,12 @@
   ],
   "features": [
     {
+      "title": "A scroll through the home page",
+      "image": "/uploads/happy-scroll-poster.jpg",
+      "video": "/uploads/happy-scroll.mp4",
+      "alt": "Screen recording scrolling down the happy's home page"
+    },
+    {
       "title": "The smiley wall",
       "text": "The bar's own wall is the hero, and its colors run the whole site.",
       "image": "/uploads/happy-f1.jpg",
@@ -60,10 +66,15 @@
       "story": "Hours are a simple table, with today's row marked. Directions and the phone number are one tap."
     },
     {
+      "title": "The whole home page",
+      "image": "/uploads/happy-fullpage.jpg",
+      "alt": "The full happy's home page from top to bottom"
+    },
+    {
       "title": "On a phone",
       "text": "Hero, menu and events at 390px wide.",
-      "image": "/uploads/happy-f6.jpg",
-      "alt": "happy's on a phone"
+      "image": "/uploads/happy-phone.jpg",
+      "alt": "happy's home page on a phone"
     }
   ],
   "quote": {

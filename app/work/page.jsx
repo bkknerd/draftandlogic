@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 import Contact from '@/components/Contact';
 import Reveal from '@/components/Reveal';
 import WorkGrid from '@/components/WorkGrid';
-import { getAreas, getSite, getCases, thumb, trim, SITE_URL } from '@/lib/content';
+import { getAreas, getSite, getCases, trim, SITE_URL } from '@/lib/content';
 import { org, ldJson } from '@/lib/schema';
 
 export function generateMetadata() {
@@ -21,7 +21,7 @@ export function generateMetadata() {
 
 export default function WorkIndex() {
   const s = getSite();
-  const cases = getCases().map((c) => ({ ...c, shots: c.shots.map((sh) => ({ ...sh, thumb: thumb(sh.src) })) }));
+  const cases = getCases();
   const graph = [
     { '@type': 'CollectionPage', '@id': SITE_URL + '/work/#webpage', url: SITE_URL + '/work/', name: s.work.allHeading || 'All work', inLanguage: 'en-US' },
     { '@type': 'ItemList', itemListElement: cases.filter((c) => c.slug).map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.label, url: `${SITE_URL}/work/${c.slug}/` })) },

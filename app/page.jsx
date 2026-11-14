@@ -14,7 +14,7 @@ export default function Home() {
   const s = getSite();
   const cases = getCases()
     .filter((c) => c.home)
-    .map((c) => ({ ...c, shots: c.shots.map((sh, i) => (i === 0 ? { ...sh, thumb: thumb(sh.src) } : sh)) }));
+    .map((c) => ({ ...c, shots: c.shots.map((sh) => ({ ...sh, src: sh.web })) }));
   const i = s.interface;
 
   const graph = [
@@ -38,7 +38,7 @@ export default function Home() {
       <main id="main">
         <Hero
           hero={{ ...s.hero, lines: [splitLine(s.hero.line1), splitLine(s.hero.line2)] }}
-          reel={s.on.work ? getCases().filter((c) => c.slug && c.shots[0]).map((c) => ({ slug: c.slug, label: c.label, src: thumb(c.shots[0].src), alt: c.shots[0].alt })) : []}
+          reel={s.on.work ? getCases().filter((c) => c.slug && c.shots[0]).map((c) => ({ slug: c.slug, label: c.label, src: c.shots[0].thumb, draft: c.shots[0].draft, alt: c.shots[0].alt })) : []}
         />
         {s.on.work && <Work work={s.work} cases={cases} viewCase="Case study" />}
         {s.on.partners && <Partners partners={s.partners} />}

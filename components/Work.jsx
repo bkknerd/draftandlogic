@@ -79,7 +79,7 @@ export default function Work({ work, cases, viewCase = 'Case study' }) {
               </Link>
               {c.shots[0] && (
                 <div className="case-shot">
-                  <img src={c.shots[0].thumb || c.shots[0].src} alt={c.shots[0].alt} loading="lazy" width="1440" height="900" />
+                  <img src={c.shots[0].thumb} alt={c.shots[0].alt} loading="lazy" width="1440" height="900" />
                   <p>{c.summary}</p>
                 </div>
               )}
