@@ -211,7 +211,10 @@ html:not(.js) .ln { overflow: visible; }
 .plogos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
 .plogos li { display: flex; align-items: center; justify-content: center; height: 84px; padding: 0 22px; background: #fff; border: 1px solid var(--rule); border-radius: 8px; transition: transform .5s var(--ease), border-color .3s; }
 .plogos li:hover { transform: translateY(-3px); border-color: var(--fg); }
-.plogos img { max-width: 100%; }
+.plogos img { width: auto; height: auto; max-width: 100%; max-height: 34px; }
+/* Netlify's mark is squarer (about 2.4:1 against roughly 5:1 for the others), so at the same height its
+   wordmark reads small. Give it more height so all four carry the same visual weight. */
+.plogos img[alt*="Netlify" i] { max-height: 56px; }
 
 /* services */
 .sx { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, .9fr); gap: clamp(24px, 5vw, 80px); align-items: start; margin-top: clamp(40px, 6vw, 72px); }
