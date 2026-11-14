@@ -26,14 +26,6 @@ export default function Footer({ footer, home = true }) {
               {footer.phone && <a href={`tel:${footer.phone}`}>{footer.phoneDisplay || footer.phone}</a>}
             </p>
           </div>
-          <div>
-            <p className="k">Elsewhere</p>
-            <p>
-              {footer.founderLinkedin && <a href={footer.founderLinkedin} target="_blank" rel="noopener">LinkedIn</a>}
-              {footer.founderLinkedin && footer.github && <br />}
-              {footer.github && <a href={footer.github} target="_blank" rel="noopener">GitHub</a>}
-            </p>
-          </div>
         </div>
         <div className="foot-base">
           <span>{footer.copyright} {footer.name}</span>

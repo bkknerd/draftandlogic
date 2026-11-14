@@ -143,12 +143,7 @@ html:not(.js) .loader { display: none; }
 .hero { position: relative; min-height: min(100svh, 1000px); display: flex; padding: clamp(104px, 12vh, 140px) 0 clamp(40px, 6vh, 72px); overflow: hidden; }
 .hero-in { position: relative; width: 100%; display: flex; flex-direction: column; justify-content: center; }
 
-.dl { position: relative; touch-action: pan-y; cursor: col-resize; user-select: none; -webkit-user-select: none; }
-.dl-draft, .dl-built { font: 700 clamp(2.6rem, 8.4vw, 8.6rem)/.94 var(--display); letter-spacing: -.055em; margin: 0; }
-.dl-draft { position: absolute; inset: 0; pointer-events: none; clip-path: inset(-.2em calc(100% - var(--x)) -.3em -1px); }
-.dl-draft .ln-in { color: transparent; -webkit-text-stroke: 1px var(--fg); }
-.dl-draft .ln { border-bottom: 1px dashed var(--pencil); }
-.dl-built { position: relative; z-index: 1; clip-path: inset(-.2em -1px -.3em var(--x)); }
+.hero-h1 { font: 700 clamp(2.6rem, 8.4vw, 8.6rem)/.94 var(--display); letter-spacing: -.055em; margin: 0; }
 .ln { display: block; overflow: hidden; padding: .04em 0 .12em; margin-bottom: -.08em; }
 .hero.settled .ln { overflow: visible; }
 html:not(.js) .ln { overflow: visible; }
@@ -157,21 +152,6 @@ html:not(.js) .ln { overflow: visible; }
 .js .hero.in .ln-in { transform: none; }
 .ln-mut .ln-in { color: var(--mut); }
 .seg { white-space: nowrap; }
-.dl-x { position: absolute; z-index: 3; top: -14px; bottom: -14px; left: var(--x); width: 0; }
-.js .dl-x { opacity: 0; transition: opacity .5s .6s; }
-.js .hero.in .dl-x { opacity: 1; }
-.dl-x b { position: absolute; left: -1px; top: 0; bottom: 0; width: 2px; background: var(--fg); }
-.dl-x > span { position: absolute; top: -12px; font-size: .85rem; white-space: nowrap; }
-.dl-x .l { right: 12px; color: var(--mut); }
-.dl-x .r { left: 12px; color: var(--fg); }
-.dl-x > span { transition: opacity .3s; }
-.dl-x.edge > span { opacity: 0; }
-.dl-x button { position: absolute; left: -24px; top: 50%; width: 48px; height: 48px; margin-top: -24px; padding: 0; border-radius: 50%; background: var(--lime); color: var(--ink); border: 2px solid var(--ink); cursor: grab; display: grid; place-items: center; transition: transform .35s var(--ease); }
-.dl-x button:hover { transform: scale(1.08); }
-.dl:active .dl-x button { cursor: grabbing; transform: scale(.94); }
-/* Without JS: show the finished headline, no drawing, no handle. */
-html:not(.js) .dl-built { clip-path: none; }
-html:not(.js) .dl-draft, html:not(.js) .dl-x { display: none; }
 
 .hero-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 28px; flex-wrap: wrap; margin-top: clamp(36px, 5vw, 64px); padding-top: clamp(20px, 2.4vw, 28px); border-top: 1px solid var(--fg); }
 .js .hero-row { opacity: 0; transform: translateY(14px); transition: opacity .8s var(--ease) .55s, transform .9s var(--ease) .55s; }
@@ -328,7 +308,7 @@ html:not(.js) .dl-draft, html:not(.js) .dl-x { display: none; }
 .foot { background: var(--ink); color: var(--d-mut); }
 .flogo { display: block; color: #F1EEE8; padding: clamp(64px, 9vw, 128px) 0 clamp(40px, 5vw, 64px); }
 .flogo .wm { width: 100%; height: auto; }
-.foot-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding: 28px 0 40px; border-top: 1px solid var(--d-rule); }
+.foot-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 28px 0 40px; border-top: 1px solid var(--d-rule); }
 .foot-grid .k { color: #8C887F; margin-bottom: 10px; font-size: .9rem; }
 .foot-grid p:not(.k) { color: #E4E0D6; line-height: 1.7; }
 .foot-grid a { text-decoration: none; background: linear-gradient(var(--lime), var(--lime)) 0 100% / 0 1px no-repeat; transition: background-size .45s var(--ease), color .3s; }
@@ -375,9 +355,7 @@ html:not(.js) .dl-draft, html:not(.js) .dl-x { display: none; }
   .nav-cta .t { background-size: 100% .3em; }
   .plogos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .foot-grid { grid-template-columns: minmax(0, 1fr); }
-  .dl-x > span { display: none; }
-  .dl-x button { width: 42px; height: 42px; left: -21px; margin-top: -21px; }
-  .dl-draft, .dl-built { font-size: clamp(2.6rem, 13vw, 4.4rem); }
+  .hero-h1 { font-size: clamp(2.6rem, 13vw, 4.4rem); }
   .seg { display: block; }
 }
 /* Phones and touch screens: no decorative arrows next to text. */

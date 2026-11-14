@@ -1,9 +1,9 @@
 {
   "title": "Milo's Cafe: a neighborhood café with a patio that follows the sky",
-  "tag": "Café website, Morrisville, NC · Launching Nov 2026",
+  "tag": "Café website, Morrisville, NC",
   "summaryLead": "Milo's is a European-style café in Morrisville. One page with the menu, the prices, a patio drawn from the real sky and drinks that pour when you tap them.",
-  "story": "Milo's is a European-style café in Morrisville, run by Menad and Liliana Haliche. When people look it up they want three things: what's on the menu, what it costs, and whether the patio's worth it today. The new site answers all three. At the top is an illustrated patio that follows the real weather and time of day. The menu is on the page instead of a PDF, and every drink has a little glass that pours when you tap it. Ordering is one tap. It's porcelain, cobalt and one gold, with the gold saved for the order button.",
-  "url": "",
+  "story": "Milo's is a European-style café in Morrisville, run by Menad and Liliana Haliche. When people look it up they want three things: what's on the menu, what it costs, and whether the patio's worth it today. The new site answers all three. At the top is an illustrated patio that follows the real weather and time of day. The menu is on the page instead of a PDF, and every drink has a little glass that pours when you tap it. It's porcelain, cobalt and one gold, with the gold saved for the buttons.",
+  "url": "https://miloseuropeancafe.com",
   "numbers": [
     {
       "value": "4.7",
@@ -16,8 +16,7 @@
   ],
   "goals": [
     "Put the menu and prices on the page.",
-    "Show whether the patio's worth it today.",
-    "Make ordering one tap."
+    "Show whether the patio's worth it today."
   ],
   "features": [
     {
@@ -82,7 +81,7 @@
     },
     {
       "title": "On a phone",
-      "text": "Order and Call stay pinned to the bottom of the screen.",
+      "text": "The patio, the menu and the pouring drinks at 390px wide.",
       "image": "/uploads/milo-f9.jpg",
       "alt": "Milo's on a phone"
     }

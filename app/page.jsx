@@ -38,7 +38,6 @@ export default function Home() {
       <main id="main">
         <Hero
           hero={{ ...s.hero, lines: [splitLine(s.hero.line1), splitLine(s.hero.line2)] }}
-          labels={{ left: i.sliderLeft, right: i.sliderRight, aria: i.sliderAria, value: 'built' }}
         />
         {s.on.work && <Work work={s.work} cases={cases} viewCase="Case study" />}
         {s.on.partners && <Partners partners={s.partners} />}
