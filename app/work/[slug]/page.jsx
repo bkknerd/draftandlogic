@@ -121,12 +121,11 @@ export default function CaseStudy({ params }) {
                 <h3 className="cs-h3">{c.title}</h3>
                 <div className="ba-pair">
                   {[['before', c.beforeImage, c.beforeAlt, c.beforeText, i.csBefore || 'Before'], ['after', c.afterImage, c.afterAlt, c.afterText, i.csAfter || 'After']].map(
-                    ([k, src, alt, text, tag]) =>
+                    ([k, src, alt, , tag]) =>
                       src && (
                         <figure key={k} className={`ba-fig ${k}`}>
                           <span className="ba-tag">{tag}</span>
                           <span className="frame"><img src={thumb(src)} alt={alt || ''} loading="lazy" width="1440" height="900" /></span>
-                          {text && <figcaption>{text}</figcaption>}
                         </figure>
                       )
                   )}
@@ -139,20 +138,17 @@ export default function CaseStudy({ params }) {
         {st.features.length > 0 && (
           <section className="wrap cs-feats" aria-labelledby="cs-f">
             <h2 id="cs-f" className="cs-h2">{i.csFeatures || 'Features'}</h2>
-            {st.features.map((f, n) => (
-              <Reveal key={f.title} className={`feat ${n % 2 ? 'rev' : ''}`}>
-                {f.image && (
-                  <figure className="frame">
-                    <img src={thumb(f.image)} alt={f.alt || ''} loading="lazy" width="1440" height="900" />
-                  </figure>
-                )}
-                <div className="feat-t">
-                  <h3>{f.title}</h3>
-                  <p>{f.text}</p>
-                  {f.story && <p className="feat-s">{f.story}</p>}
-                </div>
-              </Reveal>
-            ))}
+            {/* The screens carry it: each image gets its title and nothing else. */}
+            <div className="shots">
+              {st.features.filter((f) => f.image).map((f, n) => (
+                <Reveal as="figure" key={f.title} className={`shot ${n === 0 ? 'wide' : ''}`}>
+                  <span className="frame">
+                    <img src={f.image} alt={f.alt || ''} loading="lazy" width="1440" height="900" />
+                  </span>
+                  <figcaption>{f.title}</figcaption>
+                </Reveal>
+              ))}
+            </div>
           </section>
         )}
 

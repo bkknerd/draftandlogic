@@ -427,6 +427,10 @@ html:not(.js) .ln { overflow: visible; }
 .ba-tag { display: inline-block; margin-bottom: 10px; font-size: .9rem; font-weight: 500; }
 .ba-fig.after .ba-tag { background: linear-gradient(var(--lime), var(--lime)) 0 80% / 100% .4em no-repeat; }
 .ba-fig figcaption { margin-top: 12px; color: var(--mut); line-height: 1.5; max-width: 34rem; }
+.shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(36px, 5vw, 64px) clamp(16px, 2.4vw, 32px); }
+.shot { margin: 0; }
+.shot.wide { grid-column: 1 / -1; }
+.shot figcaption { margin-top: 14px; font-weight: 500; }
 .feat { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: clamp(24px, 5vw, 72px); align-items: center; }
 .feat + .feat { margin-top: clamp(56px, 8vw, 104px); }
 .feat.rev { grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); }
@@ -455,4 +459,5 @@ html:not(.js) .ln { overflow: visible; }
 }
 @media (max-width: 640px) {
   .ba-pair { grid-template-columns: minmax(0, 1fr); }
+  .shots { grid-template-columns: minmax(0, 1fr); }
 }
