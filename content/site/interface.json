@@ -5,22 +5,22 @@
   "mockUrl": "draftandlogic.com/your-site",
   "mockLines": [
     {
-      "text": "goals"
+      "text": "Goals"
     },
     {
-      "text": "timeline"
+      "text": "Timeline"
     },
     {
-      "text": "budget"
+      "text": "Budget"
     },
     {
-      "text": "who approves"
+      "text": "Who approves"
     },
     {
-      "text": "what must not break"
+      "text": "What must not break"
     }
   ],
-  "sliderAria": "Drag to compare the drawing with the built page",
+  "sliderAria": "Compare the drawing with the built page",
   "sliderLeft": "Draft",
   "sliderRight": "Logic",
   "shotsAria": "Project screenshots",
@@ -44,16 +44,16 @@
   "notFoundButton": "Back to the studio",
   "mockStates": [
     {
-      "text": "requirements mapped"
+      "text": "Requirements mapped"
     },
     {
-      "text": "drawn, awaiting your sign-off"
+      "text": "Drawn, waiting on your sign-off"
     },
     {
-      "text": "build passing, tested on devices"
+      "text": "Build passing, tested on devices"
     },
     {
-      "text": "live"
+      "text": "Live"
     }
   ],
   "sliderValue": "% drawn",

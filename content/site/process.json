@@ -1,24 +1,24 @@
 {
   "show": true,
-  "heading": "Blueprint First. Code Second.",
-  "why": "We don't guess or write speculative code. Every engagement follows a strict discovery and structural pipeline before development starts.",
+  "heading": "Blueprint first. Code second.",
+  "why": "We don't write speculative code. Every project goes through discovery and a signed-off structure before development starts.",
   "steps": [
     {
       "title": "Blueprinting & Scoping",
-      "text": "Defining functional requirements, user flows, data schemas, and technical specs up front."
+      "text": "Requirements, user flows, data schemas and technical specs, agreed up front."
     },
     {
       "title": "Wireframing & UI Architecture",
-      "text": "Structuring site layouts, content hierarchy, and visual design systems in high fidelity."
+      "text": "Page layouts, content hierarchy and the design system, drawn in high fidelity."
     },
     {
       "title": "Engineering & CMS Integration",
-      "text": "Building clean, component-based codebases paired with intuitive editing workflows."
+      "text": "Component-based code, plus an editor your team can use."
     },
     {
       "title": "Audit, Security & Launch",
-      "text": "Rigorous testing across browser compatibility, accessibility standards, speed benchmarks, and security checks."
+      "text": "Browser, accessibility, speed and security checks before anything goes live."
     }
   ],
-  "label": "// Methodology"
+  "label": "Process"
 }

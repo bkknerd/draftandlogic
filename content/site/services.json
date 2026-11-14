@@ -1,38 +1,38 @@
 {
   "show": true,
-  "heading": "What We Build & Engineer",
+  "heading": "What we build and engineer.",
   "intro": "",
   "levels": [
     {
       "title": "Technical SEO & Performance",
-      "lead": "Clean semantic DOM structure, structured schema markup, and speed optimizations.",
-      "text": "Engineered directly into the core code."
+      "lead": "Semantic markup, structured data and fast load times, written into the code rather than bolted on.",
+      "text": ""
     },
     {
       "title": "ADA Accessibility Compliance",
-      "lead": "WCAG-compliant design and markup ensuring equal access across devices, screen readers, and regulatory requirements.",
+      "lead": "Design and markup built to WCAG, tested with screen readers, keyboards and phones.",
       "text": ""
     },
     {
       "title": "Content Management Systems",
-      "lead": "Custom CMS setups, including Decap, Sanity, and headless integrations.",
-      "text": "Configured so your team can edit content without breaking layout logic."
+      "lead": "Decap, Sanity or another headless CMS, set up so your team can edit pages without breaking the layout.",
+      "text": ""
     },
     {
       "title": "Site Modernization & Audits",
-      "lead": "Rebuilding legacy sites to improve infrastructure, fix codebase debt, and restore speed and maintainability.",
+      "lead": "Old sites rebuilt on current infrastructure, with the code debt cleared and the speed back.",
       "text": ""
     },
     {
       "title": "Event & Program Portals",
-      "lead": "Specialized digital platforms built for seamless registration, dynamic scheduling, and high-volume attendee delivery.",
+      "lead": "Registration, schedules and attendee pages that stay fast when everyone signs up at once.",
       "text": ""
     },
     {
       "title": "Custom Web Development",
-      "lead": "Tailored web architectures built on modern, headless, and static frameworks.",
-      "text": "Fast load times, zero template bloat, and clean code output."
+      "lead": "Hand-built sites on headless and static frameworks. No page builder, no template bloat.",
+      "text": ""
     }
   ],
-  "label": "// Services"
+  "label": "Services"
 }

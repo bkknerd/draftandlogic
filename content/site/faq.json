@@ -3,24 +3,8 @@
   "heading": "Common questions",
   "items": [
     {
-      "q": "Which platforms do you build on?",
-      "a": "We build custom sites on modern headless and static frameworks, hosted on Netlify. For content editing we set up Decap CMS, Sanity or another headless CMS, and for event registration and attendee management we work with Swoogo. We pick whichever fits the project."
-    },
-    {
       "q": "Who owns the code and the accounts?",
       "a": "You do. Code, design assets and accounts are yours from day one."
-    },
-    {
-      "q": "Do I see the design before you build it?",
-      "a": "Yes. Wireframes of every key page are agreed before we write code."
-    },
-    {
-      "q": "What does a project include?",
-      "a": "Design, development, CMS setup, technical SEO, accessibility checks, analytics and launch support. Support after launch is available if you want it."
-    },
-    {
-      "q": "Do you handle SEO and AI search visibility?",
-      "a": "Yes. Technical SEO is built in: clean semantic markup, structured data and fast pages. The same structure helps search engines and AI answer engines read and quote your site."
     },
     {
       "q": "How much does a project cost?",
@@ -28,11 +12,11 @@
     },
     {
       "q": "How long does a project take?",
-      "a": "It depends on scope. Timelines are agreed during Blueprinting & Scoping, before any design work starts."
+      "a": "It depends on scope. The timeline is set during Blueprinting & Scoping, before any design work starts."
     },
     {
-      "q": "How do we start?",
-      "a": "Email hello@draftandlogic.com with what you are building and when you need it. We reply within two working days."
+      "q": "Do you handle SEO and AI search visibility?",
+      "a": "Yes. Clean semantic markup, structured data and fast pages help search engines and AI answer engines read and quote your site."
     }
   ]
 }

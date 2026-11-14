@@ -4,7 +4,7 @@ backend:
   repo: bkknerd/draftandlogic
   branch: main
 
-media_folder: static/uploads
+media_folder: public/uploads
 public_folder: /uploads
 site_url: https://draftandlogic.com
 display_url: https://draftandlogic.com
@@ -14,40 +14,6 @@ collections:
   - name: site
     label: Site content
     files:
-      - name: launch
-        label: Coming soon switch
-        file: content/site/launch.json
-        format: json
-        fields:
-          - { label: "Show the coming soon page (turn off to launch the full site)", name: comingSoon, widget: boolean, default: false, hint: "ON: the home page shows the coming soon page, the full site moves to /preview/ and search engines are blocked. OFF: the full site is live. Takes about a minute after you save." }
-          - { label: Browser tab title, name: pageTitle, widget: string }
-          - { label: Headline, first line (drawn, faded), name: line1, widget: string }
-          - { label: Headline, second line (built, blinks to solid), name: line2, widget: string }
-          - { label: Message, name: message, widget: text }
-          - { label: "Launch date (the countdown ends here)", name: launchDate, widget: string, pattern: ['^\d{4}-\d{2}-\d{2}$', "Use YYYY-MM-DD, for example 2026-11-03"], hint: "Dot walks across eight calendar days ending on this date and crosses one off each day. Format YYYY-MM-DD." }
-          - { label: "Word before the date (Launching)", name: launchWord, widget: string }
-          - { label: "Tag on the launch day box", name: launchTag, widget: string }
-          - { label: "Countdown label, many days", name: daysToGo, widget: string }
-          - { label: "Countdown label, one day", name: dayToGo, widget: string }
-          - { label: "Word on launch day", name: todayWord, widget: string }
-          - { label: "Dot, screen reader label", name: dotLabel, widget: string }
-          - { label: "Dot says this first", name: hello, widget: string }
-          - label: "Dot's facts and jokes (a random one each time Dot is clicked)"
-            name: facts
-            widget: list
-            summary: "{{fields.kind}}: {{fields.text}}"
-            fields:
-              - { label: Type, name: kind, widget: select, options: [Fact, Joke], default: Fact }
-              - { label: Text, name: text, widget: string, hint: "Keep it under about 110 characters so it fits on a phone." }
-          - { label: "Coming soon teaser, label", name: soonLabel, widget: string, required: false }
-          - { label: "Coming soon teaser, project name (empty hides it)", name: soonName, widget: string, required: false }
-          - { label: "Coming soon teaser, text", name: soonText, widget: string, required: false }
-          - { label: Email field label, name: emailLabel, widget: string }
-          - { label: Button, name: button, widget: string }
-          - { label: Thank you message, name: thanks, widget: string }
-          - { label: Error message, name: error, widget: string }
-          - { label: Contact email (optional, leave empty to hide), name: contactEmail, widget: string, required: false }
-          - { label: Text before the contact email, name: contactText, widget: string, required: false }
       - name: interface
         label: Small text (buttons, labels, form messages, 404 page)
         file: content/site/interface.json

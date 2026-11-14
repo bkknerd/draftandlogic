@@ -1,1 +1,14 @@
-{"name":"draft-and-logic","version":"1.0.0","private":true,"type":"module","scripts":{"build":"node build.mjs"}}
+{
+  "name": "draft-and-logic",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build"
+  },
+  "dependencies": {
+    "lenis": "^1.3.27",
+    "next": "14.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "private": true
+}
