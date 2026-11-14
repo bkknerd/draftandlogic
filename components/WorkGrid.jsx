@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import { DimArrow } from './Icons';
 
@@ -35,7 +36,7 @@ export default function WorkGrid({ cases, allLabel = 'All', filterLabel = 'Filte
           );
           return (
             <li key={c.label} className="wcard">
-              {c.slug ? <a href={`/work/${c.slug}/`}>{inner}</a> : <div>{inner}</div>}
+              {c.slug ? <Link href={`/work/${c.slug}/`}>{inner}</Link> : <div>{inner}</div>}
             </li>
           );
         })}

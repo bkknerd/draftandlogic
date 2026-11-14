@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "slug": "web-design-wake-forest-nc",
+      "city": "Wake Forest",
+      "heading": "Web design in Wake Forest, NC",
+      "intro": "Draft and Logic is a web design and engineering studio based in Wake Forest. We design and build custom websites, event portals and content systems, and you own the code, the design files and every account from day one.",
+      "points": [
+        "Hand-built sites on static and headless frameworks, with no page builder or template",
+        "An editor set up so your staff can change text, photos and menus themselves",
+        "Technical SEO, structured data and accessibility checks included in every build"
+      ],
+      "cases": [
+        "milo",
+        "happy",
+        "namc"
+      ]
+    },
+    {
+      "slug": "web-design-cary-nc",
+      "city": "Cary",
+      "heading": "Web design in Cary, NC",
+      "intro": "We build custom websites for Cary businesses from our studio in Wake Forest. Our Cary work includes the site for happy's, a cocktail bar in downtown Cary, and a concept site for The WalkUp, the bar upstairs.",
+      "points": [
+        "Sites designed around the place itself, not a template",
+        "Menus, hours and events your staff can update without calling us",
+        "Pages that load fast on a phone"
+      ],
+      "cases": [
+        "happy",
+        "walkup",
+        "milo"
+      ]
+    },
+    {
+      "slug": "web-design-raleigh-nc",
+      "city": "Raleigh",
+      "heading": "Web design in Raleigh, NC",
+      "intro": "Draft and Logic builds custom websites, event portals and content systems for Raleigh-area businesses and organizations. The studio is in Wake Forest, and our local work includes Milo's Cafe in Morrisville and happy's in downtown Cary.",
+      "points": [
+        "Event and program portals with registration, schedules and sponsor pages",
+        "Site rebuilds for organizations that have outgrown an old platform",
+        "Code, design assets and accounts in your name from the start"
+      ],
+      "cases": [
+        "namc",
+        "milo",
+        "abaxent"
+      ]
+    }
+  ]
+}

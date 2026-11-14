@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 import Contact from '@/components/Contact';
 import Reveal from '@/components/Reveal';
 import WorkGrid from '@/components/WorkGrid';
-import { getSite, getCases, thumb, trim, SITE_URL } from '@/lib/content';
+import { getAreas, getSite, getCases, thumb, trim, SITE_URL } from '@/lib/content';
 import { org, ldJson } from '@/lib/schema';
 
 export function generateMetadata() {
@@ -43,7 +43,7 @@ export default function WorkIndex() {
         </section>
         <Contact contact={s.contact} email={s.footer.email} />
       </main>
-      <Footer footer={s.footer} home={false} />
+      <Footer footer={s.footer} areas={getAreas()} home={false} />
     </>
   );
 }

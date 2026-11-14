@@ -81,5 +81,6 @@
       "beforeAlt": "The original Abaxent news carousel and footer",
       "afterAlt": "The new Abaxent in focus section"
     }
-  ]
+  ],
+  "accent": "#4878A8"
 }

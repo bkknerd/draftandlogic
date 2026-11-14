@@ -1,10 +1,11 @@
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import Contact from '@/components/Contact';
 import Reveal from '@/components/Reveal';
 import { ArrowLink, DimArrow } from '@/components/Icons';
-import { getSite, getCases, getStudy, getStudySlugs, thumb, trim, SITE_URL } from '@/lib/content';
+import { getAreas, getSite, getCases, getStudy, getStudySlugs, thumb, trim, SITE_URL } from '@/lib/content';
 import { org, ldJson, orgId } from '@/lib/schema';
 
 export const dynamicParams = false;
@@ -62,9 +63,9 @@ export default function CaseStudy({ params }) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(graph) }} />
       <Nav items={s.nav.items} home={false} />
-      <main id="main" className="page cs">
+      <main id="main" className="page cs" style={st.accent ? { '--accent': st.accent } : undefined}>
         <header className="wrap cs-head" id="top">
-          <a className="back" href="/work/"><DimArrow /><span>{i.csBackWork || 'All work'}</span></a>
+          <Link className="back" href="/work/"><DimArrow /><span>{i.csBackWork || 'All work'}</span></Link>
           <Reveal>
             <p className="label">{[i.csBadge || 'Case study', st.card?.label].filter(Boolean).join(': ')}</p>
             <h1 id="hero-h" className="cs-h1">{st.title}</h1>
@@ -140,11 +141,18 @@ export default function CaseStudy({ params }) {
             <h2 id="cs-f" className="cs-h2">{i.csFeatures || 'Features'}</h2>
             {/* The screens carry it: each image gets its title and nothing else. */}
             <div className="shots">
-              {st.features.filter((f) => f.image).map((f, n) => (
-                <Reveal as="figure" key={f.title} className={`shot ${n === 0 ? 'wide' : ''}`}>
-                  <span className="frame">
-                    <img src={f.image} alt={f.alt || ''} loading="lazy" width="1440" height="900" />
-                  </span>
+              {/* Shape comes from the file itself: a phone capture shows narrow, a whole-page capture scrolls in its frame. */}
+              {st.features.filter((f) => f.image || f.video).map((f, n) => (
+                <Reveal as="figure" key={f.title} className={`shot ${f.video ? 'wide' : f.shape || 'wide'} ${n === 0 ? 'first' : ''}`}>
+                  {f.video ? (
+                    <span className="frame">
+                      <video src={f.video} poster={f.image || undefined} controls muted loop playsInline preload="metadata" aria-label={f.alt || f.title} />
+                    </span>
+                  ) : (
+                    <span className="frame" tabIndex={f.shape === 'full' ? 0 : undefined} role={f.shape === 'full' ? 'group' : undefined} aria-label={f.shape === 'full' ? `${f.title}, full page, scrolls` : undefined}>
+                      <img src={f.image} alt={f.alt || ''} loading="lazy" width={f.w} height={f.h} />
+                    </span>
+                  )}
                   <figcaption>{f.title}</figcaption>
                 </Reveal>
               ))}
@@ -170,11 +178,11 @@ export default function CaseStudy({ params }) {
             <ul className="wgrid">
               {more.map((c) => (
                 <li key={c.slug} className="wcard">
-                  <a href={`/work/${c.slug}/`}>
+                  <Link href={`/work/${c.slug}/`}>
                     <span className="wcard-img">{c.shots[0] && <img src={thumb(c.shots[0].src)} alt={c.shots[0].alt} loading="lazy" width="1440" height="900" />}</span>
                     <span className="wcard-top"><span className="wcard-name">{c.label}</span><DimArrow /></span>
                     <span className="wcard-title">{c.title}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -183,7 +191,7 @@ export default function CaseStudy({ params }) {
 
         <Contact contact={s.contact} email={s.footer.email} />
       </main>
-      <Footer footer={s.footer} home={false} />
+      <Footer footer={s.footer} areas={getAreas()} home={false} />
     </>
   );
 }

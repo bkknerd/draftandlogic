@@ -15,27 +15,12 @@ collections:
     label: Site content
     files:
       - name: interface
-        label: Small text (buttons, labels, form messages, 404 page)
+        label: Small text (case study labels, work filter, 404 page)
         file: content/site/interface.json
         format: json
         fields:
-          - { label: Skip link, name: skip, widget: string }
-          - { label: Main menu screen reader label, name: navAria, widget: string }
-          - { label: Case study link, name: viewCase, widget: string }
-          - { label: Hero slider, left label, name: sliderLeft, widget: string }
-          - { label: Hero slider, right label, name: sliderRight, widget: string }
-          - { label: Hero slider screen reader label, name: sliderAria, widget: string }
-          - { label: Hero slider spoken value (after the number), name: sliderValue, widget: string }
-          - { label: Process mock, address bar, name: mockUrl, widget: string }
-          - { label: Process mock, brief lines, name: mockLines, widget: list, summary: "{{fields.text}}", field: { label: Line, name: text, widget: string } }
-          - { label: Process mock, four status lines, name: mockStates, widget: list, min: 4, max: 4, summary: "{{fields.text}}", field: { label: Status, name: text, widget: string } }
-          - { label: Screenshot viewer label, name: shotsAria, widget: string }
-          - { label: Screenshot viewer close button, name: close, widget: string }
-          - { label: Cursor label on work images, name: cursor, widget: string }
-          - { label: Back to top label, name: backToTop, widget: string }
           - { label: Case study page, badge, name: csBadge, widget: string }
           - { label: Case study page, back to work link, name: csBackWork, widget: string }
-          - { label: Case study page, start a project link, name: csStart, widget: string }
           - { label: Case study page, features heading, name: csFeatures, widget: string }
           - { label: Case study page, before and after heading, name: csCompare, widget: string }
           - { label: Case study page, before tag, name: csBefore, widget: string }
@@ -45,30 +30,9 @@ collections:
           - { label: Case study page, what we did heading, name: csDid, widget: string }
           - { label: Case study page, visit site button, name: csVisit, widget: string }
           - { label: Case study page, more work heading, name: csRelated, widget: string }
-          - { label: Case study page, services label, name: csServices, widget: string }
           - { label: Work filter, all label, name: filterAll, widget: string }
           - { label: Work filter, group label, name: filterLabel, widget: string }
-          - { label: Case study page, stack heading, name: csStack, widget: string }
-          - { label: Case study page, chapters label, name: csChapters, widget: string }
-          - { label: Case study page, challenge label, name: csChallenge, widget: string }
-          - { label: Case study page, solution label, name: csSolution, widget: string }
-          - { label: Case study page, outcome label, name: csOutcome, widget: string }
-          - { label: Case study page, results heading, name: csResults, widget: string }
-          - { label: Case study page, try the demos button, name: csTryDemos, widget: string }
-          - { label: Case study page, closing heading, name: csEndHeading, widget: string }
           - { label: Case study page, back to all work button, name: csBackAll, widget: string }
-          - { label: Contact brief card, title, name: briefTitle, widget: string }
-          - { label: Contact brief card, draft status, name: briefDraft, widget: string }
-          - { label: Contact brief card, ready status, name: briefReady, widget: string }
-          - { label: Contact brief card, To, name: briefTo, widget: string }
-          - { label: Contact brief card, Re, name: briefRe, widget: string }
-          - { label: Contact brief card, From, name: briefFrom, widget: string }
-          - { label: Contact brief card, Brief, name: briefBody, widget: string }
-          - { label: Form, empty fields message, name: formEmpty, widget: string }
-          - { label: Form, invalid email message, name: formInvalid, widget: string }
-          - { label: Form, sending message, name: formSending, widget: string }
-          - { label: Form, thank you message, name: formSent, widget: string }
-          - { label: Form, error message, name: formError, widget: string }
           - { label: 404 page, big heading, name: notFoundHeading, widget: string }
           - { label: 404 page, second line, name: notFoundAccent, widget: string }
           - { label: 404 page, text, name: notFoundText, widget: string }
@@ -78,7 +42,7 @@ collections:
         file: content/site/analytics.json
         format: json
         fields:
-          - { label: "Turn Google Analytics on", name: enabled, widget: boolean, default: true, hint: "Only runs on the live site, never on the coming soon page. Visitors who send Do Not Track are not measured." }
+          - { label: "Turn Google Analytics on", name: enabled, widget: boolean, default: true, hint: "Visitors who send Do Not Track or Global Privacy Control are not measured." }
           - { label: "Measurement ID", name: measurementId, widget: string, pattern: ['^G-[A-Z0-9]{6,14}$', "Looks like G-XXXXXXXXXX"], hint: "From Google Analytics: Admin, Data streams, your stream." }
       - name: seo
         label: SEO and sharing
@@ -101,12 +65,13 @@ collections:
             summary: "{{fields.label}}"
             fields:
               - { label: Label, name: label, widget: string }
-              - { label: Goes to, name: href, widget: select, options: ["#approach", "#stack", "#work", "#process", "#contact"] }
+              - { label: Goes to, name: href, widget: select, options: ["#work", "#services", "#faq", "#contact"] }
       - name: hero
         label: Hero
         file: content/site/hero.json
         format: json
         fields:
+          - { label: Small line above the headline, name: kicker, widget: string, required: false }
           - { label: Headline, name: line1, widget: string }
           - { label: Headline (second line), name: line2, widget: string }
           - { label: Intro, name: intro, widget: text }
@@ -127,22 +92,6 @@ collections:
             fields:
               - { label: Logo, name: image, widget: image }
               - { label: Name (alt text), name: alt, widget: string }
-      - name: approach
-        label: Approach
-        file: content/site/approach.json
-        format: json
-        fields:
-          - { label: "Show this section on the site", name: show, widget: boolean, default: true, hint: "Turn off to hide this whole section and its menu link. Takes about a minute after you save." }
-          - { label: Section label, name: label, widget: string, required: false }
-          - { label: Heading, name: heading, widget: string }
-          - label: Columns
-            name: columns
-            widget: list
-            summary: "{{fields.title}}"
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: Tagline, name: how, widget: string }
-              - { label: Text, name: text, widget: text }
       - name: services
         label: Services
         file: content/site/services.json
@@ -151,7 +100,6 @@ collections:
           - { label: "Show this section on the site", name: show, widget: boolean, default: true, hint: "Turn off to hide this whole section and its menu link. Takes about a minute after you save." }
           - { label: Section label, name: label, widget: string, required: false }
           - { label: Heading, name: heading, widget: string }
-          - { label: Intro, name: intro, widget: text, required: false }
           - label: Levels (six, top to bottom; the count is fixed by the drawing)
             name: levels
             widget: list
@@ -160,8 +108,7 @@ collections:
             summary: "{{fields.title}}"
             fields:
               - { label: Title, name: title, widget: string }
-              - { label: Bold lead-in, name: lead, widget: string }
-              - { label: Text, name: text, widget: text }
+              - { label: Description, name: lead, widget: string }
       - name: work
         label: Work section
         file: content/site/work.json
@@ -193,13 +140,9 @@ collections:
             summary: "{{fields.label}}"
             fields:
               - { label: Name, name: label, widget: string }
-              - { label: Look, name: style, widget: select, options: [abx, namc, sum, iron, milo, happy, walkup, nlt], hint: "Picks the card's colour theme. New cards can reuse any of these." }
               - { label: Show on the home page, name: home, widget: boolean, default: false, required: false, hint: "Keep this to three cards. Every card appears on the All work page." }
-              - { label: Large card, name: feature, widget: boolean, default: false, required: false }
-              - { label: Image on the right, name: reverse, widget: boolean, default: false, required: false }
               - { label: Case study ID, name: study, widget: string, required: false, hint: "summit, abaxent, namc, milo, nlt, happy or walkup. Leave empty for no case-study link." }
               - { label: Small tag on the card (optional, e.g. Concept), name: tag, widget: string, required: false }
-              - { label: Caption (cards without screenshots), name: note, widget: string, required: false }
               - label: Screenshots
                 name: shots
                 widget: list
@@ -211,22 +154,6 @@ collections:
               - { label: Headline, name: title, widget: string }
               - { label: Summary, name: summary, widget: text }
               - { label: Services we delivered, name: services, widget: list, required: false, field: { label: Service, name: service, widget: string }, hint: "Shown as tags on the card and the case page, and used by the filter. Use the same wording across projects." }
-      - name: process
-        label: Process
-        file: content/site/process.json
-        format: json
-        fields:
-          - { label: "Show this section on the site", name: show, widget: boolean, default: true, hint: "Turn off to hide this whole section and its menu link. Takes about a minute after you save." }
-          - { label: Section label, name: label, widget: string, required: false }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Intro line, name: why, widget: text }
-          - label: Steps
-            name: steps
-            widget: list
-            summary: "{{fields.title}}"
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: Text, name: text, widget: text }
       - name: faq
         label: FAQ (also feeds search and AI answers)
         file: content/site/faq.json
@@ -250,6 +177,37 @@ collections:
           - { label: Heading, name: heading, widget: string }
           - { label: Text, name: intro, widget: string }
           - { label: "Button text (opens the visitor's email app, addressed to the email in Footer)", name: button, widget: string }
+      - name: areas
+        label: Local pages (web design in a town)
+        file: content/site/areas.json
+        format: json
+        fields:
+          - label: Pages
+            name: items
+            widget: list
+            summary: "{{fields.city}}"
+            fields:
+              - { label: Town, name: city, widget: string }
+              - { label: "Page address (lowercase, hyphens, e.g. web-design-apex-nc)", name: slug, widget: string, pattern: ['^[a-z0-9-]+$', "Lowercase letters, numbers and hyphens only"] }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Intro, name: intro, widget: text, hint: "Say what is true for this town: where the studio is, which local clients you built for." }
+              - { label: What you get, name: points, widget: list, field: { label: Point, name: point, widget: string } }
+              - { label: Case studies to show, name: cases, widget: list, field: { label: Case study ID, name: id, widget: string }, hint: "summit, abaxent, namc, milo, nlt, happy or walkup" }
+      - name: privacy
+        label: Privacy page
+        file: content/site/privacy.json
+        format: json
+        fields:
+          - { label: Heading, name: heading, widget: string }
+          - { label: Last updated, name: updated, widget: string, required: false }
+          - { label: Intro, name: intro, widget: text }
+          - label: Sections
+            name: sections
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
       - name: footer
         label: Footer
         file: content/site/footer.json
@@ -260,7 +218,6 @@ collections:
           - { label: Phone (for links and search, with +1), name: phone, widget: string }
           - { label: Phone (as shown), name: phoneDisplay, widget: string }
           - { label: Google Business Profile link (used in search schema only, not shown on the page), name: gbpUrl, widget: string, required: false }
-          - { label: Google Business Profile link text, name: gbpLabel, widget: string }
           - { label: GitHub link (structured data), name: github, widget: string, required: false }
           - { label: Founder name (structured data), name: founderName, widget: string, required: false }
           - { label: Founder title, name: founderTitle, widget: string, required: false }
@@ -279,9 +236,10 @@ collections:
         fields: &studyfields
           - { label: Title, name: title, widget: string }
           - { label: Tag line, name: tag, widget: string }
-          - { label: One-line summary (also used for search results), name: summaryLead, widget: text }
+          - { label: "Backup summary (the page opens with the Work card's summary; this is used only if that is empty)", name: summaryLead, widget: text }
           - { label: "Client story (3 to 5 sentences, who they are, what they needed, what we built)", name: story, widget: text }
-          - { label: Website address (adds a Visit site button), name: url, widget: string, required: false }
+          - { label: Website address (adds a Visit site link), name: url, widget: string, required: false }
+          - { label: Client colour (rules and markers on the case page), name: accent, widget: color, required: false }
           - label: By the numbers
             name: numbers
             widget: list
@@ -291,7 +249,7 @@ collections:
             fields:
               - { label: Number, name: value, widget: string }
               - { label: Label, name: label, widget: string }
-          - { label: Goals (shown as a numbered list), name: goals, widget: list, required: false, field: { label: Goal, name: goal, widget: string } }
+          - { label: Goals, name: goals, widget: list, required: false, field: { label: Goal, name: goal, widget: string } }
           - label: Client quote
             name: quote
             widget: object
@@ -306,11 +264,9 @@ collections:
             widget: list
             required: false
             summary: "{{fields.title}}"
-            hint: "Old site on the left, new site on the right. Leave empty to hide the block."
+            hint: "Old site on the left, new site on the right, with no captions. Leave empty to hide the block."
             fields:
               - { label: Title, name: title, widget: string }
-              - { label: Before text, name: beforeText, widget: text }
-              - { label: After text, name: afterText, widget: text }
               - { label: Before image, name: beforeImage, widget: image }
               - { label: After image, name: afterImage, widget: image }
               - { label: Before image description, name: beforeAlt, widget: string, required: false }
@@ -319,12 +275,11 @@ collections:
             name: features
             widget: list
             summary: "{{fields.title}}"
-            hint: "Short title, one line of text, and a screenshot. The first feature is shown full width."
+            hint: "A short title and a screenshot or recording. The first one is shown full width."
             fields:
-              - { label: Title, name: title, widget: string }
-              - { label: Text, name: text, widget: string }
-              - { label: Story (optional, 1 to 2 sentences on why we built it this way), name: story, widget: text, required: false }
-              - { label: Screenshot, name: image, widget: image, required: false }
+              - { label: Title (shown under the image), name: title, widget: string }
+              - { label: Screenshot, name: image, widget: image, required: false, hint: "Any shape works. A phone capture is shown narrow; a whole-page capture scrolls inside its frame." }
+              - { label: "Screen recording (optional, MP4; shown instead of the screenshot)", name: video, widget: file, required: false }
               - { label: Screenshot description, name: alt, widget: string, required: false }
       - { name: abaxent, label: Abaxent, file: content/case-studies/abaxent.json, format: json, fields: *studyfields }
       - { name: namc, label: NAMC, file: content/case-studies/namc.json, format: json, fields: *studyfields }

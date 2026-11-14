@@ -1,22 +1,32 @@
 'use client';
 
+import Link from 'next/link';
 import { useReveal } from '@/lib/hooks';
 import Wordmark from './Wordmark';
 
-/** footer: content/site/footer.json */
-export default function Footer({ footer, home = true }) {
+/** footer: content/site/footer.json; areas: [{ slug, city }] for the local pages */
+export default function Footer({ footer, areas = [], home = true }) {
   const [ref, shown] = useReveal(0.3);
-  const top = home ? '#top' : '/';
+  const label = home ? 'Draft and Logic, back to top' : 'Draft and Logic home';
   return (
     <footer className="foot">
       <div className="wrap">
-        <a ref={ref} className="flogo" href={top} aria-label={home ? 'Draft and Logic, back to top' : 'Draft and Logic home'}>
-          <Wordmark draw={shown} />
-        </a>
+        {home ? (
+          <a ref={ref} className="flogo" href="#top" aria-label={label}><Wordmark draw={shown} /></a>
+        ) : (
+          <Link ref={ref} className="flogo" href="/" aria-label={label}><Wordmark draw={shown} /></Link>
+        )}
         <div className="foot-grid">
           <div>
             <p className="k">Studio</p>
             <p>{footer.area}</p>
+            {areas.length > 0 && (
+              <ul className="foot-areas">
+                {areas.map((a) => (
+                  <li key={a.slug}><Link href={`/${a.slug}/`}>Web design in {a.city}</Link></li>
+                ))}
+              </ul>
+            )}
           </div>
           <div>
             <p className="k">Contact</p>
@@ -29,7 +39,8 @@ export default function Footer({ footer, home = true }) {
         </div>
         <div className="foot-base">
           <span>{footer.copyright} {footer.name}</span>
-          <a href={top}>{home ? 'Back to top' : 'Home'}</a>
+          <Link href="/privacy/">Privacy</Link>
+          {home ? <a href="#top">Back to top</a> : <Link href="/">Home</Link>}
         </div>
       </div>
     </footer>

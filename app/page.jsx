@@ -7,7 +7,7 @@ import Process from '@/components/Process';
 import Faq from '@/components/Faq';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
-import { getSite, getCases, splitLine, shortName, thumb, SITE_URL } from '@/lib/content';
+import { getSite, getCases, getAreas, splitLine, shortName, thumb, SITE_URL } from '@/lib/content';
 import { org, ldJson, orgId } from '@/lib/schema';
 
 export default function Home() {
@@ -38,6 +38,7 @@ export default function Home() {
       <main id="main">
         <Hero
           hero={{ ...s.hero, lines: [splitLine(s.hero.line1), splitLine(s.hero.line2)] }}
+          reel={s.on.work ? getCases().filter((c) => c.slug && c.shots[0]).map((c) => ({ slug: c.slug, label: c.label, src: thumb(c.shots[0].src), alt: c.shots[0].alt })) : []}
         />
         {s.on.work && <Work work={s.work} cases={cases} viewCase="Case study" />}
         {s.on.partners && <Partners partners={s.partners} />}
@@ -51,7 +52,7 @@ export default function Home() {
         {s.on.faq && <Faq faq={s.faq} />}
         {s.on.contact && <Contact contact={s.contact} email={s.footer.email} />}
       </main>
-      <Footer footer={s.footer} />
+      <Footer footer={s.footer} areas={getAreas()} />
     </>
   );
 }

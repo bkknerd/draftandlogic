@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { reducedMotion, useMediaQuery } from '@/lib/hooks';
 import Reveal from './Reveal';
@@ -68,14 +69,14 @@ export default function Work({ work, cases, viewCase = 'Case study' }) {
         >
           {cases.map((c, i) => (
             <li key={c.label} className={`case ${active === i ? 'on' : ''}`}>
-              <a href={caseHref(c)} onPointerEnter={(e) => enter(i, e)} onFocus={() => enter(i)} onBlur={() => setActive(-1)}>
+              <Link href={caseHref(c)} onPointerEnter={(e) => enter(i, e)} onFocus={() => enter(i)} onBlur={() => setActive(-1)}>
                 <span className="case-name">{c.label}</span>
                 <span className="case-meta">
                   <span className="case-title">{c.title}</span>
                   {c.tag && <span className="case-tag">{c.tag}</span>}
                 </span>
                 <span className="case-go"><DimArrow /></span>
-              </a>
+              </Link>
               {c.shots[0] && (
                 <div className="case-shot">
                   <img src={c.shots[0].thumb || c.shots[0].src} alt={c.shots[0].alt} loading="lazy" width="1440" height="900" />

@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Wordmark from './Wordmark';
 import { ArrowLink } from './Icons';
@@ -36,15 +37,18 @@ export default function Nav({ items, home = true }) {
 
   const close = () => setOpen(false);
   const to = (href) => (home ? href : `/${href}`);
+  const NavTag = home ? 'a' : Link;
   const cta = items.find((i) => i.href === '#contact');
   const links = items.filter((i) => i !== cta);
 
   return (
     <header className={`nav ${hidden ? 'hide' : ''} ${scrolled || open ? 'scrolled' : ''}`}>
       <nav className="wrap nav-in" aria-label="Main">
-        <a className="logo" href={home ? '#top' : '/'} aria-label={home ? 'Draft and Logic, back to top' : 'Draft and Logic home'}>
-          <Wordmark draw={drawn} />
-        </a>
+        {home ? (
+          <a className="logo" href="#top" aria-label="Draft and Logic, back to top"><Wordmark draw={drawn} /></a>
+        ) : (
+          <Link className="logo" href="/" aria-label="Draft and Logic home"><Wordmark draw={drawn} /></Link>
+        )}
         <button
           className={`menu-btn ${open ? 'is-open' : ''}`}
           type="button"
@@ -58,9 +62,9 @@ export default function Nav({ items, home = true }) {
         <ul id="nav-list" className={open ? 'open' : ''}>
           {links.map((n) => (
             <li key={n.href}>
-              <a className="nl" href={to(n.href)} onClick={close}>
+              <NavTag className="nl" href={to(n.href)} onClick={close}>
                 <span className="nl-m"><span data-t={n.label}>{n.label}</span></span>
-              </a>
+              </NavTag>
             </li>
           ))}
           {cta && (

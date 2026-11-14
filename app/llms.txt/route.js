@@ -1,4 +1,4 @@
-import { getSite, getStudy, getStudySlugs, trim, SITE_URL } from '@/lib/content';
+import { getSite, getStudy, getStudySlugs, getAreas, trim, SITE_URL } from '@/lib/content';
 
 export const dynamic = 'force-static';
 
@@ -17,6 +17,8 @@ export function GET() {
   }
   if (d.on.process) L.push('## How a project runs', ...d.process.steps.map((x) => `- ${x.title}: ${x.text}`), '');
   if (d.on.faq) L.push('## Common questions', ...d.faq.items.flatMap((f) => [`- ${f.q}`, `  ${f.a}`]), '');
+  const areas = getAreas();
+  if (areas.length) L.push('## Areas served', ...areas.map((a) => `- [${a.heading}](${SITE_URL}/${a.slug}/)`), '');
   if (d.on.contact) {
     L.push('## Contact', `- Start a project: ${SITE_URL}/#contact`, `- ${d.contact.intro}`);
     if (d.footer.email) L.push(`- Email: ${d.footer.email}`);

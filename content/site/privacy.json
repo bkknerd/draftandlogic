@@ -1,0 +1,31 @@
+{
+  "heading": "Privacy",
+  "updated": "November 14, 2026",
+  "intro": "This page explains what draftandlogic.com collects and what we do with it.",
+  "sections": [
+    {
+      "title": "Analytics",
+      "text": "We use Google Analytics to see which pages are visited and roughly where visitors come from. IP addresses are anonymized. If your browser sends a Do Not Track or Global Privacy Control signal, Google Analytics is not loaded for you at all."
+    },
+    {
+      "title": "The project intake form",
+      "text": "If you fill in the intake form, we receive what you type and any logo file you upload. Submissions are processed by Netlify, which hosts this site, and your contact details are saved to our customer records in HubSpot so we can follow up. We use this information only to scope and deliver your project."
+    },
+    {
+      "title": "Email and phone",
+      "text": "If you email or call us, we keep the conversation for as long as we need it to do the work and keep our business records."
+    },
+    {
+      "title": "Hosting",
+      "text": "The site is hosted by Netlify. Like any web host, Netlify keeps short-term server logs that include IP addresses."
+    },
+    {
+      "title": "What we don't do",
+      "text": "We don't sell your information, and we don't use advertising trackers on this site."
+    },
+    {
+      "title": "Your choices",
+      "text": "You can ask to see, correct or delete the information we hold about you. Email hello@draftandlogic.com."
+    }
+  ]
+}

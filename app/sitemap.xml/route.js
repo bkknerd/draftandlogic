@@ -1,4 +1,4 @@
-import { getSite, getCases, getStudySlugs, SITE_URL } from '@/lib/content';
+import { getSite, getCases, getStudySlugs, getAreas, SITE_URL } from '@/lib/content';
 
 export const dynamic = 'force-static';
 
@@ -15,6 +15,8 @@ export function GET() {
       urls.push({ loc: `${SITE_URL}/work/${slug}/`, pri: '0.8', img: img ? SITE_URL + img : '' });
     }
   }
+  for (const a of getAreas()) urls.push({ loc: `${SITE_URL}/${a.slug}/`, pri: '0.7' });
+  urls.push({ loc: `${SITE_URL}/privacy/`, pri: '0.2' });
   const xml =
     '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' +
     urls

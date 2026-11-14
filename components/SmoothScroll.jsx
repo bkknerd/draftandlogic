@@ -1,14 +1,26 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 import Lenis from 'lenis';
 import { reducedMotion } from '@/lib/hooks';
 
 /** Lenis smooth scroll, with in-page links routed through it and focus moved to the target. */
 export default function SmoothScroll() {
+  const ref = useRef(null);
+  const pathname = usePathname();
+
+  // A new page starts at the top, unless the link pointed at a section.
+  useEffect(() => {
+    if (window.location.hash) return;
+    if (ref.current) ref.current.scrollTo(0, { immediate: true });
+    else window.scrollTo(0, 0);
+  }, [pathname]);
+
   useEffect(() => {
     document.documentElement.classList.add('js');
     const lenis = reducedMotion() ? null : new Lenis({ lerp: 0.11 });
+    ref.current = lenis;
     let raf;
     if (lenis) {
       const loop = (t) => { lenis.raf(t); raf = requestAnimationFrame(loop); };

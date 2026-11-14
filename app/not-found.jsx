@@ -1,7 +1,7 @@
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import { ArrowLink } from '@/components/Icons';
-import { getSite } from '@/lib/content';
+import { getAreas, getSite } from '@/lib/content';
 
 export const metadata = { title: 'Page not found | Draft and Logic', robots: { index: false } };
 
@@ -18,7 +18,7 @@ export default function NotFound() {
           <p><ArrowLink href="/" variant="lg">{i.notFoundButton}</ArrowLink></p>
         </section>
       </main>
-      <Footer footer={s.footer} home={false} />
+      <Footer footer={s.footer} areas={getAreas()} home={false} />
     </>
   );
 }

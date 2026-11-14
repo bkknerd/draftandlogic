@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 // Studio arrow, drawn like a dimension line on a drawing: a tail tick, a shaft that
 // stretches on hover, and an open head. Built from CSS + SVG so no phone turns it into emoji.
 export function DimArrow({ out = false }) {
@@ -14,8 +16,9 @@ export function DimArrow({ out = false }) {
 /** Text link with the studio arrow. variant: 'lg' (lime marker), 'sm', 'ink' (for the lime section). */
 export function ArrowLink({ href, children, variant = '', out = false, className = '', ...rest }) {
   const ext = /^https?:/.test(href);
+  const Tag = href.startsWith('/') ? Link : 'a';
   return (
-    <a
+    <Tag
       href={href}
       className={`alink ${variant ? `alink-${variant}` : ''} ${className}`}
       {...(ext ? { target: '_blank', rel: 'noopener' } : {})}
@@ -24,7 +27,7 @@ export function ArrowLink({ href, children, variant = '', out = false, className
       <span className="t">{children}</span>
       <DimArrow out={out} />
       {ext && <span className="sr"> (opens in a new tab)</span>}
-    </a>
+    </Tag>
   );
 }
 

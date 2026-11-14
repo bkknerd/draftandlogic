@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useReveal } from '@/lib/hooks';
 import { ArrowLink } from './Icons';
+import { track } from '@/lib/track';
 
 /** contact: { heading, intro, button }; email from footer.json */
 export default function Contact({ contact, email, id = 'contact', heading }) {
@@ -13,6 +14,7 @@ export default function Contact({ contact, email, id = 'contact', heading }) {
 
   const copy = async () => {
     try {
+      track('email_copy', { section: id });
       await navigator.clipboard.writeText(email);
       setCopied(true);
       setTimeout(() => setCopied(false), 1800);
@@ -31,7 +33,7 @@ export default function Contact({ contact, email, id = 'contact', heading }) {
         <div className="contact-row">
           <p>{contact.intro}</p>
           <div className="contact-act">
-            <ArrowLink href={`mailto:${email}`} variant="ink">{contact.button || 'Email us'}</ArrowLink>
+            <ArrowLink href={`mailto:${email}`} variant="ink" onClick={() => track('email_click', { section: id })}>{contact.button || 'Email us'}</ArrowLink>
             <p className="copy-row">
               <span>{email}</span>
               <button type="button" className="copy" onClick={copy}>
