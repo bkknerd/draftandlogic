@@ -3,13 +3,13 @@
 import { useState } from 'react';
 import Reveal from './Reveal';
 
-export default function Faq({ faq }) {
+export default function Faq({ faq, label = 'Questions' }) {
   const [open, setOpen] = useState(-1);
   return (
     <section id="faq" className="sec faq" aria-labelledby="faq-h">
       <div className="wrap faq-grid">
         <Reveal>
-          <p className="label">Questions</p>
+          {label && <p className="label">{label}</p>}
           <h2 id="faq-h" className="lede">{faq.heading}</h2>
         </Reveal>
         <div className="faq-l">

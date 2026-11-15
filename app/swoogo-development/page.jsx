@@ -108,7 +108,6 @@ function ServiceRow({ s }) {
         {s.lead.map((p) => <p key={p} className="lead">{p}</p>)}
       </div>
       <div>
-        <h3>Includes</h3>
         <ul className="cs-list">{s.items.map((i) => <li key={i}>{i}</li>)}</ul>
       </div>
     </Reveal>
@@ -177,10 +176,6 @@ export default function SwoogoDevelopment() {
       <main id="main" className="page sw">
         {/* Hero */}
         <header className="wrap page-head" id="top">
-          <nav className="crumb" aria-label="Breadcrumb">
-            <Link href="/">Home</Link><span aria-hidden="true">/</span><span aria-current="page">Swoogo Development</span>
-            <span className="byline">Updated <time dateTime={UPDATED}>November 2026</time></span>
-          </nav>
           <h1 className="sw-h1">Swoogo Development <span>&amp; Custom Event Websites</span></h1>
           <div className="sw-row">
             <p className="tag">Make more of your event platform.</p>
@@ -200,14 +195,14 @@ export default function SwoogoDevelopment() {
         <section className="wrap demo" aria-label="Concept event website">
           <figure className="demo-fig">
             <Reveal className="demo-stage"><SwoogoMockup /></Reveal>
-            <figcaption className="demo-cap"><span><b>Concept build.</b> Northfield Forum is a fictional event designed for this page, not a client site. For live Swoogo work, see <Link href="/work/namc/">NAMC 2027</Link>.</span></figcaption>
+            <figcaption className="demo-cap"><span><b>Concept build.</b> For live Swoogo work, see <Link href="/work/namc/">NAMC 2027</Link>.</span></figcaption>
           </figure>
         </section>
 
         {/* Introduction */}
         <section className="sec sec-top0" aria-labelledby="intro-h">
           <div className="wrap intro">
-            <Reveal><p className="label">Why custom</p><h2 id="intro-h" className="lede">Swoogo development beyond the standard template</h2></Reveal>
+            <Reveal><h2 id="intro-h" className="lede">Swoogo development beyond the standard template</h2></Reveal>
             <Reveal className="body">
               <p>The event website is usually the first thing an attendee sees. Swoogo&apos;s templates cover the basics. When the brand, the audience or the program gets specific, a custom build usually serves the event better.</p>
               <p className="m">We start with what Swoogo can do natively and build outside it only where the event needs it, whether that&apos;s a corporate conference, an association&apos;s annual meeting, an industry summit or a season of recurring events.</p>
@@ -230,7 +225,6 @@ export default function SwoogoDevelopment() {
                 </ul>
               </div>
               <div>
-                <h3>Typical connections</h3>
                 <div className="flow">
                   <ul><li>CRM<small>Registrants to contacts and deals</small></li><li>Marketing platform<small>Lists, segments, follow-up</small></li></ul>
                   <span className="hub">Swoogo</span>
@@ -246,7 +240,7 @@ export default function SwoogoDevelopment() {
         <section className="sec dark sec-gap" aria-labelledby="ext-h">
           <div className="wrap">
             <Reveal className="ext-head">
-              <div><p className="label">How it&apos;s built</p><h2 id="ext-h" className="lede">Four ways to extend Swoogo</h2></div>
+              <div><h2 id="ext-h" className="lede">Four ways to extend Swoogo</h2></div>
               <p>These aren&apos;t interchangeable. Each one has different strengths, limits and upkeep, and most projects use more than one. We match each requirement to the right layer.</p>
             </Reveal>
             <ol className="ext">
@@ -264,7 +258,7 @@ export default function SwoogoDevelopment() {
         {/* Approach */}
         <section className="sec" aria-labelledby="meth-h">
           <div className="wrap">
-            <Reveal><p className="label">Approach</p><h2 id="meth-h" className="lede">Designed around your brand. Built around your event.</h2></Reveal>
+            <Reveal><h2 id="meth-h" className="lede">Designed around your brand. Built around your event.</h2></Reveal>
             <div className="meth">
               {method.map(([h, p], i) => <Reveal key={h} delay={i * 80}><h3>{h}</h3><p>{p}</p></Reveal>)}
             </div>
@@ -274,7 +268,7 @@ export default function SwoogoDevelopment() {
         {/* Who we work with */}
         <section className="sec sec-top0" aria-labelledby="who-h">
           <div className="wrap">
-            <Reveal><p className="label">Who we work with</p><h2 id="who-h" className="lede">Technical development for teams building better events</h2></Reveal>
+            <Reveal><h2 id="who-h" className="lede">Technical development for teams building better events</h2></Reveal>
             <div className="who">
               {audiences.map(([h, p]) => <Reveal key={h}><h3>{h}</h3><p>{p}</p></Reveal>)}
               <Reveal><h3>Event agencies &amp; production companies</h3><p>More technical capability without building and keeping an in-house development team. <a href="#agencies">How the partnership works</a>.</p></Reveal>
@@ -285,11 +279,10 @@ export default function SwoogoDevelopment() {
         {/* White-label */}
         <section id="agencies" className="sec wl" aria-labelledby="wl-h">
           <div className="wrap">
-            <Reveal as="h2" id="wl-h" className="label">White-label Swoogo development for event agencies</Reveal>
-            <Reveal as="p" className="wl-h">Your event strategy. <span>Our development.</span></Reveal>
+            <Reveal as="h2" id="wl-h" className="wl-h">Your event strategy. <span>Our development.</span></Reveal>
             <div className="wl-grid">
               <Reveal className="wl-copy">
-                <p>Agencies bring the creative direction, the client relationships and the production. Draft &amp; Logic adds development capacity behind the scenes, as an extension of your team.</p>
+                <p>White-label Swoogo development for event agencies. You bring the creative direction, the client relationships and the production. Draft &amp; Logic adds development capacity behind the scenes, as an extension of your team.</p>
                 <div className="wl-how">
                   <div><b>Your brand</b><span>Work delivered under your agency&apos;s name.</span></div>
                   <div><b>Your client</b><span>You own the relationship and the scope.</span></div>
@@ -300,7 +293,6 @@ export default function SwoogoDevelopment() {
                 </div>
               </Reveal>
               <Reveal>
-                <h3 className="wl-take">What we take on</h3>
                 <ul className="cs-list">{agency.map((i) => <li key={i}>{i}</li>)}</ul>
               </Reveal>
             </div>
@@ -310,14 +302,14 @@ export default function SwoogoDevelopment() {
         {/* What we need to start */}
         <section id="start" className="sec sec-bot0" aria-labelledby="need-h">
           <div className="wrap need">
-            <Reveal><p className="label">Getting started</p><h2 id="need-h" className="lede">What we need to start a Swoogo project</h2></Reveal>
+            <Reveal><h2 id="need-h" className="lede">What we need to start a Swoogo project</h2></Reveal>
             <Reveal as="ol">
               {needs.map(([b, t]) => <li key={b}><b>{b}</b><span>{t}</span></li>)}
             </Reveal>
           </div>
         </section>
 
-        <Faq faq={faq} />
+        <Faq faq={faq} label="" />
 
         <Contact
           id="swoogo-contact"
