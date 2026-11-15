@@ -690,3 +690,28 @@ html:not(.js) .ln { overflow: visible; }
 .sw .who-3{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media (max-width:900px){.sw .who-3{grid-template-columns:minmax(0,1fr)}}
 .hero + .work { padding-top: calc(var(--sec) * .55); }
+
+/* Texture and glow.
+   Paper sections get a static film grain (one tiled SVG, no animation).
+   Services and the footer get a slow lime glow over near-black; the lime contact section stays flat. */
+body {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='.13'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+.services, .foot { position: relative; overflow: hidden; isolation: isolate; background-color: #0a0a09;
+  background-image: radial-gradient(60% 50% at 85% 110%, rgba(212, 255, 58, .10), transparent 70%); }
+.services::before, .services::after, .foot::before, .foot::after {
+  content: ""; position: absolute; z-index: -1; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, rgba(212, 255, 58, .2), rgba(212, 255, 58, 0) 68%);
+  filter: blur(40px); will-change: transform; }
+.services::before, .foot::before { width: 56vmax; height: 56vmax; left: -18vmax; top: -16vmax; animation: glow-a 28s ease-in-out infinite alternate; }
+.services::after, .foot::after { width: 40vmax; height: 40vmax; right: -12vmax; top: 30%; opacity: .8; animation: glow-b 34s ease-in-out infinite alternate; }
+@keyframes glow-a { 50% { transform: translate(14vw, 18vh) scale(1.12); } 100% { transform: translate(4vw, 36vh) scale(.92); } }
+@keyframes glow-b { 50% { transform: translate(-18vw, -10vh) scale(.88); } 100% { transform: translate(-6vw, 16vh) scale(1.15); } }
+@media (max-width: 760px) {
+  .services::before, .services::after, .foot::before, .foot::after { filter: blur(24px); }
+  .services::after, .foot::after { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .services::before, .services::after, .foot::before, .foot::after { animation: none; }
+}
