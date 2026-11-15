@@ -37,7 +37,7 @@ const services = [
     id: 'websites',
     h: 'Custom Swoogo Event Websites',
     lead: ['Branded Swoogo event websites that look like your organization and make it easy for attendees to find what they need and register.'],
-    items: ['Custom event page layouts', 'Branded landing pages and microsites', 'Responsive desktop and mobile experiences', 'Custom HTML, CSS and JavaScript enhancements', 'Navigation and content architecture', 'Conversion-focused registration journeys'],
+    items: ['Custom event page layouts', 'Branded landing pages and microsites', 'Responsive desktop and mobile experiences', 'Navigation and content architecture', 'Conversion-focused registration journeys'],
   },
   {
     id: 'widgets',
@@ -64,19 +64,11 @@ const ways = [
   ['API-connected applications and integrations', 'Moving registration data into a CRM, marketing platform or reporting tool, and back.', "API credentials from your Swoogo admin, and the third-party platform’s own API and limits."],
 ];
 
-const method = [
-  ['Design', "Your event’s identity carried through every page: type, color, layout and imagery."],
-  ['Development', 'Front-end code your team, or the next developer, can read and maintain.'],
-  ['Integration', 'Data that moves between Swoogo and your other tools without anyone re-keying it.'],
-];
-
 const audiences = [
   ['Event marketing teams', 'Branded experiences that support promotion, registration and attendee engagement.'],
   ['Associations & membership organizations', 'Event sites for conferences, annual meetings, member programs and recurring events.'],
   ['Corporate event teams', 'Digital experiences for corporate conferences, customer events, internal meetings and industry programs.'],
 ];
-
-const agency = ['White-label Swoogo development', 'Custom event website builds', 'Front-end development', 'Custom functionality', 'API and third-party integrations', 'Technical troubleshooting', 'Ongoing development support'];
 
 const needs = [
   ['Swoogo access', 'A user login with website editing rights for the events in scope.'],
@@ -92,7 +84,7 @@ const faq = {
     { q: 'What is Swoogo?', a: 'Swoogo is an event management platform for registration, attendee management, sessions and event communications, used for in-person, virtual and hybrid events.' },
     { q: 'Can you build custom websites using Swoogo?', a: 'Yes. We design and build custom Swoogo event websites using its own customization options first, then add front-end development where the event needs more.' },
     { q: 'Can you customize an existing Swoogo event website?', a: 'Yes. We review the current site, list what to change in design, navigation, mobile layout and functionality, then make those changes.' },
-    { q: 'Can Swoogo connect to other platforms?', a: "Yes. Swoogo has a documented REST API covering events, registrants, sessions, speakers and contacts, authenticated with OAuth2 client credentials. What we can connect depends on your account permissions and the other platform’s API." },
+    { q: 'Can Swoogo connect to other platforms?', a: "Yes. Swoogo has a documented REST API covering events, registrants, sessions, speakers and contacts, authenticated with OAuth2 client credentials." },
     { q: 'Can you create custom event registration experiences?', a: "We can redesign the pages and journey around registration. The registration form and logic stay in Swoogo, so what’s possible depends on your plan and configuration." },
     { q: 'Do you work with event agencies?', a: "Yes. We provide white-label Swoogo development for event agencies and production companies, delivered under the agency’s name." },
     { q: 'Can you work on a single event?', a: 'Yes. We take on one-off event builds as well as ongoing support across a full event season.' },
@@ -195,7 +187,7 @@ export default function SwoogoDevelopment() {
         <section className="wrap demo" aria-label="Concept event website">
           <figure className="demo-fig">
             <Reveal className="demo-stage"><SwoogoMockup /></Reveal>
-            <figcaption className="demo-cap"><span><b>Concept build.</b> For live Swoogo work, see <Link href="/work/namc/">NAMC 2027</Link>.</span></figcaption>
+            <figcaption className="demo-cap"><span><b>Concept build.</b></span></figcaption>
           </figure>
         </section>
 
@@ -221,7 +213,6 @@ export default function SwoogoDevelopment() {
                 <ul className="facts">
                   <li><b>REST API.</b> Swoogo publishes a documented API covering events, registrants, sessions, speakers and contacts.</li>
                   <li><b>Authentication.</b> OAuth2 client credentials, issued by your Swoogo admin. Tokens expire every 30 minutes, so integrations renew them automatically.</li>
-                  <li><b>Feasibility first.</b> We confirm what your account and the other platform allow before quoting.</li>
                 </ul>
               </div>
               <div>
@@ -255,23 +246,12 @@ export default function SwoogoDevelopment() {
           </div>
         </section>
 
-        {/* Approach */}
-        <section className="sec" aria-labelledby="meth-h">
-          <div className="wrap">
-            <Reveal><h2 id="meth-h" className="lede">Designed around your brand. Built around your event.</h2></Reveal>
-            <div className="meth">
-              {method.map(([h, p], i) => <Reveal key={h} delay={i * 80}><h3>{h}</h3><p>{p}</p></Reveal>)}
-            </div>
-          </div>
-        </section>
-
         {/* Who we work with */}
-        <section className="sec sec-top0" aria-labelledby="who-h">
+        <section className="sec" aria-labelledby="who-h">
           <div className="wrap">
             <Reveal><h2 id="who-h" className="lede">Technical development for teams building better events</h2></Reveal>
-            <div className="who">
+            <div className="who who-3">
               {audiences.map(([h, p]) => <Reveal key={h}><h3>{h}</h3><p>{p}</p></Reveal>)}
-              <Reveal><h3>Event agencies &amp; production companies</h3><p>More technical capability without building and keeping an in-house development team. <a href="#agencies">How the partnership works</a>.</p></Reveal>
             </div>
           </div>
         </section>
@@ -280,7 +260,7 @@ export default function SwoogoDevelopment() {
         <section id="agencies" className="sec wl" aria-labelledby="wl-h">
           <div className="wrap">
             <Reveal as="h2" id="wl-h" className="wl-h">Your event strategy. <span>Our development.</span></Reveal>
-            <div className="wl-grid">
+            <div className="wl-grid wl-solo">
               <Reveal className="wl-copy">
                 <p>White-label Swoogo development for event agencies. You bring the creative direction, the client relationships and the production. Draft &amp; Logic adds development capacity behind the scenes, as an extension of your team.</p>
                 <div className="wl-how">
@@ -291,9 +271,6 @@ export default function SwoogoDevelopment() {
                 <div className="hcta">
                   <ArrowLink href={mail('Agency partnership: Swoogo development')} variant="lg" data-ga="swoogo_agency_cta_click" data-ga-loc="agency_section">Discuss an Agency Partnership</ArrowLink>
                 </div>
-              </Reveal>
-              <Reveal>
-                <ul className="cs-list">{agency.map((i) => <li key={i}>{i}</li>)}</ul>
               </Reveal>
             </div>
           </div>

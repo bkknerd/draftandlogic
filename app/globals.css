@@ -681,3 +681,7 @@ html:not(.js) .ln { overflow: visible; }
 .foot-svc { margin-top: 0; }
 .nl[aria-current="page"] { color: var(--fg); }
 @media (max-width: 760px) { .foot-grid-3 { grid-template-columns: minmax(0, 1fr); } }
+.sw .wl-solo{grid-template-columns:minmax(0,1fr)}
+.sw .wl-solo .wl-copy{max-width:52rem}
+.sw .who-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.sw .who-3{grid-template-columns:minmax(0,1fr)}}
