@@ -109,6 +109,8 @@ collections:
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Description, name: lead, widget: string }
+              - { label: Link text (optional), name: linkText, widget: string, required: false, hint: "Shown after the description, e.g. a link to a service page." }
+              - { label: Link goes to (optional), name: linkHref, widget: string, required: false, hint: "A page on this site, e.g. /swoogo-development/" }
       - name: work
         label: Work section
         file: content/site/work.json

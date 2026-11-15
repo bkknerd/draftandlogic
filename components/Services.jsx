@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import { useActiveStep } from '@/lib/hooks';
 import Reveal from './Reveal';
@@ -24,7 +25,7 @@ export default function Services({ services }) {
             {levels.map((s, i) => (
               <li key={s.title} data-step={i} className={`lv ${active === i ? 'on' : ''}`} onPointerEnter={() => setHover(i)}>
                 <h3>{s.title}</h3>
-                <p>{s.lead}{s.text ? ` ${s.text}` : ''}</p>
+                <p>{s.lead}{s.text ? ` ${s.text}` : ''}{s.linkText && s.linkHref ? <>{' '}<Link className="lv-link" href={s.linkHref}>{s.linkText}</Link></> : null}</p>
               </li>
             ))}
           </ul>
