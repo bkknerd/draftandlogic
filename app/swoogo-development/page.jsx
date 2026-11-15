@@ -295,7 +295,7 @@ export default function SwoogoDevelopment() {
           email={email}
         />
       </main>
-      <Footer footer={s.footer} areas={getAreas()} home={false} />
+      <Footer footer={s.footer} areas={getAreas()} hideEmail home={false} />
     </>
   );
 }

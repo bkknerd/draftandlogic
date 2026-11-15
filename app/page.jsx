@@ -49,10 +49,10 @@ export default function Home() {
             mock={{ url: i.mockUrl, notes: i.mockLines.map((m) => m.text), states: i.mockStates.map((m) => m.text) }}
           />
         )}
-        {s.on.faq && <Faq faq={s.faq} />}
+        {s.on.faq && <Faq faq={s.faq} label="" />}
         {s.on.contact && <Contact contact={s.contact} email={s.footer.email} />}
       </main>
-      <Footer footer={s.footer} areas={getAreas()} />
+      <Footer footer={s.footer} areas={getAreas()} hideEmail />
     </>
   );
 }

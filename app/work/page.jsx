@@ -43,7 +43,7 @@ export default function WorkIndex() {
         </section>
         <Contact contact={s.contact} email={s.footer.email} />
       </main>
-      <Footer footer={s.footer} areas={getAreas()} home={false} />
+      <Footer footer={s.footer} areas={getAreas()} hideEmail home={false} />
     </>
   );
 }

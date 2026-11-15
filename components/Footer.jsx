@@ -5,7 +5,8 @@ import { useReveal } from '@/lib/hooks';
 import Wordmark from './Wordmark';
 
 /** footer: content/site/footer.json; areas: [{ slug, city }] for the local pages */
-export default function Footer({ footer, areas = [], home = true }) {
+export default function Footer({ footer, areas = [], home = true, hideEmail = false }) {
+  const email = hideEmail ? '' : footer.email;
   const [ref, shown] = useReveal(0.3);
   const label = home ? 'Draft & Logic, back to top' : 'Draft & Logic home';
   return (
@@ -41,8 +42,8 @@ export default function Footer({ footer, areas = [], home = true }) {
           <div>
             <p className="k">Contact</p>
             <p>
-              {footer.email && <a href={`mailto:${footer.email}`}>{footer.email}</a>}
-              {footer.email && footer.phone && <br />}
+              {email && <a href={`mailto:${email}`}>{email}</a>}
+              {email && footer.phone && <br />}
               {footer.phone && <a href={`tel:${footer.phone}`}>{footer.phoneDisplay || footer.phone}</a>}
             </p>
           </div>
