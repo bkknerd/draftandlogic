@@ -51,6 +51,7 @@ export default function Footer({ footer, areas = [], home = true, hideEmail = fa
         <div className="foot-base">
           <span>{footer.copyright} {footer.name}</span>
           <Link href="/privacy/">Privacy</Link>
+          <a href="/llms.txt">llms.txt</a>
           {home ? <a href="#top">Back to top</a> : <Link href="/">Home</Link>}
         </div>
       </div>
