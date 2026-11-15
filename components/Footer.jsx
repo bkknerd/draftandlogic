@@ -16,7 +16,7 @@ export default function Footer({ footer, areas = [], home = true }) {
         ) : (
           <Link ref={ref} className="flogo" href="/" aria-label={label}><Wordmark draw={shown} /></Link>
         )}
-        <div className="foot-grid">
+        <div className={`foot-grid ${(footer.serviceLinks || []).length ? 'foot-grid-3' : ''}`}>
           <div>
             <p className="k">Studio</p>
             <p>{footer.area}</p>
@@ -28,6 +28,16 @@ export default function Footer({ footer, areas = [], home = true }) {
               </ul>
             )}
           </div>
+          {(footer.serviceLinks || []).length > 0 && (
+            <div>
+              <p className="k">Services</p>
+              <ul className="foot-areas foot-svc">
+                {footer.serviceLinks.map((l) => (
+                  <li key={l.href}><Link href={l.href}>{l.label}</Link></li>
+                ))}
+              </ul>
+            </div>
+          )}
           <div>
             <p className="k">Contact</p>
             <p>

@@ -65,7 +65,7 @@ collections:
             summary: "{{fields.label}}"
             fields:
               - { label: Label, name: label, widget: string }
-              - { label: Goes to, name: href, widget: select, options: ["#work", "#services", "#faq", "#contact"] }
+              - { label: Goes to, name: href, widget: select, options: ["#work", "#services", "#faq", "#contact", "/swoogo-development/"] }
       - name: hero
         label: Hero
         file: content/site/hero.json
@@ -226,6 +226,14 @@ collections:
           - { label: Founder LinkedIn, name: founderLinkedin, widget: string, required: false }
           - { label: Name, name: name, widget: string }
           - { label: Copyright line, name: copyright, widget: string }
+          - label: Service page links
+            name: serviceLinks
+            widget: list
+            required: false
+            summary: "{{fields.label}}"
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Goes to (a page on this site), name: href, widget: string }
 
   - name: studies
     label: Case studies

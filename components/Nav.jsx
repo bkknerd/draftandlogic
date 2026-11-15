@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Wordmark from './Wordmark';
 import { ArrowLink } from './Icons';
 import { onReady } from './Loader';
@@ -12,6 +13,7 @@ export default function Nav({ items, home = true }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [drawn, setDrawn] = useState(false);
+  const path = usePathname();
 
   useEffect(() => onReady(() => setDrawn(true)), []);
 
@@ -36,7 +38,9 @@ export default function Nav({ items, home = true }) {
   }, [open]);
 
   const close = () => setOpen(false);
-  const to = (href) => (home ? href : `/${href}`);
+  // Section anchors (#work) jump on home and point back to home elsewhere; page paths (/swoogo-development/) go straight there.
+  const isPage = (href) => href.startsWith('/');
+  const to = (href) => (isPage(href) || home ? href : `/${href}`);
   const NavTag = home ? 'a' : Link;
   const cta = items.find((i) => i.href === '#contact');
   const links = items.filter((i) => i !== cta);
@@ -60,13 +64,17 @@ export default function Nav({ items, home = true }) {
           <span aria-hidden="true" /><span aria-hidden="true" />
         </button>
         <ul id="nav-list" className={open ? 'open' : ''}>
-          {links.map((n) => (
-            <li key={n.href}>
-              <NavTag className="nl" href={to(n.href)} onClick={close}>
-                <span className="nl-m"><span data-t={n.label}>{n.label}</span></span>
-              </NavTag>
-            </li>
-          ))}
+          {links.map((n) => {
+            const Tag = isPage(n.href) ? Link : NavTag;
+            const here = isPage(n.href) && path === n.href;
+            return (
+              <li key={n.href}>
+                <Tag className="nl" href={to(n.href)} onClick={close} aria-current={here ? 'page' : undefined}>
+                  <span className="nl-m"><span data-t={n.label}>{n.label}</span></span>
+                </Tag>
+              </li>
+            );
+          })}
           {cta && (
             <li>
               <ArrowLink href={to(cta.href)} variant="sm" className="nav-cta" onClick={close}>{cta.label}</ArrowLink>

@@ -668,3 +668,16 @@ html:not(.js) .ln { overflow: visible; }
 .sw .sec-bot0{padding-bottom:0}
 .sw .sec-gap{margin-top:var(--sec)}
 .lv-link{color:inherit;text-underline-offset:4px}
+/* Swoogo page type scale: H1 > section H2 > service H2 > H3. */
+.sw .page-head{padding-top:clamp(28px,5vw,64px)}
+.sw .lede{font-size:clamp(2.1rem,4vw,3.8rem);max-width:16ch}
+.sw .svc-row h2{font-size:clamp(1.7rem,2.8vw,2.5rem);max-width:15ch}
+.sw .meth h3{font-size:clamp(1.5rem,2.2vw,2rem)}
+.sw .ext h3{font-size:clamp(1.25rem,2vw,1.7rem)}
+.sw .who h3{font-size:clamp(1.25rem,1.8vw,1.6rem)}
+.sw p,.sw li{text-wrap:pretty}
+.sw .nw{white-space:nowrap}
+.foot-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.foot-svc { margin-top: 0; }
+.nl[aria-current="page"] { color: var(--fg); }
+@media (max-width: 760px) { .foot-grid-3 { grid-template-columns: minmax(0, 1fr); } }

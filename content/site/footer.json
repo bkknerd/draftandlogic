@@ -10,5 +10,11 @@
   "github": "https://github.com/bkknerd",
   "founderName": "Mike Browne",
   "founderTitle": "Founder",
-  "founderLinkedin": "https://www.linkedin.com/in/mikebrowne-sr-pm"
+  "founderLinkedin": "https://www.linkedin.com/in/mikebrowne-sr-pm",
+  "serviceLinks": [
+    {
+      "label": "Swoogo development",
+      "href": "/swoogo-development/"
+    }
+  ]
 }

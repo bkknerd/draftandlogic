@@ -43,8 +43,8 @@ const services = [
     id: 'widgets',
     h: 'Custom Swoogo Widgets & Functionality',
     lead: [
-      "Features built around your audience that Swoogo doesn't offer out of the box.",
-      "Some run inside Swoogo pages as custom code. Others work better as separately hosted components that pull data from your event. You'll know which is which before anything is built.",
+      "Features built around your audience that Swoogo doesn’t offer out of the box.",
+      "Some run inside Swoogo pages as custom code. Others work better as separately hosted components that pull data from your event. You’ll know which is which before anything is built.",
     ],
     items: ['Custom speaker and presenter directories', 'Interactive agendas and session listings', 'Sponsor and exhibitor showcases', 'Searchable event content', 'Custom content components', 'Interactive event features'],
   },
@@ -61,11 +61,11 @@ const ways = [
   ['Native Swoogo configuration', 'Registration forms, page structure, themes, emails and anything Swoogo already does well.', 'Your plan and the features enabled on your account.'],
   ['Custom HTML, CSS and JavaScript in Swoogo', 'Brand-accurate layouts, styling, interactive page elements and small enhancements.', 'Where your account allows custom code, and how Swoogo renders those pages.'],
   ['Externally hosted components', 'Searchable directories, advanced agendas and microsites that need more than a page builder allows.', 'Hosting, embedding rules and keeping event data in sync.'],
-  ['API-connected applications and integrations', 'Moving registration data into a CRM, marketing platform or reporting tool, and back.', "API credentials from your Swoogo admin, and the third-party platform's own API and limits."],
+  ['API-connected applications and integrations', 'Moving registration data into a CRM, marketing platform or reporting tool, and back.', "API credentials from your Swoogo admin, and the third-party platform’s own API and limits."],
 ];
 
 const method = [
-  ['Design', "Your event's identity carried through every page: type, color, layout and imagery."],
+  ['Design', "Your event’s identity carried through every page: type, color, layout and imagery."],
   ['Development', 'Front-end code your team, or the next developer, can read and maintain.'],
   ['Integration', 'Data that moves between Swoogo and your other tools without anyone re-keying it.'],
 ];
@@ -92,9 +92,9 @@ const faq = {
     { q: 'What is Swoogo?', a: 'Swoogo is an event management platform for registration, attendee management, sessions and event communications, used for in-person, virtual and hybrid events.' },
     { q: 'Can you build custom websites using Swoogo?', a: 'Yes. We design and build custom Swoogo event websites using its own customization options first, then add front-end development where the event needs more.' },
     { q: 'Can you customize an existing Swoogo event website?', a: 'Yes. We review the current site, list what to change in design, navigation, mobile layout and functionality, then make those changes.' },
-    { q: 'Can Swoogo connect to other platforms?', a: "Yes. Swoogo has a documented REST API covering events, registrants, sessions, speakers and contacts, authenticated with OAuth2 client credentials. What we can connect depends on your account permissions and the other platform's API." },
-    { q: 'Can you create custom event registration experiences?', a: "We can redesign the pages and journey around registration. The registration form and logic stay in Swoogo, so what's possible depends on your plan and configuration." },
-    { q: 'Do you work with event agencies?', a: "Yes. We provide white-label Swoogo development for event agencies and production companies, delivered under the agency's name." },
+    { q: 'Can Swoogo connect to other platforms?', a: "Yes. Swoogo has a documented REST API covering events, registrants, sessions, speakers and contacts, authenticated with OAuth2 client credentials. What we can connect depends on your account permissions and the other platform’s API." },
+    { q: 'Can you create custom event registration experiences?', a: "We can redesign the pages and journey around registration. The registration form and logic stay in Swoogo, so what’s possible depends on your plan and configuration." },
+    { q: 'Do you work with event agencies?', a: "Yes. We provide white-label Swoogo development for event agencies and production companies, delivered under the agency’s name." },
     { q: 'Can you work on a single event?', a: 'Yes. We take on one-off event builds as well as ongoing support across a full event season.' },
     { q: 'Do we need to migrate away from Swoogo?', a: 'No. We extend and improve the Swoogo setup you already have rather than replace it.' },
   ],
@@ -180,7 +180,7 @@ export default function SwoogoDevelopment() {
           <div className="sw-row">
             <p className="tag">Make more of your event platform.</p>
             <div className="hero-copy">
-              <p>Swoogo runs registration, attendees, sessions and event email. Draft &amp; Logic builds what sits around it: the event website, the features Swoogo doesn&apos;t ship with, and the connections to your CRM and marketing tools.</p>
+              <p>Swoogo runs registration, attendees, sessions and event email. Draft &amp; Logic builds what sits around it: the event website, the features Swoogo doesn’t ship with, and the connections to your CRM and marketing tools.</p>
               <p className="m">You keep the platform. We make it look like your brand, work on every device and talk to the rest of your stack.</p>
               <div className="hcta">
                 <ArrowLink href={mail('Swoogo project')} variant="lg" data-ga="swoogo_cta_click" data-ga-loc="hero">Discuss Your Swoogo Project</ArrowLink>
@@ -204,8 +204,8 @@ export default function SwoogoDevelopment() {
           <div className="wrap intro">
             <Reveal><h2 id="intro-h" className="lede">Swoogo development beyond the standard template</h2></Reveal>
             <Reveal className="body">
-              <p>The event website is usually the first thing an attendee sees. Swoogo&apos;s templates cover the basics. When the brand, the audience or the program gets specific, a custom build usually serves the event better.</p>
-              <p className="m">We start with what Swoogo can do natively and build outside it only where the event needs it, whether that&apos;s a corporate conference, an association&apos;s annual meeting, an industry summit or a season of recurring events.</p>
+              <p>The event website is usually the first thing an attendee sees. Swoogo’s templates cover the basics. When the brand, the audience or the program gets specific, a custom build usually serves the event better.</p>
+              <p className="m">We start with what Swoogo can do natively and build outside it only where the event needs it, whether that’s a corporate conference, an association’s annual meeting, an industry summit or a season of recurring events.</p>
             </Reveal>
           </div>
         </section>
@@ -216,7 +216,7 @@ export default function SwoogoDevelopment() {
             {services.map((x) => <ServiceRow key={x.id} s={x} />)}
             <Reveal as="article" className="svc-row" id="integrations">
               <div>
-                <h2>Swoogo API &amp; Third-Party Integrations</h2>
+                <h2>Swoogo API &amp; <span className="nw">Third-Party</span> Integrations</h2>
                 <p className="lead">Your event platform rarely works alone. We connect Swoogo to the systems you use for marketing, customer records, reporting and communications.</p>
                 <ul className="facts">
                   <li><b>REST API.</b> Swoogo publishes a documented API covering events, registrants, sessions, speakers and contacts.</li>
@@ -241,7 +241,7 @@ export default function SwoogoDevelopment() {
           <div className="wrap">
             <Reveal className="ext-head">
               <div><h2 id="ext-h" className="lede">Four ways to extend Swoogo</h2></div>
-              <p>These aren&apos;t interchangeable. Each one has different strengths, limits and upkeep, and most projects use more than one. We match each requirement to the right layer.</p>
+              <p>These aren’t interchangeable. Each one has different strengths, limits and upkeep, and most projects use more than one. We match each requirement to the right layer.</p>
             </Reveal>
             <ol className="ext">
               {ways.map(([h, best, dep]) => (
@@ -284,7 +284,7 @@ export default function SwoogoDevelopment() {
               <Reveal className="wl-copy">
                 <p>White-label Swoogo development for event agencies. You bring the creative direction, the client relationships and the production. Draft &amp; Logic adds development capacity behind the scenes, as an extension of your team.</p>
                 <div className="wl-how">
-                  <div><b>Your brand</b><span>Work delivered under your agency&apos;s name.</span></div>
+                  <div><b>Your brand</b><span>Work delivered under your agency’s name.</span></div>
                   <div><b>Your client</b><span>You own the relationship and the scope.</span></div>
                   <div><b>Our build</b><span>Design, code and integrations on your timeline.</span></div>
                 </div>
@@ -313,8 +313,8 @@ export default function SwoogoDevelopment() {
 
         <Contact
           id="swoogo-contact"
-          heading="Let's build a better event experience."
-          contact={{ intro: 'Send a short note on the event, the Swoogo setup you have and what you want it to do. We reply within two working days.', button: "Let's Talk About Your Swoogo Project" }}
+          heading="Let’s build a better event experience."
+          contact={{ intro: 'Send a short note on the event, the Swoogo setup you have and what you want it to do. We reply within two working days.', button: "Let’s Talk About Your Swoogo Project" }}
           email={email}
         />
       </main>
