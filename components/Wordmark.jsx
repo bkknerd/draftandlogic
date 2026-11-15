@@ -1,4 +1,4 @@
-// The Draft and Logic wordmark: construction lines plus the letterforms.
+// The Draft & Logic wordmark: construction lines plus the letterforms.
 // `draw` animates each stroke in, the way the logo is drawn on the live site.
 export default function Wordmark({ draw = false, className = '' }) {
   return (

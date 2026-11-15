@@ -18,7 +18,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }) {
   const st = getStudy(params.slug);
   if (!st) return {};
-  const title = `${trim(st.title, 52)} | Draft and Logic`;
+  const title = `${trim(st.title, 52)} | Draft & Logic`;
   const description = trim(st.lead, 158);
   const img = st.card?.shots[0]?.src || '/og.png';
   const url = `${SITE_URL}/work/${st.slug}/`;

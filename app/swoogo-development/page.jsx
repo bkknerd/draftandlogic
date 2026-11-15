@@ -24,10 +24,10 @@ export const metadata = {
   openGraph: {
     type: 'website',
     url: URL_,
-    siteName: 'Draft and Logic',
+    siteName: 'Draft & Logic',
     title: TITLE,
     description: SHARE,
-    images: [{ url: '/og-swoogo.png', width: 1200, height: 630, alt: 'Concept conference website designed and built by Draft and Logic' }],
+    images: [{ url: '/og-swoogo.png', width: 1200, height: 630, alt: 'Concept conference website designed and built by Draft & Logic' }],
   },
   twitter: { card: 'summary_large_image', title: TITLE, description: SHARE, images: ['/og-swoogo.png'] },
 };

@@ -19,7 +19,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }) {
   const a = getAreas().find((x) => x.slug === params.area);
   if (!a) return {};
-  const title = `${a.heading} | Draft and Logic`;
+  const title = `${a.heading} | Draft & Logic`;
   const description = trim(a.intro, 158);
   return {
     title,

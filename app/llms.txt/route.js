@@ -5,7 +5,7 @@ export const dynamic = 'force-static';
 // A plain-text brief for AI tools, built from the same content as the site.
 export function GET() {
   const d = getSite();
-  const L = ['# Draft and Logic', '', '> ' + d.seo.description, '', d.seo.orgIntro, ''];
+  const L = ['# Draft & Logic', '', '> ' + d.seo.description, '', d.seo.orgIntro, ''];
   if (d.on.services) L.push('## Services', ...d.services.levels.map((l) => `- ${l.title}: ${[l.lead, l.text].filter(Boolean).join(' ')}`), '');
   L.push('## Service pages', `- [Swoogo Development](${SITE_URL}/swoogo-development/): Custom Swoogo event websites, widgets, Swoogo API and third-party integrations, ongoing support, and white-label Swoogo development for event agencies.`, '');
   if (d.on.work) {

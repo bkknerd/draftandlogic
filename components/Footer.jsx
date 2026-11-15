@@ -7,7 +7,7 @@ import Wordmark from './Wordmark';
 /** footer: content/site/footer.json; areas: [{ slug, city }] for the local pages */
 export default function Footer({ footer, areas = [], home = true }) {
   const [ref, shown] = useReveal(0.3);
-  const label = home ? 'Draft and Logic, back to top' : 'Draft and Logic home';
+  const label = home ? 'Draft & Logic, back to top' : 'Draft & Logic home';
   return (
     <footer className="foot">
       <div className="wrap">

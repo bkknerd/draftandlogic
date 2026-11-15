@@ -19,7 +19,7 @@ export default function Home() {
 
   const graph = [
     org(),
-    { '@type': 'WebSite', '@id': SITE_URL + '/#website', url: SITE_URL + '/', name: 'Draft and Logic', inLanguage: 'en-US', publisher: { '@id': orgId } },
+    { '@type': 'WebSite', '@id': SITE_URL + '/#website', url: SITE_URL + '/', name: 'Draft & Logic', inLanguage: 'en-US', publisher: { '@id': orgId } },
     s.on.work && {
       '@type': 'ItemList',
       name: s.work.heading,

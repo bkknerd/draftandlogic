@@ -1,4 +1,4 @@
-# Draft and Logic — draftandlogic.com
+# Draft & Logic — draftandlogic.com
 
 Next.js 14 (App Router) built as a static site. Every word on the site still comes from the JSON files the Decap editor writes, so editing at `/admin/` works as before.
 

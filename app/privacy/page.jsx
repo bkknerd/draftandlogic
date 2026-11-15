@@ -5,10 +5,10 @@ import { getSite, getAreas, SITE_URL } from '@/lib/content';
 export function generateMetadata() {
   const { privacy } = getSite();
   return {
-    title: `${privacy.heading} | Draft and Logic`,
+    title: `${privacy.heading} | Draft & Logic`,
     description: privacy.intro,
     alternates: { canonical: '/privacy/' },
-    openGraph: { title: `${privacy.heading} | Draft and Logic`, description: privacy.intro, url: SITE_URL + '/privacy/' },
+    openGraph: { title: `${privacy.heading} | Draft & Logic`, description: privacy.intro, url: SITE_URL + '/privacy/' },
   };
 }
 

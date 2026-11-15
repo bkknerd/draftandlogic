@@ -49,9 +49,9 @@ export default function Nav({ items, home = true }) {
     <header className={`nav ${hidden ? 'hide' : ''} ${scrolled || open ? 'scrolled' : ''}`}>
       <nav className="wrap nav-in" aria-label="Main">
         {home ? (
-          <a className="logo" href="#top" aria-label="Draft and Logic, back to top"><Wordmark draw={drawn} /></a>
+          <a className="logo" href="#top" aria-label="Draft & Logic, back to top"><Wordmark draw={drawn} /></a>
         ) : (
-          <Link className="logo" href="/" aria-label="Draft and Logic home"><Wordmark draw={drawn} /></Link>
+          <Link className="logo" href="/" aria-label="Draft & Logic home"><Wordmark draw={drawn} /></Link>
         )}
         <button
           className={`menu-btn ${open ? 'is-open' : ''}`}

@@ -14,10 +14,10 @@ export const metadata = {
   openGraph: {
     type: 'website',
     url: SITE_URL + '/',
-    siteName: 'Draft and Logic',
+    siteName: 'Draft & Logic',
     title: seo.title,
     description: seo.shareDescription || seo.description,
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Draft and Logic' }],
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Draft & Logic' }],
   },
   twitter: { card: 'summary_large_image', title: seo.title, description: seo.shareDescription || seo.description, images: ['/og.png'] },
   icons: {

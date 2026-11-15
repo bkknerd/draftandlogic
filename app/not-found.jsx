@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 import { ArrowLink } from '@/components/Icons';
 import { getAreas, getSite } from '@/lib/content';
 
-export const metadata = { title: 'Page not found | Draft and Logic', robots: { index: false } };
+export const metadata = { title: 'Page not found | Draft & Logic', robots: { index: false } };
 
 export default function NotFound() {
   const s = getSite();

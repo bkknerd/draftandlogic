@@ -8,8 +8,8 @@ import { org, ldJson } from '@/lib/schema';
 
 export function generateMetadata() {
   const { work } = getSite();
-  const title = `${work.allHeading || 'All work'} | Draft and Logic`;
-  const description = trim(work.allIntro || 'Client builds and concepts from Draft and Logic.', 158);
+  const title = `${work.allHeading || 'All work'} | Draft & Logic`;
+  const description = trim(work.allIntro || 'Client builds and concepts from Draft & Logic.', 158);
   return {
     title,
     description,
