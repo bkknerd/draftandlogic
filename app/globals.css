@@ -689,3 +689,4 @@ html:not(.js) .ln { overflow: visible; }
 .sw .wl-solo .wl-copy{max-width:52rem}
 .sw .who-3{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media (max-width:900px){.sw .who-3{grid-template-columns:minmax(0,1fr)}}
+.hero + .work { padding-top: calc(var(--sec) * .55); }

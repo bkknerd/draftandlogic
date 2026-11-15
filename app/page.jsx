@@ -38,7 +38,6 @@ export default function Home() {
       <main id="main">
         <Hero
           hero={{ ...s.hero, lines: [splitLine(s.hero.line1), splitLine(s.hero.line2)] }}
-          reel={s.on.work ? getCases().filter((c) => c.slug && c.shots[0]).map((c) => ({ slug: c.slug, label: c.label, src: c.shots[0].thumb, draft: c.shots[0].draft, alt: c.shots[0].alt })) : []}
         />
         {s.on.work && <Work work={s.work} cases={cases} viewCase="Case study" />}
         {s.on.partners && <Partners partners={s.partners} />}
