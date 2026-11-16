@@ -1,0 +1,98 @@
+{
+  "title": "New York International Auto Show: a show site that reads like the show floor",
+  "tag": "Auto show website, New York, NY. Launching December 2026",
+  "summaryLead": "The New York International Auto Show has run since 1900. The new site puts the dates, the debuts and the rides up front, and cuts the news pile that buried them.",
+  "story": "The New York International Auto Show is the oldest auto show in North America, ten days at the Javits Center every spring. The old site had the dates in the hero and then a long rail of news cards, tabs, an Instagram embed and tile grids, with stories from a show that had already closed still in the featured spot. Someone looking for when it opens, what's debuting and how to get there had to dig. The new site answers those first. Dates, venue, opening day and ticket status sit in one strip above the name. The name is set in Archivo and stretched to fill the width, the way a banner hangs over the floor. Everything else is asphalt, white and one signal red, kept for the ticket button.",
+  "url": "",
+  "numbers": [],
+  "goals": [
+    "Put the dates, venue and ticket status on the first screen.",
+    "Show what's debuting and what you can ride.",
+    "Make getting to the Javits Center easy to plan."
+  ],
+  "features": [
+    {
+      "title": "The name, banner-sized",
+      "text": "Four facts in a strip, then the show's name stretched to the full width. The floor photo below opens out as you scroll, with a count of days until the doors open.",
+      "image": "/uploads/nyias-1.jpg",
+      "alt": "New York International Auto Show home page with the dates strip and the full-width name",
+      "story": "Archivo is a variable font with a width axis, so the headline is sized and stretched in the browser to fit whatever screen it's on. Labels are Barlow."
+    },
+    {
+      "title": "Debuts on a departures board",
+      "text": "Last year's debuts as a split-flap board: make, model and status. Hover a row and the car comes up below with its story.",
+      "image": "/uploads/nyias-2.jpg",
+      "alt": "The 2026 debuts shown as a split-flap departures board",
+      "story": "Every tile is a live character, not an image. Each one runs through a few random letters before it lands, so the board settles left to right like the real thing. With reduced motion on, it just shows the words."
+    },
+    {
+      "title": "The test track on a turntable",
+      "text": "Scroll and the cars on the EV and hybrid test track come round one at a time, with the rider rules beside them.",
+      "image": "/uploads/nyias-f2.jpg",
+      "alt": "Cadillac Lyriq on the turntable in the EV and hybrid test track section",
+      "story": "The section pins while you scroll and a ruler under the name tracks which car you're on. The platform is drawn in SVG and CSS, so the only images are the cars."
+    },
+    {
+      "title": "Rides and exhibits as a list",
+      "text": "Camp Jeep, the EV track, exotics, tuner cars and the rest, each with one line on what it is.",
+      "image": "/uploads/nyias-f3.jpg",
+      "alt": "Rides and exhibits list on the new auto show site"
+    },
+    {
+      "title": "Plan your visit",
+      "text": "Hours by day, opening day, early access, and a drawn street map of the Javits with the subway, ferry, bus and rail stops.",
+      "image": "/uploads/nyias-f4.jpg",
+      "alt": "Plan your visit section with hours and a map of the Javits Center",
+      "story": "The map is hand-drawn SVG: the river, the avenues, the cross streets and the main entrance. It loads instantly and stays sharp on any screen."
+    },
+    {
+      "title": "Since 1900",
+      "text": "The show's history as a timeline, from Madison Square Garden to the Javits.",
+      "image": "/uploads/nyias-f5.jpg",
+      "alt": "Since 1900 history timeline"
+    },
+    {
+      "title": "News, kept current",
+      "text": "One lead story and a short dated list, with the rest one click away.",
+      "image": "/uploads/nyias-a2.jpg",
+      "alt": "News section with a lead photo and dated headlines"
+    },
+    {
+      "title": "The whole home page",
+      "image": "/uploads/nyias-fullpage.jpg",
+      "alt": "The full New York International Auto Show home page from top to bottom"
+    },
+    {
+      "title": "On a phone",
+      "text": "The dates strip, the name and the floor photo at 390px wide.",
+      "image": "/uploads/nyias-phone.jpg",
+      "alt": "The new auto show home page on a phone"
+    }
+  ],
+  "quote": {
+    "text": "",
+    "name": "",
+    "role": ""
+  },
+  "compare": [
+    {
+      "title": "The first screen",
+      "beforeText": "A floor photo under a dark overlay, the show's name and the dates.",
+      "afterText": "Dates, venue, opening day and ticket status in one strip, then the name across the full width.",
+      "beforeImage": "/uploads/nyias-b1.jpg",
+      "afterImage": "/uploads/nyias-1.jpg",
+      "beforeAlt": "The original autoshowny.com home page",
+      "afterAlt": "The new New York International Auto Show home page"
+    },
+    {
+      "title": "News",
+      "beforeText": "A long rail of article cards, with stories from the closed 2026 show still featured.",
+      "afterText": "One lead story and five dated headlines.",
+      "beforeImage": "/uploads/nyias-b2.jpg",
+      "afterImage": "/uploads/nyias-a2.jpg",
+      "beforeAlt": "The original autoshowny.com news cards",
+      "afterAlt": "The new news section"
+    }
+  ],
+  "accent": "#C4161C"
+}

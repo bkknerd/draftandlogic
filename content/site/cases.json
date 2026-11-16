@@ -1,6 +1,35 @@
 {
   "items": [
     {
+      "style": "nyias",
+      "feature": true,
+      "reverse": false,
+      "study": "nyias",
+      "label": "NY Auto Show",
+      "note": "",
+      "shots": [
+        {
+          "image": "/uploads/nyias-1.jpg",
+          "alt": "New York International Auto Show home page with the full-width name"
+        },
+        {
+          "image": "/uploads/nyias-2.jpg",
+          "alt": "The 2026 debuts on a split-flap departures board"
+        }
+      ],
+      "title": "The oldest auto show in North America, dates first.",
+      "summary": "The old site buried the dates and the debuts under a rail of news from a show that had already closed. The new one opens on four facts and the name across the full width, then a departures board of debuts, the test-track cars on a turntable and a drawn map of the Javits.",
+      "tag": "Launching Dec 2026",
+      "services": [
+        "Custom Web Development",
+        "Event & Program Portals",
+        "Site Modernization & Audits",
+        "Technical SEO & Performance",
+        "ADA Accessibility Compliance"
+      ],
+      "home": true
+    },
+    {
       "style": "abx",
       "feature": true,
       "reverse": false,

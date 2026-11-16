@@ -143,7 +143,7 @@ collections:
             fields:
               - { label: Name, name: label, widget: string }
               - { label: Show on the home page, name: home, widget: boolean, default: false, required: false, hint: "Keep this to three cards. Every card appears on the All work page." }
-              - { label: Case study ID, name: study, widget: string, required: false, hint: "summit, abaxent, namc, milo, nlt, happy or walkup. Leave empty for no case-study link." }
+              - { label: Case study ID, name: study, widget: string, required: false, hint: "nyias, summit, abaxent, namc, milo, nlt, happy or walkup. Leave empty for no case-study link." }
               - { label: Small tag on the card (optional, e.g. Concept), name: tag, widget: string, required: false }
               - label: Screenshots
                 name: shots
@@ -194,7 +194,7 @@ collections:
               - { label: Heading, name: heading, widget: string }
               - { label: Intro, name: intro, widget: text, hint: "Say what is true for this town: where the studio is, which local clients you built for." }
               - { label: What you get, name: points, widget: list, field: { label: Point, name: point, widget: string } }
-              - { label: Case studies to show, name: cases, widget: list, field: { label: Case study ID, name: id, widget: string }, hint: "summit, abaxent, namc, milo, nlt, happy or walkup" }
+              - { label: Case studies to show, name: cases, widget: list, field: { label: Case study ID, name: id, widget: string }, hint: "nyias, summit, abaxent, namc, milo, nlt, happy or walkup" }
       - name: privacy
         label: Privacy page
         file: content/site/privacy.json
@@ -296,4 +296,5 @@ collections:
       - { name: milo, label: "Milo's Cafe", file: content/case-studies/milo.json, format: json, fields: *studyfields }
       - { name: nlt, label: New Life Tabernacle, file: content/case-studies/nlt.json, format: json, fields: *studyfields }
       - { name: happy, label: "Happy's (concept)", file: content/case-studies/happy.json, format: json, fields: *studyfields }
+      - { name: nyias, label: "New York International Auto Show", file: content/case-studies/nyias.json, format: json, fields: *studyfields }
       - { name: walkup, label: "The WalkUp (concept)", file: content/case-studies/walkup.json, format: json, fields: *studyfields }
