@@ -1,108 +1,85 @@
-'use client';
-
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
-import { reducedMotion, useMediaQuery } from '@/lib/hooks';
 import Reveal from './Reveal';
+import Drafted from './Drafted';
+import BeforeAfter from './BeforeAfter';
 import { ArrowLink, DimArrow } from './Icons';
 
 const caseHref = (c) => (c.slug ? `/work/${c.slug}/` : '/work/');
 
+/** One project: its screen, then the name and one short line. Nothing else. */
+function Card({ c, className = '', big = false }) {
+  const s = c.shots[0];
+  return (
+    <Reveal className={`wk-card ${className}`}>
+      <Link href={caseHref(c)}>
+        <span className="wk-img">
+          {s ? <Drafted src={big ? s.src : s.thumb} draft={s.draft} alt={s.alt} /> : <span className="wcard-ph" />}
+        </span>
+        <span className="wk-cap">
+          <span className="wk-name">{c.label}</span>
+          {c.meta && <span className="wk-meta">{c.meta}</span>}
+        </span>
+      </Link>
+    </Reveal>
+  );
+}
+
 export default function Work({ work, cases, viewCase = 'Case study' }) {
-  const [active, setActive] = useState(-1);
-  const [shot, setShot] = useState(0);
-  const fine = useMediaQuery('(hover: hover) and (pointer: fine) and (min-width: 901px)');
-  const pv = useRef(null);
-  const target = useRef({ x: 0, y: 0 });
-  const pos = useRef({ x: 0, y: 0 });
-
-  // The preview trails the pointer and leans a little with its speed.
-  useEffect(() => {
-    if (!fine) return;
-    let raf;
-    const loop = () => {
-      const p = pos.current, t = target.current;
-      const k = reducedMotion() ? 1 : 0.14;
-      const dx = (t.x - p.x) * k;
-      p.x += dx;
-      p.y += (t.y - p.y) * k;
-      if (pv.current) {
-        const rot = Math.max(-6, Math.min(6, dx * 0.12));
-        pv.current.style.transform = `translate3d(${p.x}px, ${p.y}px, 0) translate(-50%, -50%) rotate(${rot}deg)`;
-      }
-      raf = requestAnimationFrame(loop);
-    };
-    raf = requestAnimationFrame(loop);
-    return () => cancelAnimationFrame(raf);
-  }, [fine]);
-
-  // While a row is held, alternate between its screenshots.
-  useEffect(() => {
-    if (active < 0) return;
-    setShot(0);
-    const n = cases[active].shots.length;
-    if (n < 2) return;
-    const id = setInterval(() => setShot((s) => (s + 1) % Math.min(n, 2)), 1400);
-    return () => clearInterval(id);
-  }, [active, cases]);
-
-  const enter = (i, e) => {
-    if (e) {
-      target.current = { x: e.clientX, y: e.clientY };
-      if (active < 0) pos.current = { ...target.current };
-    }
-    setActive(i);
-  };
+  const [lead, ...rest] = cases;
+  const big = rest[0];
+  const side = rest.slice(1, 3);
+  const extra = rest.slice(3);
+  const ba = lead && lead.compare;
+  const count = String(cases.length + ((work.alsoShow && work.also) || []).length).padStart(2, '0');
 
   return (
     <section id="work" className="work" aria-labelledby="work-h">
       <div className="wrap">
-        <Reveal className="work-head">
+        <Reveal className="wk-head">
           <h2 id="work-h" className="mask"><span>{work.heading}</span></h2>
-          {work.intro && <p>{work.intro}</p>}
+          <div className="wk-head-r">
+            <span>{count} sites</span>
+            {work.allLink && <ArrowLink href="/work/">{work.allLink}</ArrowLink>}
+          </div>
         </Reveal>
 
-        <ul
-          className={`cases ${active > -1 ? 'has-active' : ''}`}
-          onPointerMove={(e) => { target.current = { x: e.clientX, y: e.clientY }; }}
-          onPointerLeave={() => setActive(-1)}
-        >
-          {cases.map((c, i) => (
-            <li key={c.label} className={`case ${active === i ? 'on' : ''}`}>
-              <Link href={caseHref(c)} onPointerEnter={(e) => enter(i, e)} onFocus={() => enter(i)} onBlur={() => setActive(-1)}>
-                <span className="case-name">{c.label}</span>
-                <span className="case-meta">
-                  <span className="case-title">{c.title}</span>
-                  {c.tag && <span className="case-tag">{c.tag}</span>}
-                </span>
-                <span className="case-go"><DimArrow /></span>
+        {lead && (
+          <Reveal className="wk-feat">
+            {ba ? (
+              <BeforeAfter
+                before={ba.beforeImage}
+                after={ba.afterImage}
+                beforeAlt={ba.beforeAlt}
+                afterAlt={ba.afterAlt}
+                label={`${lead.label}: drag to compare the old site and the redesign`}
+              />
+            ) : (
+              <Link href={caseHref(lead)} className="wk-img" tabIndex={-1} aria-hidden="true">
+                {lead.shots[0] && <Drafted src={lead.shots[0].src} draft={lead.shots[0].draft} alt="" />}
               </Link>
-              {c.shots[0] && (
-                <div className="case-shot">
-                  <img src={c.shots[0].thumb} alt={c.shots[0].alt} loading="lazy" width="1440" height="900" />
-                  <p>{c.summary}</p>
-                </div>
-              )}
-            </li>
-          ))}
-        </ul>
-
-        {fine && (
-          <div ref={pv} className={`pv ${active > -1 ? 'show' : ''}`} aria-hidden="true">
-            <div className="pv-in">
-              {cases.map((c, i) =>
-                c.shots.slice(0, 2).map((s, j) => (
-                  <img key={s.src} src={s.src} alt="" loading="lazy" className={active === i && shot === j ? 'on' : ''} />
-                ))
-              )}
-              <i className="reg tl" /><i className="reg tr" /><i className="reg bl" /><i className="reg br" />
-              <span className="pv-cap">{active > -1 ? cases[active].label : ''}<span>{viewCase}</span></span>
+            )}
+            <div className="wk-cap">
+              <Link href={caseHref(lead)} className="wk-name wk-name-lg">{lead.label}<DimArrow /></Link>
+              {lead.meta && <span className="wk-meta">{lead.meta}</span>}
             </div>
+          </Reveal>
+        )}
+
+        {big && (
+          <div className="wk-duo">
+            <Card c={big} className="wk-big" big />
+            {side.length > 0 && (
+              <div className="wk-side">
+                {side.map((c) => <Card key={c.label} c={c} />)}
+              </div>
+            )}
           </div>
         )}
 
-        {work.allLink && (
-          <p className="allwork"><ArrowLink href="/work/" variant="lg">{work.allLink}</ArrowLink></p>
+        {extra.length > 0 && (
+          <div className="wk-more">
+            {extra.map((c) => <Card key={c.label} c={c} />)}
+          </div>
         )}
 
         {work.alsoShow && (work.also || []).length > 0 && (

@@ -715,3 +715,101 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .services::before, .services::after, .foot::before, .foot::after { animation: none; }
 }
+
+/* ===== work, homepage: one lead project, then a big screen beside two stacked ===== */
+.wk-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px 32px; flex-wrap: wrap; padding-bottom: clamp(18px, 2vw, 26px); margin-bottom: clamp(36px, 5vw, 72px); border-bottom: 1px solid var(--fg); }
+.wk-head h2 { font-size: clamp(3rem, 8vw, 7.2rem); line-height: .9; letter-spacing: -.037em; }
+.wk-head-r { display: flex; align-items: center; gap: 12px 32px; flex-wrap: wrap; color: var(--mut); }
+.wk-head-r .alink { color: var(--fg); }
+.wk-img { display: block; overflow: hidden; border-radius: 6px; border: 1px solid var(--rule); background: #E4E0D6; }
+.wk-img .dr, .wk-img .dr-r { display: block; width: 100%; height: 100%; }
+.wk-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 1s var(--ease); }
+.wk-cap { display: flex; justify-content: space-between; align-items: baseline; gap: 6px 20px; flex-wrap: wrap; margin-top: 16px; }
+.wk-name { font: 700 clamp(1.35rem, 2vw, 1.7rem)/1.1 var(--display); letter-spacing: -.022em; color: var(--fg); text-decoration: none; }
+.wk-name-lg { display: inline-flex; align-items: center; gap: 16px; min-height: 44px; font-size: clamp(1.6rem, 2.8vw, 2.4rem); }
+.wk-meta { font-size: .95rem; color: var(--mut); }
+.wk-card > a { display: block; text-decoration: none; color: var(--fg); }
+.wk-feat { margin-bottom: clamp(64px, 8vw, 112px); }
+.wk-feat > .wk-img { aspect-ratio: 16 / 8.5; }
+.wk-duo { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(20px, 2.6vw, 36px); }
+.wk-big { grid-column: span 7; }
+.wk-big .wk-img { aspect-ratio: 4 / 3.4; }
+.wk-side { grid-column: span 5; display: flex; flex-direction: column; gap: clamp(32px, 4vw, 48px); }
+.wk-side .wk-img, .wk-more .wk-img { aspect-ratio: 16 / 10.6; }
+.wk-more { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(32px, 4vw, 48px) clamp(20px, 2.6vw, 36px); margin-top: clamp(48px, 6vw, 72px); }
+@media (hover: hover) {
+  .wk-card > a:hover .wk-img img { transform: scale(1.025); }
+  .wk-name-lg:hover .arw i { width: 34px; }
+}
+@media (max-width: 800px) {
+  .wk-big, .wk-side { grid-column: 1 / -1; }
+  .wk-side { gap: clamp(32px, 6vw, 48px); margin-top: 16px; }
+  .wk-more { grid-template-columns: minmax(0, 1fr); }
+  .wk-feat > .wk-img, .wk-big .wk-img { aspect-ratio: 16 / 10.6; }
+}
+
+/* before and after: drag the line between the old screen and the new one */
+.bax { --x: 50%; position: relative; aspect-ratio: 16 / 8.5; overflow: hidden; border-radius: 6px; border: 1px solid var(--rule); background: #E4E0D6; user-select: none; }
+.bax img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.bax-b { clip-path: inset(0 calc(100% - var(--x)) 0 0); }
+.bax-t { position: absolute; top: 14px; z-index: 2; padding: 6px 10px; background: var(--bg); color: var(--fg); font-size: .85rem; font-weight: 500; border-radius: 3px; }
+.bax-tb { left: 14px; }
+.bax-ta { right: 14px; }
+.bax-line { position: absolute; top: 0; bottom: 0; left: var(--x); z-index: 2; width: 2px; margin-left: -1px; background: #fff; box-shadow: 0 0 0 1px rgba(12, 12, 12, .12); pointer-events: none; }
+.bax-knob { position: absolute; top: 50%; left: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px; border-radius: 50%; background: #fff; color: var(--ink); display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px -6px rgba(12, 12, 12, .45); }
+.bax input { position: absolute; inset: 0; z-index: 3; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; -webkit-appearance: none; appearance: none; touch-action: pan-y; }
+.bax input::-webkit-slider-thumb { -webkit-appearance: none; width: 46px; height: 100vh; }
+.bax input::-moz-range-thumb { width: 46px; height: 100vh; border: 0; }
+.bax:has(input:focus-visible) .bax-knob { outline: 2px solid var(--fg); outline-offset: 3px; }
+@media (max-width: 800px) { .bax { aspect-ratio: 16 / 10.6; } }
+
+/* ===== case study, v2: headline and facts, the screen full width, then the work ===== */
+.cs2-top { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(28px, 4vw, 48px); align-items: end; }
+.cs2-top .cs-h1 { grid-column: span 8; max-width: 16ch; }
+.cs2-facts { grid-column: span 4; display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 10px 16px; margin: 0; padding-top: 16px; border-top: 3px solid var(--accent); font-size: .98rem; line-height: 1.4; }
+.cs2-facts dt { color: var(--mut); }
+.cs2-facts dd { margin: 0; }
+.cs2-facts a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.cs2-hero { max-width: 1440px; margin: 0 auto; padding: clamp(36px, 5vw, 72px) clamp(12px, 2vw, 28px) 0; }
+.cs2-hero .frame { border-radius: 6px; }
+.cs2-hero .frame img { aspect-ratio: 16 / 9; }
+.cs2-two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 4vw, 56px); padding-top: clamp(72px, 10vw, 140px); }
+.cs2-two .cs-h3 { font: 500 .85rem/1.2 var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--mut); margin-bottom: 16px; }
+.cs2-two .cs-list { border-top: 1px solid var(--fg); }
+.cs2-sec { padding-top: clamp(80px, 11vw, 160px); }
+.cs2-ba + .cs2-ba { margin-top: clamp(56px, 7vw, 96px); }
+.cs2-ba-h { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-top: 14px; margin-bottom: 20px; border-top: 1px solid var(--fg); }
+.cs2-ba-h h3 { font-size: clamp(1.2rem, 1.8vw, 1.45rem); letter-spacing: -.02em; }
+.cs2-ba-h span { font-size: .9rem; color: var(--mut); font-variant-numeric: tabular-nums; }
+.cs2-ba .ba-fig .ba-tag { margin: 12px 0 0; color: var(--mut); font-weight: 400; order: 2; }
+.cs2-ba .ba-fig { display: flex; flex-direction: column; }
+.cs2-ba .ba-fig.after .ba-tag { border: 0; color: var(--fg); }
+.cs2-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(48px, 6vw, 80px) clamp(16px, 2.4vw, 32px); align-items: start; }
+.cs2-grid .shot { grid-column: span 12; }
+.cs2-grid .shot .frame img { aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }
+.cs2-grid .s12 .frame img { aspect-ratio: 16 / 8.5; }
+.cs2-grid .s7 { grid-column: span 7; }
+.cs2-grid .s5 { grid-column: span 5; margin-top: clamp(48px, 9vw, 140px); }
+.cs2-grid .s4 { grid-column: span 4; }
+.cs2-grid .s8 { grid-column: span 8; }
+.cs2-grid .s6 { grid-column: span 6; }
+.cs2-grid .shot.full .frame img, .cs2-grid .shot.phone .frame img { aspect-ratio: auto; object-fit: initial; }
+.cs2-grid .shot.full .frame { max-height: min(80vh, 820px); overflow-y: auto; overscroll-behavior: contain; }
+.cs2-grid .shot.phone { justify-self: center; width: min(100%, 340px); align-self: end; }
+.cs2-grid .shot.phone .frame { border-radius: 28px; }
+.cs2-grid .shot figcaption { margin-top: 14px; padding: 0; border: 0; font-weight: 400; color: var(--mut); font-size: .98rem; }
+.cs2-next { display: block; margin-top: clamp(96px, 12vw, 180px); text-decoration: none; background: var(--nb, var(--ink)); color: var(--nf, var(--bg)); }
+.cs2-next .wrap { display: flex; flex-direction: column; gap: 20px; padding-top: clamp(64px, 9vw, 112px); padding-bottom: clamp(72px, 10vw, 124px); }
+.cs2-next small { font-size: .95rem; opacity: .85; }
+.cs2-next strong { display: inline-flex; align-items: center; gap: .3em; font: 700 clamp(3rem, 10vw, 8.6rem)/.88 var(--display); letter-spacing: -.045em; transition: transform .6s var(--ease); }
+.cs2-next strong span { display: inline-block; transition: transform .6s var(--ease); }
+@media (hover: hover) { .cs2-next:hover strong span { transform: translateX(.18em); } }
+.cs2-next:focus-visible { outline-offset: -6px; }
+@media (max-width: 900px) {
+  .cs2-top .cs-h1, .cs2-facts { grid-column: 1 / -1; }
+  .cs2-grid .s7, .cs2-grid .s5, .cs2-grid .s4, .cs2-grid .s8, .cs2-grid .s6 { grid-column: 1 / -1; margin-top: 0; }
+}
+@media (max-width: 640px) {
+  .cs2-two { grid-template-columns: minmax(0, 1fr); }
+  .cs2-grid .s12 .frame img { aspect-ratio: 16 / 10; }
+}
