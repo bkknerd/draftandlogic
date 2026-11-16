@@ -30,17 +30,13 @@ export default function Work({ work, cases, viewCase = 'Case study' }) {
   const side = rest.slice(1, 3);
   const extra = rest.slice(3);
   const ba = lead && lead.compare;
-  const count = String(cases.length + ((work.alsoShow && work.also) || []).length).padStart(2, '0');
 
   return (
     <section id="work" className="work" aria-labelledby="work-h">
       <div className="wrap">
         <Reveal className="wk-head">
           <h2 id="work-h" className="mask"><span>{work.heading}</span></h2>
-          <div className="wk-head-r">
-            <span>{count} sites</span>
-            {work.allLink && <ArrowLink href="/work/">{work.allLink}</ArrowLink>}
-          </div>
+          {work.allLink && <div className="wk-head-r"><ArrowLink href="/work/">{work.allLink}</ArrowLink></div>}
         </Reveal>
 
         {lead && (
