@@ -454,17 +454,11 @@ html:not(.js) .ln { overflow: visible; }
 .cs-side .cs-h3:not(:first-child) { margin-top: 36px; }
 .cs-list { border-top: 1px solid var(--fg); }
 .cs-list li { padding: 12px 0; border-bottom: 1px solid var(--rule); line-height: 1.45; }
-.cs-nums, .cs-ba, .cs-feats, .cs-q, .cs-more { padding-top: clamp(64px, 9vw, 128px); }
+.cs-nums, .cs-feats, .cs-q, .cs-more { padding-top: clamp(64px, 9vw, 128px); }
 .cs-nums dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin: 0; }
 .cs-nums dl div { display: flex; flex-direction: column-reverse; gap: 6px; border-top: 1px solid var(--fg); padding-top: 16px; }
 .cs-nums dd { margin: 0; font: 700 clamp(2.2rem, 4vw, 3.4rem)/1 var(--display); letter-spacing: -.028em; }
 .cs-nums dt { color: var(--mut); }
-.ba + .ba { margin-top: clamp(48px, 6vw, 80px); }
-.ba-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 32px); }
-.ba-fig { margin: 0; }
-.ba-tag { display: inline-block; margin-bottom: 10px; font-size: .9rem; font-weight: 500; }
-.ba-fig.after .ba-tag { border-bottom: 3px solid var(--accent); }
-.ba-fig figcaption { margin-top: 12px; color: var(--mut); line-height: 1.5; max-width: 34rem; }
 .shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(36px, 5vw, 64px) clamp(16px, 2.4vw, 32px); }
 .shot { margin: 0; }
 .shot.first, .shot.full { grid-column: 1 / -1; }
@@ -501,7 +495,6 @@ html:not(.js) .ln { overflow: visible; }
   .feat.rev .frame { order: 0; }
 }
 @media (max-width: 640px) {
-  .ba-pair { grid-template-columns: minmax(0, 1fr); }
   .shots { grid-template-columns: minmax(0, 1fr); }
 }
 
@@ -762,13 +755,6 @@ body {
 .cs2-two .cs-h3 { font: 500 .85rem/1.2 var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--mut); margin-bottom: 16px; }
 .cs2-two .cs-list { border-top: 1px solid var(--fg); }
 .cs2-sec { padding-top: clamp(80px, 11vw, 160px); }
-.cs2-ba + .cs2-ba { margin-top: clamp(56px, 7vw, 96px); }
-.cs2-ba-h { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-top: 14px; margin-bottom: 20px; border-top: 1px solid var(--fg); }
-.cs2-ba-h h3 { font-size: clamp(1.2rem, 1.8vw, 1.45rem); letter-spacing: -.02em; }
-.cs2-ba-h span { font-size: .9rem; color: var(--mut); font-variant-numeric: tabular-nums; }
-.cs2-ba .ba-fig .ba-tag { margin: 12px 0 0; color: var(--mut); font-weight: 400; order: 2; }
-.cs2-ba .ba-fig { display: flex; flex-direction: column; }
-.cs2-ba .ba-fig.after .ba-tag { border: 0; color: var(--fg); }
 .cs2-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(48px, 6vw, 80px) clamp(16px, 2.4vw, 32px); align-items: start; }
 .cs2-grid .shot { grid-column: span 12; }
 .cs2-grid .shot .frame img { aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }

@@ -68,25 +68,5 @@
     "name": "",
     "role": ""
   },
-  "compare": [
-    {
-      "title": "The first screen",
-      "beforeText": "A photo, a date and a Buy Tickets button. Everything else was a click away.",
-      "afterText": "Attend, Sponsor or Exhibit, each with its price, next to a countdown to the conference.",
-      "beforeImage": "/uploads/namc-b1.jpg",
-      "afterImage": "/uploads/namc-f1.jpg",
-      "beforeAlt": "The 2026 B2B Forum site",
-      "afterAlt": "The 2027 conference home page"
-    },
-    {
-      "title": "Dates, venue and pricing",
-      "beforeText": "The schedule and the casino map were behind buttons. Date and venue were plain text.",
-      "afterText": "Venue, dates, what registration includes and gala pricing in one view, with Register and Add to Calendar.",
-      "beforeImage": "/uploads/namc-b2.jpg",
-      "afterImage": "/uploads/namc-info.jpg",
-      "beforeAlt": "The earlier information page",
-      "afterAlt": "The new information page"
-    }
-  ],
   "accent": "#8C181C"
 }

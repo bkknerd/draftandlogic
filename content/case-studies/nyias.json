@@ -74,25 +74,5 @@
     "name": "",
     "role": ""
   },
-  "compare": [
-    {
-      "title": "The first screen",
-      "beforeText": "A floor photo under a dark overlay, the show's name and the dates.",
-      "afterText": "Dates, venue, opening day and ticket status in one strip, then the name across the full width.",
-      "beforeImage": "/uploads/nyias-b1.jpg",
-      "afterImage": "/uploads/nyias-1.jpg",
-      "beforeAlt": "The original autoshowny.com home page",
-      "afterAlt": "The new New York International Auto Show home page"
-    },
-    {
-      "title": "News",
-      "beforeText": "A long rail of article cards, with stories from the closed 2026 show still featured.",
-      "afterText": "One lead story and five dated headlines.",
-      "beforeImage": "/uploads/nyias-b2.jpg",
-      "afterImage": "/uploads/nyias-a2.jpg",
-      "beforeAlt": "The original autoshowny.com news cards",
-      "afterAlt": "The new news section"
-    }
-  ],
   "accent": "#C4161C"
 }

@@ -164,28 +164,6 @@ export default function CaseStudy({ params }) {
             </section>
           )}
 
-          {st.compare.length > 0 && (
-            <section className="cs2-sec" aria-labelledby="cs-ba">
-              <h2 id="cs-ba" className="cs-h2">{i.csCompare || 'Before and after'}</h2>
-              {st.compare.map((c, n) => (
-                <Reveal key={c.title} className="cs2-ba">
-                  <div className="cs2-ba-h"><h3>{c.title}</h3><span>{String(n + 1).padStart(2, '0')}</span></div>
-                  <div className="ba-pair">
-                    {[['before', c.beforeImage, c.beforeAlt, i.csBefore || 'Before'], ['after', c.afterImage, c.afterAlt, i.csAfter || 'After']].map(
-                      ([k, src, alt, tag]) =>
-                        src && (
-                          <figure key={k} className={`ba-fig ${k}`}>
-                            <span className="frame"><img src={src} alt={alt || ''} loading="lazy" width="1440" height="900" /></span>
-                            <figcaption className="ba-tag">{tag}</figcaption>
-                          </figure>
-                        )
-                    )}
-                  </div>
-                </Reveal>
-              ))}
-            </section>
-          )}
-
           {shots.length > 0 && (
             <section className="cs2-sec" aria-labelledby="cs-f">
               <h2 id="cs-f" className="cs-h2">{i.csFeatures || 'Features'}</h2>
