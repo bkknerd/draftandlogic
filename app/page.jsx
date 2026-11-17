@@ -14,14 +14,12 @@ export default function Home() {
   const s = getSite();
   const cases = getCases()
     .filter((c) => c.home)
-    .map((c, n) => {
+    .map((c) => {
       const st = c.slug ? getStudy(c.slug) : null;
       return {
         ...c,
         shots: c.shots.map((sh) => ({ ...sh, src: sh.web })),
         meta: [st && st.kind, c.tag].filter(Boolean).join(' · '),
-        // The lead project opens on its first before-and-after pair when it has one.
-        compare: n === 0 && st && st.compare[0] && st.compare[0].beforeImage && st.compare[0].afterImage ? st.compare[0] : null,
       };
     });
   const i = s.interface;

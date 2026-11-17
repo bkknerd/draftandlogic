@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Reveal from './Reveal';
 import Drafted from './Drafted';
-import BeforeAfter from './BeforeAfter';
 import { ArrowLink, DimArrow } from './Icons';
 
 const caseHref = (c) => (c.slug ? `/work/${c.slug}/` : '/work/');
@@ -29,7 +28,6 @@ export default function Work({ work, cases, viewCase = 'Case study' }) {
   const big = rest[0];
   const side = rest.slice(1, 3);
   const extra = rest.slice(3);
-  const ba = lead && lead.compare;
 
   return (
     <section id="work" className="work" aria-labelledby="work-h">
@@ -41,19 +39,9 @@ export default function Work({ work, cases, viewCase = 'Case study' }) {
 
         {lead && (
           <Reveal className="wk-feat">
-            {ba ? (
-              <BeforeAfter
-                before={ba.beforeImage}
-                after={ba.afterImage}
-                beforeAlt={ba.beforeAlt}
-                afterAlt={ba.afterAlt}
-                label={`${lead.label}: drag to compare the old site and the redesign`}
-              />
-            ) : (
-              <Link href={caseHref(lead)} className="wk-img" tabIndex={-1} aria-hidden="true">
-                {lead.shots[0] && <Drafted src={lead.shots[0].src} draft={lead.shots[0].draft} alt="" />}
-              </Link>
-            )}
+            <Link href={caseHref(lead)} className="wk-img" tabIndex={-1} aria-hidden="true">
+              {lead.shots[0] && <Drafted src={lead.shots[0].src} draft={lead.shots[0].draft} alt="" />}
+            </Link>
             <div className="wk-cap">
               <Link href={caseHref(lead)} className="wk-name wk-name-lg">{lead.label}<DimArrow /></Link>
               {lead.meta && <span className="wk-meta">{lead.meta}</span>}
