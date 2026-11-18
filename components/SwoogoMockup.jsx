@@ -38,7 +38,7 @@ export default function SwoogoMockup() {
             <div style={lift}>
               <p className="ev-k">Annual Leadership Conference</p>
               <p className="ev-h">Build what<br />comes next.</p>
-              <p className="ev-meta">April 14–16, 2027 · Convention Center, Hall C</p>
+              <p className="ev-meta">April 14 to 16, 2027 · Convention Center, Hall C</p>
               <p className="ev-btns"><span>Register now</span><span>View agenda</span></p>
             </div>
             <div className="ev-count">
@@ -72,7 +72,7 @@ export default function SwoogoMockup() {
       <div className="ph" aria-hidden="true">
         <div className="ph-in ev">
           <div className="ev-nav"><Logo /><span>Menu</span></div>
-          <div className="ev-hero"><div style={lift}><p className="ev-k">April 14–16, 2027</p><p className="ev-h">Build what comes next.</p></div></div>
+          <div className="ev-hero"><div style={lift}><p className="ev-k">April 14 to 16, 2027</p><p className="ev-h">Build what comes next.</p></div></div>
           <div className="ev-body">
             <div>
               <p className="ev-sh">Up next <small>Day 1</small></p>
