@@ -13,7 +13,7 @@ export function DimArrow({ out = false }) {
   );
 }
 
-/** Text link with the studio arrow. variant: 'lg' (lime marker), 'sm', 'ink' (for the lime section). */
+/** Text link with the studio arrow. variant: 'lg', 'sm', 'ink' (for the contact section). */
 export function ArrowLink({ href, children, variant = '', out = false, className = '', ...rest }) {
   const ext = /^https?:/.test(href);
   const Tag = href.startsWith('/') ? Link : 'a';
