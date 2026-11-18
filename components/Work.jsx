@@ -1,33 +1,19 @@
+'use client';
+
 import Link from 'next/link';
+import { useState } from 'react';
 import Reveal from './Reveal';
-import Drafted from './Drafted';
 import { ArrowLink, DimArrow } from './Icons';
 
-const caseHref = (c) => (c.slug ? `/work/${c.slug}/` : '/work/');
-
-/** One project: its screen, then the name and one short line. Nothing else. */
-function Card({ c, className = '', big = false }) {
-  const s = c.shots[0];
-  return (
-    <Reveal className={`wk-card ${className}`}>
-      <Link href={caseHref(c)}>
-        <span className="wk-img">
-          {s ? <Drafted src={big ? s.src : s.thumb} draft={s.draft} alt={s.alt} /> : <span className="wcard-ph" />}
-        </span>
-        <span className="wk-cap">
-          <span className="wk-name">{c.label}</span>
-          {c.meta && <span className="wk-meta">{c.meta}</span>}
-        </span>
-      </Link>
-    </Reveal>
-  );
-}
-
-export default function Work({ work, cases, viewCase = 'Case study' }) {
-  const [lead, ...rest] = cases;
-  const big = rest[0];
-  const side = rest.slice(1, 3);
-  const extra = rest.slice(3);
+/** Work as a typographic index. The screen of whichever row is held shows in the panel beside it. */
+export default function Work({ work, cases }) {
+  const also = work.alsoShow ? (work.also || []).filter((a) => a.label && a.url) : [];
+  const rows = [
+    ...cases.map((c) => ({ key: c.label, label: c.label, meta: c.meta, href: c.slug ? `/work/${c.slug}/` : '/work/', shot: c.shots[0] })),
+    ...also.map((a) => ({ key: a.label, label: a.label, meta: work.alsoHeading, href: a.url, out: true })),
+  ];
+  const [active, setActive] = useState(0);
+  const cur = rows[active] || rows[0];
 
   return (
     <section id="work" className="work" aria-labelledby="work-h">
@@ -37,51 +23,45 @@ export default function Work({ work, cases, viewCase = 'Case study' }) {
           {work.allLink && <div className="wk-head-r"><ArrowLink href="/work/">{work.allLink}</ArrowLink></div>}
         </Reveal>
 
-        {lead && (
-          <Reveal className="wk-feat">
-            <Link href={caseHref(lead)} className="wk-img" tabIndex={-1} aria-hidden="true">
-              {lead.shots[0] && <Drafted src={lead.shots[0].src} draft={lead.shots[0].draft} alt="" />}
-            </Link>
-            <div className="wk-cap">
-              <Link href={caseHref(lead)} className="wk-name wk-name-lg">{lead.label}<DimArrow /></Link>
-              {lead.meta && <span className="wk-meta">{lead.meta}</span>}
-            </div>
-          </Reveal>
-        )}
-
-        {big && (
-          <div className="wk-duo">
-            <Card c={big} className="wk-big" big />
-            {side.length > 0 && (
-              <div className="wk-side">
-                {side.map((c) => <Card key={c.label} c={c} />)}
-              </div>
-            )}
-          </div>
-        )}
-
-        {extra.length > 0 && (
-          <div className="wk-more">
-            {extra.map((c) => <Card key={c.label} c={c} />)}
-          </div>
-        )}
-
-        {work.alsoShow && (work.also || []).length > 0 && (
-          <div className="also">
-            <h3>{work.alsoHeading}</h3>
-            <ul>
-              {work.also.map((a) => (
-                <li key={a.label}>
-                  <a href={a.url} target="_blank" rel="noopener">
-                    <span className="also-l">{a.label}</span>
-                    <DimArrow />
-                    <span className="sr"> (opens in a new tab)</span>
-                  </a>
+        <div className="ix">
+          <ol className="ix-list">
+            {rows.map((r, n) => {
+              const inner = (
+                <>
+                  <span className="ix-n">{String(n + 1).padStart(2, '0')}</span>
+                  <span className="ix-name">{r.label}</span>
+                  {r.meta && <span className="ix-meta">{r.meta}</span>}
+                  <span className="ix-go"><DimArrow /></span>
+                  {r.out && <span className="sr"> (opens in a new tab)</span>}
+                </>
+              );
+              const props = { onPointerEnter: () => setActive(n), onFocus: () => setActive(n) };
+              return (
+                <li key={r.key} className={`ix-row ${n === active ? 'on' : ''}`}>
+                  {r.out ? <a href={r.href} target="_blank" rel="noopener" {...props}>{inner}</a> : <Link href={r.href} {...props}>{inner}</Link>}
+                  {r.shot && (
+                    <span className="ix-thumb" aria-hidden="true">
+                      <img src={r.shot.thumb} alt="" loading="lazy" width="640" height="400" />
+                    </span>
+                  )}
                 </li>
-              ))}
-            </ul>
+              );
+            })}
+          </ol>
+
+          <div className="ix-pv" aria-hidden="true">
+            <div className="ix-pv-in">
+              {rows.map((r, n) =>
+                r.shot ? (
+                  <img key={r.key} src={r.shot.src} alt="" loading="lazy" className={n === active ? 'on' : ''} />
+                ) : (
+                  <span key={r.key} className={`ix-pv-ph ${n === active ? 'on' : ''}`}>{r.label}</span>
+                )
+              )}
+            </div>
+            <p className="ix-pv-cap"><span>{cur && cur.label}</span><span>{cur && (cur.out ? 'Visit site' : 'Case study')}</span></p>
           </div>
-        )}
+        </div>
       </div>
     </section>
   );
