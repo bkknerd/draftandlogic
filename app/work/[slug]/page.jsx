@@ -113,6 +113,7 @@ export default function CaseStudy({ params }) {
           <Link className="back" href="/work/"><DimArrow /><span>{i.csBackWork || 'All work'}</span></Link>
           <Reveal className="cs2-top">
             <h1 id="hero-h" className="cs-h1"><span className="sr">{st.client}: </span>{st.headline}</h1>
+            {st.lead && <p className="cs2-lead">{st.lead}</p>}
             <dl className="cs2-facts">
               {facts.map(([k, v]) => (
                 <div key={k} style={{ display: 'contents' }}><dt>{k}</dt><dd>{v}</dd></div>
@@ -245,7 +246,7 @@ export default function CaseStudy({ params }) {
           <Link href={`/work/${next.slug}/`} className="cs2-next" style={{ '--nb': nb, '--nf': inkOn(nb) }}>
             <span className="wrap">
               <small>{i.csNext || 'Next project'}</small>
-              <strong>{next.label} <span aria-hidden="true">→</span></strong>
+              <strong>{next.label} <span aria-hidden="true"><svg className="cs2-next-arw" viewBox="0 0 48 32" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="square"><path d="M2 16h40M28 3l14 13-14 13" /></svg></span></strong>
             </span>
           </Link>
         )}

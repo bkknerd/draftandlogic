@@ -11,11 +11,6 @@
       "label": "Home page download"
     },
     {
-      "value": "60",
-      "before": "139",
-      "label": "Files requested to load the home page"
-    },
-    {
       "value": "156 KB",
       "before": "1.1 MB",
       "label": "JavaScript"
@@ -26,9 +21,9 @@
       "label": "Largest paint, desktop"
     },
     {
-      "value": "85 px",
-      "before": "1,880 px",
-      "label": "Distance from the top to the first ticket link"
+      "value": "Header",
+      "before": "2 screens down",
+      "label": "First ticket link"
     },
     {
       "value": "0",
@@ -39,16 +34,6 @@
       "value": "1",
       "before": "40",
       "label": "H1 headings on the home page"
-    },
-    {
-      "value": "6",
-      "before": "18",
-      "label": "Outside servers called"
-    },
-    {
-      "value": "Event",
-      "before": "None",
-      "label": "Structured data for search"
     }
   ],
   "goals": [
@@ -85,23 +70,10 @@
       "alt": "Rides and exhibits list on the new auto show site"
     },
     {
-      "title": "Plan your visit",
-      "text": "Hours by day, opening day, early access, and a drawn street map of the Javits with the subway, ferry, bus and rail stops.",
-      "image": "/uploads/nyias-f4.jpg",
-      "alt": "Plan your visit section with hours and a map of the Javits Center",
-      "story": "The map is hand-drawn SVG: the river, the avenues, the cross streets and the main entrance. It loads instantly and stays sharp on any screen."
-    },
-    {
       "title": "Since 1900",
       "text": "The show's history as a timeline, from Madison Square Garden to the Javits.",
       "image": "/uploads/nyias-f5.jpg",
       "alt": "Since 1900 history timeline"
-    },
-    {
-      "title": "News, kept current",
-      "text": "One lead story and a short dated list, with the rest one click away.",
-      "image": "/uploads/nyias-a2.jpg",
-      "alt": "News section with a lead photo and dated headlines"
     },
     {
       "title": "The whole home page",
