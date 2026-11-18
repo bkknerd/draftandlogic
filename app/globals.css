@@ -715,7 +715,7 @@ body {
 .wk-head-r .alink { color: var(--fg); }
 .ix { display: flex; flex-wrap: wrap; align-items: flex-start; gap: clamp(32px, 5vw, 72px); }
 .ix-list { flex: 999 1 600px; min-width: 0; border-bottom: 1px solid var(--rule); }
-.ix-row > a { display: grid; grid-template-columns: 40px minmax(0, 1fr) minmax(0, 160px) 44px; align-items: baseline; gap: 8px 16px; padding: clamp(18px, 2.2vw, 28px) 0; border-top: 1px solid var(--rule); text-decoration: none; color: var(--pencil); transition: color .35s; }
+.ix-row > a { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 180px) 44px; align-items: baseline; gap: 8px 16px; padding: clamp(18px, 2.2vw, 28px) 0; border-top: 1px solid var(--rule); text-decoration: none; color: var(--pencil); transition: color .35s; }
 .ix-row.on > a { color: var(--fg); }
 .ix-n { font-size: .9rem; color: var(--mut); font-variant-numeric: tabular-nums; }
 .ix-name { font: 700 clamp(1.9rem, 2.9vw, 2.7rem)/1.05 var(--display); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-bottom: .08em; letter-spacing: -.032em; transition: transform .5s var(--ease); }
@@ -734,15 +734,14 @@ body {
 .ix-pv-cap span:first-child { color: var(--fg); font-weight: 500; }
 @media (max-width: 900px), (hover: none) {
   .ix-pv { display: none; }
-  .ix-row > a { color: var(--fg); grid-template-columns: 36px minmax(0, 1fr) 44px; }
+  .ix-row > a { color: var(--fg); grid-template-columns: minmax(0, 1fr) 44px; }
   .ix-row.on .ix-name { transform: none; }
   .ix-name { white-space: normal; }
-  .ix-meta { grid-column: 2; grid-row: 2; text-align: left; }
-  .ix-go { grid-column: 3; grid-row: 1; }
-  .ix-thumb { display: block; padding: 0 0 24px 56px; }
+  .ix-meta { grid-column: 1; grid-row: 2; text-align: left; }
+  .ix-go { grid-column: 2; grid-row: 1; }
+  .ix-thumb { display: block; padding: 0 0 24px; }
   .ix-thumb img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-radius: 4px; border: 1px solid var(--rule); }
 }
-@media (max-width: 560px) { .ix-thumb { padding-left: 0; } }
 
 /* ===== case study, v2: headline and facts, the screen full width, then the work ===== */
 .cs2-top { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(28px, 4vw, 48px); align-items: end; }

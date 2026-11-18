@@ -28,7 +28,6 @@ export default function Work({ work, cases }) {
             {rows.map((r, n) => {
               const inner = (
                 <>
-                  <span className="ix-n">{String(n + 1).padStart(2, '0')}</span>
                   <span className="ix-name">{r.label}</span>
                   {r.meta && <span className="ix-meta">{r.meta}</span>}
                   <span className="ix-go"><DimArrow /></span>
