@@ -19,7 +19,7 @@ export default function Home() {
       return {
         ...c,
         shots: c.shots.map((sh) => ({ ...sh, src: sh.web })),
-        meta: [st && st.kind, c.tag].filter(Boolean).join(' · '),
+        meta: [c.featured && (s.interface.featuredLabel || 'Featured case study'), st && st.kind, c.tag].filter(Boolean).join(' · '),
       };
     });
   const i = s.interface;

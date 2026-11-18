@@ -23,6 +23,11 @@ collections:
           - { label: Case study page, back to work link, name: csBackWork, widget: string }
           - { label: Case study page, features heading, name: csFeatures, widget: string }
           - { label: Case study page, numbers heading, name: csNumbers, widget: string }
+          - { label: Case study page, before and after heading, name: csCompare, widget: string, required: false }
+          - { label: Case study page, before label, name: csBefore, widget: string, required: false }
+          - { label: Case study page, after label, name: csAfter, widget: string, required: false }
+          - { label: Case study page, impact heading, name: csImpact, widget: string, required: false }
+          - { label: Work cards, featured label, name: featuredLabel, widget: string, required: false }
           - { label: Case study page, goals heading, name: csGoals, widget: string }
           - { label: Case study page, what we did heading, name: csDid, widget: string }
           - { label: Case study page, visit site button, name: csVisit, widget: string }
@@ -140,6 +145,7 @@ collections:
             fields:
               - { label: Name, name: label, widget: string }
               - { label: Show on the home page, name: home, widget: boolean, default: false, required: false, hint: "Keep this to three cards. Every card appears on the All work page." }
+              - { label: Featured case study, name: featured, widget: boolean, default: false, required: false, hint: "Leads the work list and spans the full row on the All work page. Turn it on for one project." }
               - { label: Case study ID, name: study, widget: string, required: false, hint: "nyias, summit, abaxent, namc, milo, nlt, happy or walkup. Leave empty for no case-study link." }
               - { label: Small tag on the card (optional, e.g. Concept), name: tag, widget: string, required: false }
               - label: Screenshots
@@ -255,7 +261,35 @@ collections:
             summary: "{{fields.value}} {{fields.label}}"
             fields:
               - { label: Number, name: value, widget: string }
+              - { label: "Before (optional, shown struck through under the number)", name: before, widget: string, required: false }
               - { label: Label, name: label, widget: string }
+          - { label: "Numbers footnote (how and when they were measured)", name: numbersNote, widget: text, required: false }
+          - label: Before and after
+            name: compare
+            widget: list
+            required: false
+            hint: "Matched screenshots of the old and new site, same width. Leave empty to hide the block."
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Before screenshot, name: before, widget: image }
+              - { label: Before description, name: beforeAlt, widget: string, required: false }
+              - { label: Before caption, name: beforeNote, widget: text, required: false }
+              - { label: After screenshot, name: after, widget: image }
+              - { label: After description, name: afterAlt, widget: string, required: false }
+              - { label: After caption, name: afterNote, widget: text, required: false }
+          - { label: "Impact intro (say whether these are projected or measured)", name: impactNote, widget: string, required: false }
+          - label: What it should move
+            name: impact
+            widget: list
+            required: false
+            hint: "A research figure, what it means for this site, and the source. Leave empty to hide the block."
+            summary: "{{fields.value}}"
+            fields:
+              - { label: Figure, name: value, widget: string }
+              - { label: Text, name: text, widget: text }
+              - { label: Source, name: source, widget: string, required: false }
+              - { label: Source link, name: url, widget: string, required: false }
           - { label: Goals, name: goals, widget: list, required: false, field: { label: Goal, name: goal, widget: string } }
           - label: Client quote
             name: quote

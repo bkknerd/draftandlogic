@@ -153,14 +153,58 @@ export default function CaseStudy({ params }) {
             </section>
           )}
 
+          {st.compare.length > 0 && (
+            <section className="cs2-sec cs-ba" aria-labelledby="cs-ba">
+              <h2 id="cs-ba" className="cs-h2">{i.csCompare || 'Before and after'}</h2>
+              {st.compare.map((c) => (
+                <Reveal key={c.title} className="ba-row">
+                  <h3 className="ba-h">{c.title}</h3>
+                  <div className="ba-pair">
+                    <figure className="ba-side ba-was">
+                      <span className="frame"><img src={c.before} alt={c.beforeAlt || ''} loading="lazy" /></span>
+                      <figcaption><b>{i.csBefore || 'Before'}</b>{c.beforeNote}</figcaption>
+                    </figure>
+                    <figure className="ba-side ba-now">
+                      <span className="frame"><img src={c.after} alt={c.afterAlt || ''} loading="lazy" /></span>
+                      <figcaption><b>{i.csAfter || 'After'}</b>{c.afterNote}</figcaption>
+                    </figure>
+                  </div>
+                </Reveal>
+              ))}
+            </section>
+          )}
+
           {st.numbers.length > 0 && (
             <section className="cs-nums" aria-labelledby="cs-n">
               <h2 id="cs-n" className="cs-h2">{i.csNumbers || 'By the numbers'}</h2>
               <dl>
                 {st.numbers.map((n) => (
-                  <div key={n.label}><dt>{n.label}</dt><dd>{n.value}</dd></div>
+                  <div key={n.label}>
+                    <dt>{n.label}</dt>
+                    <dd>
+                      {n.value}
+                      {n.before && <small><span className="sr">{i.csBefore || 'Before'}: </span><s>{n.before}</s></small>}
+                    </dd>
+                  </div>
                 ))}
               </dl>
+              {st.numbersNote && <p className="cs-note">{st.numbersNote}</p>}
+            </section>
+          )}
+
+          {st.impact.length > 0 && (
+            <section className="cs-nums cs-imp" aria-labelledby="cs-i">
+              <h2 id="cs-i" className="cs-h2">{i.csImpact || 'What it should move'}</h2>
+              {st.impactNote && <p className="cs-imp-lead">{st.impactNote}</p>}
+              <ul>
+                {st.impact.map((n) => (
+                  <li key={n.value + n.text.slice(0, 12)}>
+                    <strong>{n.value}</strong>
+                    <p>{n.text}</p>
+                    {n.source && (n.url ? <a href={n.url} target="_blank" rel="noopener">{n.source}<span className="sr"> (opens in a new tab)</span></a> : <span className="cs-src">{n.source}</span>)}
+                  </li>
+                ))}
+              </ul>
             </section>
           )}
 

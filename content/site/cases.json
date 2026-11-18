@@ -27,7 +27,8 @@
         "Technical SEO & Performance",
         "ADA Accessibility Compliance"
       ],
-      "home": true
+      "home": true,
+      "featured": true
     },
     {
       "style": "abx",

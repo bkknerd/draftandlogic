@@ -39,7 +39,7 @@ export default function WorkIndex() {
           </Reveal>
         </section>
         <section className="wrap page-body" aria-label="Projects">
-          <WorkGrid cases={cases} allLabel={s.interface.filterAll} filterLabel={s.interface.filterLabel} />
+          <WorkGrid cases={cases} allLabel={s.interface.filterAll} filterLabel={s.interface.filterLabel} featuredLabel={s.interface.featuredLabel} />
         </section>
         <Contact contact={s.contact} email={s.footer.email} />
       </main>

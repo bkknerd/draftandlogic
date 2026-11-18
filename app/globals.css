@@ -779,3 +779,44 @@ body {
   .cs2-two { grid-template-columns: minmax(0, 1fr); }
   .cs2-grid .s12 .frame img { aspect-ratio: 16 / 10; }
 }
+
+/* ===== case study: before and after, measured numbers, projected impact ===== */
+.ba-row { padding-top: clamp(40px, 5vw, 64px); border-top: 1px solid var(--rule); margin-top: clamp(40px, 5vw, 64px); }
+.ba-row:first-of-type { margin-top: 0; }
+.ba-h { font-size: clamp(1.3rem, 2vw, 1.7rem); letter-spacing: -.02em; margin-bottom: clamp(18px, 2.4vw, 28px); }
+.ba-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 32px); align-items: start; }
+.ba-side { margin: 0; }
+.ba-side .frame { display: block; overflow: hidden; border-radius: 6px; border: 1px solid var(--rule); }
+.ba-side img { display: block; width: 100%; height: auto; aspect-ratio: 8 / 8.4; object-fit: cover; object-position: top; }
+.ba-was img { filter: saturate(.55); }
+.ba-now .frame { border-top: 4px solid var(--accent); }
+.ba-side figcaption { margin-top: 14px; color: var(--mut); font-size: .98rem; line-height: 1.5; max-width: 34rem; }
+.ba-side figcaption b { display: block; margin-bottom: 4px; color: var(--fg); font: 500 .8rem/1.2 var(--body); letter-spacing: .08em; text-transform: uppercase; }
+.ba-now figcaption b { color: var(--accent); }
+.cs-nums dd small { display: block; margin-top: 8px; font: 400 .95rem/1.2 var(--body); letter-spacing: 0; color: var(--mut); }
+.cs-nums dd s { text-decoration-thickness: 1px; }
+.cs-nums dl div { border-top-color: var(--rule); }
+.cs-note { margin-top: clamp(24px, 3vw, 36px); max-width: 46rem; color: var(--mut); font-size: .92rem; line-height: 1.55; }
+.cs-imp-lead { margin: calc(-1 * clamp(14px, 2vw, 28px)) 0 clamp(28px, 4vw, 44px); color: var(--mut); max-width: 40rem; }
+.cs-imp ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(28px, 3vw, 40px); margin: 0; padding: 0; list-style: none; }
+.cs-imp li { display: flex; flex-direction: column; gap: 12px; border-top: 3px solid var(--accent); padding-top: 18px; }
+.cs-imp strong { font: 700 clamp(2.2rem, 4vw, 3.4rem)/1 var(--display); letter-spacing: -.028em; }
+.cs-imp p { line-height: 1.5; }
+.cs-imp a, .cs-imp .cs-src { margin-top: auto; font-size: .88rem; color: var(--mut); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+@media (max-width: 640px) { .ba-pair { grid-template-columns: minmax(0, 1fr); } }
+
+/* ===== work grid: the featured study spans the row ===== */
+.wcard-feat { order: -1; font: 500 .8rem/1.2 var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--mut); }
+.wcard-lead { grid-column: 1 / -1; }
+.wcard-lead > a { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); grid-template-rows: auto auto auto auto 1fr; column-gap: clamp(24px, 4vw, 56px); row-gap: 12px; align-items: start; }
+.wcard-lead .wcard-img { grid-column: 1; grid-row: 1 / -1; }
+.wcard-lead .wcard-feat, .wcard-lead .wcard-top, .wcard-lead .wcard-title, .wcard-lead .wcard-sum, .wcard-lead .wcard-tag { grid-column: 2; }
+.wcard-lead .wcard-feat { order: 0; padding-top: 4px; }
+.wcard-lead .wcard-top { margin-top: 0; }
+.wcard-lead .wcard-name { font-size: clamp(2rem, 3.6vw, 3.2rem); }
+.wcard-lead .wcard-title { color: var(--fg); font-size: 1.1rem; }
+.wcard-sum { color: var(--mut); line-height: 1.55; }
+@media (max-width: 900px) {
+  .wcard-lead > a { display: flex; }
+}
+@media (max-width: 640px) { .cs-nums dl { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px; } }
