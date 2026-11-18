@@ -268,14 +268,16 @@ collections:
             name: compare
             widget: list
             required: false
-            hint: "Matched screenshots of the old and new site, same width. Leave empty to hide the block."
+            hint: "The old and new site at 1440 desktop and 390 phone, full screens, nothing cropped. Leave empty to hide the block."
             summary: "{{fields.title}}"
             fields:
               - { label: Title, name: title, widget: string }
-              - { label: Before screenshot, name: before, widget: image }
+              - { label: Before screenshot, desktop, name: before, widget: image }
+              - { label: Before screenshot, phone, name: beforeMobile, widget: image, required: false }
               - { label: Before description, name: beforeAlt, widget: string, required: false }
               - { label: Before caption, name: beforeNote, widget: text, required: false }
-              - { label: After screenshot, name: after, widget: image }
+              - { label: After screenshot, desktop, name: after, widget: image }
+              - { label: After screenshot, phone, name: afterMobile, widget: image, required: false }
               - { label: After description, name: afterAlt, widget: string, required: false }
               - { label: After caption, name: afterNote, widget: text, required: false }
           - { label: "Impact intro (say whether these are projected or measured)", name: impactNote, widget: string, required: false }

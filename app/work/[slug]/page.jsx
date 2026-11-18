@@ -159,16 +159,16 @@ export default function CaseStudy({ params }) {
               {st.compare.map((c) => (
                 <Reveal key={c.title} className="ba-row">
                   <h3 className="ba-h">{c.title}</h3>
-                  <div className="ba-pair">
-                    <figure className="ba-side ba-was">
-                      <span className="frame"><img src={c.before} alt={c.beforeAlt || ''} loading="lazy" /></span>
-                      <figcaption><b>{i.csBefore || 'Before'}</b>{c.beforeNote}</figcaption>
+                  {[
+                    ['ba-was', i.csBefore || 'Before', c.before, c.beforeMobile, c.beforeAlt, c.beforeNote],
+                    ['ba-now', i.csAfter || 'After', c.after, c.afterMobile, c.afterAlt, c.afterNote],
+                  ].map(([cls, label, desk, phone, alt, note]) => (
+                    <figure key={cls} className={`ba-set ${cls}${phone ? '' : ' solo'}`}>
+                      <span className="frame ba-desk"><img src={desk} alt={alt ? `${alt}, desktop` : ''} loading="lazy" width="1262" height="788" /></span>
+                      {phone && <span className="frame ba-phone"><img src={phone} alt={alt ? `${alt}, phone` : ''} loading="lazy" width="656" height="1419" /></span>}
+                      <figcaption><b>{label}</b>{note}</figcaption>
                     </figure>
-                    <figure className="ba-side ba-now">
-                      <span className="frame"><img src={c.after} alt={c.afterAlt || ''} loading="lazy" /></span>
-                      <figcaption><b>{i.csAfter || 'After'}</b>{c.afterNote}</figcaption>
-                    </figure>
-                  </div>
+                  ))}
                 </Reveal>
               ))}
             </section>

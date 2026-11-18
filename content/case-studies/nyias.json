@@ -126,27 +126,33 @@
     {
       "title": "The first screen",
       "before": "/uploads/nyias-before-1.jpg",
+      "beforeMobile": "/uploads/nyias-before-1-m.jpg",
       "beforeAlt": "Old auto show home page: the name and dates over a video",
-      "beforeNote": "The name and the dates over a video, and nothing to act on. Tickets were two screens down.",
+      "beforeNote": "The name and the dates over a video, and nothing to act on. On a phone the first ticket link is almost three screens down.",
       "after": "/uploads/nyias-after-1.jpg",
+      "afterMobile": "/uploads/nyias-after-1-m.jpg",
       "afterAlt": "New auto show home page: dates, venue, opening day and ticket status above the name",
       "afterNote": "Dates, venue, opening day and ticket status in one strip, then the name across the full width."
     },
     {
       "title": "The news",
       "before": "/uploads/nyias-before-2.jpg",
+      "beforeMobile": "/uploads/nyias-before-2-m.jpg",
       "beforeAlt": "Old home page news carousel with 19 slides and a tabbed headline list",
-      "beforeNote": "A 19 slide carousel of stories, most from a show that had already closed, then a second list of the same headlines in tabs.",
+      "beforeNote": "A 19 slide carousel of stories, most from a show that had already closed. On a phone the dots run under the arrows.",
       "after": "/uploads/nyias-after-2.jpg",
+      "afterMobile": "/uploads/nyias-after-2-m.jpg",
       "afterAlt": "New news section with dated stories in a grid and headline, video and photo filters",
       "afterNote": "Dated stories in a grid, with headlines, videos and photos as three filters on one list."
     },
     {
       "title": "Planning a visit",
       "before": "/uploads/nyias-before-3.jpg",
+      "beforeMobile": "/uploads/nyias-before-3-m.jpg",
       "beforeAlt": "Old home page hot links grid with Get Tickets as one photo tile",
-      "beforeNote": "Get Tickets was one photo tile in a grid of ten, with the label set in white over a busy photo.",
+      "beforeNote": "Get Tickets is one photo tile in a grid of ten, with its label in white over a busy photo. The grid runs off the right edge on both screens.",
       "after": "/uploads/nyias-after-3.jpg",
+      "afterMobile": "/uploads/nyias-after-3-m.jpg",
       "afterAlt": "New plan your visit section with hours by day, opening day and early access",
       "afterNote": "Hours by day, the press preview, opening day and early access in one place, with tickets, transit, parking and hotels linked at the top."
     }
