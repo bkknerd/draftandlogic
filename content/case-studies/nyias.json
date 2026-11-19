@@ -166,5 +166,48 @@
     "Pantheon hosting",
     "Archivo variable type, Barlow labels",
     "Hand-drawn SVG map and turntable"
-  ]
+  ],
+  "cms": {
+    "title": "Built to be edited",
+    "label": "A back end for the show staff",
+    "intro": "The show runs on WordPress, so we rebuilt the back end around how the staff actually work. Editors land on the jobs they do every week, every editable part of the site sits on one screen, and every change is logged with what it was before.",
+    "items": [
+      "A dashboard of quick actions for news, vehicles, exhibitions, tickets and galleries",
+      "Edit Site: every page, post and listing in one list, newest edits first",
+      "All 18 site-wide sections, from the homepage banner to the footer, in one place",
+      "An on-screen editor: switch it on, click text on the live site and type",
+      "A new homepage banner by dropping in an image",
+      "A change log with before and after, emailed to the team",
+      "A trimmed menu, with the full WordPress menu one click away for admins"
+    ],
+    "shots": [
+      {
+        "image": "/uploads/nyias-cms-1.jpg",
+        "alt": "Auto show WordPress dashboard with quick actions and content counts",
+        "caption": "The dashboard: the week's jobs first"
+      },
+      {
+        "image": "/uploads/nyias-cms-2.jpg",
+        "alt": "Edit Site screen with the on-screen editor switch and site-wide section cards",
+        "caption": "Edit Site: every section of the site on one screen"
+      },
+      {
+        "image": "/uploads/nyias-cms-3.jpg",
+        "alt": "List of every page, post and listing with type, status and last edited",
+        "caption": "Every page, post and listing in one list",
+        "half": true
+      },
+      {
+        "image": "/uploads/nyias-cms-4.jpg",
+        "alt": "Homepage banner screen with the current banner and an upload area",
+        "caption": "Swap the banner by dropping in an image",
+        "half": true
+      },
+      {
+        "image": "/uploads/nyias-cms-5.jpg",
+        "alt": "Change log showing when, who, what changed and before and after",
+        "caption": "The change log, with before and after"
+      }
+    ]
+  }
 }

@@ -161,6 +161,36 @@ export default function CaseEditorial({ st, i, services, related }) {
           </section>
         )}
 
+        {st.cms && (
+          <section className="ed-sec ed-cms" aria-labelledby="ed-cms">
+            <h2 id="ed-cms" className="ed-giant">{st.cms.title}</h2>
+            <div className="ed-row">
+              <p className="ed-label">{st.cms.label || 'The back end'}</p>
+              <div>
+                {st.cms.intro && <p className="ed-cms-intro">{st.cms.intro}</p>}
+                {st.cms.items.length > 0 && <ul className="ed-cms-list">{st.cms.items.map((x) => <li key={x}>{x}</li>)}</ul>}
+              </div>
+            </div>
+            {(() => {
+              const sh = st.cms.shots;
+              const rows = [];
+              for (let k = 0; k < sh.length; ) {
+                if (sh[k].half && sh[k + 1] && sh[k + 1].half) { rows.push([sh[k], sh[k + 1]]); k += 2; } else { rows.push([sh[k]]); k += 1; }
+              }
+              return rows.map((r) => (
+                <div key={r[0].image} className={r.length === 2 ? 'ed-two ed-cms-two' : 'ed-cms-one'}>
+                  {r.map((x) => (
+                    <Reveal as="figure" key={x.image} className="ed-img">
+                      <img src={x.image} alt={x.alt || ''} loading="lazy" width="1440" height="900" />
+                      {x.caption && <figcaption>{x.caption}</figcaption>}
+                    </Reveal>
+                  ))}
+                </div>
+              ));
+            })()}
+          </section>
+        )}
+
         {st.impact.length > 0 && (
           <section className="ed-row ed-imp" aria-labelledby="ed-i">
             <div>

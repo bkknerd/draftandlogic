@@ -261,6 +261,25 @@ collections:
           - { label: "Editorial: closing line", name: closing, widget: string, required: false }
           - { label: "Editorial: built with", name: platforms, widget: list, required: false, field: { label: Item, name: item, widget: string } }
           - { label: "Numbers heading (optional)", name: numbersHeading, widget: string, required: false }
+          - label: "Editorial: back end section"
+            name: cms
+            widget: object
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - { label: Label, name: label, widget: string, required: false }
+              - { label: Intro, name: intro, widget: text, required: false }
+              - { label: Features, name: items, widget: list, required: false, field: { label: Feature, name: item, widget: string } }
+              - label: Screenshots
+                name: shots
+                widget: list
+                required: false
+                summary: "{{fields.caption}}"
+                fields:
+                  - { label: Screenshot, name: image, widget: image }
+                  - { label: Description, name: alt, widget: string, required: false }
+                  - { label: Caption, name: caption, widget: string, required: false }
+                  - { label: "Half width (pairs with the next half-width shot)", name: half, widget: boolean, required: false, default: false }
           - { label: Client colour (rules and markers on the case page), name: accent, widget: color, required: false }
           - label: By the numbers
             name: numbers
