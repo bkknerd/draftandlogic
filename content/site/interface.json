@@ -78,10 +78,12 @@
   "csGoals": "Goals",
   "csDid": "What we did",
   "csVisit": "Visit site",
-  "csRelated": "More work",
+  "csRelated": "Related work",
   "csCompare": "Before and after",
   "csBefore": "Before",
   "csAfter": "After",
   "csImpact": "What it should move",
-  "featuredLabel": "Featured case study"
+  "featuredLabel": "Featured case study",
+  "csBuilt": "Built with",
+  "csViewCase": "View case"
 }

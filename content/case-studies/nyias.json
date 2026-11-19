@@ -155,5 +155,16 @@
       "source": "Google Search Central, Event structured data",
       "url": "https://developers.google.com/search/docs/appearance/structured-data/event"
     }
+  ],
+  "layout": "editorial",
+  "numbersHeading": "The rebuild in numbers",
+  "statement": "The New York International Auto Show is the oldest in North America: ten days at the Javits Center every spring since 1900. The old site opened on a video, then buried the dates, the debuts and the ticket link under news from a show that had already closed. We rebuilt the home page around what people come for: when it's on, what's new and how to get there.",
+  "brief": "We started from the questions people ask before they buy a ticket: when, what's new, what can I ride and how do I get there. Every section on the new home page answers one of them.",
+  "closing": "Dates, debuts and directions first. Everything else is one click away.",
+  "platforms": [
+    "WordPress",
+    "Pantheon hosting",
+    "Archivo variable type, Barlow labels",
+    "Hand-drawn SVG map and turntable"
   ]
 }

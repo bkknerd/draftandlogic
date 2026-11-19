@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import Contact from '@/components/Contact';
 import Reveal from '@/components/Reveal';
 import Drafted from '@/components/Drafted';
+import CaseEditorial from '@/components/CaseEditorial';
 import { DimArrow } from '@/components/Icons';
 import { getAreas, getSite, getCases, getStudy, getStudySlugs, thumb, trim, SITE_URL } from '@/lib/content';
 import { org, ldJson, orgId } from '@/lib/schema';
@@ -80,6 +81,7 @@ export default function CaseStudy({ params }) {
   const next = all.length > 1 ? all[(at + 1) % all.length] : null;
   const nextStudy = next ? getStudy(next.slug) : null;
   const nb = (nextStudy && nextStudy.accent) || '#0C0C0C';
+  const related = [1, 2].map((k) => all[(at + k) % all.length]).filter((c, n, arr) => c && c.slug !== st.slug && arr.findIndex((x) => x.slug === c.slug) === n).map((c) => ({ slug: c.slug, label: c.label, title: c.title, shot: c.shots[0] }));
 
   const facts = [
     [i.csClient || 'Client', st.client],
@@ -108,7 +110,11 @@ export default function CaseStudy({ params }) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(graph) }} />
       <Nav items={s.nav.items} home={false} />
-      <main id="main" className="page cs" style={st.accent ? { '--accent': st.accent } : undefined}>
+      <main id="main" className={`page cs${st.layout === 'editorial' ? ' cs-ed' : ''}`} style={st.accent ? { '--accent': st.accent } : undefined}>
+        {st.layout === 'editorial' ? (
+          <CaseEditorial st={st} i={i} services={services} related={related} />
+        ) : (
+          <>
         <header className="wrap cs-head" id="top">
           <Link className="back" href="/work/"><DimArrow /><span>{i.csBackWork || 'All work'}</span></Link>
           <Reveal className="cs2-top">
@@ -249,6 +255,9 @@ export default function CaseStudy({ params }) {
               <strong>{next.label} <span aria-hidden="true"><svg className="cs2-next-arw" viewBox="0 0 48 32" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="square"><path d="M2 16h40M28 3l14 13-14 13" /></svg></span></strong>
             </span>
           </Link>
+        )}
+
+          </>
         )}
 
         <Contact contact={s.contact} email={s.footer.email} />

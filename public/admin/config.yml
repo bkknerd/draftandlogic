@@ -23,6 +23,9 @@ collections:
           - { label: Case study page, back to work link, name: csBackWork, widget: string }
           - { label: Case study page, features heading, name: csFeatures, widget: string }
           - { label: Case study page, numbers heading, name: csNumbers, widget: string }
+          - { label: Case study page, built with heading, name: csBuilt, widget: string, required: false }
+          - { label: Case study page, related work heading, name: csRelated, widget: string, required: false }
+          - { label: Case study page, view case label, name: csViewCase, widget: string, required: false }
           - { label: Case study page, before and after heading, name: csCompare, widget: string, required: false }
           - { label: Case study page, before label, name: csBefore, widget: string, required: false }
           - { label: Case study page, after label, name: csAfter, widget: string, required: false }
@@ -252,6 +255,12 @@ collections:
           - { label: "Backup summary (the page opens with the Work card's summary; this is used only if that is empty)", name: summaryLead, widget: text }
           - { label: "Client story (3 to 5 sentences, who they are, what they needed, what we built)", name: story, widget: text }
           - { label: Website address (adds a Visit site link), name: url, widget: string, required: false }
+          - { label: "Layout (editorial = full-bleed hero, big statement, oversized section titles)", name: layout, widget: select, options: ["", "editorial"], required: false }
+          - { label: "Editorial: statement (one paragraph, about 70 words)", name: statement, widget: text, required: false }
+          - { label: "Editorial: brief (short paragraph before the closing line)", name: brief, widget: text, required: false }
+          - { label: "Editorial: closing line", name: closing, widget: string, required: false }
+          - { label: "Editorial: built with", name: platforms, widget: list, required: false, field: { label: Item, name: item, widget: string } }
+          - { label: "Numbers heading (optional)", name: numbersHeading, widget: string, required: false }
           - { label: Client colour (rules and markers on the case page), name: accent, widget: color, required: false }
           - label: By the numbers
             name: numbers
