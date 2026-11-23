@@ -3,19 +3,19 @@ import Footer from '@/components/Footer';
 import Contact from '@/components/Contact';
 import Reveal from '@/components/Reveal';
 import WorkGrid from '@/components/WorkGrid';
-import { getAreas, getSite, getCases, trim, SITE_URL } from '@/lib/content';
+import { getAreas, getSite, getCases, trim, sentences, SITE_URL } from '@/lib/content';
 import { org, ldJson } from '@/lib/schema';
 
 export function generateMetadata() {
   const { work } = getSite();
-  const title = `${work.allHeading || 'All work'} | Draft & Logic`;
-  const description = trim(work.allIntro || 'Client builds and concepts from Draft & Logic.', 158);
+  const title = `${work.allTitle || work.allHeading || 'All work'} | Draft & Logic`;
+  const description = sentences(work.allIntro || 'Client builds and concepts from Draft & Logic.');
   return {
     title,
     description,
     alternates: { canonical: '/work/' },
     openGraph: { title, description, url: SITE_URL + '/work/', type: 'website', images: ['/og.png'] },
-    twitter: { title, description },
+    twitter: { card: 'summary_large_image', title, description, images: ['/og.png'] },
   };
 }
 

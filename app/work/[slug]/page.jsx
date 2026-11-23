@@ -7,7 +7,7 @@ import Reveal from '@/components/Reveal';
 import Drafted from '@/components/Drafted';
 import CaseEditorial from '@/components/CaseEditorial';
 import { DimArrow } from '@/components/Icons';
-import { getAreas, getSite, getCases, getStudy, getStudySlugs, thumb, trim, SITE_URL } from '@/lib/content';
+import { getAreas, getSite, getCases, getStudy, getStudySlugs, thumb, trim, sentences, SITE_URL } from '@/lib/content';
 import { org, ldJson, orgId } from '@/lib/schema';
 
 export const dynamicParams = false;
@@ -19,8 +19,8 @@ export function generateStaticParams() {
 export function generateMetadata({ params }) {
   const st = getStudy(params.slug);
   if (!st) return {};
-  const title = `${trim(st.title, 52)} | Draft & Logic`;
-  const description = trim(st.lead, 158);
+  const title = `${st.seoTitle || trim(st.title, 52)} | Draft & Logic`;
+  const description = sentences(st.lead);
   const img = st.card?.shots[0]?.src || '/og.png';
   const url = `${SITE_URL}/work/${st.slug}/`;
   return {
@@ -28,7 +28,7 @@ export function generateMetadata({ params }) {
     description,
     alternates: { canonical: `/work/${st.slug}/` },
     openGraph: { type: 'article', title, description, url, images: [{ url: img, alt: st.title }] },
-    twitter: { title, description, images: [img] },
+    twitter: { card: 'summary_large_image', title, description, images: [img] },
   };
 }
 

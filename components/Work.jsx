@@ -52,7 +52,7 @@ export default function Work({ work, cases }) {
             <div className="ix-pv-in">
               {rows.map((r, n) =>
                 r.shot ? (
-                  <img key={r.key} src={r.shot.src} alt="" loading="lazy" className={n === active ? 'on' : ''} />
+                  <img key={r.key} src={r.shot.src} alt="" width="1280" height="800" loading="lazy" className={n === active ? 'on' : ''} />
                 ) : (
                   <span key={r.key} className={`ix-pv-ph ${n === active ? 'on' : ''}`}>{r.label}</span>
                 )

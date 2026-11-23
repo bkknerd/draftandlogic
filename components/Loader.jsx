@@ -26,7 +26,9 @@ export default function Loader() {
     const html = document.documentElement;
     let seen = false;
     try { seen = sessionStorage.getItem(KEY) === '1'; } catch {}
-    if (seen || reducedMotion()) { setState('gone'); markReady(); return; }
+    // Phones skip it: the page is the first thing they see, and it keeps load time down.
+    const narrow = window.matchMedia('(max-width: 899px)').matches;
+    if (seen || narrow || reducedMotion()) { setState('gone'); markReady(); return; }
 
     html.classList.add('dl-locked');
     const t1 = setTimeout(() => setState('out'), 950);

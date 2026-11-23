@@ -17,6 +17,14 @@
     {
       "q": "Do you handle SEO and AI search visibility?",
       "a": "Yes. Clean semantic markup, structured data and fast pages help search engines and AI answer engines read and quote your site."
+    },
+    {
+      "q": "Where are you based?",
+      "a": "Wake Forest, NC. We meet in person with clients in Wake Forest, Raleigh and Cary, and work remotely with clients further away, including a church in Brooklyn and a national conference in Milwaukee."
+    },
+    {
+      "q": "What do you build on?",
+      "a": "Mostly static and headless frameworks, with Decap or Sanity as the editor. We also build on Shopify, Webflow and Swoogo when the project calls for it."
     }
   ]
 }

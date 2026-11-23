@@ -127,6 +127,7 @@ collections:
           - { label: Intro, name: intro, widget: text }
           - { label: Link text to the All work page, name: allLink, widget: string, required: false }
           - { label: All work page heading, name: allHeading, widget: string, required: false }
+          - { label: "All work page title in search results (before | Draft & Logic)", name: allTitle, widget: string, required: false }
           - { label: All work page intro, name: allIntro, widget: text, required: false }
           - { label: Heading for other launches, name: alsoHeading, widget: string }
           - label: Other launched sites
@@ -198,8 +199,18 @@ collections:
               - { label: Town, name: city, widget: string }
               - { label: "Page address (lowercase, hyphens, e.g. web-design-apex-nc)", name: slug, widget: string, pattern: ['^[a-z0-9-]+$', "Lowercase letters, numbers and hyphens only"] }
               - { label: Heading, name: heading, widget: string }
+              - { label: "Search description (140 to 158 characters)", name: description, widget: text, required: false, hint: "Leave empty to use the intro." }
               - { label: Intro, name: intro, widget: text, hint: "Say what is true for this town: where the studio is, which local clients you built for." }
               - { label: What you get, name: points, widget: list, field: { label: Point, name: point, widget: string } }
+              - { label: "Body paragraphs (what's true for this town: local clients, how you work there)", name: body, widget: list, required: false, field: { label: Paragraph, name: paragraph, widget: text } }
+              - label: Local questions
+                name: faq
+                widget: list
+                required: false
+                summary: "{{fields.q}}"
+                fields:
+                  - { label: Question, name: q, widget: string }
+                  - { label: Answer, name: a, widget: text, hint: "Put the answer in the first sentence." }
               - { label: Case studies to show, name: cases, widget: list, field: { label: Case study ID, name: id, widget: string }, hint: "nyias, summit, abaxent, namc, milo, nlt, happy or walkup" }
       - name: privacy
         label: Privacy page
@@ -252,6 +263,7 @@ collections:
         fields: &studyfields
           - { label: Title, name: title, widget: string }
           - { label: Tag line, name: tag, widget: string }
+          - { label: "Search title (before | Draft & Logic, under 45 characters)", name: seoTitle, widget: string, required: false, hint: "What the page is and where, e.g. Café website, Morrisville, NC. Leave empty to use the title." }
           - { label: "Backup summary (the page opens with the Work card's summary; this is used only if that is empty)", name: summaryLead, widget: text }
           - { label: "Client story (3 to 5 sentences, who they are, what they needed, what we built)", name: story, widget: text }
           - { label: Website address (adds a Visit site link), name: url, widget: string, required: false }

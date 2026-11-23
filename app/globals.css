@@ -116,6 +116,11 @@ html.dl-locked { overflow: hidden; }
 .loader { position: fixed; inset: 0; z-index: 100; background: var(--bg); display: grid; place-items: center; transition: transform .7s var(--snap); }
 .loader.out { transform: translateY(-100%); }
 html:not(.js) .loader { display: none; }
+/* Phones: no opening screen, and the hero headline paints at once instead of waiting for the script. */
+@media (max-width: 899px) {
+  .loader { display: none; }
+  html.js .hero .ln-in, html.js .hero .hero-row, html.js .hero .hero-foot, html.js .hero .hero-kicker { opacity: 1; transform: none; transition: none; }
+}
 .loader-in { width: min(560px, 78vw); }
 .loader-wm { width: 100%; height: auto; color: var(--fg); }
 .loader-bar { margin-top: 28px; height: 2px; background: var(--rule); overflow: hidden; }
@@ -497,6 +502,15 @@ html:not(.js) .ln { overflow: visible; }
 .prose { max-width: 46rem; margin-left: max(0px, calc((100vw - 1240px) / 2)); padding-bottom: var(--sec); display: grid; gap: 36px; }
 .prose p { color: var(--mut); font-size: 1.08rem; }
 @media (max-width: 760px) { .area-cols { grid-template-columns: minmax(0, 1fr); } }
+.area-body { padding-bottom: clamp(32px, 5vw, 64px); }
+.area-body > div { max-width: 44rem; display: grid; gap: 1.1em; }
+.area-body p { font-size: 1.08rem; line-height: 1.6; color: var(--mut); }
+.area-faq { padding-bottom: var(--sec); }
+.area-qa { border-top: 1px solid var(--fg); max-width: 56rem; }
+.area-qa > div { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(16px, 4vw, 64px); padding: 24px 0; border-bottom: 1px solid var(--rule); }
+.area-qa dt { margin: 0; }
+.area-qa dd { margin: 0; color: var(--mut); line-height: 1.55; }
+@media (max-width: 760px) { .area-qa > div { grid-template-columns: minmax(0, 1fr); gap: 8px; } }
 
 /* draft to built: the line drawing of a screen shows first, then the real page wipes across it */
 .dr { position: relative; display: block; overflow: hidden; }
