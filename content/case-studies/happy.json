@@ -77,6 +77,37 @@
       "alt": "happy's home page on a phone"
     }
   ],
+  "cms": {
+    "title": "Built to be edited",
+    "label": "A back end for the bar staff",
+    "intro": "Bar staff run the site from a phone between shifts. They sign in with one shared password, see the real page update as they type, and changes go live about a minute after they hit Publish.",
+    "items": [
+      "Staff sign-in with one shared password instead of a GitHub account. The check runs server-side, slows down repeated guesses, and no key lives in the public code",
+      "A live preview of the real page, scrolled to the section being edited, with new photos showing before they're uploaded",
+      "A how-to guide inside the editor: closing for an event, changing hours, posting the month's music",
+      "A closed notice for private events and holidays, with five designs and as many dates as needed. It takes itself down after the last one",
+      "One hours list that feeds the hours table, the footer, today's row and the Google listing",
+      "Monthly music flyers: upload the Instagram poster, add the shows, and each show becomes a Google event. Past dates cross out and next month's lineup takes over on its own",
+      "Event inquiries and newsletter sign-ups through Netlify Forms, with a spam trap",
+      "Content baked into the page at deploy, so the menu, hours and shows load complete and search engines read all of it",
+      "Google Analytics set from the editor, tracking directions, calls, Instagram, event inquiries and sign-ups",
+      "Every publish saved in the site's history. An edit that would break the site is refused and the last good version stays live"
+    ],
+    "shots": [
+      {
+        "image": "/uploads/happy-cms-closed.jpg",
+        "alt": "happy's home page with a brown Thanksgiving notice across the top: closed for thanksgiving thursday, back open friday at 4pm",
+        "caption": "The Thanksgiving notice, set from the editor",
+        "half": true
+      },
+      {
+        "image": "/uploads/happy-cms-signin.jpg",
+        "alt": "happy's staff sign-in screen: a black card with a password field, a yellow Sign in button and the dripping smiley",
+        "caption": "Staff sign-in: one password, no GitHub account",
+        "half": true
+      }
+    ]
+  },
   "quote": {
     "text": "",
     "name": "",
