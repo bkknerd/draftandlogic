@@ -3,7 +3,7 @@
   "tag": "Bar website, Cary, NC",
   "summaryLead": "A cocktail bar and event space in downtown Cary. The site is the smiley wall, a sticker-style menu and the stairs up, and the owners edit it themselves.",
   "story": "happy's has a wall covered in smiley faces, a menu that changes, live music every Saturday and a second bar upstairs. A template site would flatten all of that. The goal was a page that feels like walking in: loud, friendly, and easy to use on a phone at the door. The palette comes off the wall: cream, tomato, cobalt and pink, with Bricolage Grotesque doing the shouting and Space Mono keeping the prices tidy. Menu, hours, events, photos and reviews all live in the CMS, so the staff update them without calling us.",
-  "url": "",
+  "url": "https://happysnc.com",
   "numbers": [],
   "goals": [
     "Carry the smiley wall's personality onto the page.",
@@ -12,15 +12,9 @@
   ],
   "features": [
     {
-      "title": "A scroll through the home page",
-      "image": "/uploads/happy-scroll-poster.jpg",
-      "video": "/uploads/happy-scroll.mp4",
-      "alt": "Screen recording scrolling down the happy's home page"
-    },
-    {
       "title": "The smiley wall",
       "text": "The bar's own wall is the hero, and its colors run the whole site.",
-      "image": "/uploads/happy-f1.jpg",
+      "image": "/uploads/happy-1.jpg",
       "alt": "happy's home page",
       "story": "Borders are a hard ink line and cards sit on an offset shadow, so everything reads like a sticker. The hero tint shifts slowly between the wall's colors."
     },
@@ -30,13 +24,6 @@
       "image": "/uploads/happy-f2.jpg",
       "alt": "happy's menu cards, colored by section",
       "story": "Specials, draft, shots, zero proof and snacks each get their own color, so you can find the section before you read it. Search handles the rest. Prices are edited in the CMS."
-    },
-    {
-      "title": "The walk up",
-      "text": "A staircase that opens the upstairs bar's page.",
-      "image": "/uploads/happy-f3.jpg",
-      "alt": "the walk up staircase animation",
-      "story": "The upstairs bar is the bar's best secret, so the link to it climbs a staircase. It opens in a native dialog, and it's skipped for anyone with reduced motion turned on."
     },
     {
       "title": "Lately at happy's",
@@ -49,7 +36,7 @@
       "title": "Saturday live music",
       "text": "The month's lineup, a poster and a card for booking the bar.",
       "image": "/uploads/happy-f5.jpg",
-      "alt": "happy's events section with the October lineup",
+      "alt": "happy's events section with the November lineup, past shows crossed out",
       "story": "The lineup is a list in the CMS, and past dates strike themselves out. Birthdays and work nights get their own card with a way to ask about a date."
     },
     {
