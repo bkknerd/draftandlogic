@@ -853,6 +853,7 @@ body {
 .ed-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: clamp(20px, 2.4vw, 32px) 0 0; padding: 0; list-style: none; }
 .ed-tags li { border: 1px solid var(--rule); border-radius: 999px; padding: 6px 14px; font-size: .9rem; color: var(--mut); }
 .ed-visit { display: inline-block; margin-top: 20px; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.ed-visit + .ed-visit { margin-left: 28px; }
 .ed-label { font: 500 clamp(1.05rem, 1.5vw, 1.3rem)/1.4 var(--display); letter-spacing: -.01em; margin: 0; }
 .ed-mut { color: var(--mut); }
 .ed-note { margin-top: 28px; color: var(--mut); font-size: .92rem; line-height: 1.55; max-width: 36rem; }

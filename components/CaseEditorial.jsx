@@ -35,6 +35,7 @@ export default function CaseEditorial({ st, i, services, related }) {
               </ul>
             )}
             {st.url && <a className="ed-visit" href={st.url} target="_blank" rel="noopener">{i.csVisit || 'Visit site'}<span className="sr"> (opens in a new tab)</span></a>}
+            {st.paper && <a className="ed-visit" href={st.paper.file} target="_blank" rel="noopener">{st.paper.label}<span className="sr"> (PDF, opens in a new tab)</span></a>}
           </div>
         </header>
 

@@ -130,6 +130,12 @@ export default function CaseStudy({ params }) {
                   <dd><a href={st.url} target="_blank" rel="noopener">{st.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}<span className="sr"> (opens in a new tab)</span></a></dd>
                 </div>
               )}
+              {st.paper && (
+                <div style={{ display: 'contents' }}>
+                  <dt>{i.csPaper || 'Download'}</dt>
+                  <dd><a href={st.paper.file} target="_blank" rel="noopener">{st.paper.label}<span className="sr"> (PDF, opens in a new tab)</span></a></dd>
+                </div>
+              )}
             </dl>
           </Reveal>
         </header>

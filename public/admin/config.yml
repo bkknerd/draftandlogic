@@ -278,6 +278,14 @@ collections:
           - { label: "Backup summary (the page opens with the Work card's summary; this is used only if that is empty)", name: summaryLead, widget: text }
           - { label: "Client story (3 to 5 sentences, who they are, what they needed, what we built)", name: story, widget: text }
           - { label: Website address (adds a Visit site link), name: url, widget: string, required: false }
+          - label: White paper or write-up (adds a link beside Visit site)
+            name: paper
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - { label: Link text, name: label, widget: string, required: false, default: White paper (PDF) }
+              - { label: PDF file, name: file, widget: file, required: false }
           - { label: "Layout (editorial = full-bleed hero, big statement, oversized section titles)", name: layout, widget: select, options: ["", "editorial"], required: false }
           - { label: "Editorial: statement (one paragraph, about 70 words)", name: statement, widget: text, required: false }
           - { label: "Editorial: brief (short paragraph before the closing line)", name: brief, widget: text, required: false }
