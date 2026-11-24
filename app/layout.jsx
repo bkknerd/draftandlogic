@@ -4,6 +4,7 @@ import './globals.css';
 import { getSite, SITE_URL } from '@/lib/content';
 import Loader from '@/components/Loader';
 import SmoothScroll from '@/components/SmoothScroll';
+import SiteTrack from '@/components/SiteTrack';
 
 const { seo, analytics } = getSite();
 
@@ -60,6 +61,7 @@ export default function RootLayout({ children }) {
         <SmoothScroll />
         <a className="skip" href="#main">Skip to content</a>
         {children}
+        {gaId && <SiteTrack />}
       </body>
     </html>
   );

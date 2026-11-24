@@ -33,7 +33,7 @@ export default function Contact({ contact, email, id = 'contact', heading }) {
         <div className="contact-row">
           <p>{contact.intro}</p>
           <div className="contact-act">
-            <ArrowLink href={`mailto:${email}`} variant="ink" onClick={() => track('email_click', { section: id })}>{contact.button || 'Email us'}</ArrowLink>
+            <ArrowLink href={`mailto:${email}`} variant="ink">{contact.button || 'Email us'}</ArrowLink>
             <p className="copy-row">
               <span>{email}</span>
               <button type="button" className="copy" onClick={copy}>

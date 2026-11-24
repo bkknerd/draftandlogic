@@ -52,6 +52,10 @@ button[disabled]{opacity:.6;cursor:default}
 .sent form{display:none}.sent .done{display:block}
 footer{border-top:1px solid var(--rule);padding:24px 0 40px;font-size:14px;color:var(--mut)}
 </style>
+<script>
+/* Google Analytics (same property as the site, content/site/analytics.json). Skipped for Do Not Track / GPC visitors. */
+(function(){var n=navigator;if(n.doNotTrack==='1'||window.doNotTrack==='1'||n.globalPrivacyControl)return;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-95462DBSVK';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-95462DBSVK',{anonymize_ip:true})})();
+</script>
 </head>
 <body>
 <div class="wrap">
@@ -197,7 +201,10 @@ footer{border-top:1px solid var(--rule);padding:24px 0 40px;font-size:14px;color
     e.preventDefault();
     var b=f.querySelector('button'),m=f.querySelector('.msg');b.disabled=true;m.textContent='Sending…';
     fetch('/',{method:'POST',body:new FormData(f)}).then(function(r){
-      if(!r.ok)throw 0;document.body.classList.add('sent');window.scrollTo(0,0);document.querySelector('.done').focus();
+      if(!r.ok)throw 0;document.body.classList.add('sent');
+      /* counted only once Netlify has the brief; nothing typed in the form goes to analytics */
+      try{window.gtag&&gtag('event','generate_lead',{form_name:'intake'})}catch(x){}
+      window.scrollTo(0,0);document.querySelector('.done').focus();
     }).catch(function(){m.textContent='That didn’t go through. Please try again, or email us and we’ll send it another way.';b.disabled=false;});
   });
 })();
