@@ -125,6 +125,15 @@ collections:
           - { label: "Show the other launched sites list", name: alsoShow, widget: boolean, default: true }
           - { label: Heading, name: heading, widget: string }
           - { label: Intro, name: intro, widget: text }
+          - label: Groups on the home page
+            name: groups
+            widget: list
+            required: false
+            summary: "{{fields.heading}}"
+            hint: "The home page list splits into these groups, in this order. Give each work card and launched site a matching group ID."
+            fields:
+              - { label: Group ID, name: id, widget: string, hint: "venues or events" }
+              - { label: Heading, name: heading, widget: string }
           - { label: Link text to the All work page, name: allLink, widget: string, required: false }
           - { label: All work page heading, name: allHeading, widget: string, required: false }
           - { label: "All work page title in search results (before | Draft & Logic)", name: allTitle, widget: string, required: false }
@@ -137,6 +146,7 @@ collections:
             fields:
               - { label: Name, name: label, widget: string }
               - { label: Link, name: url, widget: string }
+              - { label: Group ID, name: group, widget: string, required: false, hint: "venues or events" }
       - name: cases
         label: Work cards
         file: content/site/cases.json
@@ -148,7 +158,8 @@ collections:
             summary: "{{fields.label}}"
             fields:
               - { label: Name, name: label, widget: string }
-              - { label: Show on the home page, name: home, widget: boolean, default: false, required: false, hint: "Keep this to three cards. Every card appears on the All work page." }
+              - { label: Show on the home page, name: home, widget: boolean, default: false, required: false, hint: "Every card appears on the All work page." }
+              - { label: Group ID, name: group, widget: string, required: false, hint: "venues or events. Sets which group the card sits in on the home page." }
               - { label: Featured case study, name: featured, widget: boolean, default: false, required: false, hint: "Leads the work list and spans the full row on the All work page. Turn it on for one project." }
               - { label: Case study ID, name: study, widget: string, required: false, hint: "nyias, summit, abaxent, namc, milo, nlt, happy or walkup. Leave empty for no case-study link." }
               - { label: Small tag on the card (optional, e.g. Concept), name: tag, widget: string, required: false }

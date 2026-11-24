@@ -8,10 +8,17 @@ import { ArrowLink, DimArrow } from './Icons';
 /** Work as a typographic index. The screen of whichever row is held shows in the panel beside it. */
 export default function Work({ work, cases }) {
   const also = work.alsoShow ? (work.also || []).filter((a) => a.label && a.url) : [];
-  const rows = [
-    ...cases.map((c) => ({ key: c.label, label: c.label, meta: c.meta, href: c.slug ? `/work/${c.slug}/` : '/work/', shot: c.shots[0] })),
-    ...also.map((a) => ({ key: a.label, label: a.label, meta: work.alsoHeading, href: a.url, out: true })),
+  const all = [
+    ...cases.map((c) => ({ key: c.label, label: c.label, meta: c.meta, group: c.group, href: c.slug ? `/work/${c.slug}/` : '/work/', shot: c.shots[0] })),
+    ...also.map((a) => ({ key: a.label, label: a.label, meta: work.alsoHeading, group: a.group, href: a.url, out: true })),
   ];
+  // Split into the editor's groups (venues, events…); anything ungrouped falls into the last one.
+  const defs = (work.groups || []).filter((g) => g.id && g.heading);
+  const ids = defs.map((g) => g.id);
+  const groups = defs.length
+    ? defs.map((g, gi) => ({ ...g, rows: all.filter((r) => r.group === g.id || (gi === defs.length - 1 && !ids.includes(r.group))) })).filter((g) => g.rows.length)
+    : [{ id: 'all', heading: '', rows: all }];
+  const rows = groups.flatMap((g) => g.rows);
   const [active, setActive] = useState(0);
   const cur = rows[active] || rows[0];
 
@@ -24,29 +31,37 @@ export default function Work({ work, cases }) {
         </Reveal>
 
         <div className="ix">
-          <ol className="ix-list">
-            {rows.map((r, n) => {
-              const inner = (
-                <>
-                  <span className="ix-name">{r.label}</span>
-                  {r.meta && <span className="ix-meta">{r.meta}</span>}
-                  <span className="ix-go"><DimArrow /></span>
-                  {r.out && <span className="sr"> (opens in a new tab)</span>}
-                </>
-              );
-              const props = { onPointerEnter: () => setActive(n), onFocus: () => setActive(n) };
-              return (
-                <li key={r.key} className={`ix-row ${n === active ? 'on' : ''}`}>
-                  {r.out ? <a href={r.href} target="_blank" rel="noopener" {...props}>{inner}</a> : <Link href={r.href} {...props}>{inner}</Link>}
-                  {r.shot && (
-                    <span className="ix-thumb" aria-hidden="true">
-                      <img src={r.shot.thumb} alt="" loading="lazy" width="640" height="400" />
-                    </span>
-                  )}
-                </li>
-              );
-            })}
-          </ol>
+          <div className="ix-list">
+            {groups.map((g) => (
+              <div key={g.id} className="ix-grp">
+                {g.heading && <h3 className="ix-gh">{g.heading}</h3>}
+                <ol>
+                  {g.rows.map((r) => {
+                    const n = rows.indexOf(r);
+                    const inner = (
+                      <>
+                        <span className="ix-name">{r.label}</span>
+                        {r.meta && <span className="ix-meta">{r.meta}</span>}
+                        <span className="ix-go"><DimArrow /></span>
+                        {r.out && <span className="sr"> (opens in a new tab)</span>}
+                      </>
+                    );
+                    const props = { onPointerEnter: () => setActive(n), onFocus: () => setActive(n) };
+                    return (
+                      <li key={r.key} className={`ix-row ${n === active ? 'on' : ''}`}>
+                        {r.out ? <a href={r.href} target="_blank" rel="noopener" {...props}>{inner}</a> : <Link href={r.href} {...props}>{inner}</Link>}
+                        {r.shot && (
+                          <span className="ix-thumb" aria-hidden="true">
+                            <img src={r.shot.thumb} alt="" loading="lazy" width="640" height="400" />
+                          </span>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ol>
+              </div>
+            ))}
+          </div>
 
           <div className="ix-pv" aria-hidden="true">
             <div className="ix-pv-in">

@@ -29,7 +29,8 @@
         "ADA Accessibility Compliance"
       ],
       "home": true,
-      "featured": true
+      "featured": true,
+      "group": "events"
     },
     {
       "style": "abx",
@@ -53,7 +54,8 @@
         "Technical SEO & Performance",
         "ADA Accessibility Compliance"
       ],
-      "home": false
+      "home": false,
+      "group": "events"
     },
     {
       "style": "namc",
@@ -83,7 +85,8 @@
         "Technical SEO & Performance",
         "ADA Accessibility Compliance"
       ],
-      "home": true
+      "home": true,
+      "group": "events"
     },
     {
       "style": "milo",
@@ -110,7 +113,8 @@
         "Technical SEO & Performance",
         "ADA Accessibility Compliance"
       ],
-      "home": true
+      "home": true,
+      "group": "venues"
     },
     {
       "style": "nlt",
@@ -138,7 +142,8 @@
         "Technical SEO & Performance",
         "ADA Accessibility Compliance"
       ],
-      "home": false
+      "home": true,
+      "group": "events"
     },
     {
       "style": "sum",
@@ -164,7 +169,8 @@
         "Custom Web Development",
         "Technical SEO & Performance"
       ],
-      "home": false
+      "home": false,
+      "group": "events"
     },
     {
       "style": "iron",
@@ -190,7 +196,8 @@
         "Custom Web Development",
         "Technical SEO & Performance"
       ],
-      "home": false
+      "home": false,
+      "group": "events"
     },
     {
       "style": "happy",
@@ -217,7 +224,8 @@
         "Content Management Systems",
         "ADA Accessibility Compliance"
       ],
-      "home": true
+      "home": true,
+      "group": "venues"
     },
     {
       "style": "walkup",
@@ -243,7 +251,8 @@
         "Custom Web Development",
         "ADA Accessibility Compliance"
       ],
-      "home": false
+      "home": false,
+      "group": "venues"
     }
   ]
 }

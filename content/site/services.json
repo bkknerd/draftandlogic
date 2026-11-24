@@ -9,6 +9,13 @@
       "text": ""
     },
     {
+      "title": "Event & Program Portals",
+      "lead": "Registration, schedules and attendee pages that stay fast when everyone signs up at once.",
+      "text": "",
+      "linkText": "More on Swoogo development.",
+      "linkHref": "/swoogo-development/"
+    },
+    {
       "title": "ADA Accessibility Compliance",
       "lead": "Design and markup built to WCAG, tested with screen readers, keyboards and phones.",
       "text": ""
@@ -22,13 +29,6 @@
       "title": "Site Modernization & Audits",
       "lead": "Old sites rebuilt on current infrastructure, with the code debt cleared and the speed back.",
       "text": ""
-    },
-    {
-      "title": "Event & Program Portals",
-      "lead": "Registration, schedules and attendee pages that stay fast when everyone signs up at once.",
-      "text": "",
-      "linkText": "More on Swoogo development.",
-      "linkHref": "/swoogo-development/"
     },
     {
       "title": "Custom Web Development",

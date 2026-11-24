@@ -2,19 +2,32 @@
   "show": true,
   "heading": "Selected work",
   "intro": "",
+  "groups": [
+    {
+      "id": "venues",
+      "heading": "Venues and local"
+    },
+    {
+      "id": "events",
+      "heading": "Events and organizations"
+    }
+  ],
   "alsoHeading": "Also launched",
   "also": [
     {
       "label": "Southwest Looms",
-      "url": "https://southwestlooms.com/"
+      "url": "https://southwestlooms.com/",
+      "group": "venues"
     },
     {
       "label": "Brights Beauty",
-      "url": "https://www.brightsbeauty.com/"
+      "url": "https://www.brightsbeauty.com/",
+      "group": "venues"
     },
     {
       "label": "Persian Carpet",
-      "url": "https://www.persiancarpet.com/"
+      "url": "https://www.persiancarpet.com/",
+      "group": "venues"
     }
   ],
   "alsoShow": true,

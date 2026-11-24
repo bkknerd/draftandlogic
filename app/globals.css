@@ -721,7 +721,10 @@ body {
 .wk-head h2 { font-size: clamp(3rem, 8vw, 7.2rem); line-height: .9; letter-spacing: -.037em; }
 .wk-head-r .alink { color: var(--fg); }
 .ix { display: flex; flex-wrap: wrap; align-items: flex-start; gap: clamp(32px, 5vw, 72px); }
-.ix-list { flex: 999 1 600px; min-width: 0; border-bottom: 1px solid var(--rule); }
+.ix-list { flex: 999 1 600px; min-width: 0; }
+.ix-grp ol { border-bottom: 1px solid var(--rule); }
+.ix-grp + .ix-grp { margin-top: clamp(40px, 5vw, 64px); }
+.ix-gh { font-size: .95rem; font-weight: 500; color: var(--mut); padding-bottom: 14px; }
 .ix-row > a { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 180px) 44px; align-items: baseline; gap: 8px 16px; padding: clamp(18px, 2.2vw, 28px) 0; border-top: 1px solid var(--rule); text-decoration: none; color: var(--pencil); transition: color .35s; }
 .ix-row.on > a { color: var(--fg); }
 .ix-n { font-size: .9rem; color: var(--mut); font-variant-numeric: tabular-nums; }
