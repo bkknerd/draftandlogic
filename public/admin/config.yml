@@ -173,7 +173,7 @@ collections:
                   - { label: Description (alt text), name: alt, widget: string }
               - { label: Headline, name: title, widget: string }
               - { label: Summary, name: summary, widget: text }
-              - { label: Services we delivered, name: services, widget: list, required: false, field: { label: Service, name: service, widget: string }, hint: "Shown as tags on the card and the case page, and used by the filter. Use the same wording across projects." }
+              - { label: Services we delivered, name: services, widget: list, required: false, field: { label: Service, name: service, widget: string }, hint: "Shown as tags and used by the filter. Use the service names from the Services section exactly." }
       - name: faq
         label: FAQ (also feeds search and AI answers)
         file: content/site/faq.json
@@ -223,6 +223,64 @@ collections:
                   - { label: Question, name: q, widget: string }
                   - { label: Answer, name: a, widget: text, hint: "Put the answer in the first sentence." }
               - { label: Case studies to show, name: cases, widget: list, field: { label: Case study ID, name: id, widget: string }, hint: "nyias, summit, abaxent, namc, milo, nlt, happy or walkup" }
+      - name: studio
+        label: Studio page
+        file: content/site/studio.json
+        format: json
+        fields:
+          - { label: "Show this page", name: show, widget: boolean, default: true }
+          - { label: Heading, name: heading, widget: string }
+          - { label: "Lead line (big, under the heading)", name: lead, widget: string, required: false }
+          - { label: Intro, name: intro, widget: text }
+          - { label: "Search description", name: description, widget: text, hint: "About 150 characters. Shown in Google results." }
+          - label: "What we do"
+            name: whatWeDo
+            widget: object
+            fields:
+              - { label: "Statement (starts with Draft & Logic)", name: heading, widget: string }
+              - { label: Text, name: text, widget: text }
+              - label: Links
+                name: links
+                widget: list
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Link, name: href, widget: string }
+          - { label: "Manifesto lines (one statement per line)", name: manifesto, widget: list, field: { label: Line, name: line, widget: string } }
+          - { label: "Results: heading", name: statsHeading, widget: string }
+          - { label: "Results: note", name: statsNote, widget: string, hint: "Say where the numbers come from." }
+          - label: "Results"
+            name: stats
+            widget: list
+            summary: "{{fields.value}} {{fields.label}}"
+            hint: "A result only shows once it has a value. The section stays hidden until at least one does. Use real numbers from Google Analytics."
+            fields:
+              - { label: "Number (e.g. 48,000 or 32%)", name: value, widget: string, required: false }
+              - { label: Label, name: label, widget: string }
+          - { label: "How it goes: heading", name: processHeading, widget: string }
+          - label: "How it goes: steps"
+            name: steps
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Step, name: title, widget: string }
+              - { label: Text, name: text, widget: string }
+          - { label: "How we work: heading", name: valuesHeading, widget: string }
+          - label: "How we work"
+            name: values
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Line, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+          - { label: "Questions: heading", name: factsHeading, widget: string }
+          - label: Questions
+            name: facts
+            widget: list
+            summary: "{{fields.q}}"
+            fields:
+              - { label: Question, name: q, widget: string }
+              - { label: Answer, name: a, widget: text }
       - name: privacy
         label: Privacy page
         file: content/site/privacy.json

@@ -21,12 +21,12 @@
       "summary": "The old site buried the dates and the debuts under a rail of news from a show that had already closed. The new one opens on four facts and the name across the full width, then a departures board of debuts, the test-track cars on a turntable and a drawn map of the Javits.",
       "tag": "Launching Dec 2026",
       "services": [
-        "Custom Web Development",
-        "Content Management Systems",
-        "Event & Program Portals",
-        "Site Modernization & Audits",
-        "Technical SEO & Performance",
-        "ADA Accessibility Compliance"
+        "Custom web development",
+        "Content management",
+        "Event and program portals",
+        "Site rebuilds and audits",
+        "Technical SEO and performance",
+        "Accessibility (WCAG 2.2 AA)"
       ],
       "home": true,
       "featured": true,
@@ -46,13 +46,13 @@
         }
       ],
       "title": "A broker that works for the buyer",
-      "summary": "Abaxent has brokered technology in Wisconsin for 22 years, and the old site read like one more reseller. The new one opens on a single question, what's a broker, then answers it with a four-step method, 93% partner retention and the three people who run it.",
+      "summary": "Abaxent has brokered technology in Wisconsin for 22 years, and the old site read like one more reseller. The new one opens on a single question, what’s a broker, then answers it with a four-step method, 93% partner retention and the three people who run it.",
       "tag": "",
       "services": [
-        "Custom Web Development",
-        "Site Modernization & Audits",
-        "Technical SEO & Performance",
-        "ADA Accessibility Compliance"
+        "Custom web development",
+        "Site rebuilds and audits",
+        "Technical SEO and performance",
+        "Accessibility (WCAG 2.2 AA)"
       ],
       "home": false,
       "group": "events"
@@ -75,15 +75,15 @@
         }
       ],
       "title": "One question on the first screen: attend, sponsor or exhibit.",
-      "summary": "The forum site buried the schedule, the map and the sponsor levels behind buttons. The 2027 conference site opens by asking what you're here to do, then puts the $400 ticket, six sponsor levels and the $1,500 booth one click away.",
+      "summary": "The forum site buried the schedule, the map and the sponsor levels behind buttons. The 2027 conference site opens by asking what you’re here to do, then puts the $400 ticket, six sponsor levels and the $1,500 booth one click away.",
       "tag": "",
       "services": [
-        "Custom Web Development",
-        "Event & Program Portals",
-        "Content Management Systems",
-        "Site Modernization & Audits",
-        "Technical SEO & Performance",
-        "ADA Accessibility Compliance"
+        "Custom web development",
+        "Event and program portals",
+        "Content management",
+        "Site rebuilds and audits",
+        "Technical SEO and performance",
+        "Accessibility (WCAG 2.2 AA)"
       ],
       "home": true,
       "group": "events"
@@ -93,25 +93,25 @@
       "feature": true,
       "reverse": false,
       "study": "milo",
-      "label": "Milo's Cafe",
+      "label": "Milo’s Cafe",
       "note": "",
       "shots": [
         {
           "image": "/uploads/milo-1.jpg",
-          "alt": "Milo's Cafe home page with the storefront and the headline A little Europe, a lot of flavor"
+          "alt": "Milo’s Cafe home page with the storefront and the headline A little Europe, a lot of flavor"
         },
         {
           "image": "/uploads/milo-2.jpg",
-          "alt": "Milo's Cafe patio scene in the morning with a time-of-day slider"
+          "alt": "Milo’s Cafe patio scene in the morning with a time-of-day slider"
         }
       ],
       "title": "A café site with a patio that follows the sky.",
-      "summary": "People looking up Milo's want the menu, the prices and whether the patio is worth it today. The site answers all three on one page, with a patio drawn from the real Morrisville sky and a little glass that pours on every drink.",
+      "summary": "People looking up Milo’s want the menu, the prices and whether the patio is worth it today. The site answers all three on one page, with a patio drawn from the real Morrisville sky and a little glass that pours on every drink.",
       "tag": "",
       "services": [
-        "Custom Web Development",
-        "Technical SEO & Performance",
-        "ADA Accessibility Compliance"
+        "Custom web development",
+        "Technical SEO and performance",
+        "Accessibility (WCAG 2.2 AA)"
       ],
       "home": true,
       "group": "venues"
@@ -137,10 +137,10 @@
       "summary": "Service times, video, events and giving for a Brooklyn church, with an email sign-in so the staff update it themselves.",
       "tag": "",
       "services": [
-        "Custom Web Development",
-        "Content Management Systems",
-        "Technical SEO & Performance",
-        "ADA Accessibility Compliance"
+        "Custom web development",
+        "Content management",
+        "Technical SEO and performance",
+        "Accessibility (WCAG 2.2 AA)"
       ],
       "home": true,
       "group": "events"
@@ -166,8 +166,8 @@
       "summary": "Shopify discovery ends in a pile of notes. Summit turns them into requirements, risks, a roadmap and a QA plan, and the landing page shows what comes out.",
       "tag": "",
       "services": [
-        "Custom Web Development",
-        "Technical SEO & Performance"
+        "Custom web development",
+        "Technical SEO and performance"
       ],
       "home": false,
       "group": "events"
@@ -193,8 +193,8 @@
       "summary": "Odds for MLB, NFL, NBA, NHL and WNBA in one place, with three daily parlays ranked by probability and value and a plain-English reason for each pick.",
       "tag": "",
       "services": [
-        "Custom Web Development",
-        "Technical SEO & Performance"
+        "Custom web development",
+        "Technical SEO and performance"
       ],
       "home": false,
       "group": "events"
@@ -204,25 +204,25 @@
       "feature": true,
       "reverse": false,
       "study": "happy",
-      "label": "happy's",
+      "label": "happy’s",
       "note": "",
       "shots": [
         {
           "image": "/uploads/happy-1.jpg",
-          "alt": "happy's home page: a wall of smiley faces behind the headline come by, feel good"
+          "alt": "happy’s home page: a wall of smiley faces behind the headline come by, feel good"
         },
         {
           "image": "/uploads/happy-2.jpg",
-          "alt": "happy's menu: color-coded cards for house specials, draft and wine, with filter buttons and a search box"
+          "alt": "happy’s menu: color-coded cards for house specials, draft and wine, with filter buttons and a search box"
         }
       ],
       "title": "A bar site that looks like the bar.",
       "summary": "The smiley wall, a sticker-style menu and a staircase you can climb, for a cocktail bar in downtown Cary.",
       "tag": "",
       "services": [
-        "Custom Web Development",
-        "Content Management Systems",
-        "ADA Accessibility Compliance"
+        "Custom web development",
+        "Content management",
+        "Accessibility (WCAG 2.2 AA)"
       ],
       "home": true,
       "group": "venues"
@@ -245,11 +245,11 @@
           "alt": "The Walk Up menu: tabs for cocktails, beer, wine and snacks, with prices"
         }
       ],
-      "title": "A bar that's easy to find, one flight up",
-      "summary": "A seasonal menu with glasses that pour, the room in real photos, and a clear way upstairs, for the bar above happy's.",
+      "title": "A bar that’s easy to find, one flight up",
+      "summary": "A seasonal menu with glasses that pour, the room in real photos, and a clear way upstairs, for the bar above happy’s.",
       "services": [
-        "Custom Web Development",
-        "ADA Accessibility Compliance"
+        "Custom web development",
+        "Accessibility (WCAG 2.2 AA)"
       ],
       "home": false,
       "group": "venues"

@@ -53,6 +53,9 @@ export default function RootLayout({ children }) {
       <head>
         {/* Mark JS before first paint so reveal states never flash. */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+        {/* The two faces every page uses above the fold, fetched before the CSS asks for them. */}
+        <link rel="preload" href="/fonts/figtree/Figtree-700.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/figtree/Figtree-400.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         {fontFaces && <style dangerouslySetInnerHTML={{ __html: fontFaces }} />}
         {gaScript && <script dangerouslySetInnerHTML={{ __html: gaScript }} />}
       </head>

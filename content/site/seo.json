@@ -1,9 +1,13 @@
 {
   "title": "Web Design & Development in Wake Forest, NC | Draft & Logic",
-  "description": "Websites for the places people walk into and the events they travel for. A studio in Wake Forest, NC, building for Raleigh, Cary and beyond.",
-  "shareDescription": "High-performance websites, event portals and content systems. Blueprinted first, then built on clean code.",
-  "orgIntro": "Web design and engineering studio in Wake Forest, NC. We build fast, editable websites for bars, restaurants, shops and churches, and registration portals for conferences and trade shows. Every project is blueprinted and wireframed before development starts.",
+  "description": "Websites with the search, data and dashboards behind them. A studio in Wake Forest, NC, building for Raleigh, Cary and beyond.",
+  "shareDescription": "Custom back ends, site search, analytics dashboards and integrations, on fast sites your team can edit.",
+  "orgIntro": "Web design and engineering studio in Wake Forest, NC. We build the work behind the website: custom back ends, site search, analytics dashboards and integrations with the tools a business already runs, on fast, accessible sites its team can edit. Clients include bars, a café, a church, a national conference and an auto show.",
   "topics": [
+    "API integrations",
+    "Analytics dashboards",
+    "Site search",
+    "Custom back ends",
     "Custom web development",
     "Headless and static websites",
     "Event and program portals",

@@ -2,11 +2,11 @@
   "title": "New Life Tabernacle: a church site the staff can run",
   "tag": "Church website, Brooklyn, NY",
   "summaryLead": "An eight-page site for a church on Bedford Avenue, with a sign-in the church staff use to update it themselves.",
-  "story": "New Life Tabernacle was founded by Archbishop Eric R. Figueroa Sr. in 1983 and has worshipped at 1476 Bedford Avenue in Brooklyn ever since. Sunday Worship streams on Facebook, full services go to YouTube, and giving runs through Cash App, Zelle and PayPal. The site puts all of that in one place: Sunday's time and the address first, then video, events, the pastors, the church's two ministries and giving. The look starts from the church's logo, an open book with rays rising from it, drawn on the home page as light. It's black, white and burgundy with gold, set in Source Serif 4 over Hanken Grotesk. Church staff sign in with an email and password and edit every section themselves.",
+  "story": "New Life Tabernacle was founded by Archbishop Eric R. Figueroa Sr. in 1983 and has worshipped at 1476 Bedford Avenue in Brooklyn ever since. Sunday Worship streams on Facebook, full services go to YouTube, and giving runs through Cash App, Zelle and PayPal. The site puts all of that in one place: Sunday’s time and the address first, then video, events, the pastors, the church’s two ministries and giving. The look starts from the church’s logo, an open book with rays rising from it, drawn on the home page as light. It’s black, white and burgundy with gold, set in Source Serif 4 over Hanken Grotesk. Church staff sign in with an email and password and edit every section themselves.",
   "url": "",
   "numbers": [],
   "goals": [
-    "Put Sunday's time, the address and a way to watch on the first screen.",
+    "Put Sunday’s time, the address and a way to watch on the first screen.",
     "Make giving one tap: the handle, a copy button and a link to the app.",
     "Let church staff change events, videos, service times and pastors without calling us."
   ],
@@ -19,7 +19,7 @@
     },
     {
       "title": "We believe God.",
-      "text": "The church's own line, over the logo's open book and rising light.",
+      "text": "The church’s own line, over the logo’s open book and rising light.",
       "image": "/uploads/nlt-f1.jpg",
       "alt": "New Life Tabernacle home page with the headline we believe God. over gold light rays",
       "story": "The rays are drawn on a canvas and lean toward the cursor, and the letters thin out as it passes. Both hold still for anyone with reduced motion turned on."
@@ -29,7 +29,7 @@
       "text": "Pick how you feel and get a King James verse for it. Eleven feelings, four verses each.",
       "image": "/uploads/nlt-f2.jpg",
       "alt": "A list of feelings beside a card showing Jeremiah 29:11",
-      "story": "There's also a box to say it in your own words. Under the verse: another verse, copy, and a link to the full chapter. The verses are a list in the CMS."
+      "story": "There’s also a box to say it in your own words. Under the verse: another verse, copy, and a link to the full chapter. The verses are a list in the CMS."
     },
     {
       "title": "Watch",
@@ -42,7 +42,7 @@
       "text": "Staff enter a date and time. The big date on the poster and the Google Calendar link fill in from it.",
       "image": "/uploads/nlt-f4.jpg",
       "alt": "Event posters for the Convocation Live Recording and Watch Night",
-      "story": "Each poster picks one of four colors from the church's palette. Weekly events like Wednesday Prayer repeat in the calendar link."
+      "story": "Each poster picks one of four colors from the church’s palette. Weekly events like Wednesday Prayer repeat in the calendar link."
     },
     {
       "title": "Three pastors, one scroll",

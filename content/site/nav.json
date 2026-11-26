@@ -17,6 +17,10 @@
       "href": "#process"
     },
     {
+      "label": "Studio",
+      "href": "/studio/"
+    },
+    {
       "label": "Start a project",
       "href": "#contact"
     }

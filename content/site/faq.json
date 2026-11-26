@@ -1,18 +1,18 @@
 {
   "show": true,
-  "heading": "Common questions",
+  "heading": "Common questions.",
   "items": [
     {
       "q": "Who owns the code and the accounts?",
-      "a": "You do. Code, design assets and accounts are yours from day one."
+      "a": "You do. Code, design files, domain and every account are yours from day one."
     },
     {
       "q": "How much does a project cost?",
-      "a": "It depends on scope and platform. Send a short brief and we reply with a written quote within two working days."
+      "a": "Scope and platform decide it. Send a short brief and you’ll have a written quote within two working days."
     },
     {
       "q": "How long does a project take?",
-      "a": "It depends on scope. The timeline is set during Blueprinting & Scoping, before any design work starts."
+      "a": "We set the timeline in the written scope, before design starts, and it only moves if the scope does."
     },
     {
       "q": "Do you handle SEO and AI search visibility?",
@@ -24,7 +24,7 @@
     },
     {
       "q": "What do you build on?",
-      "a": "Mostly static and headless frameworks, with Decap or Sanity as the editor. We also build on Shopify, Webflow and Swoogo when the project calls for it."
+      "a": "Mostly static and headless frameworks, with Decap or Sanity as the editor, plus search, analytics and the APIs of the tools you already use. We also build on Shopify, Webflow and Swoogo when the project calls for it."
     }
   ]
 }

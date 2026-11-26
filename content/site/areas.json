@@ -4,7 +4,7 @@
       "slug": "web-design-wake-forest-nc",
       "city": "Wake Forest",
       "heading": "Web design in Wake Forest, NC",
-      "intro": "Draft & Logic is a web design and engineering studio based in Wake Forest. We design and build custom websites, event portals and content systems, and you own the code, the design files and every account from day one.",
+      "intro": "Draft & Logic is a web design and engineering studio based in Wake Forest. We build custom websites, event portals, site search and dashboards, and you own the code, the design files and every account from day one.",
       "points": [
         "Hand-built sites on static and headless frameworks, with no page builder or template",
         "An editor set up so your staff can change text, photos and menus themselves",
@@ -16,9 +16,9 @@
         "namc"
       ],
       "body": [
-        "The studio is here in Wake Forest, so a first meeting can happen at your office or your shop, not only on a video call. Every project starts the same way. We look at the site you have now, how people find it and what they come for, then draw the new one as a blueprint before any code is written. You see the page structure and the content plan first, and you sign off on it before design starts.",
-        "We build on static and headless frameworks instead of page builders. By the time a page reaches a visitor it's plain HTML, so it loads fast on a phone and there's very little to patch or break. The editor sits on top: your staff sign in, change a menu, an event or a photo, and the site is updated in about a minute.",
-        "Recent work includes Milo's Cafe in Morrisville, happy's in downtown Cary and the 2027 national conference site for NAMC Wisconsin. If your Wake Forest business, practice or nonprofit has a site that's slow, hard to edit or built on a template you've outgrown, that's the work we do."
+        "The studio is here in Wake Forest, so a first meeting can happen at your office or your shop, not only on a video call. Every project starts the same way. We look at the site you have now, how people find it and what they come for, then write up the new one before any code is written. You see the page structure, the content plan and what we’ll track first, and you sign off on it before design starts.",
+        "We build on static and headless frameworks instead of page builders. By the time a page reaches a visitor it’s plain HTML, so it loads fast on a phone and there’s very little to patch or break. The editor sits on top: your staff sign in, change a menu, an event or a photo, and the site is updated in about a minute.",
+        "Recent work includes Milo’s Cafe in Morrisville, happy’s in downtown Cary and the 2027 national conference site for NAMC Wisconsin. If your Wake Forest business, practice or nonprofit has a site that’s slow, hard to edit or built on a template you’ve outgrown, that’s the work we do."
       ],
       "faq": [
         {
@@ -30,17 +30,17 @@
           "a": "Yes. We audit the current site first, keep the content and pages that already bring in search traffic, and set up redirects so nothing is lost when the new site goes live."
         },
         {
-          "q": "Who owns the site when it's done?",
+          "q": "Who owns the site when it’s done?",
           "a": "You do. The code, the design files, the domain and every account are in your name from day one."
         }
       ],
-      "description": "Web design and development studio in Wake Forest, NC. Custom websites, event portals and content systems, with the code and accounts in your name."
+      "description": "Web design and engineering studio in Wake Forest, NC. Custom websites, event portals, site search and dashboards, with the code and accounts in your name."
     },
     {
       "slug": "web-design-cary-nc",
       "city": "Cary",
       "heading": "Web design in Cary, NC",
-      "intro": "We build custom websites for Cary businesses from our studio in Wake Forest. Our Cary work includes the site for happy's, a cocktail bar in downtown Cary, and a concept site for The Walk Up, the bar upstairs.",
+      "intro": "We build custom websites for Cary businesses from our studio in Wake Forest. Our Cary work includes the site for happy’s, a cocktail bar in downtown Cary, and a concept site for The Walk Up, the bar upstairs.",
       "points": [
         "Sites designed around the place itself, not a template",
         "Menus, hours and events your staff can update without calling us",
@@ -52,9 +52,9 @@
         "milo"
       ],
       "body": [
-        "Two of our recent projects are in downtown Cary. happy's is a cocktail bar and event space with a wall covered in smiley faces, and its site is built from that wall: the same colors, a sticker-style menu and live music listings the staff update themselves. The Walk Up, the bar one flight above it, is a concept site drawn around one problem. People walk past the door without knowing it's there.",
-        "For a bar, restaurant or shop, most visitors are on a phone and want three answers: are you open, what's on the menu and how do I get there. We put those at the top, keep the menu on the page instead of in a PDF, and set up hours and events so your staff can change them in the editor without calling us.",
-        "The studio is in Wake Forest, a short drive from Cary, and we're glad to meet at your place."
+        "Two of our recent projects are in downtown Cary. happy’s is a cocktail bar and event space with a wall covered in smiley faces, and its site is built from that wall: the same colors, a sticker-style menu and live music listings the staff update themselves. The Walk Up, the bar one flight above it, is a concept site drawn around one problem. People walk past the door without knowing it’s there.",
+        "For a bar, restaurant or shop, most visitors are on a phone and want three answers: are you open, what’s on the menu and how do I get there. We put those at the top, keep the menu on the page instead of in a PDF, and set up hours and events so your staff can change them in the editor without calling us.",
+        "The studio is in Wake Forest, a short drive from Cary, and we’re glad to meet at your place."
       ],
       "faq": [
         {
@@ -67,20 +67,20 @@
         },
         {
           "q": "Will the site work well on phones?",
-          "a": "Yes. We design and test every page at phone size first, because that's where most local searches happen."
+          "a": "Yes. We design and test every page at phone size first, because that’s where most local searches happen."
         }
       ],
-      "description": "Custom websites for Cary, NC bars, restaurants and businesses, from a studio in Wake Forest. Recent Cary work includes happy's and The Walk Up."
+      "description": "Custom websites for Cary, NC bars, restaurants and businesses, from a studio in Wake Forest. Recent Cary work includes happy’s and The Walk Up."
     },
     {
       "slug": "web-design-raleigh-nc",
       "city": "Raleigh",
       "heading": "Web design in Raleigh, NC",
-      "intro": "Draft & Logic builds custom websites, event portals and content systems for Raleigh-area businesses and organizations. The studio is in Wake Forest, and our local work includes Milo's Cafe in Morrisville and happy's in downtown Cary.",
+      "intro": "Draft & Logic builds custom websites, event portals, site search and dashboards for Raleigh-area businesses and organizations. The studio is in Wake Forest, and our local work includes Milo’s Cafe in Morrisville and happy’s in downtown Cary.",
       "points": [
         "Event and program portals with registration, schedules and sponsor pages",
         "Site rebuilds for organizations that have outgrown an old platform",
-        "Code, design assets and accounts in your name from the start"
+        "Code, design files and accounts in your name from the start"
       ],
       "cases": [
         "namc",
@@ -88,8 +88,8 @@
         "abaxent"
       ],
       "body": [
-        "Raleigh-area organizations usually come to us with a larger site that has stopped working for them: an event site where the schedule is buried behind buttons, a site nobody on staff can edit, or a platform that's slow and costly to keep patched. We rebuild those on a static or headless stack, with an editor your team will actually use.",
-        "Event and program portals are a big part of that work. For NAMC Wisconsin's 2027 national conference we built a full event site with its own pages for sponsors, exhibitors, registration and the program, and the home page opens by asking visitors what they're there to do. For events that run on Swoogo, we build custom event sites, widgets and integrations on top of the platform.",
+        "Raleigh-area organizations usually come to us with a larger site that has stopped working for them: an event site where the schedule is buried behind buttons, a site nobody on staff can edit, or a platform that’s slow and costly to keep patched. We rebuild those on a static or headless stack, with an editor your team will actually use.",
+        "Event and program portals are a big part of that work. For NAMC Wisconsin’s 2027 national conference we built a full event site with its own pages for sponsors, exhibitors, registration and the program, and the home page opens by asking visitors what they’re there to do. For events that run on Swoogo, we build custom event sites, widgets and integrations on top of the platform.",
         "Accessibility and technical SEO are part of every build, not an add-on. That matters for public sector organizations with WCAG requirements, and for any business that needs to be found in search and in AI answers."
       ],
       "faq": [
@@ -98,7 +98,7 @@
           "a": "Yes. Public sector organizations are one of the groups we build for, and every build is checked against WCAG AA accessibility guidelines before launch."
         },
         {
-          "q": "Can you rebuild a site on a platform we've outgrown?",
+          "q": "Can you rebuild a site on a platform we’ve outgrown?",
           "a": "Yes. We audit the current site, carry over the content and the pages that already rank, and set up redirects before launch."
         },
         {
@@ -106,7 +106,7 @@
           "a": "Yes. We build event and program portals with registration, schedules and sponsor pages, either as a custom site or on top of Swoogo."
         }
       ],
-      "description": "Custom websites, event portals and content systems for Raleigh-area businesses and organizations, from a web studio in Wake Forest, NC."
+      "description": "Custom websites, event portals, site search and dashboards for Raleigh-area businesses and organizations, from a studio in Wake Forest, NC."
     }
   ]
 }

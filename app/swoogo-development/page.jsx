@@ -175,7 +175,7 @@ export default function SwoogoDevelopment() {
               <p>Swoogo runs registration, attendees, sessions and event email. Draft &amp; Logic builds what sits around it: the event website, the features Swoogo doesn’t ship with, and the connections to your CRM and marketing tools.</p>
               <p className="m">You keep the platform. We make it look like your brand, work on every device and talk to the rest of your stack.</p>
               <div className="hcta">
-                <ArrowLink href={mail('Swoogo project')} variant="lg" data-ga="swoogo_cta_click" data-ga-loc="hero">Discuss Your Swoogo Project</ArrowLink>
+                <ArrowLink href={mail('Swoogo project')} variant="lg" data-ga="swoogo_cta_click" data-ga-loc="hero">Discuss your Swoogo project</ArrowLink>
                 <ArrowLink href="#agencies">Agency partnerships</ArrowLink>
               </div>
               <p className="proof">Recent Swoogo work: <Link href="/work/namc/">NAMC 2027</Link>, the National Conference site for NAMC Wisconsin, with registration, sponsorship and exhibiting each one click from the home page.</p>
@@ -291,7 +291,7 @@ export default function SwoogoDevelopment() {
         <Contact
           id="swoogo-contact"
           heading="Let’s build a better event experience."
-          contact={{ intro: 'Send a short note on the event, the Swoogo setup you have and what you want it to do. We reply within two working days.', button: "Let’s Talk About Your Swoogo Project" }}
+          contact={{ intro: 'Send a short note on the event, the Swoogo setup you have and what you want it to do. We reply within two working days.', button: "Talk about your Swoogo project" }}
           email={email}
         />
       </main>

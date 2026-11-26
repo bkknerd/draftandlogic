@@ -16,7 +16,7 @@
       "text": "A paper-like grain, and headlines that scale smoothly from phone to desktop.",
       "image": "/uploads/sum-1.jpg",
       "alt": "Summit home page",
-      "story": "The grain is an SVG noise filter inside the page, so there's no image request. Headline sizes come from one clamp() instead of a pile of breakpoints."
+      "story": "The grain is an SVG noise filter inside the page, so there’s no image request. Headline sizes come from one clamp() instead of a pile of breakpoints."
     },
     {
       "title": "Workflow",
@@ -27,7 +27,7 @@
     {
       "title": "CSS score ring",
       "text": "A score ring drawn in CSS, with no chart library.",
-      "story": "It didn't need Chart.js or D3 for one ring. It's a conic-gradient with a smaller circle on top, so it draws instantly."
+      "story": "It didn’t need Chart.js or D3 for one ring. It’s a conic-gradient with a smaller circle on top, so it draws instantly."
     }
   ],
   "quote": {

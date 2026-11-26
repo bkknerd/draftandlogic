@@ -16,6 +16,7 @@ export function GET() {
     }
   }
   urls.push({ loc: `${SITE_URL}/swoogo-development/`, pri: '0.8' });
+  urls.push({ loc: `${SITE_URL}/studio/`, pri: '0.6' });
   for (const a of getAreas()) urls.push({ loc: `${SITE_URL}/${a.slug}/`, pri: '0.7' });
   urls.push({ loc: `${SITE_URL}/privacy/`, pri: '0.2' });
   const xml =

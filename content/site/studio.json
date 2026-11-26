@@ -1,0 +1,142 @@
+{
+  "show": true,
+  "heading": "Studio.",
+  "intro": "",
+  "description": "Draft & Logic is a Wake Forest, NC studio building custom back ends, site search, analytics dashboards and integrations, with the code and accounts in your name.",
+  "iceberg": {
+    "heading": "Most of the work is below the waterline.",
+    "tip": {
+      "title": "Your website",
+      "text": "The part people see."
+    },
+    "layers": [
+      {
+        "title": "Search",
+        "text": "Matches what people mean, and logs every search that finds nothing."
+      },
+      {
+        "title": "Your data",
+        "text": "One source of truth behind every page, menu, session and product."
+      },
+      {
+        "title": "Dashboards",
+        "text": "The numbers you decide with, pulled into one place."
+      },
+      {
+        "title": "Integrations",
+        "text": "Forms, orders and registrations flow into the tools you already run."
+      }
+    ]
+  },
+  "whatWeDo": {
+    "heading": "Draft & Logic builds the systems behind your site.",
+    "text": "Anyone can put up a website. The hard part is what happens after someone lands: finding the right session on the first try, getting a sponsor’s form into your CRM before they close the tab, knowing which searches came up empty last week. That takes engineering, clean data and someone who actually reads the numbers.",
+    "links": [
+      {
+        "label": "Work",
+        "href": "/work/"
+      },
+      {
+        "label": "Events",
+        "href": "/swoogo-development/"
+      },
+      {
+        "label": "Start a project",
+        "href": "/#contact"
+      }
+    ]
+  },
+  "manifesto": [
+    "Search answers the easy questions now.",
+    "So the click has to count.",
+    "Fewer visitors. Better ones.",
+    "Not more pages. Fewer dead ends.",
+    "We build for the person who already knows what they want."
+  ],
+  "statsHeading": "2026 results.",
+  "statsNote": "Across client sites we launched or rebuilt in 2026. Source: Google Analytics 4.",
+  "stats": [
+    {
+      "value": "",
+      "label": "visitors to client sites this year"
+    },
+    {
+      "value": "",
+      "label": "tracked events per month, from form submits to ticket and registration clicks"
+    },
+    {
+      "value": "",
+      "label": "more form submissions in the first 90 days after launch"
+    },
+    {
+      "value": "",
+      "label": "more ticket and registration clicks after launch"
+    },
+    {
+      "value": "",
+      "label": "of visitors who reach the main call to action"
+    }
+  ],
+  "processHeading": "How it goes.",
+  "steps": [
+    {
+      "title": "Audit",
+      "text": "We read your analytics and your search terms before we read the brief."
+    },
+    {
+      "title": "Scope",
+      "text": "A written plan and a quote. Nothing gets built on a guess."
+    },
+    {
+      "title": "Build",
+      "text": "Code, editor and tracking, built together and tested on real phones."
+    },
+    {
+      "title": "Launch",
+      "text": "Speed, accessibility and security checked first. Then we watch the numbers."
+    }
+  ],
+  "valuesHeading": "How we work.",
+  "values": [
+    {
+      "title": "Hand over the keys.",
+      "text": "Code, design files, domain and every account are yours from day one. Leave whenever you like."
+    },
+    {
+      "title": "Skip the page builder.",
+      "text": "Hand-built pages load faster and break less. Your team still edits them in a minute."
+    },
+    {
+      "title": "Count what matters.",
+      "text": "A search that found nothing tells you more than a thousand pageviews."
+    },
+    {
+      "title": "Say it plainly.",
+      "text": "Written scopes, written quotes, no jargon. If something slips, you hear it from us first."
+    }
+  ],
+  "factsHeading": "Good to know.",
+  "facts": [
+    {
+      "q": "Can you work alongside our developers or agency?",
+      "a": "Yes. We often build the back end, search or dashboard while another team owns the design. Every endpoint is documented, so the handoff doesn’t depend on us."
+    },
+    {
+      "q": "Where does our data live?",
+      "a": "In your accounts: your analytics property, your database, your CRM. We work with delegated access, and when the project ends you remove it. Nothing sits in a studio account."
+    },
+    {
+      "q": "How do you decide what to track?",
+      "a": "We start from the decisions you make each week, then name the events that answer them, like a registration that was started and not finished, or a search that found nothing. That list is agreed before any tracking code is written."
+    },
+    {
+      "q": "Does a dashboard have to be custom?",
+      "a": "Not always. If Google Analytics and a Looker Studio report answer the question, we set those up and stop there. Custom is for when the numbers sit in more than one system."
+    },
+    {
+      "q": "Do we have to replace our current site?",
+      "a": "Not always. Search, a dashboard or an integration can often be added to the site and tools you already have. The audit tells you which way costs less."
+    }
+  ],
+  "lead": "We’re Draft & Logic, a Wake Forest studio for the work behind the website: search, data, dashboards and the wiring between your tools."
+}

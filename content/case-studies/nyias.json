@@ -2,7 +2,7 @@
   "title": "New York International Auto Show: a show site that reads like the show floor",
   "tag": "Auto show website, New York, NY. Launching December 2026",
   "summaryLead": "The New York International Auto Show has run since 1900. The new site puts the dates, the debuts and the rides up front, and cuts the news pile that buried them.",
-  "story": "The New York International Auto Show is the oldest auto show in North America, ten days at the Javits Center every spring. The old site had the dates in the hero and then a long rail of news cards, tabs, an Instagram embed and tile grids, with stories from a show that had already closed still in the featured spot. Someone looking for when it opens, what's debuting and how to get there had to dig. The new site answers those first. Dates, venue, opening day and ticket status sit in one strip above the name. The name is set in Archivo and stretched to fill the width, the way a banner hangs over the floor. Everything else is asphalt, white and one signal red, kept for the ticket button.",
+  "story": "The New York International Auto Show is the oldest auto show in North America, ten days at the Javits Center every spring. The old site had the dates in the hero and then a long rail of news cards, tabs, an Instagram embed and tile grids, with stories from a show that had already closed still in the featured spot. Someone looking for when it opens, what’s debuting and how to get there had to dig. The new site answers those first. Dates, venue, opening day and ticket status sit in one strip above the name. The name is set in Archivo and stretched to fill the width, the way a banner hangs over the floor. Everything else is asphalt, white and one signal red, kept for the ticket button.",
   "url": "",
   "numbers": [
     {
@@ -38,20 +38,20 @@
   ],
   "goals": [
     "Put the dates, venue and ticket status on the first screen.",
-    "Show what's debuting and what you can ride.",
+    "Show what’s debuting and what you can ride.",
     "Make getting to the Javits Center easy to plan."
   ],
   "features": [
     {
       "title": "The name, banner-sized",
-      "text": "Four facts in a strip, then the show's name stretched to the full width. The floor photo below opens out as you scroll, with a count of days until the doors open.",
+      "text": "Four facts in a strip, then the show’s name stretched to the full width. The floor photo below opens out as you scroll, with a count of days until the doors open.",
       "image": "/uploads/nyias-1.jpg",
       "alt": "New York International Auto Show home page with the dates strip and the full-width name",
-      "story": "Archivo is a variable font with a width axis, so the headline is sized and stretched in the browser to fit whatever screen it's on. Labels are Barlow."
+      "story": "Archivo is a variable font with a width axis, so the headline is sized and stretched in the browser to fit whatever screen it’s on. Labels are Barlow."
     },
     {
       "title": "Debuts on a departures board",
-      "text": "Last year's debuts as a split-flap board: make, model and status. Hover a row and the car comes up below with its story.",
+      "text": "Last year’s debuts as a split-flap board: make, model and status. Hover a row and the car comes up below with its story.",
       "image": "/uploads/nyias-2.jpg",
       "alt": "The 2026 debuts shown as a split-flap departures board",
       "story": "Every tile is a live character, not an image. Each one runs through a few random letters before it lands, so the board settles left to right like the real thing. With reduced motion on, it just shows the words."
@@ -61,7 +61,7 @@
       "text": "Scroll and the cars on the EV and hybrid test track come round one at a time, with the rider rules beside them.",
       "image": "/uploads/nyias-f2.jpg",
       "alt": "Cadillac Lyriq on the turntable in the EV and hybrid test track section",
-      "story": "The section pins while you scroll and a ruler under the name tracks which car you're on. The platform is drawn in SVG and CSS, so the only images are the cars."
+      "story": "The section pins while you scroll and a ruler under the name tracks which car you’re on. The platform is drawn in SVG and CSS, so the only images are the cars."
     },
     {
       "title": "Rides and exhibits as a list",
@@ -71,7 +71,7 @@
     },
     {
       "title": "Since 1900",
-      "text": "The show's history as a timeline, from Madison Square Garden to the Javits.",
+      "text": "The show’s history as a timeline, from Madison Square Garden to the Javits.",
       "image": "/uploads/nyias-f5.jpg",
       "alt": "Since 1900 history timeline"
     },
@@ -129,7 +129,7 @@
       "afterNote": "Hours by day, the press preview, opening day and early access in one place, with tickets, transit, parking and hotels linked at the top."
     }
   ],
-  "impactNote": "Projected from published research. We'll replace these with the show's own numbers after launch.",
+  "impactNote": "Projected from published research. We’ll replace these with the show’s own numbers after launch.",
   "impact": [
     {
       "value": "57%",
@@ -145,21 +145,21 @@
     },
     {
       "value": "2.5x",
-      "text": "the e-commerce conversion rate for pages that load in 1 second compared with pages that load in 5. On a 25 Mbps connection, the old home page's images alone took about two minutes to finish.",
+      "text": "the e-commerce conversion rate for pages that load in 1 second compared with pages that load in 5. On a 25 Mbps connection, the old home page’s images alone took about two minutes to finish.",
       "source": "Portent, Site Speed and Conversion Rate",
       "url": "https://www.portent.com/blog/analytics/research-site-speed-hurting-everyone.htm"
     },
     {
       "value": "Event",
-      "text": "structured data lets Google show the show's dates and venue in search results. The old home page had none, and its 40 H1 headings left search engines guessing what the page was about.",
+      "text": "structured data lets Google show the show’s dates and venue in search results. The old home page had none, and its 40 H1 headings left search engines guessing what the page was about.",
       "source": "Google Search Central, Event structured data",
       "url": "https://developers.google.com/search/docs/appearance/structured-data/event"
     }
   ],
   "layout": "editorial",
   "numbersHeading": "The rebuild in numbers",
-  "statement": "The New York International Auto Show is the oldest in North America: ten days at the Javits Center every spring since 1900. The old site opened on a video, then buried the dates, the debuts and the ticket link under news from a show that had already closed. We rebuilt the home page around what people come for: when it's on, what's new and how to get there.",
-  "brief": "We started from the questions people ask before they buy a ticket: when, what's new, what can I ride and how do I get there. Every section on the new home page answers one of them.",
+  "statement": "The New York International Auto Show is the oldest in North America: ten days at the Javits Center every spring since 1900. The old site opened on a video, then buried the dates, the debuts and the ticket link under news from a show that had already closed. We rebuilt the home page around what people come for: when it’s on, what’s new and how to get there.",
+  "brief": "We started from the questions people ask before they buy a ticket: when, what’s new, what can I ride and how do I get there. Every section on the new home page answers one of them.",
   "closing": "Dates, debuts and directions first. Everything else is one click away.",
   "platforms": [
     "WordPress",
@@ -184,7 +184,7 @@
       {
         "image": "/uploads/nyias-cms-1.jpg",
         "alt": "Auto show WordPress dashboard with quick actions and content counts",
-        "caption": "The dashboard: the week's jobs first"
+        "caption": "The dashboard: the week’s jobs first"
       },
       {
         "image": "/uploads/nyias-cms-2.jpg",

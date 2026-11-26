@@ -4,13 +4,13 @@
   "columns": [
     {
       "title": "Draft",
-      "how": "How it's structured",
-      "text": "Requirements, user flows and data schemas first, then wireframes and a design system in high fidelity. Changes are cheap while it's still a drawing."
+      "how": "How it’s structured",
+      "text": "Requirements, user flows and data schemas first, then wireframes and a design system in high fidelity. Changes are cheap while it’s still a drawing."
     },
     {
       "title": "Logic",
-      "how": "How it's built",
-      "text": "Component-based code on headless and static frameworks, with search, scheduling, registration and the rules behind them. It's fast on a phone and holds up under traffic."
+      "how": "How it’s built",
+      "text": "Component-based code on headless and static frameworks, with search, scheduling, registration and the rules behind them. It’s fast on a phone and holds up under traffic."
     }
   ],
   "label": "// Approach"

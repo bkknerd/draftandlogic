@@ -1,8 +1,8 @@
 {
-  "title": "The Walk Up: a bar that's easy to find, one flight up",
+  "title": "The Walk Up: a bar that’s easy to find, one flight up",
   "tag": "Concept site · cocktail bar, Cary, NC",
-  "summaryLead": "A site for the cocktail bar above happy's in downtown Cary. It's written like a printed menu, with a seasonal drink list, glasses that pour, and real photos of the room.",
-  "story": "The Walk Up sits one flight above happy's, and people walk past the door without knowing it's there. The page opens on the room itself with the lights coming up on exposed brick, and says it in the headline: a little above the usual. The type is a Georgia italic with Lekton, a typewriter-style mono, for the details, set in cream, forest green and gold. Numbered labels and a small staircase rule between sections give it the feel of a printed menu, and the steps point you up the page.",
+  "summaryLead": "A site for the cocktail bar above happy’s in downtown Cary. It’s written like a printed menu, with a seasonal drink list, glasses that pour, and real photos of the room.",
+  "story": "The Walk Up sits one flight above happy’s, and people walk past the door without knowing it’s there. The page opens on the room itself with the lights coming up on exposed brick, and says it in the headline: a little above the usual. The type is a Georgia italic with Lekton, a typewriter-style mono, for the details, set in cream, forest green and gold. Numbered labels and a small staircase rule between sections give it the feel of a printed menu, and the steps point you up the page.",
   "url": "",
   "numbers": [],
   "goals": [
@@ -22,21 +22,21 @@
       "text": "The hero is the room, with the lights coming up on the brick.",
       "image": "/uploads/walkup-1.jpg",
       "alt": "The Walk Up home page: exposed brick and timber beams behind the headline A little above the usual",
-      "story": "The photo starts dark and fades up over a couple of seconds, like walking in. The address line sits at the bottom: 126 West Chatham Street, upstairs, above happy's. Two buttons go to the menu or the visit details."
+      "story": "The photo starts dark and fades up over a couple of seconds, like walking in. The address line sits at the bottom: 126 West Chatham Street, upstairs, above happy’s. Two buttons go to the menu or the visit details."
     },
     {
       "title": "The menu, in tabs",
       "text": "Cocktails, beer, wine, snacks, non-alcoholic and the printed menu, with prices and a running tab.",
       "image": "/uploads/walkup-2.jpg",
       "alt": "The Walk Up menu with tabs for cocktails, beer, wine, snacks and non-alcoholic",
-      "story": "The Fall / Winter 2026 list changes often, so it's one tab per section and easy to edit. Tapping an item adds it to a tab. It's only a tally for planning a round, since everyone orders at the counter."
+      "story": "The Fall / Winter 2026 list changes often, so it’s one tab per section and easy to edit. Tapping an item adds it to a tab. It’s only a tally for planning a round, since everyone orders at the counter."
     },
     {
       "title": "Glasses that pour",
       "text": "Each specialty cocktail has a small glass that fills with its ingredients.",
       "image": "/uploads/walkup-f1.jpg",
       "alt": "The Walk Up specialty cocktails with small glasses beside each drink",
-      "story": "Hover a glass, or tap it on a phone, and it fills layer by layer so you can see what's in the drink. There's a replay link under each one. The page says the drawings aren't recipes, because they aren't."
+      "story": "Hover a glass, or tap it on a phone, and it fills layer by layer so you can see what’s in the drink. There’s a replay link under each one. The page says the drawings aren’t recipes, because they aren’t."
     },
     {
       "title": "The room",
@@ -47,7 +47,7 @@
     },
     {
       "title": "Reviews",
-      "text": "Two large quotes from Google reviews, with the reviewer's name under each.",
+      "text": "Two large quotes from Google reviews, with the reviewer’s name under each.",
       "image": "/uploads/walkup-f3.jpg",
       "alt": "The Walk Up reviews section, Good nights. Kind words.",
       "story": "Quotes are set big in the serif, with a thin gold rule above and below. A button opens more."
@@ -57,7 +57,7 @@
       "text": "Plain-text hours, the address, phone, email, price and an email sign-up.",
       "image": "/uploads/walkup-f4.jpg",
       "alt": "The Walk Up visit section with hours, address and email sign-up",
-      "story": "The section turns dark green, like the room at night. Hours are a simple table, with indoor and outdoor seating and a $10 to $20 price per person. Sign-up and the message form go through Netlify Forms, with a note that the page doesn't book tables or take orders."
+      "story": "The section turns dark green, like the room at night. Hours are a simple table, with indoor and outdoor seating and a $10 to $20 price per person. Sign-up and the message form go through Netlify Forms, with a note that the page doesn’t book tables or take orders."
     },
     {
       "title": "The whole home page",

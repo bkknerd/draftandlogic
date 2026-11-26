@@ -1,8 +1,8 @@
 {
   "title": "Abaxent: a broker that works for the buyer",
   "tag": "Technology broker website, Wisconsin",
-  "summaryLead": "Abaxent has brokered technology in Wisconsin for 22 years. The old site read like a vendor's, so we rebuilt it around one question: what's a broker?",
-  "story": "Abaxent has brokered technology in Wisconsin for 22 years. They work with every big vendor, but they sit on the buyer's side, and the old site never said so. Visitors figured they were one more reseller. The new site opens with the question people actually have, what's a technology broker, and the rest of the page answers it. It's Helvetica, white and one crimson, with a single italic serif on the word in each heading that matters. Then the four-step method, the numbers and the people.",
+  "summaryLead": "Abaxent has brokered technology in Wisconsin for 22 years. The old site read like a vendor’s, so we rebuilt it around one question: what’s a broker?",
+  "story": "Abaxent has brokered technology in Wisconsin for 22 years. They work with every big vendor, but they sit on the buyer’s side, and the old site never said so. Visitors figured they were one more reseller. The new site opens with the question people actually have, what’s a technology broker, and the rest of the page answers it. It’s Helvetica, white and one crimson, with a single italic serif on the word in each heading that matters. Then the four-step method, the numbers and the people.",
   "url": "",
   "numbers": [],
   "goals": [
@@ -16,14 +16,14 @@
       "text": "A short film sits in a frame. Scroll, and it opens out to full width.",
       "image": "/uploads/abx-v1.jpg",
       "alt": "Abaxent hero film opening below the headline",
-      "story": "We wanted a film up top without a slow page. The video and its poster are inside the page file, so there's nothing extra to load, and it stops for anyone with reduced motion on."
+      "story": "We wanted a film up top without a slow page. The video and its poster are inside the page file, so there’s nothing extra to load, and it stops for anyone with reduced motion on."
     },
     {
       "title": "Four-step method",
       "text": "How a broker works, drawn as a four-step pyramid.",
       "image": "/uploads/abx-f2.jpg",
       "alt": "How a technology broker works, with the pyramid graphic",
-      "story": "Nobody can picture what a broker does, so we drew it. The pyramid is one SVG shape recolored in CSS. It stays sharp at any size and there's no image to load."
+      "story": "Nobody can picture what a broker does, so we drew it. The pyramid is one SVG shape recolored in CSS. It stays sharp at any size and there’s no image to load."
     },
     {
       "title": "Impact numbers",
@@ -38,11 +38,11 @@
       "alt": "Abaxent leadership team"
     },
     {
-      "title": "Why we're different",
+      "title": "Why we’re different",
       "text": "Four short reasons: brokers, not vendors; no bench; 22 years; certified.",
       "image": "/uploads/abx-f5.jpg",
       "alt": "Abaxent why we are different section",
-      "story": "The serif italic only shows up on the one word in each heading that carries the point. That's the whole type trick."
+      "story": "The serif italic only shows up on the one word in each heading that carries the point. That’s the whole type trick."
     },
     {
       "title": "Full-screen menu",

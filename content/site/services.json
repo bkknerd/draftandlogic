@@ -1,38 +1,53 @@
 {
   "show": true,
-  "heading": "What we build and engineer.",
+  "heading": "What we build.",
   "intro": "",
   "levels": [
     {
-      "title": "Technical SEO & Performance",
-      "lead": "Semantic markup, structured data and fast load times, written into the code rather than bolted on.",
+      "title": "Custom back ends and integrations",
+      "lead": "Booking rules, registrations and member areas. Forms to the CRM, orders to inventory, and nobody copying rows between tabs.",
       "text": ""
     },
     {
-      "title": "Event & Program Portals",
-      "lead": "Registration, schedules and attendee pages that stay fast when everyone signs up at once.",
+      "title": "Site search",
+      "lead": "Forgives typos, filters fast, and keeps a list of everything it couldn’t find.",
+      "text": ""
+    },
+    {
+      "title": "Analytics dashboards",
+      "lead": "Analytics, CRM and Shopify numbers on one screen you’ll actually open.",
+      "text": ""
+    },
+    {
+      "title": "Event and program portals",
+      "lead": "Registration, schedules and attendee pages that hold up when everyone signs up at once.",
       "text": "",
       "linkText": "More on Swoogo development.",
       "linkHref": "/swoogo-development/"
     },
     {
-      "title": "ADA Accessibility Compliance",
-      "lead": "Design and markup built to WCAG, tested with screen readers, keyboards and phones.",
+      "title": "Custom web development",
+      "lead": "Hand-built on static and headless frameworks. No page builder, no template bloat.",
       "text": ""
     },
     {
-      "title": "Content Management Systems",
-      "lead": "Decap, Sanity or another headless CMS, set up so your team can edit pages without breaking the layout.",
+      "title": "Content management",
+      "lead": "Decap or Sanity, set up so your team edits pages without breaking the layout.",
       "text": ""
     },
     {
-      "title": "Site Modernization & Audits",
-      "lead": "Old sites rebuilt on current infrastructure, with the code debt cleared and the speed back.",
+      "title": "Technical SEO and performance",
+      "lead": "Clean markup, structured data and fast pages, so search engines and AI tools describe you correctly.",
       "text": ""
     },
     {
-      "title": "Custom Web Development",
-      "lead": "Hand-built sites on headless and static frameworks. No page builder, no template bloat.",
+      "title": "Accessibility (WCAG 2.2 AA)",
+      "lead": "Tested with screen readers, keyboards and phones before anything goes live.",
+      "text": ""
+    },
+    {
+      "title": "Site rebuilds and audits",
+      "lead": "Old sites moved to current infrastructure, with the search traffic they already earn kept intact.",
       "text": ""
     }
   ],

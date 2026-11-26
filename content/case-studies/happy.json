@@ -1,8 +1,8 @@
 {
-  "title": "happy's: a bar site that looks like the bar",
+  "title": "happy’s: a bar site that looks like the bar",
   "tag": "Bar website, Cary, NC",
   "summaryLead": "A cocktail bar and event space in downtown Cary. The site is the smiley wall, a sticker-style menu and the stairs up, and the owners edit it themselves.",
-  "story": "happy's has a wall covered in smiley faces, a menu that changes, live music every Saturday and a second bar upstairs. A template site would flatten all of that. The goal was a page that feels like walking in: loud, friendly, and easy to use on a phone at the door. The palette comes off the wall: cream, tomato, cobalt and pink, with Bricolage Grotesque doing the shouting and Space Mono keeping the prices tidy. Menu, hours, events, photos and reviews all live in the CMS, so the staff update them without calling us.",
+  "story": "happy’s has a wall covered in smiley faces, a menu that changes, live music every Saturday and a second bar upstairs. A template site would flatten all of that. The goal was a page that feels like walking in: loud, friendly, and easy to use on a phone at the door. The palette comes off the wall: cream, tomato, cobalt and pink, with Bricolage Grotesque doing the shouting and Space Mono keeping the prices tidy. Menu, hours, events, photos and reviews all live in the CMS, so the staff update them without calling us.",
   "url": "https://happysnc.com",
   "paper": {
     "label": "White paper (PDF)",
@@ -10,62 +10,62 @@
   },
   "numbers": [],
   "goals": [
-    "Carry the smiley wall's personality onto the page.",
+    "Carry the smiley wall’s personality onto the page.",
     "Make a long drink menu easy to browse on a phone.",
     "Let the staff change the menu, hours and music lineup themselves."
   ],
   "features": [
     {
       "title": "The smiley wall",
-      "text": "The bar's own wall is the hero, and its colors run the whole site.",
+      "text": "The bar’s own wall is the hero, and its colors run the whole site.",
       "image": "/uploads/happy-1.jpg",
-      "alt": "happy's home page",
-      "story": "Borders are a hard ink line and cards sit on an offset shadow, so everything reads like a sticker. The hero tint shifts slowly between the wall's colors."
+      "alt": "happy’s home page",
+      "story": "Borders are a hard ink line and cards sit on an offset shadow, so everything reads like a sticker. The hero tint shifts slowly between the wall’s colors."
     },
     {
       "title": "A menu that works like a menu",
       "text": "Cards colored by section, with filter chips and a search box.",
       "image": "/uploads/happy-f2.jpg",
-      "alt": "happy's menu cards, colored by section",
+      "alt": "happy’s menu cards, colored by section",
       "story": "Specials, draft, shots, zero proof and snacks each get their own color, so you can find the section before you read it. Search handles the rest. Prices are edited in the CMS."
     },
     {
-      "title": "Lately at happy's",
+      "title": "Lately at happy’s",
       "text": "A photo strip of the wall, the cocktails and the snacks.",
       "image": "/uploads/happy-f4.jpg",
-      "alt": "happy's photo strip with captions",
+      "alt": "happy’s photo strip with captions",
       "story": "Slightly crooked snapshots with a caption each. The photos swap from the CMS."
     },
     {
       "title": "Saturday live music",
-      "text": "The month's lineup, a poster and a card for booking the bar.",
+      "text": "The month’s lineup, a poster and a card for booking the bar.",
       "image": "/uploads/happy-f5.jpg",
-      "alt": "happy's events section with the November lineup, past shows crossed out",
+      "alt": "happy’s events section with the November lineup, past shows crossed out",
       "story": "The lineup is a list in the CMS, and past dates strike themselves out. Birthdays and work nights get their own card with a way to ask about a date."
     },
     {
       "title": "Reviews",
       "text": "A 4.8 from 26 Google reviews, pulled forward on colored cards.",
       "image": "/uploads/happy-f7.jpg",
-      "alt": "happy's reviews section with a 4.8 rating"
+      "alt": "happy’s reviews section with a 4.8 rating"
     },
     {
       "title": "Hours and sign-up",
       "text": "Plain-text hours, the address, directions and an email list.",
       "image": "/uploads/happy-f8.jpg",
-      "alt": "happy's hours and email sign-up",
-      "story": "Hours are a simple table, with today's row marked. Directions and the phone number are one tap."
+      "alt": "happy’s hours and email sign-up",
+      "story": "Hours are a simple table, with today’s row marked. Directions and the phone number are one tap."
     },
     {
       "title": "The whole home page",
       "image": "/uploads/happy-fullpage.jpg",
-      "alt": "The full happy's home page from top to bottom"
+      "alt": "The full happy’s home page from top to bottom"
     },
     {
       "title": "On a phone",
       "text": "Hero, menu and events at 390px wide.",
       "image": "/uploads/happy-phone.jpg",
-      "alt": "happy's home page on a phone"
+      "alt": "happy’s home page on a phone"
     }
   ],
   "cms": {
@@ -74,26 +74,26 @@
     "intro": "Bar staff run the site from a phone between shifts. They sign in with one shared password, see the real page update as they type, and changes go live about a minute after they hit Publish.",
     "items": [
       "Staff sign-in with one shared password instead of a GitHub account. The check runs server-side, slows down repeated guesses, and no key lives in the public code",
-      "A live preview of the real page, scrolled to the section being edited, with new photos showing before they're uploaded",
-      "A how-to guide inside the editor: closing for an event, changing hours, posting the month's music",
+      "A live preview of the real page, scrolled to the section being edited, with new photos showing before they’re uploaded",
+      "A how-to guide inside the editor: closing for an event, changing hours, posting the month’s music",
       "A closed notice for private events and holidays, with five designs and as many dates as needed. It takes itself down after the last one",
-      "One hours list that feeds the hours table, the footer, today's row and the Google listing",
-      "Monthly music flyers: upload the Instagram poster, add the shows, and each show becomes a Google event. Past dates cross out and next month's lineup takes over on its own",
+      "One hours list that feeds the hours table, the footer, today’s row and the Google listing",
+      "Monthly music flyers: upload the Instagram poster, add the shows, and each show becomes a Google event. Past dates cross out and next month’s lineup takes over on its own",
       "Event inquiries and newsletter sign-ups through Netlify Forms, with a spam trap",
       "Content baked into the page at deploy, so the menu, hours and shows load complete and search engines read all of it",
       "Google Analytics set from the editor, tracking directions, calls, Instagram, event inquiries and sign-ups",
-      "Every publish saved in the site's history. An edit that would break the site is refused and the last good version stays live"
+      "Every publish saved in the site’s history. An edit that would break the site is refused and the last good version stays live"
     ],
     "shots": [
       {
         "image": "/uploads/happy-cms-closed.jpg",
-        "alt": "happy's home page with a brown Thanksgiving notice across the top: closed for thanksgiving thursday, back open friday at 4pm",
+        "alt": "happy’s home page with a brown Thanksgiving notice across the top: closed for thanksgiving thursday, back open friday at 4pm",
         "caption": "The Thanksgiving notice, set from the editor",
         "half": true
       },
       {
         "image": "/uploads/happy-cms-signin.jpg",
-        "alt": "happy's staff sign-in screen: a black card with a password field, a yellow Sign in button and the dripping smiley",
+        "alt": "happy’s staff sign-in screen: a black card with a password field, a yellow Sign in button and the dripping smiley",
         "caption": "Staff sign-in: one password, no GitHub account",
         "half": true
       }
@@ -105,5 +105,5 @@
     "role": ""
   },
   "accent": "#F0C010",
-  "seoTitle": "happy's: bar website, Cary, NC"
+  "seoTitle": "happy’s: bar website, Cary, NC"
 }

@@ -1,6 +1,6 @@
 {
   "show": true,
-  "heading": "Selected work",
+  "heading": "Selected work.",
   "intro": "",
   "groups": [
     {
@@ -13,23 +13,7 @@
     }
   ],
   "alsoHeading": "Also launched",
-  "also": [
-    {
-      "label": "Southwest Looms",
-      "url": "https://southwestlooms.com/",
-      "group": "venues"
-    },
-    {
-      "label": "Brights Beauty",
-      "url": "https://www.brightsbeauty.com/",
-      "group": "venues"
-    },
-    {
-      "label": "Persian Carpet",
-      "url": "https://www.persiancarpet.com/",
-      "group": "venues"
-    }
-  ],
+  "also": [],
   "alsoShow": true,
   "allLink": "See all work",
   "allHeading": "All work",
